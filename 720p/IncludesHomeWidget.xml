@@ -1,0 +1,2279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="HomePlayStatus">
+		<control type="group">
+			<posx>115</posx>
+			<posy>215</posy>
+			<width>1280</width>
+			<height>100</height>
+			<animation effect="slide" reversable="true" start="0,0" end="80,0" time="200" condition="VideoPlayer.Content(Episodes)">Conditional</animation>
+			<animation effect="slide" reversable="true" start="0,0" end="30,0" time="200" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
+			<animation effect="slide" reversable="true" start="0,0" end="32,0" time="200" condition="Player.HasAudio">Conditional</animation>
+			<animation effect="slide" reversable="true" start="0,0" end="120,0" time="200" condition="[IsEmpty(Player.Art(poster)) + !VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(Episodes) + !Player.HasAudio]">Conditional</animation>
+			<visible>Player.HasMedia</visible>
+			<control type="group">
+				<posx>0</posx>
+				<posy>0</posy>
+				<control type="group">
+					<visible>[Player.Paused + Player.Caching] + !Player.Seeking + Window.IsVisible(home)</visible>
+					<control type="label" id="24" description="Buffering label">
+						<animation type="Visible" condition="true" reversable="true">
+							<effect type="fade" start="0" end="100" time="700" reversable="true" />
+						</animation>
+			        	<posx>-23</posx>
+					    <posy>-27</posy>
+					    <height>75</height>
+					    <width>200</width>
+					    <align>center</align>
+					    <font>font20</font>
+					    <textcolor>white</textcolor>
+					    <shadowcolor>Black</shadowcolor>
+			        	<label>Please wait...</label>
+			      	</control>
+					<control type="label" id="24" description="Buffering label">
+			        	<visible>true</visible>
+			        	<!-- visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible -->
+						<posx>120</posx>
+					    <posy>-26</posy>
+					    <height>75</height>
+					    <width>80</width>
+					    <align>center</align>
+					    <font>font20</font>
+					    <textcolor>white</textcolor>
+					    <shadowcolor>Black</shadowcolor>
+			        	<label>$INFO[Player.CacheLevel,,%]</label>
+			      	</control>
+		      	</control>
+				<control type="group">
+					<posx>0</posx>
+					<posy>0</posy>
+					<control type="image">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>80</width>
+						<height>50</height>
+						<texture>OSDSeekFrame.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>3</posy>
+						<width>20</width>
+						<height>44</height>
+						<texture>OSDSeekRewind.png</texture>
+						<visible>Player.Rewinding</visible>
+					</control>
+					<control type="image">
+						<posx>80</posx>
+						<posy>3</posy>
+						<width>20</width>
+						<height>44</height>
+						<texture>OSDSeekForward.png</texture>
+						<visible>Player.Forwarding</visible>
+					</control>
+					<control type="image">
+						<posx>31</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSDPause.png</texture>
+						<visible>Player.Paused</visible>
+					</control>
+					<control type="image">
+						<posx>31</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSDPlay.png</texture>
+						<visible>Player.Playing</visible>
+					</control>
+					<control type="image">
+						<posx>28</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD2x.png</texture>
+						<visible>Player.Rewinding2x</visible>
+					</control>
+					<control type="image">
+						<posx>25</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD4x.png</texture>
+						<visible>Player.Rewinding4x</visible>
+					</control>
+					<control type="image">
+						<posx>22</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD8x.png</texture>
+						<visible>Player.Rewinding8x</visible>
+					</control>
+					<control type="image">
+						<posx>19</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD16x.png</texture>
+						<visible>Player.Rewinding16x</visible>
+					</control>
+					<control type="image">
+						<posx>17</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD32x.png</texture>
+						<visible>Player.Rewinding32x</visible>
+					</control>
+					<control type="image">
+						<posx>34</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD2x.png</texture>
+						<visible>Player.Forwarding2x</visible>
+					</control>
+					<control type="image">
+						<posx>37</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD4x.png</texture>
+						<visible>Player.Forwarding4x</visible>
+					</control>
+					<control type="image">
+						<posx>40</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD8x.png</texture>
+						<visible>Player.Forwarding8x</visible>
+					</control>
+					<control type="image">
+						<posx>43</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD16x.png</texture>
+						<visible>Player.Forwarding16x</visible>
+					</control>
+					<control type="image">
+						<posx>45</posx>
+						<posy>4</posy>
+						<width>40</width>
+						<height>40</height>
+						<texture>OSD32x.png</texture>
+						<visible>Player.Forwarding32x</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="HomeWidgetPanel">
+		<control type="group" id="9003">
+			<include>HomeMenuFade</include>
+			<posy>100</posy>
+			<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
+			<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+			<include>VisibleFadeEffect</include>
+			<animation effect="fade" time="300" delay="0">WindowOpen</animation>
+			<animation effect="fade" time="200">WindowClose</animation>
+
+			<control type="image" description="Top glass border">
+				<animation effect="slide" start="0,0" end="0,-10" time="300" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004)]">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,-12" time="300" condition="[
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) + !Skin.HasSetting(HideHomeVideoWidget) + IntegerGreaterThan(Container(8000).NumItems,0) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) + !Skin.HasSetting(HideHomeVideoWidget) + IntegerGreaterThan(Container(8001).NumItems,0) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Music) + !Skin.HasSetting(HideHomeAlbumsWidget) + IntegerGreaterThan(Container(8002).NumItems,0) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Online) + !Skin.HasSetting(HideHomeAddonWidget) + IntegerGreaterThan(Container(8004).NumItems,0)
+							] + [
+							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) | 
+							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music) |
+							StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows) |
+							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Online) ]
+							">Conditional
+				</animation>
+		        <posx>0</posx>
+		       	<posy>338</posy>
+		       	<width>1280</width>
+		       	<height>87</height>
+		       	<texture border="0,0,0,12">home/NavbarGlass.png</texture>
+   			</control>
+
+			<control type="group">
+				<posx>0</posx>
+				<posy>45</posy>
+				<visible>Library.HasContent(Movies)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) + !Skin.HasSetting(HideHomeVideoWidget)</visible>
+				<include>VisibleFadeEffect</include>
+				
+				<!-- control type="label">
+					<visible allowhiddenfocus="true">!Control.HasFocus(8000)</visible>
+					<include>VisibleFadeEffect</include>
+					<description>Title label</description>
+					<posx>0</posx>
+					<posy>330</posy>
+					<height>20</height>
+					<width>1280</width>
+					<label>$VAR[WidgetTitle]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+				</control -->
+
+				<control type="image" description="Top glass border">
+					<include>VisibleFadeEffect</include>
+					<visible allowhiddenfocus="true">[!Control.HasFocus(8000) + IntegerGreaterThan(Container(8000).NumItems,0)]</visible>
+			        <posx>620</posx>
+			       	<posy>333</posy>
+			       	<width>24</width>
+			       	<height>15</height>
+			       	<texture background="true">arrow-big-up.png</texture>
+			       	<animation type="Conditional" condition="true" pulse="true">
+			       		<effect type="fade" start="10" end="90"  time="1400"  />
+					</animation>
+			    </control>
+				
+
+				<control type="list" id="8000">
+					<visible allowhiddenfocus="true">Control.HasFocus(8000)</visible>
+					<visible>IntegerGreaterThan(Container(8000).NumItems,0)</visible>
+					<include>VisibleFadeEffect</include>
+					<posx>40</posx>
+					<posy>125</posy>
+					<width>1250</width>
+					<height>300</height>
+					<onleft>8000</onleft>
+					<onright>8000</onright>
+					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
+					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="280" width="165">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>140</width>
+      						<height>210</height>
+							<texture background="true" fallback="DefaultVideoIcon.png">$INFO[ListItem.ActualIcon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image" description="Reflection">
+					        <posx>0</posx>
+					        <posy>210</posy>
+					        <width>140</width>
+					        <height>210</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="DefaultVideoIcon.png" flipy="true">$INFO[ListItem.ActualIcon]</texture>
+					        <aspectratio>scale</aspectratio>
+					      </control>
+					</itemlayout>
+					<focusedlayout height="280" width="165">
+						<!-- no image fallback -->
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+					        <posx>0</posx>
+							<posy>0</posy>
+							<width>140</width>
+							<height>210</height>
+					        <texture background="true">DefaultVideoIcon.png</texture>
+					        <aspectratio>scale</aspectratio>
+					    </control>
+					    <control type="label">
+					    	<posx>70</posx>
+							<posy>186</posy>
+							<width>125</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$VAR[MainItemLabel]</label>
+						</control>
+						<!-- no image fallback end -->
+						<control type="image" description="Reflection">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="slide" end="0,14" time="400" />
+							</animation>
+					        <posx>0</posx>
+					        <posy>210</posy>
+					        <width>140</width>
+					        <height>100</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="black-back.png" flipy="true">$INFO[ListItem.ActualIcon]</texture>
+					       	<aspectratio>scale</aspectratio>    
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="100,100" end="110,110" fallback="black-back.png" center="auto" time="300">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>140</width>
+							<height>210</height>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="100,100" end="110,110" center="auto" time="300">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>140</width>
+							<height>210</height>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+							<bordertexture border="1">button-nofocus.png</bordertexture>
+							<bordersize>1</bordersize>
+							<aspectratio>scale</aspectratio>
+						</control>
+					</focusedlayout>
+					<include condition="!Skin.HasSetting(RandomWidgetInfo) + !Skin.HasSetting(SuggestedWidgetInfo)">RecentVideoContent</include>
+					<include condition="Skin.HasSetting(RandomWidgetInfo) + !SubString(Window(Home).Property(SkinWidgets_RandomItems),true)">RecentVideoContent</include>
+					<include condition="Skin.HasSetting(RandomWidgetInfo) + SubString(Window(Home).Property(SkinWidgets_RandomItems),true)">RandomVideoContent</include>
+					<include condition="Skin.HasSetting(SuggestedWidgetInfo) + SubString(Window(Home).Property(SkinWidgets_Recommended),true)">SuggestedVideoContent</include>
+					<include condition="Skin.HasSetting(SuggestedWidgetInfo) + !SubString(Window(Home).Property(SkinWidgets_Recommended),true)">RecentVideoContent</include>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>0</posx>
+				<posy>45</posy>
+				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Online) + !Skin.HasSetting(HideHomeAddonWidget)</visible>
+				<include>VisibleFadeEffect</include>
+	   			<!-- control type="label">
+					<visible allowhiddenfocus="true">!Control.HasFocus(8004)</visible>
+					<visible>IntegerGreaterThan(Container(8004).NumItems,0)</visible>
+					<include>VisibleFadeEffect</include>
+					<description>Title label</description>
+					<posx>0</posx>
+					<posy>330</posy>
+					<height>20</height>
+					<width>1280</width>
+					<label>Favourites</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+				</control -->
+				<control type="image" description="Top glass border">
+					<include>VisibleFadeEffect</include>
+					<visible allowhiddenfocus="true">[!Control.HasFocus(8004) + IntegerGreaterThan(Container(8004).NumItems,0)]</visible>
+			        <posx>620</posx>
+			       	<posy>333</posy>
+			       	<width>24</width>
+			       	<height>15</height>
+			       	<texture background="true">arrow-big-up.png</texture>
+			       	<animation type="Conditional" condition="true" pulse="true">
+			       		<effect type="fade" start="10" end="90"  time="1400"  />
+					</animation>
+			    </control>
+	   			<control type="list" id="8004">
+					<visible allowhiddenfocus="true">Control.HasFocus(8004)</visible>
+					<include>VisibleFadeEffect</include>
+					<posx>45</posx>
+					<posy>182</posy>
+					<width>1250</width>
+					<height>300</height>
+					<onleft>8004</onleft>
+					<onright>8004</onright>
+					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
+					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="220" width="170">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<aspectratio aligny="bottom">scale</aspectratio>
+							<texture fallback="DefaultAddonShelfIcon.png" background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>155</posy>
+							<width>155</width>
+							<height>110</height>
+							<aspectratio aligny="top">scale</aspectratio>
+							<texture fallback="DefaultAddonShelfIcon.png" diffuse="home/NavbarGlass.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout height="220" width="170">
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+							<posx>0</posx>
+							<posy>155</posy>
+							<width>155</width>
+							<height>110</height>
+							<aspectratio aligny="top">scale</aspectratio>
+							<texture diffuse="home/NavbarGlass.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<aspectratio aligny="bottom">scale</aspectratio>
+							<texture fallback="DefaultAddonShelfIcon.png" background="true">$INFO[ListItem.Icon]</texture>
+						</control>	
+						<control type="image">
+					    	<animation type="Focus" condition="true" reversable="true">
+								<effect type="slide" end="0,7" time="0" />
+								<effect type="zoom"  start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+					        <posx>0</posx>
+							<posy>120</posy>
+							<width>155</width>
+							<height>34</height>
+					        <texture background="true">black-back.png</texture>
+					        <aspectratio>scale</aspectratio>
+					    </control>
+						<control type="label">
+							<posx>78</posx>
+							<posy>135</posy>
+							<width>145</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$VAR[MainItemLabel]</label>
+						</control>
+					</focusedlayout>
+					<include>HomeAddonItemsShelf</include>
+				</control>
+			</control>
+
+			<control type="group">
+				<posx>0</posx>
+				<posy>45</posy>
+				<visible>Library.HasContent(TVShows)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows) + !Skin.HasSetting(HideHomeVideoWidget)</visible>
+				<include>VisibleFadeEffect</include>
+		
+				<!-- control type="label">
+					<visible allowhiddenfocus="true">!Control.HasFocus(8001)</visible>
+					<visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
+					<include>VisibleFadeEffect</include>
+					<description>Title label</description>
+					<posx>0</posx>
+					<posy>330</posy>
+					<height>20</height>
+					<width>1280</width>
+					<label>$VAR[WidgetTitle]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+				</control -->
+				<control type="image" description="Top glass border">
+					<include>VisibleFadeEffect</include>
+					<visible allowhiddenfocus="true">[!Control.HasFocus(8001) + IntegerGreaterThan(Container(8001).NumItems,0)]</visible>
+			        <posx>620</posx>
+			       	<posy>333</posy>
+			       	<width>24</width>
+			       	<height>15</height>
+			       	<texture background="true">arrow-big-up.png</texture>
+			       	<animation type="Conditional" condition="true" pulse="true">
+			       		<effect type="fade" start="10" end="90"  time="1400"  />
+					</animation>
+			    </control>
+				<control type="list" id="8001">
+					<posx>45</posx>
+					<posy>180</posy>
+					<width>1250</width>
+					<height>300</height>
+					<onleft>8001</onleft>
+					<onright>8001</onright>
+					<onup condition="!Skin.HasSetting(AutoHidePowerBtn)">20</onup>
+					<onup condition="Skin.HasSetting(AutoHidePowerBtn)">21</onup>
+					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
+					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<focusposition>1</focusposition>
+					<movement>2</movement>
+					<visible allowhiddenfocus="true">Control.HasFocus(8001)</visible>
+					<itemlayout height="220" width="240">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>220</width>
+							<height>155</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.ActualIcon]</texture>
+							<visible>!Skin.HasSetting(HideEpisodeThumb)</visible>
+						</control>
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>220</width>
+							<height>155</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.Thumb]</texture>
+							<visible>Skin.HasSetting(HideEpisodeThumb)</visible>
+						</control>
+						<control type="image" description="Reflection">
+					       	<posx>0</posx>
+							<posy>155</posy>
+							<width>220</width>
+							<height>155</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="Fanart_Fallback_Small.jpg" flipy="true">$INFO[ListItem.Thumb]</texture>
+					        <aspectratio>scale</aspectratio>
+					        <visible>Skin.HasSetting(HideEpisodeThumb)</visible>
+					    </control>
+					   	<control type="image" description="Reflection">
+					        <posx>0</posx>
+							<posy>155</posy>
+							<width>220</width>
+							<height>155</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="Fanart_Fallback_Small.jpg" flipy="true">$INFO[ListItem.ActualIcon]</texture>
+					        <aspectratio>scale</aspectratio>
+					       	<visible>!Skin.HasSetting(HideEpisodeThumb)</visible>
+					    </control>
+					</itemlayout>
+					<focusedlayout height="220" width="240">
+						<control type="image" description="Reflection">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+					       	<posx>0</posx>
+							<posy>155</posy>
+							<width>220</width>
+							<height>155</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="Fanart_Fallback_Small.jpg" flipy="true">$INFO[ListItem.Thumb]</texture>
+					        <aspectratio>scale</aspectratio>
+					        <visible>Skin.HasSetting(HideEpisodeThumb)</visible>
+					    </control>
+					   	<control type="image" description="Reflection">
+					   		<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+					        <posx>0</posx>
+							<posy>155</posy>
+							<width>220</width>
+							<height>155</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="Fanart_Fallback_Small.jpg" flipy="true">$INFO[ListItem.ActualIcon]</texture>
+					        <aspectratio>scale</aspectratio>
+					       	<visible>!Skin.HasSetting(HideEpisodeThumb)</visible>
+					    </control>
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>220</width>
+							<height>155</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.ActualIcon]</texture>
+							<visible>Control.HasFocus(8001)</visible>
+							<visible>!Skin.HasSetting(HideEpisodeThumb)</visible>
+						</control>
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>220</width>
+							<height>155</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.ActualIcon]</texture>
+							<visible>!Control.HasFocus(8001)</visible>
+							<visible>!Skin.HasSetting(HideEpisodeThumb)</visible>
+						</control>
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>220</width>
+							<height>155</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.Thumb]</texture>
+							<visible>Control.HasFocus(8001)</visible>
+							<visible>Skin.HasSetting(HideEpisodeThumb)</visible>
+						</control>
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>220</width>
+							<height>155</height>
+							<aspectratio>scale</aspectratio>
+							<texture fallback="Fanart_Fallback_Small.jpg">$INFO[ListItem.Thumb]</texture>
+							<visible>!Control.HasFocus(8001)</visible>
+							<visible>Skin.HasSetting(HideEpisodeThumb)</visible>
+						</control>
+					    <control type="image" description="Reflection">
+					    	<animation type="Focus" condition="true" reversable="true">
+								<effect type="slide" end="0,7" time="0" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+					        <posx>0</posx>
+							<posy>107</posy>
+							<width>220</width>
+							<height>47</height>
+					        <texture background="true">black-back.png</texture>
+					        <aspectratio>scale</aspectratio>
+					    </control>
+						<control type="label">
+							<posx>112</posx>
+							<posy>115</posy>
+							<width>200</width>
+							<height>20</height>
+							<font>font10</font>
+							<textcolor>grey2</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>112</posx>
+							<posy>135</posy>
+							<width>190</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$VAR[MainItemLabel]</label>
+						</control>
+					</focusedlayout>
+					<include>RecentTVShowContent</include>
+					<!-- include condition="!Skin.HasSetting(RandomWidgetInfo) + !Skin.HasSetting(SuggestedWidgetInfo)">RecentTVShowContent</include>
+					<include condition="Skin.HasSetting(RandomWidgetInfo) + !SubString(Window(Home).Property(SkinWidgets_RandomItems),true)">RecentTVShowContent</include>
+					<include condition="Skin.HasSetting(RandomWidgetInfo) + SubString(Window(Home).Property(SkinWidgets_RandomItems),true)">RandomTVShowContent</include>
+					<include condition="Skin.HasSetting(SuggestedWidgetInfo) + SubString(Window(Home).Property(SkinWidgets_Recommended),true)">SuggestedTVShowContent</include>
+					<include condition="Skin.HasSetting(SuggestedWidgetInfo) + !SubString(Window(Home).Property(SkinWidgets_Recommended),true)">RecentTVShowContent</include -->
+				</control>
+			</control>
+			<control type="group">
+				<posx>0</posx>
+				<posy>45</posy>
+				<visible>Library.HasContent(Music)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music) + !Skin.HasSetting(HideHomeAlbumsWidget)</visible>
+				<include>VisibleFadeEffect</include>
+				<!-- control type="label">
+					<visible allowhiddenfocus="true">!Control.HasFocus(8002)</visible>
+					<visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>
+					<include>VisibleFadeEffect</include>
+					<description>Title label</description>
+					<posx>0</posx>
+					<posy>330</posy>
+					<height>20</height>
+					<width>1280</width>
+					<label>$VAR[WidgetTitle]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey</textcolor>
+				</control -->
+					
+				<control type="image" description="Top glass border">
+					<include>VisibleFadeEffect</include>
+					<visible allowhiddenfocus="true">[!Control.HasFocus(8002) + IntegerGreaterThan(Container(8002).NumItems,0)]</visible>
+			        <posx>620</posx>
+			       	<posy>333</posy>
+			       	<width>24</width>
+			       	<height>15</height>
+			       	<texture background="true">arrow-big-up.png</texture>
+			       	<animation type="Conditional" condition="true" pulse="true">
+			       		<effect type="fade" start="10" end="90"  time="1400"  />
+					</animation>
+			    </control>
+
+
+				<control type="list" id="8002">
+					<visible allowhiddenfocus="true">Control.HasFocus(8002)</visible>
+					<posx>40</posx>
+					<posy>180</posy>
+					<width>1250</width>
+					<height>240</height>
+					<onleft>8002</onleft>
+					<onright>8002</onright>
+					<onup condition="!Skin.HasSetting(AutoHidePowerBtn)">20</onup>
+					<onup condition="Skin.HasSetting(AutoHidePowerBtn)">21</onup>
+					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
+					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="220" width="170">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<texture background="true" fallback="livecdcase/DefaultAlbumCover.png">$INFO[ListItem.ActualIcon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image" description="Reflection">
+					        <posx>0</posx>
+							<posy>155</posy>
+							<width>155</width>
+							<height>155</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="livecdcase/DefaultAlbumCover.png" flipy="true">$INFO[ListItem.ActualIcon]</texture>
+					        <aspectratio>scale</aspectratio>
+					    </control>
+					</itemlayout>
+					<focusedlayout height="220" width="170">
+						<control type="image" description="Reflection">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+					        <posx>0</posx>
+							<posy>155</posy>
+							<width>155</width>
+							<height>155</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="livecdcase/DefaultAlbumCover.png" flipy="true">$INFO[ListItem.ActualIcon]</texture>
+					        <aspectratio>scale</aspectratio>
+					    </control>
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="livecdcase/DefaultAlbumCover.png">$INFO[ListItem.ActualIcon]</texture>
+							<visible>Control.HasFocus(8002)</visible>
+						</control>
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>155</width>
+							<height>155</height>
+							<aspectratio>scale</aspectratio>
+							<texture background="true" fallback="livecdcase/DefaultAlbumCover.png">$INFO[ListItem.ActualIcon]</texture>
+							<visible>!Control.HasFocus(8002)</visible>
+						</control>
+						<control type="image">
+					    	<animation type="Focus" condition="true" reversable="true">
+								<effect type="slide" end="0,7" time="0" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+					        <posx>0</posx>
+							<posy>107</posy>
+							<width>155</width>
+							<height>47</height>
+					        <texture background="true">black-back.png</texture>
+					        <aspectratio>scale</aspectratio>
+					    </control>
+						<control type="label">
+							<posx>77</posx>
+							<posy>115</posy>
+							<width>135</width>
+							<height>20</height>
+							<font>font10</font>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label2]</label>
+						</control>
+						<control type="label">
+							<posx>77</posx>
+							<posy>132</posy>
+							<width>135</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$VAR[MainItemLabel]</label>
+						</control>
+					</focusedlayout>
+					<include condition="!Skin.HasSetting(RandomWidgetInfo) + !Skin.HasSetting(SuggestedWidgetInfo)">RecentAlbumContent</include>
+					<include condition="Skin.HasSetting(RandomWidgetInfo) + !SubString(Window(Home).Property(SkinWidgets_RandomItems),true)">RecentAlbumContent</include>
+					<include condition="Skin.HasSetting(RandomWidgetInfo) + SubString(Window(Home).Property(SkinWidgets_RandomItems),true)">RandomAlbumContent</include>
+					<include condition="Skin.HasSetting(SuggestedWidgetInfo) + SubString(Window(Home).Property(SkinWidgets_Recommended),true)">SuggestedAlbumContent</include>
+					<include condition="Skin.HasSetting(SuggestedWidgetInfo) + !SubString(Window(Home).Property(SkinWidgets_Recommended),true)">RecentAlbumContent</include>
+				</control>
+			</control>
+			<!-- TODO -->
+			<control type="group">
+				<posx>190</posx>
+				<posy>50</posy>
+				<visible>Library.HasContent(MusicVideos)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Concerts) + !Skin.HasSetting(HideHomeConcertsWidget)</visible>
+				<include>VisibleFadeEffect</include>
+				<control type="label">
+					<description>Title label</description>
+					<posx>180</posx>
+					<posy>220</posy>
+					<height>20</height>
+					<width>540</width>
+					<label>$VAR[WidgetTitle]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="list" id="8003">
+					<animation effect="slide" start="0,0" end="90,0" time="0" condition="StringCompare(Container(8003).NumItems,4)">conditional</animation>
+					<animation effect="slide" start="0,0" end="180,0" time="0" condition="StringCompare(Container(8003).NumItems,3)">conditional</animation>
+					<animation effect="slide" start="0,0" end="270,0" time="0" condition="StringCompare(Container(8003).NumItems,2)">conditional</animation>
+					<animation effect="slide" start="0,0" end="360,0" time="0" condition="StringCompare(Container(8003).NumItems,1)">conditional</animation>
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>900</width>
+					<height>220</height>
+					<onleft>8003</onleft>
+					<onright>8003</onright>
+					<onup condition="!Skin.HasSetting(AutoHidePowerBtn)">20</onup>
+					<onup condition="Skin.HasSetting(AutoHidePowerBtn)">21</onup>
+					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
+					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+					<itemlayout height="220" width="180">
+						<control type="image">
+							<description>background</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>180</width>
+							<height>220</height>
+							<texture border="15">RecentAddedBack.png</texture>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>160</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>185</posy>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$VAR[MainItemLabel]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout height="220" width="180">
+						<control type="image">
+							<description>background</description>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>180</width>
+							<height>220</height>
+							<texture border="15">RecentAddedBack.png</texture>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>160</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+							<bordertexture border="5">folder-focus.png</bordertexture>
+							<bordersize>5</bordersize>
+							<visible>Control.HasFocus(8003)</visible>
+						</control>
+						<control type="image">
+							<posx>10</posx>
+							<posy>10</posy>
+							<width>160</width>
+							<height>170</height>
+							<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+							<bordertexture border="5">button-nofocus.png</bordertexture>
+							<bordersize>5</bordersize>
+							<visible>!Control.HasFocus(8003)</visible>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>185</posy>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$VAR[MainItemLabel]</label>
+						</control>
+						<control type="label">
+							<posx>90</posx>
+							<posy>185</posy>
+							<width>150</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>blue</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$VAR[MainItemLabel]</label>
+							<visible>Control.HasFocus(8003)</visible>
+						</control>
+					</focusedlayout>
+					<include condition="!Skin.HasSetting(RandomWidgetInfo) + !Skin.HasSetting(SuggestedWidgetInfo)">RecentConcertContent</include>
+					<include condition="Skin.HasSetting(RandomWidgetInfo) + !SubString(Window(Home).Property(SkinWidgets_RandomItems),true)">RecentConcertContent</include>
+					<include condition="Skin.HasSetting(RandomWidgetInfo) + SubString(Window(Home).Property(SkinWidgets_RandomItems),true)">RandomConcertContent</include>
+					<include condition="Skin.HasSetting(SuggestedWidgetInfo) + SubString(Window(Home).Property(SkinWidgets_Recommended),true)">SuggestedConcertContent</include>
+					<include condition="Skin.HasSetting(SuggestedWidgetInfo) + !SubString(Window(Home).Property(SkinWidgets_Recommended),true)">RecentConcertContent</include>
+				</control>
+				<control type="button">
+					<description>left Arrow</description>
+					<posx>-40</posx>
+					<posy>90</posy>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-left.png</texturefocus>
+					<texturenofocus>arrow-big-left.png</texturenofocus>
+					<onclick>Control.Move(8003,-1)</onclick>
+					<visible>Control.HasFocus(8003) + Container(8003).HasPrevious</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="button">
+					<description>right Arrow</description>
+					<posx>910</posx>
+					<posy>90</posy>
+					<width>30</width>
+					<height>40</height>
+					<texturefocus>arrow-big-right.png</texturefocus>
+					<texturenofocus>arrow-big-right.png</texturenofocus>
+					<onclick>Control.Move(8003,1)</onclick>
+					<visible>Control.HasFocus(8003) + Container(8003).HasNext</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="RecentVideoContent">	
+		<content>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.1.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.1.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.1.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.2.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.2.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.2.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.2.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.2.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.3.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.3.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.3.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.3.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.4.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.4.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.4.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.4.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.4.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.5.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.5.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.5.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.5.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.5.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.6.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.6.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.6.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.6.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.6.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.7.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.7.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.7.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.7.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.7.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.8.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.8.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.8.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.8.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.8.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.9.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.9.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.9.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.9.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.9.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(RecentMovie.10.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.10.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecentMovie.10.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecentMovie.10.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecentMovie.10.Title)) + SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.1.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.1.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.1.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.2.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.2.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.2.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.3.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.3.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.3.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.4.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.4.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.4.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.5.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.5.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.5.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.6.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.6.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.6.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.7.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.7.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.7.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.8.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.8.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.8.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.9.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.9.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.9.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.9.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.10.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMovie.10.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMovie.10.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMovie.10.Title)) + !SubString(Window(Home).Property(SkinWidgets_RecentItems),true)</visible>
+			</item>
+		</content>					
+	</include>
+	<include name="RandomVideoContent">	
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.1.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.1.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.1.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.1.Title))</visible>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RandomMovie.2.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.2.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.2.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.2.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.2.Title))</visible>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RandomMovie.3.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.3.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.3.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.3.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.3.Title))</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RandomMovie.4.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.4.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.4.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.4.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.4.Title))</visible>
+			</item>
+			<item id="5">
+				<label>$INFO[Window(Home).Property(RandomMovie.5.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.5.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.5.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.5.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.5.Title))</visible>
+			</item>
+			<item id="6">
+				<label>$INFO[Window(Home).Property(RandomMovie.6.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.6.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.6.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.6.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.6.Title))</visible>
+			</item>
+			<item id="7">
+				<label>$INFO[Window(Home).Property(RandomMovie.7.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.7.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.7.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.7.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.7.Title))</visible>
+			</item>
+			<item id="8">
+				<label>$INFO[Window(Home).Property(RandomMovie.8.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.8.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.8.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.8.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.8.Title))</visible>
+			</item>
+			<item id="9">
+				<label>$INFO[Window(Home).Property(RandomMovie.9.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.9.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.9.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.9.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.9.Title))</visible>
+			</item>
+			<item id="10">
+				<label>$INFO[Window(Home).Property(RandomMovie.10.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.10.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMovie.10.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMovie.10.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMovie.10.Title))</visible>
+			</item>
+		</content>	
+	</include>
+	<include name="SuggestedVideoContent">	
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.1.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.1.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.1.Title))</visible>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.2.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.2.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.2.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.2.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.2.Title))</visible>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.3.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.3.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.3.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.3.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.3.Title))</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.4.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.4.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.4.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.4.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.4.Title))</visible>
+			</item>
+			<item id="5">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.5.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.5.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.5.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.5.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.5.Title))</visible>
+			</item>
+			<item id="6">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.6.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.6.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.6.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.6.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.6.Title))</visible>
+			</item>
+			<item id="7">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.7.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.7.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.7.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.7.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.7.Title))</visible>
+			</item>
+			<item id="8">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.8.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.8.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.8.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.8.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.8.Title))</visible>
+			</item>
+			<item id="9">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.9.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.9.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.9.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.9.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.9.Title))</visible>
+			</item>
+			<item id="10">
+				<label>$INFO[Window(Home).Property(RecommendedMovie.10.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.10.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMovie.10.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMovie.10.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMovie.10.Title))</visible>
+			</item>
+		</content>		
+	</include>
+	<include name="RecentTVShowContent">
+		<content>
+			<item>
+				<label>$INFO[Window.Property(LatestEpisode.1.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.1.ShowTitle)] - $INFO[Window.Property(LatestEpisode.1.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.1.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.1.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.1.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.1.EpisodeTitle))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestEpisode.2.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.2.ShowTitle)] - $INFO[Window.Property(LatestEpisode.2.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.2.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.2.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.2.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.2.EpisodeTitle))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestEpisode.3.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.3.ShowTitle)] - $INFO[Window.Property(LatestEpisode.3.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.3.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.3.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.3.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.3.EpisodeTitle))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestEpisode.4.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.4.ShowTitle)] - $INFO[Window.Property(LatestEpisode.4.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.4.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.4.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.4.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.4.EpisodeTitle))</visible>
+			</item>
+			<item>
+			<label>$INFO[Window.Property(LatestEpisode.5.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.5.ShowTitle)] - $INFO[Window.Property(LatestEpisode.5.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.5.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.5.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.5.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.5.EpisodeTitle))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestEpisode.6.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.6.ShowTitle)] - $INFO[Window.Property(LatestEpisode.6.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.6.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.6.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.6.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.6.EpisodeTitle))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestEpisode.7.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.7.ShowTitle)] - $INFO[Window.Property(LatestEpisode.7.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.7.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.7.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.7.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.7.EpisodeTitle))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestEpisode.8.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.8.ShowTitle)] - $INFO[Window.Property(LatestEpisode.8.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.8.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.8.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.8.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.8.EpisodeTitle))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestEpisode.9.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.9.ShowTitle)] - $INFO[Window.Property(LatestEpisode.9.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.9.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.9.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.9.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.9.EpisodeTitle))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestEpisode.10.EpisodeTitle)]</label>
+				<label2>$INFO[Window.Property(LatestEpisode.10.ShowTitle)] - $INFO[Window.Property(LatestEpisode.10.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisode.10.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestEpisode.10.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestEpisode.10.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestEpisode.10.EpisodeTitle))</visible>
+			</item>
+		</content>
+	</include>
+	<include name="RandomTVShowContent">
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RandomEpisode.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.1.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.1.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.1.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.1.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.1.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.1.TVshowTitle))</visible>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RandomEpisode.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.2.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.2.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.2.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.2.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.2.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.2.TVshowTitle))</visible>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RandomEpisode.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.3.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.3.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.3.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.3.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.3.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.3.TVshowTitle))</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RandomEpisode.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.4.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.4.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.4.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.4.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.4.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.4.TVshowTitle))</visible>
+			</item>
+			<item id="5">
+				<label>$INFO[Window(Home).Property(RandomEpisode.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.5.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.5.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.5.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.5.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.5.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.5.TVshowTitle))</visible>
+			</item>
+			<item id="6">
+				<label>$INFO[Window(Home).Property(RandomEpisode.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.6.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.6.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.6.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.6.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.6.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.6.TVshowTitle))</visible>
+			</item>
+			<item id="7">
+				<label>$INFO[Window(Home).Property(RandomEpisode.7.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.7.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.7.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.7.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.7.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.7.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.7.TVshowTitle))</visible>
+			</item>
+			<item id="8">
+				<label>$INFO[Window(Home).Property(RandomEpisode.8.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.8.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.8.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.8.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.8.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.8.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.8.TVshowTitle))</visible>
+			</item>
+			<item id="9">
+				<label>$INFO[Window(Home).Property(RandomEpisode.9.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.9.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.9.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.9.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.9.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.9.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.9.TVshowTitle))</visible>
+			</item>
+			<item id="10">
+				<label>$INFO[Window(Home).Property(RandomEpisode.10.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomEpisode.10.TVshowTitle)] - $INFO[Window(Home).Property(RandomEpisode.10.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomEpisode.10.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RandomEpisode.10.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RandomEpisode.10.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RandomEpisode.10.TVshowTitle))</visible>
+			</item>
+		</content>
+	</include>
+	<include name="SuggestedTVShowContent">	
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.1.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.1.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.1.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.1.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.1.TVshowTitle))</visible>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.2.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.2.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.2.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.2.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.2.TVshowTitle))</visible>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.3.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.3.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.3.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.3.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.3.TVshowTitle))</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.4.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.4.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.4.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.4.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.4.TVshowTitle))</visible>
+			</item>
+			<item id="5">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.5.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.5.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.5.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.5.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.5.TVshowTitle))</visible>
+			</item>
+			<item id="6">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.6.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.6.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.6.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.6.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.6.TVshowTitle))</visible>
+			</item>
+			<item id="7">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.7.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.7.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.7.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.7.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.7.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.7.TVshowTitle))</visible>
+			</item>
+			<item id="8">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.8.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.8.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.8.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.8.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.8.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.8.TVshowTitle))</visible>
+			</item>
+			<item id="9">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.9.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.9.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.9.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.9.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.9.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.9.TVshowTitle))</visible>
+			</item>
+			<item id="10">
+				<label>$INFO[Window(Home).Property(RecommendedEpisode.10.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedEpisode.10.TVshowTitle)] - $INFO[Window(Home).Property(RecommendedEpisode.10.EpisodeNo)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedEpisode.10.File)])</onclick>
+				<thumb>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(tvshow.fanart))]</thumb>
+				<icon>$INFO[Window(Home).Property(RecommendedEpisode.10.Art(thumb))]</icon>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedEpisode.10.TVshowTitle))</visible>
+			</item>
+		</content>
+	</include>
+	<include name="RecentAlbumContent">
+		<content>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.1.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.1.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.1.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.1.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.1.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.2.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.2.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.2.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.2.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.2.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.3.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.3.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.3.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.3.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.3.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.4.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.4.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.4.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.4.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.4.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.5.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.5.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.5.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.5.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.5.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.6.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.6.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.6.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.6.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.6.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.6.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.7.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.7.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.7.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.7.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.7.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.7.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.8.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.8.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.8.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.8.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.8.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.8.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.9.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.9.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.9.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.9.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.9.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.9.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestAlbum.10.Title)]</label>
+				<label2>$INFO[Window.Property(LatestAlbum.10.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.10.Path)]")</onclick>
+				<icon>$INFO[Window.Property(LatestAlbum.10.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestAlbum.10.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestAlbum.10.Title))</visible>
+			</item>
+		</content>
+	</include>
+	<include name="RandomAlbumContent">
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RandomAlbum.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.1.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.1.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.1.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.1.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.1.Title))</visible>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RandomAlbum.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.2.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.2.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.2.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.2.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.2.Title))</visible>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RandomAlbum.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.3.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.3.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.3.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.3.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.3.Title))</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RandomAlbum.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.4.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.4.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.4.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.4.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.4.Title))</visible>
+			</item>
+			<item id="5">
+				<label>$INFO[Window(Home).Property(RandomAlbum.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.5.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.5.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.5.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.5.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.5.Title))</visible>
+			</item>
+			<item id="6">
+				<label>$INFO[Window(Home).Property(RandomAlbum.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.6.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.6.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.6.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.6.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.6.Title))</visible>
+			</item>
+			<item id="7">
+				<label>$INFO[Window(Home).Property(RandomAlbum.7.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.7.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.7.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.7.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.7.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.7.Title))</visible>
+			</item>
+			<item id="8">
+				<label>$INFO[Window(Home).Property(RandomAlbum.8.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.8.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.8.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.8.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.8.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.8.Title))</visible>
+			</item>
+			<item id="9">
+				<label>$INFO[Window(Home).Property(RandomAlbum.9.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.9.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.9.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.9.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.9.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.9.Title))</visible>
+			</item>
+			<item id="10">
+				<label>$INFO[Window(Home).Property(RandomAlbum.10.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RandomAlbum.10.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RandomAlbum.10.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RandomAlbum.10.Thumb )]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomAlbum.10.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomAlbum.10.Title))</visible>
+			</item>
+		</content>	
+	</include>
+	<include name="SuggestedAlbumContent">
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.1.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.1.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.1.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.1.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.1.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.1.Title))</visible>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.2.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.2.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.2.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.2.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.2.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.2.Title))</visible>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.3.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.3.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.3.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.3.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.3.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.3.Title))</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.4.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.4.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.4.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.4.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.4.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.4.Title))</visible>
+			</item>
+			<item id="5">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.5.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.5.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.5.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.5.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.5.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.5.Title))</visible>
+			</item>
+			<item id="6">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.6.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.6.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.6.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.6.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.6.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.6.Title))</visible>
+			</item>
+			<item id="7">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.7.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.7.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.7.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.7.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.7.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.7.Title))</visible>
+			</item>
+			<item id="8">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.8.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.8.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.8.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.8.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.8.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.8.Title))</visible>
+			</item>
+			<item id="9">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.9.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.9.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.9.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.9.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.9.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.9.Title))</visible>
+			</item>
+			<item id="10">
+				<label>$INFO[Window(Home).Property(RecommendedAlbum.10.Title)]</label>
+				<label2>$INFO[Window(Home).Property(RecommendedAlbum.10.Artist)]</label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.10.Play)]</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedAlbum.10.Thumb )]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.10.Fanart)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedAlbum.10.Title))</visible>
+			</item>
+		</content>		
+	</include>
+	<include name="RecentConcertContent">
+		<content>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.1.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.1.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.1.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.1.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.1.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.2.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.2.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.2.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.2.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.2.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.3.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.3.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.3.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.3.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.3.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.4.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.4.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.4.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.4.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.4.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.5.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.5.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.5.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.5.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.5.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.6.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.6.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.6.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.6.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.6.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.7.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.7.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.7.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.7.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.7.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.8.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.8.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.8.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.8.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.8.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.9.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.9.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.9.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.9.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.9.Title))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window.Property(LatestMusicVideo.10.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.10.Path)])</onclick>
+				<icon>$INFO[Window.Property(LatestMusicVideo.10.Thumb)]</icon>
+				<thumb>$INFO[Window.Property(LatestMusicVideo.10.Fanart)]</thumb>
+				<visible>!IsEmpty(Window.Property(LatestMusicVideo.10.Title))</visible>
+			</item>
+		</content>
+	</include>
+	<include name="RandomConcertContent">
+		<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.1.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.1.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.1.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.1.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.1.Title))</visible>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.2.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.2.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.2.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.2.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.2.Title))</visible>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.3.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.3.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.3.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.3.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.3.Title))</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.4.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.4.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.4.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.4.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.4.Title))</visible>
+			</item>
+			<item id="5">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.5.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.5.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.5.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.5.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.5.Title))</visible>
+			</item>
+			<item id="6">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.6.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.6.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.6.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.6.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.6.Title))</visible>
+			</item>
+			<item id="7">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.7.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.7.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.7.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.7.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.7.Title))</visible>
+			</item>
+			<item id="8">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.8.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.8.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.8.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.8.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.8.Title))</visible>
+			</item>
+			<item id="9">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.9.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.9.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.9.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.9.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.9.Title))</visible>
+			</item>
+			<item id="10">
+				<label>$INFO[Window(Home).Property(RandomMusicVideo.10.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.10.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RandomMusicVideo.10.Thumb)]</icon>
+				<thumb>$INFO[Window(Home).Property(RandomMusicVideo.10.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RandomMusicVideo.10.Title))</visible>
+			</item>
+		</content>	
+	</include>
+	<include name="SuggestedConcertContent">
+			<content>
+			<item id="1">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.1.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.1.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.1.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.1.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.1.Title))</visible>
+			</item>
+			<item id="2">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.2.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.2.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.2.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.2.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.2.Title))</visible>
+			</item>
+			<item id="3">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.3.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.3.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.3.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.3.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.3.Title))</visible>
+			</item>
+			<item id="4">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.4.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.4.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.4.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.4.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.4.Title))</visible>
+			</item>
+			<item id="5">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.5.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.5.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.5.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.5.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.5.Title))</visible>
+			</item>
+			<item id="6">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.6.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.6.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.6.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.6.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.6.Title))</visible>
+			</item>
+			<item id="7">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.7.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.7.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.7.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.7.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.7.Title))</visible>
+			</item>
+			<item id="8">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.8.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.8.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.8.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.8.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.8.Title))</visible>
+			</item>
+			<item id="9">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.9.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.9.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.9.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.9.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.9.Title))</visible>
+			</item>
+			<item id="10">
+				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.10.Title)]</label>
+				<label2></label2>
+				<onclick>PlayList.Clear</onclick>
+				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.10.File)])</onclick>
+				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.10.Art(poster))]</icon>
+				<thumb>$INFO[Window(Home).Property(RecommendedMusicVideo.10.Art(fanart))]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(RecommendedMusicVideo.10.Title))</visible>
+			</item>
+		</content>		
+	</include>
+
+	<include name="HomeAddonItemsShelf">
+		<content>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton1))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton1)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton1))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton1))</visible>
+			</item>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton2))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton2)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton2))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton2))</visible>
+			</item>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton3))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton3)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton3))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton3))</visible>
+			</item>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton4))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton4)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton4))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton4))</visible>
+			</item>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton5))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton5)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton5))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton5))</visible>
+			</item>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton6))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton6)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton6))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton6))</visible>
+			</item>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton7))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton7)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton7))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton7))</visible>
+			</item>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton8))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton8)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton8))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton8))</visible>
+			</item>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton9))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton9)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton9))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton9))</visible>
+			</item>
+			<item>
+				<label>$INFO[system.addontitle(Skin.String(HomeShelfAddonButton10))]</label>
+				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton10)])</onclick>
+				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton10))]</icon>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton10))</visible>
+			</item>
+		</content>
+	</include>
+
+
+</includes>
