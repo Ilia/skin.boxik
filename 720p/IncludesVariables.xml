@@ -114,7 +114,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Favourites)">$LOCALIZE[1036]</value>
@@ -130,7 +130,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Favourites)">$LOCALIZE[1036]</value>
@@ -146,7 +146,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Favourites)">$LOCALIZE[1036]</value>
@@ -162,7 +162,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Favourites)">$LOCALIZE[1036]</value>
@@ -178,7 +178,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Favourites)">$LOCALIZE[1036]</value>
@@ -194,7 +194,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Favourites)">$LOCALIZE[1036]</value>
@@ -210,7 +210,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Favourites)">$LOCALIZE[1036]</value>
@@ -226,7 +226,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Favourites)">$LOCALIZE[1036]</value>
@@ -242,7 +242,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Favourites)">$LOCALIZE[1036]</value>
@@ -258,7 +258,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Concerts)">$LOCALIZE[31121]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),LiveTV)">$LOCALIZE[31502]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Music)">$LOCALIZE[2]</value>
-		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Pictures)">$LOCALIZE[10002]</value>
+		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Photos)">$LOCALIZE[10002]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Programs)">$LOCALIZE[10001]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Favourites)">$LOCALIZE[1036]</value>
