@@ -202,10 +202,9 @@
 		</control>
 		<control type="image">
 			<description>LOGO</description>
-			<posx>15</posx>
-			<posy>50</posy>
-			<width>220</width>
-			<height>80</height>
+			<posx>65</posx>
+			<posy>0</posy>
+			<width>120</width>
 			<aspectratio>keep</aspectratio>
 			<texture>boxik.png</texture>
 		</control>
