@@ -814,9 +814,9 @@
 						]"
 				>Conditional</animation>
 	          	<posx>0</posx>
-	          	<posy>63</posy>
+	          	<posy>65</posy>
 	          	<width>1280</width>
-	          	<height>87</height>
+	          	<height>80</height>
 	          	<texture flipy="true" border="12,0,0,0">home/NavbarGlass2.png</texture>
         	</control>
 
@@ -908,8 +908,8 @@
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>1280</width>
-				<height>65</height>
-				<texture>HomeSubNF.png</texture>
+				<height>74</height>
+				<texture>black-back.png</texture>
 			</control>
 
 			<control type="image">
@@ -917,11 +917,11 @@
 				<posy>-48</posy>
 				<width>1280</width>
 				<height>175</height>
-				<texture border="0,6,0,6">home/HomeMenuBack3.png</texture>
+				<texture>home/HomeMenuBack3.png</texture>
 			</control>
 
 			
-			<control type="image.">
+			<control type="image">
 				<posx>0</posx>
 				<posy>-48</posy>
 				<width>1280</width>
