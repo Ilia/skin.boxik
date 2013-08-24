@@ -1,4 +1,4 @@
-<window id="1100" type="dialog">
+<window id="1102" type="dialog">
 	<defaultcontrol>10000</defaultcontrol>
 	<controls>
 		<control type="group">
@@ -20,17 +20,20 @@
 				<effect type="fade" time="400" center="auto" start="100" easing="in" end="0" reversible="false"/>
 			</animation>
 			<control type="image">
-				<height>720</height>
+				<posx>195</posx>
+				<posy>50</posy>
+				<width>900</width>
+				<height>600</height>
 				<texture background="true">dialogs/firstime_bg.png</texture>
 			</control>
 			<control type="label">
 				<description>header label</description>
 				<posx>225</posx>
-				<posy>115</posy>
+				<posy>135</posy>
 				<width>830</width>
 				<height>50</height>
 				<font>font35_title</font>
-				<label>Thank You</label>
+				<label>Your TV Show Library</label>
 				<align>center</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
@@ -39,17 +42,17 @@
 				<scrollspeed>20</scrollspeed>
 			</control>
 			<control type="group">
-				<posx>285</posx>
-				<posy>188</posy>
+				<posx>390</posx>
+				<posy>215</posy>
 				<control type="textbox">
 					<description>textarea</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>710</width>
+					<width>510</width>
 					<height>360</height>
-					<label>You may now begin playing your movies, tv shows and music on your TV with your BOXiK media player.[CR][CR]You may play your media directly, by connecting your USB drive and navigating to Video, Music or Picture section. You may also connect your device to your home network by pressing "Network" button on your remote. Once connected you can add media from your PC directly through BOXiK by going to:
-						[CR]Videos > Add Source > Windows Network
-						[CR]We are working hard to bring you tutorial videos to showcase all the amazing features your BOXiK provides and will provide with free future updates. Please see the "Help" submenu under the Settings menu or selecting the Help button below.
+					<label>It seems that your tv show library is currently empty.
+						[CR]You can add your TV Shows from your USB drive or your networked PC to this library by going to the "Video" section using the button below. 
+						[CR]Alternativly, you can disable this menu in "Home Menu Items" located in "Settings" section. Press the Settings button below to go there now. 
 						[CR]Thank You,
 						BOXiK Team
 						</label>
@@ -62,15 +65,14 @@
 			</control>
 		  	<control type="group" id="10000">
 				<posx>0</posx>
-				<posy>535</posy>
-				
+				<posy>505</posy>
 				<control type="button" id="10">
 					<description>Close button</description>
-					<posx>285</posx>
+					<posx>470</posx>
 					<posy>10</posy>
 					<width>160</width>
 					<height>38</height>
-	        		<label>Videos</label>
+	        		<label>Video</label>
 					<texturenofocus border="10,0,10,0">button-nofocus.png</texturenofocus>
 					<texturefocus border="10,0,10,0">button-focus.png</texturefocus>
 					<align>center</align>
@@ -81,15 +83,14 @@
 					<disabledcolor>white</disabledcolor>
 					<shadowcolor>55000000</shadowcolor>
 					<textoffsety>3</textoffsety>
-					<onleft>13</onleft>
+					<onleft>11</onleft>
 					<onright>11</onright>
 					<onclick>ActivateWindow(Videos,Files,return)</onclick>
 					<onclick>Close</onclick>
-					<onclick>Skin.Setbool(HelpScreen)</onclick>
 				</control>
 				<control type="button" id="11">
 					<description>Close button</description>
-					<posx>465</posx>
+					<posx>650</posx>
 					<posy>10</posy>
 					<width>160</width>
 					<height>38</height>
@@ -104,15 +105,14 @@
 					<disabledcolor>white</disabledcolor>
 					<shadowcolor>55000000</shadowcolor>
 					<textoffsety>3</textoffsety>
-					<onleft>10</onleft>
-					<onright>12</onright>
+					<onleft>11</onleft>
+					<onright>11</onright>
 					<onclick>ActivateWindow(SkinSettings)</onclick>
 					<onclick>Close</onclick>
-					<onclick>Skin.Setbool(HelpScreen)</onclick>
 				</control>
-				<control type="button" id="12">
+				<!-- control type="button" id="11">
 					<description>help button</description>
-					<posx>645</posx>
+					<posx>650</posx>
 					<posy>10</posy>
 					<width>160</width>
 					<height>38</height>
@@ -127,35 +127,12 @@
 					<disabledcolor>white</disabledcolor>
 					<shadowcolor>55000000</shadowcolor>
 					<textoffsety>3</textoffsety>
-					<onleft>11</onleft>
-					<onright>13</onright>
-					<onclick>Close</onclick>
-					<onclick>Skin.Setbool(HelpScreen)</onclick>
-					<onclick>RunAddon(plugin.video.boxik.channel)</onclick>
-					<visible>System.HasAddon(plugin.video.boxik.channel)</visible>
-				</control>
-				<control type="button" id="13">
-					<description>Close button</description>
-					<posx>825</posx>
-					<posy>10</posy>
-					<width>160</width>
-					<height>38</height>
-	        		<label>Close</label>
-					<texturenofocus border="10,0,10,0">button-nofocus.png</texturenofocus>
-					<texturefocus border="10,0,10,0">button-focus.png</texturefocus>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white</textcolor>
-					<focusedcolor>white</focusedcolor>
-					<disabledcolor>white</disabledcolor>
-					<shadowcolor>55000000</shadowcolor>
-					<textoffsety>3</textoffsety>
-					<onleft>12</onleft>
+					<onleft>10</onleft>
 					<onright>10</onright>
 					<onclick>Close</onclick>
-					<onclick>Skin.Setbool(HelpScreen)</onclick>
-				</control>
+					<onclick>RunAddon(plugin.video.boxik.channel)</onclick>
+					<visible>System.HasAddon(plugin.video.boxik.channel)</visible>
+				</control -->
 		  	</control>
 		</control>
 	</controls>
