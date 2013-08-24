@@ -11,7 +11,7 @@
 				<posx>0</posx>
 				<posy>-150</posy>
 				<width>1290</width>
-				<height>256</height>
+				<height>266</height>
 				<texture flipy="true">HomeNowPlayingBack.png</texture>
 				<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
 			</control>
@@ -119,7 +119,7 @@
 				<posx>0</posx>
 				<posy>230r</posy>
 				<width>1290</width>
-				<height>230</height>
+				<height>240</height>
 				<texture>HomeNowPlayingBack.png</texture>
 				<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
 			</control>
