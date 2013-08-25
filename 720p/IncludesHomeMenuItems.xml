@@ -44,12 +44,12 @@
 			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
 			<visible>Library.HasContent(MovieSets)</visible>
 		</control>
-		<control type="button" id="90164">
+		<!-- control type="button" id="90164">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>369</label>
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 			<visible>Library.HasContent(Movies)</visible>
-		</control>
+		</control -->
 		<control type="button" id="90165">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>135</label>
@@ -82,12 +82,12 @@
 			<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
 			<visible>Library.HasContent(TVShows)</visible>
 		</control>
-		<control type="button" id="90174">
+		<!-- control type="button" id="90174">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>369</label>
 			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 			<visible>Library.HasContent(TVShows)</visible>
-		</control>
+		</control -->
 		<control type="button" id="90175">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>135</label>
