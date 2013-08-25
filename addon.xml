@@ -11,6 +11,7 @@
     <import addon="service.boxik.firmware" version="0.0.1"/>
     <import addon="service.skin.fanart" version="0.0.1"/>
     <import addon="plugin.video.boxik.channel" version="0.0.1"/>
+    <import addon="service.sources" version="0.0.1"/>
   </requires>
   <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" debugging="false" effectslowdown="0.75">
     <res width="1280" height="720" aspect="16:9" default="true" folder="720p" />
