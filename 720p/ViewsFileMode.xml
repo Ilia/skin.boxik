@@ -413,8 +413,8 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
-					<!-- ILIA HERE -->
 					<control type="image">
 						<posx>165</posx>
 						<posy>205</posy>
@@ -446,6 +446,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<info>ListItem.Label</info>
+						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
 						<posx>165</posx>
