@@ -18,7 +18,8 @@
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 		<control type="group">
-			<visible>System.HasAddon(service.skin.fanart)</visible>	
+			<animation effect="fade" start="100" end="0" reversable="true" time="400" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004)]">Conditional</animation>
+			<visible>[System.HasAddon(service.skin.fanart) + !Player.HasMedia + !Player.HasAudio]</visible>	
 			<posx>140r</posx>
 			<posy>58r</posy>
 			<control type="label">
@@ -35,7 +36,7 @@
 				<shadowcolor>black</shadowcolor>
 			</control>
 			<control type="label">
-				<description>BG Movie title</description>
+				<description>BG Movie year</description>
 				<posx>0</posx>
 				<posy>0</posy>
 				<height>25</height>
@@ -47,7 +48,7 @@
 				<textcolor>grey2</textcolor>
 			</control>
 			<control type="label">
-				<description>BG Movie title</description>
+				<description>BG Movie genre</description>
 				<posx>0</posx>
 				<posy>22</posy>
 				<height>25</height>
