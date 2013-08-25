@@ -58,9 +58,9 @@
 			</control>
 			<control type="image">
 				<description>LOGO</description>
-				<posx>110</posx>
+				<posx>97</posx>
 				<posy>10</posy>
-				<width>80</width>
+				<width>100</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
 				<texture>boxik.png</texture>
