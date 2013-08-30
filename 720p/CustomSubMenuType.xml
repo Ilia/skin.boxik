@@ -184,7 +184,7 @@
 						<description>Pictures</description>
 						<label>$LOCALIZE[10002]</label>
 						<onclick>Dialog.Close(2116)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,Pictures)</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,Photos)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
 					<item id="11">

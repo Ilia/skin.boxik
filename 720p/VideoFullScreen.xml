@@ -10,8 +10,8 @@
 			<control type="image" id="1">
 				<posx>0</posx>
 				<posy>-150</posy>
-				<width>1280</width>
-				<height>256</height>
+				<width>1290</width>
+				<height>266</height>
 				<texture flipy="true">HomeNowPlayingBack.png</texture>
 				<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
 			</control>
@@ -93,12 +93,12 @@
 				<visible>!Skin.HasSetting(HidePauseInfo) + !IsEmpty(VideoPlayer.Plot) + Player.Paused + !Player.Caching</visible>
 				<animation effect="slide" end="-300,160" time="100" tween="back" easing="out" condition="!Window.IsActive(VideoOSD) + Skin.HasSetting(HideSeekBarOSD)" reversible="true">Conditional</animation>
 				<posx>320</posx>
-				<posy>390r</posy>
+				<posy>348r</posy>
 				<control type="image" id="1">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>920</width>
-					<height>200</height>
+					<height>150</height>
 					<texture border="20">ContentPanel.png</texture>
 					<colordiffuse>AAFFFFFF</colordiffuse>
 				</control>
@@ -107,7 +107,7 @@
 					<posx>20</posx>
 					<posy>10</posy>
 					<width>880</width>
-					<height>180</height>
+					<height>120</height>
 					<align>justify</align>
 					<textcolor>white</textcolor>
 					<font>font13</font>
@@ -118,8 +118,8 @@
 			<control type="image" id="1">
 				<posx>0</posx>
 				<posy>230r</posy>
-				<width>1280</width>
-				<height>230</height>
+				<width>1290</width>
+				<height>240</height>
 				<texture>HomeNowPlayingBack.png</texture>
 				<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
 			</control>
@@ -231,7 +231,7 @@
 				</control>
 				<control type="label" id="1">
 					<description>Studio label</description>
-					<posx>20</posx>
+					<posx>0</posx>
 					<posy>30</posy>
 					<width>910</width>
 					<height>25</height>
@@ -244,7 +244,7 @@
 				</control>
 				<control type="label" id="1">
 					<description>TV Show label</description>
-					<posx>20</posx>
+					<posx>0</posx>
 					<posy>30</posy>
 					<width>910</width>
 					<height>25</height>
@@ -270,7 +270,7 @@
 				</control>
 				<control type="label" id="1">
 					<description>LiveTV Info label</description>
-					<posx>20</posx>
+					<posx>0</posx>
 					<posy>30</posy>
 					<width>910</width>
 					<height>25</height>
@@ -282,7 +282,7 @@
 					<visible>VideoPlayer.Content(LiveTV)</visible>
 				</control>
 				<control type="grouplist" id="1">
-					<posx>20</posx>
+					<posx>0</posx>
 					<posy>60</posy>
 					<width>910</width>
 					<height>35</height>

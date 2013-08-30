@@ -57,14 +57,14 @@
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Path))">Skin.SetString(HomeItem.4.Path,ActivateWindow(Videos,Files,return))</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Sub))">Skin.SetString(HomeItem.4.Sub,Videos)</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Type))">Skin.SetString(HomeItem.4.Type,Videos)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + Library.HasContent(Movies) + IsEmpty(Skin.String(HomeItem.5.Label))">Skin.SetString(HomeItem.5.Label,$LOCALIZE[20342])</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + Library.HasContent(Movies) + IsEmpty(Skin.String(HomeItem.5.Path))">Skin.SetString(HomeItem.5.Path,ActivateWindow(Videos,MovieTitles,return))</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + Library.HasContent(Movies) + IsEmpty(Skin.String(HomeItem.5.Sub))">Skin.SetString(HomeItem.5.Sub,Movies)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + Library.HasContent(Movies) + IsEmpty(Skin.String(HomeItem.5.Type))">Skin.SetString(HomeItem.5.Type,Movies)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + Library.HasContent(TVShows) + IsEmpty(Skin.String(HomeItem.6.Label))">Skin.SetString(HomeItem.6.Label,$LOCALIZE[20343])</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + Library.HasContent(TVShows) + IsEmpty(Skin.String(HomeItem.6.Path))">Skin.SetString(HomeItem.6.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + Library.HasContent(TVShows) + IsEmpty(Skin.String(HomeItem.6.Sub))">Skin.SetString(HomeItem.6.Sub,TVShows)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + Library.HasContent(TVShows) + IsEmpty(Skin.String(HomeItem.6.Type))">Skin.SetString(HomeItem.6.Type,TVShows)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Label))">Skin.SetString(HomeItem.5.Label,$LOCALIZE[20342])</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Path))">Skin.SetString(HomeItem.5.Path,ActivateWindow(Videos,MovieTitles,return))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Sub))">Skin.SetString(HomeItem.5.Sub,Movies)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Type))">Skin.SetString(HomeItem.5.Type,Movies)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Label))">Skin.SetString(HomeItem.6.Label,$LOCALIZE[20343])</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Path))">Skin.SetString(HomeItem.6.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Sub))">Skin.SetString(HomeItem.6.Sub,TVShows)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Type))">Skin.SetString(HomeItem.6.Type,TVShows)</onload>
 		<!-- onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.7.Label))">Skin.SetString(HomeItem.7.Label,$LOCALIZE[31332])</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.7.Sub))">Skin.SetString(HomeItem.7.Sub,Movies)</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.7.Type))">Skin.SetString(HomeItem.7.Type,Movies)</onload -->
@@ -132,7 +132,7 @@
 		<align>center</align>
 		<aligny>center</aligny>
 		<font>font12</font>
-		<textcolor>grey2</textcolor>
+		<textcolor>grey3</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<texturefocus border="5">-</texturefocus>
 		<texturenofocus border="5">-</texturenofocus>
@@ -202,10 +202,9 @@
 		</control>
 		<control type="image">
 			<description>LOGO</description>
-			<posx>15</posx>
-			<posy>50</posy>
-			<width>220</width>
-			<height>80</height>
+			<posx>65</posx>
+			<posy>0</posy>
+			<width>120</width>
 			<aspectratio>keep</aspectratio>
 			<texture>boxik.png</texture>
 		</control>
@@ -973,7 +972,7 @@
 		</control>
 	</include>
 	<include name="Clock">
-		<control type="label">
+		<!-- control type="label">
 			<description>date label</description>
 			<posx>15r</posx>
 			<posy>40</posy>
@@ -986,7 +985,7 @@
 			<shadowcolor>black</shadowcolor>
 			<info>System.Date</info>
 			<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
-		</control>
+		</control -->
 		<control type="label">
 			<description>time label</description>
 			<posx>15r</posx>
@@ -1526,14 +1525,13 @@
 			</animation>
 			<visible>[System.IdleTime(31) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio]</visible>
 			<posx>0</posx>
-			<posy>690</posy>
+			<posy>687</posy>
 			<width>1280</width>
 			<height>20</height>
 			<align>center</align>
 			<aligny>center</aligny>
 			<font>font12</font>
-			<textcolor>white</textcolor>
-			<shadowcolor>black</shadowcolor>
+			<textcolor>grey</textcolor>
 			<label>press any key</label>
 		</control>
 	</include>

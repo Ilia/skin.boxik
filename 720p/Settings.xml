@@ -59,9 +59,9 @@
 			</control>
 			<control type="image">
 				<description>LOGO</description>
-				<posx>110</posx>
+				<posx>97</posx>
 				<posy>10</posy>
-				<width>80</width>
+				<width>100</width>
 				<height>80</height>
 				<aspectratio>keep</aspectratio>
 				<texture>boxik.png</texture>
@@ -222,7 +222,7 @@
 				<height>446</height>
 				<aspectratio>stretch</aspectratio>
 				<fadetime>600</fadetime>
-				<texture background="true">special://skin/backgrounds/settings.jpg</texture>
+				<texture background="true">special://skin/backgrounds/screenshot000.png</texture>
 			</control>
 			<control type="image">
 				<posx>272</posx>
@@ -256,28 +256,5 @@
 		<include>CommonNowPlaying</include>
 		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>
-		<control type="image">
-			<description>Section header image</description>
-			<posx>20</posx>
-			<posy>3</posy>
-			<width>35</width>
-			<height>35</height>
-			<aspectratio>keep</aspectratio>
-			<texture>icon_system.png</texture>
-		</control>
-		<control type="grouplist">
-			<posx>65</posx>
-			<posy>5</posy>
-			<width>1000</width>
-			<height>30</height>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<itemgap>5</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[5]</label>
-			</control>
-		</control>
-		<include>Clock</include>
 	</controls>
 </window>

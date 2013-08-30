@@ -17,6 +17,50 @@
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
+		<control type="group">
+			<animation effect="fade" start="100" end="0" reversable="true" time="400" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004)]">Conditional</animation>
+			<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+			<visible>[System.HasAddon(service.skin.fanart) + !Player.HasMedia + !Player.HasAudio + Library.HasContent(Movies)]</visible>	
+			<posx>140r</posx>
+			<posy>58r</posy>
+			<control type="label">
+				<description>BG Movie title</description>
+				<posx>205r</posx>
+				<posy>0</posy>
+				<height>25</height>
+				<width>350</width>
+				<label>$INFO[Window(Home).Property(Movie.Title)]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<textcolor>white</textcolor>
+			</control>
+			<control type="label">
+				<description>BG Movie year</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<height>25</height>
+				<width>400</width>
+				<label>($INFO[Window(Home).Property(Movie.Year)])</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>grey2</textcolor>
+			</control>
+			<control type="label">
+				<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+				<description>BG Movie genre</description>
+				<posx>0</posx>
+				<posy>22</posy>
+				<height>25</height>
+				<width>400</width>
+				<label>$INFO[Window(Home).Property(Movie.Genre)]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13</font>
+				<textcolor>grey</textcolor>
+			</control>
+		</control>
 		<control type="image">
 			<description>LOGO</description>
 			<posx>130r</posx>
@@ -796,44 +840,13 @@
 		       	<height>87</height>
 		       	<texture border="0,0,0,12">home/NavbarGlass.png</texture>
    			</control>
-   			
-   			<!--control type="image" description="Top glass border">
-		        <posx>0</posx>
-		       	<posy>-77</posy>
-		       	<width>1920</width>
-		       	<height>87</height>
-		       	<texture border="0,0,0,12">home/NavbarGlass.png</texture>
-   			</control -->
-
-   			<!--control type="label">
-   				<animation effect="fade" start="100" end="0" time="100" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004)]">Condition</animation>
-   				<font>font12</font>
-				<textcolor>grey</textcolor>
-				<focusedcolor>white</focusedcolor>
-				<texturefocus border="5">-</texturefocus>
-				<texturenofocus border="5">-</texturenofocus>
-				<pulseonselect>false</pulseonselect>
-   				<posx>0</posx>
-		       	<posy>-30</posy>
-   				<visible>[
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Music) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Online)
-						]</visible>
-				<label>Shelf</label>
-				<width>1280</width>
-				<height>30</height>
-				<align>center</align>
-				<aligny>center</aligny>
-   			</control -->
 
    			<control type="image" description="Bottom glass border">
-				<animation effect="zoom" start="100,100" end="100,87" time="100" 
+				<animation effect="zoom" start="100,100" end="100,66" time="100" 
 					condition="![
 						StringCompare(Container(9000).ListItem.Property(SubMenu),Videos) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) |
+						StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) + Library.hasContent(Movies) |
+						StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) + Library.hasContent(TVShows) |
 						StringCompare(Container(9000).ListItem.Property(SubMenu),Music) |
 						StringCompare(Container(9000).ListItem.Property(SubMenu),Settings) |
 						StringCompare(Container(9000).ListItem.Property(SubMenu),PlayDisc) |
@@ -845,9 +858,9 @@
 						]"
 				>Conditional</animation>
 	          	<posx>0</posx>
-	          	<posy>30</posy>
-	          	<width>1920</width>
-	          	<height>160</height>
+	          	<posy>65</posy>
+	          	<width>1280</width>
+	          	<height>80</height>
 	          	<texture flipy="true" border="12,0,0,0">home/NavbarGlass2.png</texture>
         	</control>
 
@@ -937,17 +950,25 @@
 
 			<control type="image">
 				<posx>0</posx>
+				<posy>0</posy>
+				<width>1280</width>
+				<height>74</height>
+				<texture>black-back.png</texture>
+			</control>
+
+			<control type="image">
+				<posx>0</posx>
 				<posy>-48</posy>
-				<width>1920</width>
+				<width>1280</width>
 				<height>175</height>
-				<texture border="0,6,0,6">home/HomeMenuBack3.png</texture>
+				<texture>home/HomeMenuBack3.png</texture>
 			</control>
 
 			
 			<control type="image">
 				<posx>0</posx>
 				<posy>-48</posy>
-				<width>1920</width>
+				<width>1280</width>
 				<height>175</height>
 				<texture border="0,6,0,6">home/NavbarOverlay.png</texture>
 			</control>
