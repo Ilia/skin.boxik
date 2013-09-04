@@ -10,7 +10,7 @@
 	<controls>
 		<control type="group">
 			<visible>!StringCompare(VideoPlayer.Title,XBMC-Intro-Video.mkv)</visible>
-			<control type="slider" id="87">
+			<control type="slider." id="87">
 				<description>Seek Slider</description>
 				<posx>430</posx>
 				<posy>81r</posy>
@@ -26,12 +26,12 @@
 				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
 			</control>
 			<control type="group" id="100">
-				<posx>365</posx>
-				<posy>50r</posy>
+				<posx>280</posx>
+				<posy>85r</posy>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<control type="button" id="608">
+				<control type="button." id="608">
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>45</width>
@@ -146,7 +146,7 @@
 			<!-- LiveTV -->
 			<control type="group" id="100">
 				<posx>325</posx>
-				<posy>60r</posy>
+				<posy>88r</posy>
 				<defaultcontrol always="true">601</defaultcontrol>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
@@ -249,7 +249,7 @@
 					<onclick>ActivateWindow(PVROSDGuide)</onclick>
 					<onclick>Dialog.Close(VideoOSD)</onclick>
 				</control>
-				<control type="label" id="606">
+				<control type="label." id="606">
 					<posx>330</posx>
 					<posy>0</posy>
 					<width>385</width>
@@ -264,8 +264,8 @@
 			</control>
 			<!-- !LiveTV -->
 			<control type="group">
-				<posx>500r</posx>
-				<posy>50r</posy>
+				<posx>250r</posx>
+				<posy>85r</posy>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
@@ -357,7 +357,7 @@
 			<!-- LiveTV -->
 			<control type="group">
 				<posx>240r</posx>
-				<posy>60r</posy>
+				<posy>88r</posy>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
