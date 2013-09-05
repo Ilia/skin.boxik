@@ -46,7 +46,7 @@
 				<visible>Player.ChapterCount + !VideoPlayer.Content(LiveTV) + [!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)]</visible>
 				<visible>SubString(Player.ChapterName,$LOCALIZE[21396],left)</visible>
 			</control>
-			<control type="label" id="1">
+			<!-- control type="label" id="1">
 				<description>Channel Group label</description>
 				<posx>30</posx>
 				<posy>5</posy>
@@ -59,7 +59,7 @@
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[VideoPlayer.ChannelGroup,$LOCALIZE[31509]: ]</label>
 				<visible>VideoPlayer.Content(LiveTV)</visible>
-			</control>
+			</control -->
 			<control type="label" id="1">
 				<description>time label</description>
 				<posx>15r</posx>
@@ -75,7 +75,7 @@
 				<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
 				<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
 			</control>
-			<control type="group." id="1">
+			<!-- control type="group." id="1">
 				<visible>!Skin.HasSetting(HidePauseInfo) + !IsEmpty(VideoPlayer.Plot) + Player.Paused + !Player.Caching</visible>
 				<animation effect="slide" end="-300,160" time="100" tween="back" easing="out" condition="!Window.IsActive(VideoOSD) + Skin.HasSetting(HideSeekBarOSD)" reversible="true">Conditional</animation>
 				<posx>320</posx>
@@ -100,6 +100,15 @@
 					<label>$INFO[VideoPlayer.Plot]</label>
 					<autoscroll time="4000" delay="3000" repeat="5000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
+			</control -->
+			<control type="image" id="1">
+				<posx>4</posx>
+				<posy>200r</posy>
+				<width>1270</width>
+				<height>160</height>
+				<texture border="20">ContentPanel.png</texture>
+				<visible>!Skin.HasSetting(HideSeekBarOSD)</visible>
+				<visible>!Window.IsActive(VideoOSD)</visible>
 			</control>
 			<control type="image" id="1">
 				<posx>4</posx>
@@ -107,54 +116,41 @@
 				<width>1270</width>
 				<height>180</height>
 				<texture border="20">ContentPanel.png</texture>
-				<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
+				<visible>!Skin.HasSetting(HideSeekBarOSD)</visible>
+				<visible>Window.IsActive(VideoOSD)</visible>
 			</control>
-			<control type="group" id="1">	
-				<control type="image" id="1">
-					<description>Movie cover image</description>
-					<posx>20</posx>
-					<posy>370r</posy>
-					<width>300</width>
-					<height>330</height>
-					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<bordertexture border="12">ThumbShadow.png</bordertexture>
-					<bordersize>12</bordersize>
-				</control>		
+			<control type="image" id="1">
+				<description>Movie cover image</description>
+				<posx>20</posx>
+				<posy>330</posy>
+				<width>300</width>
+				<height>330</height>
+				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<bordertexture border="12">ThumbShadow.png</bordertexture>
+				<bordersize>12</bordersize>
 				<visible>VideoPlayer.Content(Movies)</visible>
 				<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
 			</control>
-			<control type="group" id="1">
-				<control type="image." id="1">
-					<description>clearart image</description>
-					<posx>10</posx>
-					<posy>260r</posy>
-					<width>300</width>
-					<height>230</height>
-					<texture>$INFO[Player.Art(tvshow.clearart)]</texture>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<visible>!IsEmpty(Player.Art(tvshow.clearart))</visible>
-				</control>			
-				<control type="image" id="1">
-					<description>cover image</description>
-					<posx>45</posx>
-					<posy>260r</posy>
-					<width>260</width>
-					<height>200</height>
-					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<bordertexture border="12">ThumbShadow.png</bordertexture>
-					<bordersize>12</bordersize>
-				</control>
+			<control type="image" id="1">
+				<description>cover image</description>
+				<posx>45</posx>
+				<posy>460</posy>
+				<width>260</width>
+				<height>200</height>
+				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
+				<aspectratio aligny="bottom">keep</aspectratio>
+				<bordertexture border="12">ThumbShadow.png</bordertexture>
+				<bordersize>12</bordersize>
 				<visible>VideoPlayer.Content(Episodes)</visible>
 				<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
 			</control>
 			<control type="image" id="1">
 				<description>cover image</description>
-				<posx>20</posx>
-				<posy>260r</posy>
-				<width>300</width>
-				<height>230</height>
+				<posx>45</posx>
+				<posy>460</posy>
+				<width>260</width>
+				<height>200</height>
 				<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<bordertexture border="12">ThumbShadow.png</bordertexture>
@@ -166,7 +162,7 @@
 				<visible>!Skin.HasSetting(HideSeekBarOSD) | Window.IsActive(VideoOSD)</visible>
 				<posx>330</posx>
 				<posy>215r</posy>
-				<control type="label" id="1">
+				<!-- control type="label" id="1">
 					<description>Heading label</description>
 					<posx>0</posx>
 					<posy>-10</posy>
@@ -195,7 +191,7 @@
 					<shadowcolor>black</shadowcolor>
 					<visible>![VideoPlayer.Content(LiveTV) + Player.Recording] + Player.Paused</visible>
 					<animation effect="slide" start="0,0" end="0,25" time="0" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(MusicVideos) + !VideoPlayer.Content(LiveTV)">conditional</animation>
-				</control>
+				</control -->
 				<control type="image" id="1">
 					<posy>0</posy>
 					<width>50</width>
@@ -219,14 +215,14 @@
 					<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
 				</control>
 				<control type="label" id="1">
-					<description>Studio label</description>
+					<description>Genre label</description>
 					<posx>0</posx>
 					<posy>30</posy>
 					<width>620</width>
 					<height>25</height>
 					<align>left</align>
 					<font>font12</font>
-					<label>$INFO[VideoPlayer.Studio]</label>
+					<label>$INFO[VideoPlayer.Genre]</label>
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<visible>VideoPlayer.Content(Movies)</visible>

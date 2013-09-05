@@ -38,9 +38,9 @@
       	</control>
 		<control type="group">
 			<animation effect="slide" end="-100000,-415000" time="0" tween="back" easing="out" condition="[Window.IsVisible(home) + !Control.isVisible(8000)]" reversible="true">Conditional</animation>
-			<posx>120r</posx>
+			<posx>115r</posx>
 			<posy>175r</posy>
-			
+
 			<control type="group">
 				<posx>0</posx>
 				<posy>0</posy>

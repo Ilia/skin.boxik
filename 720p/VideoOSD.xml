@@ -10,44 +10,12 @@
 	<controls>
 		<control type="group">
 			<visible>!StringCompare(VideoPlayer.Title,XBMC-Intro-Video.mkv)</visible>
-			<control type="slider." id="87">
-				<description>Seek Slider</description>
-				<posx>430</posx>
-				<posy>81r</posy>
-				<width>720</width>
-				<height>16</height>
-				<onup>702</onup>
-				<ondown>26</ondown>
-				<action>seek</action>
-				<texturesliderbar>seekslider2.png</texturesliderbar>
-				<textureslidernib>OSD_slider_nibNF.png</textureslidernib>
-				<textureslidernibfocus>OSD_slider_nib.png</textureslidernibfocus>
-				<animation effect="fade" time="200">VisibleChange</animation>
-				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks) | VideoPlayer.Content(LiveTV)]</visible>
-			</control>
 			<control type="group" id="100">
 				<posx>280</posx>
 				<posy>85r</posy>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<control type="button." id="608">
-					<posx>0</posx>
-					<posy>0</posy>
-					<width>45</width>
-					<height>45</height>
-					<label>210</label>
-					<font>-</font>
-					<texturefocus>OSDHomeBtnFO.png</texturefocus>
-					<texturenofocus>OSDHomeBtnNF.png</texturenofocus>
-					<onleft>705</onleft>
-					<onright>600</onright>
-					<onup>608</onup>
-					<ondown>608</ondown>
-					<onclick>Dialog.Close(VideoOSD,true)</onclick>
-					<onclick>FullScreen</onclick>
-					<visible>!Window.IsActive(script.pseudotv.TVOverlay.xml)</visible>
-				</control>
 				<control type="button" id="600">
 					<posx>45</posx>
 					<posy>0</posy>
