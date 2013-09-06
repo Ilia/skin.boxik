@@ -62,13 +62,13 @@
 			</control -->
 			<control type="label" id="1">
 				<description>time label</description>
-				<posx>15r</posx>
-				<posy>5</posy>
+				<posx>30r</posx>
+				<posy>20</posy>
 				<width>345</width>
 				<height>30</height>
 				<align>right</align>
 				<aligny>center</aligny>
-				<font>font27_title</font>
+				<font>font16</font>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 				<label>$INFO[System.Time]</label>
