@@ -53,8 +53,10 @@
 			<height>30</height>
 			<aspectratio>keep</aspectratio>
 			<texture>icon_video.png</texture>
+			<visible>!Control.IsVisible(515)</visible>
 		</control>
 		<control type="grouplist">
+			<visible>!Control.IsVisible(515)</visible>
 			<posx>70</posx>
 			<posy>18</posy>
 			<width>1000</width>
