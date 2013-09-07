@@ -404,7 +404,7 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="image">
-						<posx>180</posx>
+						<posx>170</posx>
 						<posy>130</posy>
 						<width>30</width>
 						<height>30</height>
