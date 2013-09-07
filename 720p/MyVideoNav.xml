@@ -47,16 +47,18 @@
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
 			<description>Section header image</description>
-			<posx>20</posx>
-			<posy>3</posy>
-			<width>35</width>
-			<height>35</height>
+			<posx>30</posx>
+			<posy>18</posy>
+			<width>30</width>
+			<height>30</height>
 			<aspectratio>keep</aspectratio>
 			<texture>icon_video.png</texture>
+			<visible>!Control.IsVisible(515)</visible>
 		</control>
 		<control type="grouplist">
-			<posx>65</posx>
-			<posy>5</posy>
+			<visible>!Control.IsVisible(515)</visible>
+			<posx>70</posx>
+			<posy>18</posy>
 			<width>1000</width>
 			<height>30</height>
 			<orientation>horizontal</orientation>
@@ -64,12 +66,28 @@
 			<itemgap>5</itemgap>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[3]</label>
+				<label>Movies</label>
+				<visible>StringCompare(Container.FolderName, Title) + Container.Content(Movies)</visible>
 			</control>
 			<control type="label">
 				<include>WindowTitleCommons</include>
-				<label>[COLOR=blue] - [/COLOR]$INFO[Container.FolderName]</label>
-				<visible>!IsEmpty(Container.FolderName)</visible>
+				<label>TV Shows</label>
+				<visible>StringCompare(Container.FolderName, Title) + Container.Content(TVShows)</visible>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>Videos</label>
+				<visible>![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Seasons)]</visible>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label> - </label>
+				<visible>![Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Seasons)] + !IsEmpty(Container.FolderName)</visible>
+			</control>
+			<control type="label">
+				<include>WindowTitleCommons</include>
+				<label>$INFO[Container.FolderName]</label>
+				<visible>!StringCompare(Container.FolderName, Title) + !IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
 		<control type="group">

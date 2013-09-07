@@ -87,10 +87,20 @@
 					</control>
 					<control type="image">
 						<posx>660</posx>
-						<posy>14</posy>
+						<posy>9</posy>
 						<width>25</width>
-						<height>21</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<height>25</height>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable + !Skin.HasSetting(HideWatchStatus)</visible>
+					</control>
+					<control type="image">
+						<posx>660</posx>
+						<posy>9</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable + !Skin.HasSetting(HideWatchStatus)</visible>
 					</control>
 					<control type="image">
@@ -206,10 +216,20 @@
 					</control>					
 					<control type="image">
 						<posx>660</posx>
-						<posy>14</posy>
+						<posy>9</posy>
 						<width>25</width>
-						<height>21</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<height>25</height>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable + !Skin.HasSetting(HideWatchStatus)</visible>
+					</control>
+					<control type="image">
+						<posx>660</posx>
+						<posy>9</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable + !Skin.HasSetting(HideWatchStatus)</visible>
 					</control>
 					<control type="image">
@@ -328,13 +348,23 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="image">
-						<posx>170</posx>
+						<posx>184</posx>
 						<posy>130</posy>
 						<width>30</width>
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+					</control>
+					<control type="image">
+						<posx>184</posx>
+						<posy>130</posy>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="186" width="216">
@@ -383,13 +413,22 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="image">
-						<posx>180</posx>
+						<posx>184</posx>
 						<posy>130</posy>
 						<width>30</width>
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+					</control>
+					<control type="image">
+						<posx>184</posx>
+						<posy>130</posy>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 					</control>
 				</focusedlayout>
 				<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="279" width="216">
@@ -416,13 +455,24 @@
 						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
-						<posx>165</posx>
-						<posy>205</posy>
-						<width>40</width>
-						<height>40</height>
+						<posx>155</posx>
+						<posy>207</posy>
+						<width>30</width>
+						<height>30</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay].png</texture>
-						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						 <visible>!Skin.HasSetting(HideWatchStatus)</visible>
+					</control>
+					<control type="image">
+						<posx>155</posx>
+						<posy>207</posy>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						 <visible>!Skin.HasSetting(HideWatchStatus)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="276" width="216">
@@ -449,12 +499,23 @@
 						<visible>!StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="image">
-						<posx>165</posx>
-						<posy>205</posy>
-						<width>40</width>
-						<height>40</height>
+						<posx>155</posx>
+						<posy>207</posy>
+						<width>30</width>
+						<height>30</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+					</control>
+					<control type="image">
+						<posx>155</posx>
+						<posy>207</posy>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
 					</control>
 				</focusedlayout>
@@ -506,12 +567,23 @@
 						<texture background="true">$VAR[BannerThumb]</texture>
 					</control>
 					<control type="image">
-						<posx>495</posx>
-						<posy>65</posy>
-						<width>40</width>
-						<height>40</height>
+						<posx>500</posx>
+						<posy>75</posy>
+						<width>25</width>
+						<height>25</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+					</control>
+					<control type="image">
+						<posx>500</posx>
+						<posy>75</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
 					</control>
 				</itemlayout>
@@ -526,12 +598,23 @@
 						<texture background="true">$VAR[BannerThumb]</texture>
 					</control>
 					<control type="image">
-						<posx>495</posx>
-						<posy>65</posy>
-						<width>40</width>
-						<height>40</height>
+						<posx>500</posx>
+						<posy>75</posy>
+						<width>25</width>
+						<height>25</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+					</control>
+					<control type="image">
+						<posx>500</posx>
+						<posy>75</posy>
+						<width>25</width>
+						<height>25</height>
+						<aspectratio>keep</aspectratio>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
 					</control>
 				</focusedlayout>
@@ -657,10 +740,20 @@
 					</control>					
 					<control type="image">
 						<posx>1045</posx>
-						<posy>14</posy>
+						<posy>9</posy>
 						<width>25</width>
-						<height>21</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<height>25</height>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable + !Skin.HasSetting(HideWatchStatus)</visible>
+					</control>
+					<control type="image">
+						<posx>1045</posx>
+						<posy>9</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable + !Skin.HasSetting(HideWatchStatus)</visible>
 					</control>
 					<control type="image">
@@ -778,10 +871,20 @@
 					</control>					
 					<control type="image">
 						<posx>1045</posx>
-						<posy>14</posy>
+						<posy>9</posy>
 						<width>25</width>
-						<height>21</height>
-						<texture>$INFO[ListItem.Overlay]</texture>
+						<height>25</height>
+						<texture>OverlayStatus/unwatched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable + !Skin.HasSetting(HideWatchStatus)</visible>
+					</control>
+					<control type="image">
+						<posx>1045</posx>
+						<posy>9</posy>
+						<width>25</width>
+						<height>25</height>
+						<texture>OverlayStatus/watched.png</texture>
+						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						<visible>Window.IsVisible(Videos) + !ListItem.IsResumable + !Skin.HasSetting(HideWatchStatus)</visible>
 					</control>
 					<control type="image">
