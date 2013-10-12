@@ -194,10 +194,19 @@
 			<control type="group">
 				<posx>290</posx>
 				<posy>100</posy>
-				<control type="label" id="2">
+				<control type="label" id="1">
 					<description>Label 2</description>
 					<posx>0</posx>
 					<posy>0</posy>
+					<width>750</width>
+					<label>Firmware: $INFO[Window(Home).Property(firmware.version)]</label>
+					<font>font13</font>
+					<visible>System.HasAddon(service.boxik.firmware)</visible>
+				</control>
+				<control type="label" id="2">
+					<description>Label 2</description>
+					<posx>0</posx>
+					<posy>35</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
@@ -205,7 +214,7 @@
 				<control type="label" id="3">
 					<description>Label 3</description>
 					<posx>0</posx>
-					<posy>35</posy>
+					<posy>70</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
@@ -213,7 +222,7 @@
 				<control type="label" id="4">
 					<description>Label 4</description>
 					<posx>0</posx>
-					<posy>70</posy>
+					<posy>105</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
@@ -221,7 +230,7 @@
 				<control type="label" id="5">
 					<description>Label 5</description>
 					<posx>0</posx>
-					<posy>105</posy>
+					<posy>140</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
@@ -229,7 +238,7 @@
 				<control type="label" id="6">
 					<description>Label 6</description>
 					<posx>0</posx>
-					<posy>140</posy>
+					<posy>175</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
@@ -237,7 +246,7 @@
 				<control type="label" id="7">
 					<description>Label 7</description>
 					<posx>0</posx>
-					<posy>175</posy>
+					<posy>210</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
@@ -245,7 +254,7 @@
 				<control type="label" id="8">
 					<description>Label 8</description>
 					<posx>0</posx>
-					<posy>210</posy>
+					<posy>245</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
@@ -253,7 +262,7 @@
 				<control type="label" id="9">
 					<description>Label 9</description>
 					<posx>0</posx>
-					<posy>245</posy>
+					<posy>280</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
@@ -261,7 +270,7 @@
 				<control type="label" id="10">
 					<description>Label 10</description>
 					<posx>0</posx>
-					<posy>280</posy>
+					<posy>315</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
@@ -269,7 +278,7 @@
 				<control type="label" id="11">
 					<description>Label 11</description>
 					<posx>0</posx>
-					<posy>315</posy>
+					<posy>350</posy>
 					<width>750</width>
 					<label>-</label>
 					<font>font13</font>
