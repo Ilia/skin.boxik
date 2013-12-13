@@ -201,7 +201,7 @@
 					<width>750</width>
 					<label>Firmware: $INFO[Window(Home).Property(firmware.version)]</label>
 					<font>font13</font>
-					<visible>System.HasAddon(service.boxik.firmware)</visible>
+					<visible>System.HasAddon(service.boxik.firmware) + !isEmpty(Window(Home).Property(firmware.version))</visible>
 				</control>
 				<control type="label" id="2">
 					<description>Label 2</description>
