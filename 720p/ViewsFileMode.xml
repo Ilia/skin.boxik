@@ -348,23 +348,26 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="image">
-						<posx>184</posx>
-						<posy>130</posy>
+						<posx>180</posx>
+						<posy>126</posy>
 						<width>30</width>
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>OverlayStatus/unwatched.png</texture>
 						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+						<visible>Container.Content(Episodes)</visible>
 					</control>
 					<control type="image">
-						<posx>184</posx>
-						<posy>130</posy>
+						<posx>180</posx>
+						<posy>126</posy>
 						<width>30</width>
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>OverlayStatus/watched.png</texture>
 						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+						<visible>Container.Content(Episodes)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout condition="!Container.Content(Movies) + !Container.Content(Seasons) + !Container.Content(TVShows) + !Container.Content(Sets)" height="186" width="216">
@@ -413,22 +416,26 @@
 						<info>ListItem.Label</info>
 					</control>
 					<control type="image">
-						<posx>184</posx>
-						<posy>130</posy>
+						<posx>180</posx>
+						<posy>126</posy>
 						<width>30</width>
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>OverlayStatus/unwatched.png</texture>
 						<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
+						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+						<visible>Container.Content(Episodes)</visible>
 					</control>
 					<control type="image">
-						<posx>184</posx>
-						<posy>130</posy>
+						<posx>180</posx>
+						<posy>126</posy>
 						<width>30</width>
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<texture>OverlayStatus/watched.png</texture>
 						<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+						<visible>Container.Content(Episodes)</visible>
 					</control>
 				</focusedlayout>
 				<itemlayout condition="Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets)" height="279" width="216">

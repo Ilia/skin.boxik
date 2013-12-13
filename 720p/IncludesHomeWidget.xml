@@ -205,24 +205,9 @@
 				<posx>0</posx>
 				<posy>45</posy>
 				<visible>Library.HasContent(Movies)</visible>
-				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) + !Skin.HasSetting(HideHomeVideoWidget)</visible>
+				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) + !Skin.HasSetting(HideHomeVideoWidget) + StringCompare(Container(9000).ListItem.Property(SubMenu),Movies)</visible>
 				<include>VisibleFadeEffect</include>
 				
-				<!-- control type="label">
-					<visible allowhiddenfocus="true">!Control.HasFocus(8000)</visible>
-					<include>VisibleFadeEffect</include>
-					<description>Title label</description>
-					<posx>0</posx>
-					<posy>330</posy>
-					<height>20</height>
-					<width>1280</width>
-					<label>$VAR[WidgetTitle]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>grey</textcolor>
-				</control -->
-
 				<control type="image" description="Top glass border">
 					<include>VisibleFadeEffect</include>
 					<visible allowhiddenfocus="true">[!Control.HasFocus(8000) + IntegerGreaterThan(Container(8000).NumItems,0)]</visible>
