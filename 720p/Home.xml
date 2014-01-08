@@ -63,7 +63,7 @@
 		</control>
 		<control type="image">
 			<description>LOGO</description>
-			<posx>30</posx>
+			<posx>80</posx>
 			<posy>60r</posy>
 			<width>80</width>
 			<aspectratio aligny="top" align="left">keep</aspectratio>
