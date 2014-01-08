@@ -17,9 +17,6 @@
 			<visible>Skin.HasSetting(ShowWeatherFanart) + !IsEmpty(Skin.String(WeatherFanartDir))</visible>
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
-		
-		
-
 		<control type="image">
 			<posx>0</posx>
 			<posy>100r</posy>
@@ -30,6 +27,7 @@
 			<texture>floor.png</texture>
 		</control>
 		<control type="group">
+			<animation effect="slide" reversable="true" start="0,0" end="-2000,0" time="200" condition="[Player.Caching | Player.Playing | Player.Seeking]">Conditional</animation>
 			<control type="image">
 				<posx>80</posx>
 				<posy>40r</posy>
