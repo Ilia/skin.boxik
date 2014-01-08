@@ -3,32 +3,34 @@
 	<include name="PosterWrapView">
 		<control type="grouplist">
 			<visible>Control.IsVisible(501)</visible>
-			<posx>60</posx>
-			<posy>80</posy>
-			<width>1160</width>
-			<height>460</height>
+			<posx>0</posx>
+			<posy>160</posy>
+			<width>2300</width>
+			<height>1230</height>
 			<onup>9000</onup>
 			<ondown>61</ondown>
 			<usecontrolcoords>true</usecontrolcoords>
 			<include>VisibleFadeEffect</include>
 			<control type="fixedlist" id="501">
-				<visible>Container.Content(Movies) | Container.Content(Seasons) | Container.Content(TVShows) | Container.Content(Sets) | Container.Content(MusicVideos)</visible>
+				<visible>Container.Content(Movies) | Container.Content(Sets) | Container.Content(MusicVideos)</visible>
 				<visible>!Container.Content(LiveTV)</visible>
-				<posx>-183</posx>
+				<posx>-133</posx>
 				<posy>0</posy>
 				<width>1526</width>
-				<height>390</height>
+				<height>490</height>
 				<onleft>501</onleft>
 				<onright>501</onright>
 				<onup>2</onup>
 				<ondown>60</ondown>
 				<viewtype label="31028">bigwrap</viewtype>
 				<pagecontrol>60</pagecontrol>
-				<scrolltime>200</scrolltime>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<focusposition>3</focusposition>
 				<orientation>horizontal</orientation>
 				<preloaditems>4</preloaditems>
+				<movement>2</movement>
 				<itemlayout height="310" width="218">
+
 					<control type="image">
 						<posx>2</posx>
 						<posy>40</posy>
@@ -39,38 +41,27 @@
 						<bordersize>4</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
+
+					<!-- watched status needs updating -->
 					<control type="group">
-						<visible>Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
+						<posx>175</posx>
+						<posy>312</posy>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
 						<control type="image">
-							<posx>111</posx>
-							<posy>40</posy>
-							<width>105</width>
-							<height>105</height>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<texture background="true" fallback="banner/DefaultWatched.png">banner/$LOCALIZE[16102].png</texture>
-							<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+							<texture>OverlayStatus/watched.png</texture>
+							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 						<control type="image">
-							<posx>111</posx>
-							<posy>40</posy>
-							<width>105</width>
-							<height>105</height>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<texture background="true" fallback="banner/DefaultUnwatched.png">banner/$LOCALIZE[16101].png</texture>
-							<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+							<texture>OverlayStatus/unwatched.png</texture>
+							<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						</control>
-						<control type="image">
-							<posx>111</posx>
-							<posy>40</posy>
-							<width>105</width>
-							<height>105</height>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<texture background="true" fallback="banner/DefaultInProgress.png">banner/$LOCALIZE[31357].png</texture>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-					</control>					
+					</control>	
+
 				</itemlayout>
-				<focusedlayout height="310" width="218">
+				<focusedlayout height="310" width="218">		
 					<control type="image">
 						<posx>-2</posx>
 						<posy>36</posy>
@@ -84,41 +75,29 @@
 						<animation reversible="false" effect="zoom" end="-2,36,222,318" start="-28,0,284,390" time="200">unfocus</animation>
 					</control>
 					<control type="group">
-						<visible>Skin.HasSetting(ViewStatusBanner) + !IsEmpty(ListItem.Overlay)</visible>
+						<posx>175</posx>
+						<posy>307</posy>
+						<width>30</width>
+						<height>30</height>
+						<aspectratio>keep</aspectratio>
+						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
+						<animation type="focus">
+							<effect type="fade" start="0" end="100" time="200" />
+							<effect type="slide" start="0,0" end="40,40" time="200" />
+						</animation>
+						<animation type="unfocus">
+							<effect type="fade" start="100" end="0" time="200" />
+							<effect type="slide" end="0,0" start="40,40" time="200" />
+						</animation>
 						<control type="image">
-							<posx>112</posx>
-							<posy>39</posy>
-							<width>105</width>
-							<height>105</height>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<texture background="true" fallback="banner/DefaultWatched.png">banner/$LOCALIZE[16102].png</texture>
-							<animation reversible="false" effect="zoom" start="112,39,105,105" end="134,3,118,118" time="200">focus</animation>
-							<animation reversible="false" effect="zoom" end="112,39,105,105" start="134,3,118,118" time="200">unfocus</animation>
-							<visible>StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+							<texture>OverlayStatus/watched.png</texture>
+							<visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
 						</control>
 						<control type="image">
-							<posx>112</posx>
-							<posy>39</posy>
-							<width>105</width>
-							<height>105</height>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<texture background="true" fallback="banner/DefaultUnwatched.png">banner/$LOCALIZE[16101].png</texture>
-							<animation reversible="false" effect="zoom" start="112,39,105,105" end="134,3,118,118" time="200">focus</animation>
-							<animation reversible="false" effect="zoom" end="112,39,105,105" start="134,3,118,118" time="200">unfocus</animation>
-							<visible>!StringCompare(ListItem.Overlay,OverlayWatched.png) + !ListItem.IsResumable</visible>
+							<texture>OverlayStatus/unwatched.png</texture>
+							<visible>stringcompare(ListItem.Overlay,OverlayUnWatched.png)</visible>
 						</control>
-						<control type="image">
-							<posx>112</posx>
-							<posy>39</posy>
-							<width>105</width>
-							<height>105</height>
-							<fadetime>IconCrossfadeTime</fadetime>
-							<texture background="true" fallback="banner/DefaultInProgress.png">banner/$LOCALIZE[31357].png</texture>
-							<animation reversible="false" effect="zoom" start="112,39,105,105" end="134,3,118,118" time="200">focus</animation>
-							<animation reversible="false" effect="zoom" end="112,39,105,105" start="134,3,118,118" time="200">unfocus</animation>
-							<visible>ListItem.IsResumable</visible>
-						</control>
-					</control>					
+					</control>			
 					<control type="image">
 						<posx>6</posx>
 						<posy>44</posy>
@@ -129,26 +108,9 @@
 						<animation reversible="false" effect="zoom" start="6,44,170,180" end="-24,4,240,250" time="200">focus</animation>
 						<animation reversible="false" effect="zoom" end="6,44,170,180" start="-24,4,240,250" time="200">unfocus</animation>
 					</control>
-					<control type="image">
-						<posx>175</posx>
-						<posy>310</posy>
-						<width>50</width>
-						<height>50</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[ListItem.Overlay]</texture>
-						<animation type="focus">
-							<effect type="fade" start="0" end="100" time="200" />
-							<effect type="slide" start="0,0" end="40,40" time="200" />
-						</animation>
-						<animation type="unfocus">
-							<effect type="fade" start="100" end="0" time="200" />
-							<effect type="slide" end="0,0" start="40,40" time="200" />
-						</animation>
-						<visible>!Skin.HasSetting(ViewStatusBanner) + !Skin.HasSetting(HideWatchStatus)</visible>
-					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
+			<!--control type="scrollbar" id="60">
 				<posx>140</posx>
 				<posy>0</posy>
 				<width>880</width>
@@ -163,105 +125,10 @@
 				<showonepage>false</showonepage>
 				<orientation>horizontal</orientation>
 				<visible>Control.IsVisible(501)</visible>
-			</control>
-		</control>
-		<control type="group">
-			<visible>Control.IsVisible(501)</visible>
-			<control type="image">
-				<posx>56</posx>
-				<posy>120</posy>
-				<width>128</width>
-				<height>310</height>
-				<texture>SideFade.png</texture>
-			</control>
-			<control type="image">
-				<posx>1094</posx>
-				<posy>120</posy>
-				<width>128</width>
-				<height>310</height>
-				<texture flipx="true">SideFade.png</texture>
-			</control>
+			</control -->
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(501) + [Container.Content(Movies) | Container.Content(Sets) | Container.Content(MusicVideos)]</visible>
-			<control type="label">
-				<posx>30</posx>
-				<posy>500</posy>
-				<width>1220</width>
-				<height>35</height>
-				<font>font28_title</font>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<scroll>true</scroll>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$VAR[MainItemLabel]</label>
-			</control>
-			<control type="label">
-				<posx>0</posx>
-				<posy>540</posy>
-				<width>1280</width>
-				<height>35</height>
-				<font>font30</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<scroll>true</scroll>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Year]</label>
-			</control>
-			<control type="grouplist">
-				<description>Media Genre Flagging</description>
-				<posx>100</posx>
-				<posy>580</posy>
-				<width>1080</width>
-				<align>center</align>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<include>MultiVideoGenreFlagging</include>
-				<visible>Skin.HasSetting(View501GenreIcons)</visible>
-			</control>
-			<control type="grouplist">
-				<description>Media Genre Flagging</description>
-				<posx>135</posx>
-				<posy>635</posy>
-				<width>1080</width>
-				<align>center</align>
-				<itemgap>0</itemgap>
-				<orientation>horizontal</orientation>
-				<include>GenreText</include>
-				<visible>Skin.HasSetting(View501GenreIcons)</visible>
-			</control>			
-			<control type="label">
-				<posx>0</posx>
-				<posy>580</posy>
-				<width>1280</width>
-				<height>20</height>
-				<font>font13</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<scroll>true</scroll>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Duration,$LOCALIZE[2050] , $LOCALIZE[12391]]</label>
-				<visible>!Skin.HasSetting(View501GenreIcons)</visible>
-			</control>
-			<control type="grouplist">
-				<description>Media Codec Flagging Images</description>
-				<posx>0</posx>
-				<posy>610</posy>
-				<width>1280</width>
-				<align>center</align>
-				<itemgap>2</itemgap>
-				<orientation>horizontal</orientation>
-				<include>VideoMPAAFlaggingConditions</include>
-				<include>VideoCodecFlaggingConditions</include>
-				<include>AudioCodecFlaggingConditions</include>
-				<include>AudioChannelsFlaggingConditions</include>
-				<include>AspectCodecFlaggingConditions</include>
-				<include>VideoTypeHackFlaggingConditions</include>
-				<visible>!Skin.HasSetting(View501GenreIcons)</visible>
-			</control>
 		</control>
 		<control type="group">
 			<visible>Control.IsVisible(501) + Container.Content(Seasons)</visible>
