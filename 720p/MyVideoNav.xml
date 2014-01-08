@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">500</defaultcontrol>
 	<!-- Container.Content(Addons) -->
 	<allowoverlay>no</allowoverlay>
-	<views>500,50,51,550,551,560,501,508,504,503,515,505,511</views>
+	<views>500,50,560,501,508,503,515,505</views>
 	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	<onload condition="Container.Content(Addons)">Container.SetViewMode(551)</onload>
 	<onload condition="Container.Content(Movies) + !Library.HasContent(Movies)">ActivateWindow(1101)</onload>
@@ -15,17 +15,17 @@
 			<include>Window_OpenClose_Animation</include>
 			<include>CommonRootView</include>
 			<!-- view id = 50 -->
-			<include>FullWidthList</include>
+			<!-- include>FullWidthList</include -->
 			<!-- view id = 51 -->
 			<include>ThumbnailView</include>
 			<!-- view id = 500 -->
 			<include>PosterWrapView</include>
 			<!-- view id = 501 -->
-			<include>PosterWrapView2_Fanart</include>
+			<!-- include>PosterWrapView2_Fanart</include -->
 			<!-- view id = 508 -->
 			<include>MediaListView3</include>
 			<!-- view id = 503 -->
-			<include>MediaListView2</include>
+			<!-- include>MediaListView2</include -->
 			<!-- view id = 504 -->
 			<include>MediaListView4</include>
 			<!-- view id = 515 -->
@@ -33,10 +33,10 @@
 			<!-- view id = 505 -->
 			<include>MusicVideoInfoListView</include>
 			<!-- view id = 511 -->
-			<include>AddonInfoListView1</include>
-			<!-- view id = 550 -->
-			<include>AddonInfoThumbView1</include>
+			<!-- include>AddonInfoThumbView1</include -->
 			<!-- view id = 551 -->
+			<!-- include>AddonInfoListView1</include -->
+			<!-- view id = 550 -->
 			<include>LiveTVView1</include>
 			<!-- view id = 560 -->
 		</control>
@@ -47,7 +47,7 @@
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
 			<description>Section header image</description>
-			<posx>30</posx>
+			<posx>80</posx>
 			<posy>18</posy>
 			<width>30</width>
 			<height>30</height>
@@ -57,7 +57,7 @@
 		</control>
 		<control type="grouplist">
 			<visible>!Control.IsVisible(515)</visible>
-			<posx>70</posx>
+			<posx>120</posx>
 			<posy>18</posy>
 			<width>1000</width>
 			<height>30</height>
@@ -90,9 +90,40 @@
 				<visible>!StringCompare(Container.FolderName, Title) + !IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
+
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
-			<posx>-250</posx>
+			<control type="image">
+				<posx>80</posx>
+				<posy>40r</posy>
+				<width>12</width>
+				<height>12</height>
+				<aspectratio>keep</aspectratio>
+				<texture>arrow-big-up.png</texture>
+				<visible>[ Control.IsVisible(501) | Control.IsVisible(515)] </visible>
+			</control>
+			<control type="image">
+				<posx>80</posx>
+				<posy>40r</posy>
+				<width>12</width>
+				<height>12</height>
+				<aspectratio>keep</aspectratio>
+				<texture>arrow-big-left.png</texture>
+				<visible>[Control.IsVisible(500) | Control.IsVisible(50) | Control.IsVisible(560) | Control.IsVisible(508) | Control.IsVisible(503) | Control.IsVisible(505)]</visible>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>46r</posy>
+				<width>1000</width>
+				<height>30</height>
+				<align>left</align>
+				<font>font12</font>
+				<label>View Options</label>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(KioskMode)</visible>
+			<posx>-260</posx>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>
@@ -169,15 +200,7 @@
 					<visible>Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(503) | Control.IsVisible(504)</visible>
 					<visible>Window.IsVisible(Videos) + [Container.Content(Movies) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 				</control>
-				<control type="radiobutton" id="92">
-					<description>individual Genre Icons</description>
-					<textwidth>170</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>31091</label>
-					<onclick>Skin.ToggleSetting(View501GenreIcons)</onclick>
-					<selected>Skin.HasSetting(View501GenreIcons)</selected>
-					<visible>Control.IsVisible(501) + [Container.Content(TVShows) | Container.Content(Movies)]</visible>
-				</control>
+				
 				<control type="radiobutton" id="93">
 					<description>TVShow Banners Banners</description>
 					<textwidth>170</textwidth>
@@ -204,15 +227,6 @@
 					<onclick>Skin.ToggleSetting(View515SeasonArt)</onclick>
 					<selected>Skin.HasSetting(View515SeasonArt)</selected>
 					<visible>Control.IsVisible(515) + [Container.Content(Seasons) | Container.Content(Episodes)]</visible>
-				</control>
-				<control type="radiobutton" id="96">
-					<description>Show Watched Banners</description>
-					<textwidth>170</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>31304</label>
-					<onclick>Skin.ToggleSetting(ViewStatusBanner)</onclick>
-					<selected>Skin.HasSetting(ViewStatusBanner)</selected>
-					<visible>Control.IsVisible(501)</visible>
 				</control>
 				<control type="radiobutton" id="97">
 					<description>Show ExtraFanArt Toggle</description>

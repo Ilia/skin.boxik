@@ -36,16 +36,14 @@
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
 			<description>Section header image</description>
-			<posx>30</posx>
-			<posy>18</posy>
+			<include>HeaderIconPosition</include>
 			<width>30</width>
 			<height>30</height>
 			<aspectratio>keep</aspectratio>
 			<texture>icon_music.png</texture>
 		</control>
 		<control type="grouplist">
-			<posx>70</posx>
-			<posy>18</posy>
+			<include>HeaderTitlePosition</include>
 			<width>1000</width>
 			<height>30</height>
 			<orientation>horizontal</orientation>
@@ -63,7 +61,27 @@
 		</control>
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
-			<posx>-250</posx>
+			<control type="image">
+				<posx>80</posx>
+				<posy>40r</posy>
+				<width>12</width>
+				<height>12</height>
+				<aspectratio>keep</aspectratio>
+				<texture>arrow-big-left.png</texture>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>46r</posy>
+				<width>1000</width>
+				<height>30</height>
+				<align>left</align>
+				<font>font12</font>
+				<label>View Options</label>
+			</control>
+		</control>
+		<control type="group">
+			<visible>!Skin.HasSetting(KioskMode)</visible>
+			<posx>-260</posx>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>

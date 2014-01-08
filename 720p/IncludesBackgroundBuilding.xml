@@ -140,7 +140,7 @@
 			<aspectratio>stretch</aspectratio>
 			<include>VisibleFadeEffect</include>
 			<texture>floor.png</texture>
-			<visible>!Control.IsVisible(515)</visible>
+			<visible>![Control.IsVisible(515) | Control.IsVisible(501)]</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
@@ -230,10 +230,10 @@
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(501)</visible>
 				<control type="image">
-					<posx>50</posx>
-					<posy>50</posy>
-					<width>1180</width>
-					<height>610</height>
+					<posx>-50</posx>
+					<posy>-50</posy>
+					<width>2180</width>
+					<height>1010</height>
 					<texture border="15">ContentPanel.png</texture>
 				</control>
 				<control type="image">
@@ -241,7 +241,7 @@
 					<posy>652</posy>
 					<width>1180</width>
 					<height>64</height>
-					<texture border="15">ContentPanelMirror.png</texture>
+					<texture border="15">ContentPanelMirror..png</texture>
 				</control>
 			</control>
 			<control type="group">

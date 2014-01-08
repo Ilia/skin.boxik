@@ -169,7 +169,7 @@
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SideBladeLeft">
-		<animation effect="slide" start="0,0" end="250,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
+		<animation effect="slide" start="0,0" end="260,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001) | Control.HasFocus(8999)">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-300,0" time="400" tween="quadratic" easing="out" condition="ControlGroup(9000).HasFocus | Control.HasFocus(9001)">WindowClose</animation>
 		<animation effect="slide" start="0,0" end="-50,0" time="300" tween="quadratic" easing="out" condition="![ControlGroup(9000).HasFocus | Control.HasFocus(9001)]">WindowClose</animation>
 		<animation effect="slide" start="-50,0" end="0,0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
@@ -185,7 +185,7 @@
 			<texturefocus>-</texturefocus>
 			<visible>true</visible>
 		</control>
-		<control type="button" id="9001">
+		<!-- control type="button" id="9001">
 			<posx>250</posx>
 			<posy>260</posy>
 			<width>42</width>
@@ -193,7 +193,7 @@
 			<font>-</font>
 			<texturefocus>HasSub.png</texturefocus>
 			<texturenofocus>HasSub.png</texturenofocus>
-		</control>
+		</control -->
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
@@ -975,7 +975,7 @@
 	<include name="Clock">
 		<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
 		<control type="group">
-			<posx>240r</posx>
+			<posx>300r</posx>
 			<posy>20</posy>
 			<visible>Skin.HasSetting(homepageWeatherinfo) + !IsEmpty(Weather.Plugin)</visible>
 			<include>Window_OpenClose_Animation</include>
@@ -1022,7 +1022,7 @@
 		</control>
 		<control type="label">
 			<description>time label</description>
-			<posx>30r</posx>
+			<posx>80r</posx>
 			<posy>20</posy>
 			<width>345</width>
 			<height>30</height>
@@ -1568,5 +1568,12 @@
 			<label>press any key</label>
 		</control>
 	</include>
-
+	<include name="HeaderIconPosition">
+		<posx>80</posx>
+		<posy>18</posy>
+	</include>		
+	<include name="HeaderTitlePosition">
+		<posx>120</posx>
+		<posy>18</posy>
+	</include>
 </includes>

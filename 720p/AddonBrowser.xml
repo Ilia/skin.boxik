@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
-	<views>50,51,550,551</views>
+	<views>50,51,551, 550</views>
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
@@ -12,7 +12,7 @@
 			<!-- view id = 50 -->
 			<include>FullWidthList</include>
 			<!-- view id = 51 -->
-			<include>AddonInfoListView1</include>
+			<include>AddonInfoListView12</include>
 			<!-- view id = 550 -->
 			<include>AddonInfoThumbView1</include>
 			<!-- view id = 551 -->
