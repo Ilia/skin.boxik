@@ -309,6 +309,8 @@
 						<include>ButtonInfoDialogStrip</include>
 						<label>208</label>
 						<altlabel>1024</altlabel>
+						
+						<usealttexture>Container.Content(TVShows)</usealttexture>
 					</control>
 					<control type="button" id="299" description="Cinema">
 			          <visible>Container.Content(Movies) + system.hasaddon(script.cinema.experience)</visible>
