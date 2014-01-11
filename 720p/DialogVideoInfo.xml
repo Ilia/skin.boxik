@@ -309,7 +309,6 @@
 						<include>ButtonInfoDialogStrip</include>
 						<label>208</label>
 						<altlabel>1024</altlabel>
-						<usealttexture>Container.Content(TVShows)</usealttexture>
 					</control>
 					<control type="button" id="299" description="Cinema">
 			          <visible>Container.Content(Movies) + system.hasaddon(script.cinema.experience)</visible>
@@ -373,7 +372,7 @@
 					</control -->
 					<control type="button" id="102">
 						<description>Fetch TvTunes stuff</description>
-						<include>ButtonInfoDialogsCommonValues</include>
+						<include>ButtonInfoDialogStrip</include>
 						<label>31127</label>
 						<onclick>XBMC.RunScript(script.tvtunes,mode=solo&amp;tvpath=$INFO[ListItem.FilenameAndPath]&amp;tvname=$INFO[ListItem.TVShowTitle])</onclick>
 						<visible>Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes) + Container.Content(TVShows)</visible>
