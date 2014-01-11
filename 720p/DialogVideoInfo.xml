@@ -15,8 +15,7 @@
 					<effect type="fade" start="100" end="0" delay="29000" time="3000" />
 				</animation -->
                 <include>DimensionsFullscreen</include>
-                <colordiffuse>FFFFFFFF</colordiffuse>
-                <texture background="true" fallback="MediaBladeSub.png">$INFO[Listitem.Property(Fanart_Image)]</texture>                
+                <texture background="true" fallback="special://skin/backgrounds/SKINDEFAULT.png">$INFO[Listitem.Property(Fanart_Image)]</texture>                
            	</control>
 
            	<control type="image">
@@ -309,7 +308,7 @@
 						<include>ButtonInfoDialogStrip</include>
 						<label>208</label>
 						<altlabel>1024</altlabel>
-						
+
 						<usealttexture>Container.Content(TVShows)</usealttexture>
 					</control>
 					<control type="button" id="299" description="Cinema">
