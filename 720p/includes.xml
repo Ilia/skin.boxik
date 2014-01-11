@@ -183,6 +183,8 @@
 		<font>font12_title</font>
 		<texturefocus>button-focus.png</texturefocus>
 		<texturenofocus>-</texturenofocus>
+		<alttexturefocus>button-focus.png</alttexturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
 		<pulseonselect>false</pulseonselect>
 	</include>
 	<include name="SideBladeLeft">
