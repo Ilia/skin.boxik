@@ -159,7 +159,7 @@
 				</control>
 				<control type="image">
 					<description>LOGO</description>
-					<posx>60</posx>
+					<posx>90</posx>
 					<posy>10</posy>
 					<width>110</width>
 					<height>80</height>

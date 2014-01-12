@@ -9,7 +9,7 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<posx>580</posx>
+			<posx>280</posx>
 			<animation effect="slide" start="700,0" end="0,0" time="400" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
 			<animation effect="slide" start="-400,0" end="0,0" time="400" tween="quadratic" easing="out" condition="[Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="700,0" time="400" tween="quadratic" easing="out" condition="![Window.IsVisible(MovieInformation) | Window.IsVisible(MusicInformation)]">WindowClose</animation>
@@ -41,14 +41,15 @@
 			<control type="group">
 				<animation effect="fade" delay="400" start="0" end="100" time="200">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
-				<control type="label" id="411">
+				
+				<control type="label" id="4111">
 					<description>header label</description>
 					<posx>660</posx>
-					<posy>40</posy>
+					<posy>50</posy>
 					<width>630</width>
 					<height>30</height>
 					<font>font13_title</font>
-					<label>1023</label>
+					<label>[UPPERCASE]Browse for new share[/UPPERCASE]</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>selected</textcolor>
@@ -57,7 +58,7 @@
 				<control type="label" id="412">
 					<description>Path label</description>
 					<posx>660</posx>
-					<posy>70</posy>
+					<posy>80</posy>
 					<width>630</width>
 					<height>30</height>
 					<font>font13</font>
@@ -67,9 +68,16 @@
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
+				<control type="image">
+					<posx>680</posx>
+					<posy>-100</posy>
+					<width>400</width>
+					<height>920</height>
+					<texture>black-back2.png</texture>
+				</control>
 				<control type="grouplist" id="9000">
-					<posx>20</posx>
-					<posy>460</posy>
+					<posx>700</posx>
+					<posy>120</posy>
 					<width>221</width>
 					<height>225</height>
 					<itemgap>5</itemgap>
@@ -107,15 +115,15 @@
 						<label>749</label>
 					</control>
 				</control>
-				<control type="image">
-					<posx>245</posx>
+				<!-- control type="image">
+					<posx>445</posx>
 					<posy>460</posy>
 					<width>420</width>
 					<height>210</height>
 					<texture border="5">button-nofocus.png</texture>
-				</control>
+				</control -->
 				<control type="image">
-					<posx>250</posx>
+					<posx>596</posx>
 					<posy>465</posy>
 					<width>410</width>
 					<height>200</height>
@@ -124,7 +132,7 @@
 					<visible>!SubString(Control.GetLabel(416),*)</visible>
 				</control>
 				<control type="image">
-					<posx>250</posx>
+					<posx>596</posx>
 					<posy>465</posy>
 					<width>410</width>
 					<height>200</height>
@@ -136,9 +144,9 @@
 					<posx>20</posx>
 					<posy>120</posy>
 					<width>640</width>
-					<height>321</height>
+					<height>520</height>
 					<onleft>9000</onleft>
-					<onright>60</onright>
+					<onright>9000</onright>
 					<onup>450</onup>
 					<ondown>450</ondown>
 					<pagecontrol>60</pagecontrol>
@@ -214,6 +222,7 @@
 					<height>321</height>
 					<onleft>9000</onleft>
 					<onright>60</onright>
+					<onleft>60</onleft>
 					<onup>451</onup>
 					<ondown>451</ondown>
 					<pagecontrol>60</pagecontrol>
@@ -282,25 +291,25 @@
 						</control>
 					</focusedlayout>
 				</control>
-				<control type="scrollbar" id="60">
+				<!--control type="scrollbar" id="60">
 					<posx>650</posx>
 					<posy>120</posy>
 					<width>25</width>
-					<height>320</height>
+					<height>520</height>
 					<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 					<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 					<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
 					<textureslidernib>ScrollBarNib.png</textureslidernib>
 					<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
 					<onleft>450</onleft>
-					<onright>450</onright>
+					<onright>9000</onright>
 					<showonepage>false</showonepage>
 					<orientation>vertical</orientation>
-				</control>
+				</control -->
 				<control type="label">
 					<description>Page label</description>
 					<posx>660</posx>
-					<posy>680</posy>
+					<posy>670</posy>
 					<width>560</width>
 					<height>30</height>
 					<align>right</align>
@@ -313,7 +322,7 @@
 				<control type="label">
 					<description>Page label</description>
 					<posx>660</posx>
-					<posy>680</posy>
+					<posy>670</posy>
 					<width>560</width>
 					<height>30</height>
 					<align>right</align>

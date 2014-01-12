@@ -18,28 +18,6 @@
 			<animation effect="fade" time="200">WindowClose</animation>
 		</control>
 		<control type="image">
-			<description>Section header image</description>
-			<posx>30</posx>
-			<posy>18</posy>
-			<width>30</width>
-			<height>30</height>
-			<aspectratio>keep</aspectratio>
-			<texture>icon_weather.png</texture>
-		</control>
-		<control type="grouplist">
-			<posx>70</posx>
-			<posy>18</posy>
-			<width>1000</width>
-			<height>30</height>
-			<orientation>horizontal</orientation>
-			<align>left</align>
-			<itemgap>5</itemgap>
-			<control type="label">
-				<include>WindowTitleCommons</include>
-				<label>$LOCALIZE[8]</label>
-			</control>
-		</control>
-		<control type="image">
 			<posx>0</posx>
 			<posy>100r</posy>
 			<width>1280</width>
@@ -47,6 +25,26 @@
 			<aspectratio>stretch</aspectratio>
 			<include>VisibleFadeEffect</include>
 			<texture>floor.png</texture>
+		</control>
+		<control type="group">
+			<animation effect="slide" reversable="true" start="0,0" end="-2000,0" time="200" condition="[Player.Caching | Player.Playing | Player.Seeking]">Conditional</animation>
+			<control type="image">
+				<posx>80</posx>
+				<posy>40r</posy>
+				<width>12</width>
+				<height>12</height>
+				<aspectratio>keep</aspectratio>
+				<texture>arrow-big-left.png</texture>
+			</control>
+			<control type="label">
+				<posx>100</posx>
+				<posy>46r</posy>
+				<width>1000</width>
+				<height>30</height>
+				<align>left</align>
+				<font>font12</font>
+				<label>View Options</label>
+			</control>
 		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
@@ -719,7 +717,7 @@
 		<include>MainWindowMouseButtons</include>
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
-			<posx>-250</posx>
+			<posx>-260</posx>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>
@@ -856,6 +854,6 @@
 				<include>CommonNowPlaying_Controls</include>
 			</control>
 		</control>
-		<include>Clock</include>
+		<!-- include>Clock</include -->
 	</controls>
 </window>

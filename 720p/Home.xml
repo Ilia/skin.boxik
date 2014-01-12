@@ -21,14 +21,14 @@
 			<animation effect="fade" start="100" end="0" reversable="true" time="400" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004)]">Conditional</animation>
 			<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
 			<visible>[System.HasAddon(service.skin.fanart) + !Player.HasMedia + !Player.HasAudio + Library.HasContent(Movies)]</visible>	
-			<posx>30r</posx>
+			<posx>80r</posx>
 			<posy>73r</posy>
 			<control type="label">
 				<description>BG Movie title</description>
-				<posx>100r</posx>
+				<posx>150r</posx>
 				<posy>0</posy>
 				<height>25</height>
-				<width>350</width>
+				<width>300</width>
 				<label>$INFO[Window(Home).Property(Movie.Title)]</label>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -53,7 +53,7 @@
 				<posx>0</posx>
 				<posy>22</posy>
 				<height>25</height>
-				<width>400</width>
+				<width>350</width>
 				<label>$INFO[Window(Home).Property(Movie.Genre)]</label>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -63,7 +63,7 @@
 		</control>
 		<control type="image">
 			<description>LOGO</description>
-			<posx>30</posx>
+			<posx>80</posx>
 			<posy>60r</posy>
 			<width>80</width>
 			<aspectratio aligny="top" align="left">keep</aspectratio>
