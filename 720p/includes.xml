@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include file="Custom_Overlay.xml" />
+	<!-- include file="Custom_Overlay.xml" / -->
 	<include file="defaults.xml" />
 	<include file="DialogMediaSource.xml" />
 	<include file="IncludesVariables.xml" />
