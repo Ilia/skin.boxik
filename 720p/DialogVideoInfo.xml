@@ -9,14 +9,9 @@
             <animation effect="fade" time="800" start="100" end="0">WindowClose</animation>
 
 			<control type="image">
-               	<!-- animation type="Conditional" condition="true" loop="true">	
-					<effect type="fade" start="0" end="100" time="100" />
-					<effect type="zoom" center="auto" start="130" end="100" time="30000" />
-					<effect type="fade" start="100" end="0" delay="29000" time="3000" />
-				</animation -->
                 <include>DimensionsFullscreen</include>
-                <texture background="true" fallback="special://skin/backgrounds/SKINDEFAULT.png">$INFO[Listitem.Property(Fanart_Image)]</texture>                
-           	</control>
+                <texture background="true" fallback="special://skin/backgrounds/SKINDEFAULT.png">$INFO[Listitem.Property(Fanart_Image)]</texture>
+            </control>
 
            	<control type="image">
                  <posx>-100</posx>
