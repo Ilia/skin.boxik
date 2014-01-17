@@ -2,7 +2,7 @@
 <includes>
 	<!-- include file="Custom_Overlay.xml" / -->
 	<include file="defaults.xml" />
-	<include file="DialogMediaSource.xml" />
+	<!-- include file="DialogMediaSource.xml" / -->
 	<include file="IncludesVariables.xml" />
 	<include file="ViewsVideoLibrary.xml" />
 	<include file="ViewsMusicLibrary.xml" />
@@ -23,6 +23,7 @@
 	<include file="weather\MapAlerts.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
+
 	<include name="KBurnsAnimateFanart">
 		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateFanArt)">Conditional</animation>
 		<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateFanArt)">Conditional</animation>
