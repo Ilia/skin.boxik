@@ -42,19 +42,20 @@
 				<animation effect="fade" delay="400" start="0" end="100" time="200">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				
-				<control type="label" id="4111">
+				<control type="label" id="411">
 					<description>header label</description>
 					<posx>660</posx>
 					<posy>50</posy>
 					<width>630</width>
 					<height>30</height>
 					<font>font13_title</font>
-					<label>[UPPERCASE]Browse for new share[/UPPERCASE]</label>
+					<label>[UPPERCASE]$LOCALIZE[1023][/UPPERCASE]</label>
 					<align>right</align>
 					<aligny>center</aligny>
 					<textcolor>selected</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
+
 				<control type="label" id="412">
 					<description>Path label</description>
 					<posx>660</posx>
