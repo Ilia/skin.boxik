@@ -10,7 +10,7 @@
 
 			<control type="image">
                 <include>DimensionsFullscreen</include>
-                <texture background="true" fallback="special://skin/backgrounds/SKINDEFAULT.png">$INFO[Listitem.Property(Fanart_Image)]</texture>
+                <texture background="true" fallback="special://skin/backgrounds/SKINDEFAULT.jpg">$INFO[Listitem.Property(Fanart_Image)]</texture>
             </control>
 
            	<control type="image">
