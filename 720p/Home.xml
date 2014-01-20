@@ -404,7 +404,6 @@
 						<bordersize>5</bordersize>
 						<visible>!IsEmpty(Player.Art(poster))</visible>
 					</control>
-
 					<control type="image">
 						<description>Cover image</description>
 						<posx>20</posx>
@@ -420,12 +419,12 @@
 					<control type="group">
 						<animation effect="slide" reversable="true" start="0,0" end="120,0" time="200" condition="IsEmpty(Player.Art(poster))">Conditional</animation>
 						<control type="label">
-							<description>Studio label</description>
+							<description>Genre label</description>
 							<posx>130</posx>
 							<posy>265</posy>
 							<height>25</height>
 							<width>1000</width>
-							<label>$INFO[VideoPlayer.Studio]</label>
+							<label>$INFO[VideoPlayer.Genre]</label>
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>font12</font>
