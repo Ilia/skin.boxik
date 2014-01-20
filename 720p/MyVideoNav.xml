@@ -92,8 +92,10 @@
 		</control>
 
 		<control type="group">
-			<visible>!Skin.HasSetting(ShowLegend) + Container.Content(Movies) + Library.HasContent(Movies) + !Player.HasMedia</visible>
+			<visible>!Skin.HasSetting(HideLegend) + Container.Content(Movies) + Library.HasContent(Movies) + !Player.HasMedia</visible>
 			<posx>225</posx>
+			<animation effect="fade" time="200" start="0" end="100">WindowOpen</animation>
+            <animation effect="fade" time="200" start="100" end="0">WindowClose</animation>
 			<animation effect="slide" reversable="true" start="0,0" end="-149,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
 			<control type="image">
 				<posx>0</posx>
@@ -120,6 +122,8 @@
 			<animation effect="slide" reversable="true" start="0,0" end="-2000,0" time="200" condition="[Player.Caching | Player.Playing | Player.Seeking]">Conditional</animation>
 			<control type="group">
 				<visible>!Player.HasMedia</visible>
+				<animation effect="fade" time="200" start="0" end="100">WindowOpen</animation>
+            	<animation effect="fade" time="200" start="100" end="0">WindowClose</animation>
 				<control type="image">
 					<posx>85</posx>
 					<posy>40r</posy>
