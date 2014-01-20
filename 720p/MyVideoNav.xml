@@ -92,7 +92,7 @@
 		</control>
 
 		<control type="group">
-			<visible>!Skin.HasSetting(ShowLegend) + Container.Content(Movies) + Library.HasContent(Movies)</visible>
+			<visible>!Skin.HasSetting(ShowLegend) + Container.Content(Movies) + Library.HasContent(Movies) + !Player.HasMedia</visible>
 			<posx>225</posx>
 			<animation effect="slide" reversable="true" start="0,0" end="-149,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
 			<control type="image">
@@ -118,34 +118,36 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
 			<animation effect="slide" reversable="true" start="0,0" end="-2000,0" time="200" condition="[Player.Caching | Player.Playing | Player.Seeking]">Conditional</animation>
-			<control type="image">
-				<posx>80</posx>
-				<posy>40r</posy>
-				<width>12</width>
-				<height>12</height>
-				<aspectratio>keep</aspectratio>
-				<texture>arrow-big-up.png</texture>
-				<visible>[ Control.IsVisible(501) | Control.IsVisible(515) | Control.IsVisible(508)] </visible>
+			<control type="group">
+				<visible>!Player.HasMedia</visible>
+				<control type="image">
+					<posx>85</posx>
+					<posy>40r</posy>
+					<width>12</width>
+					<height>12</height>
+					<aspectratio>keep</aspectratio>
+					<texture>arrow-big-up.png</texture>
+					<visible>[ Control.IsVisible(501) | Control.IsVisible(515) | Control.IsVisible(508)] </visible>
+				</control>
+				<control type="image">
+					<posx>85</posx>
+					<posy>40r</posy>
+					<width>12</width>
+					<height>12</height>
+					<aspectratio>keep</aspectratio>
+					<texture>arrow-big-left.png</texture>
+					<visible>[Control.IsVisible(500) | Control.IsVisible(50) | Control.IsVisible(560) | Control.IsVisible(503) | Control.IsVisible(505)]</visible>
+				</control>
+				<control type="label">
+					<posx>105</posx>
+					<posy>46r</posy>
+					<width>1000</width>
+					<height>30</height>
+					<align>left</align>
+					<font>font12</font>
+					<label>View Options</label>
+				</control>
 			</control>
-			<control type="image">
-				<posx>80</posx>
-				<posy>40r</posy>
-				<width>12</width>
-				<height>12</height>
-				<aspectratio>keep</aspectratio>
-				<texture>arrow-big-left.png</texture>
-				<visible>[Control.IsVisible(500) | Control.IsVisible(50) | Control.IsVisible(560) | Control.IsVisible(503) | Control.IsVisible(505)]</visible>
-			</control>
-			<control type="label">
-				<posx>100</posx>
-				<posy>46r</posy>
-				<width>1000</width>
-				<height>30</height>
-				<align>left</align>
-				<font>font12</font>
-				<label>View Options</label>
-			</control>
-			
 		</control>
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
@@ -191,6 +193,12 @@
 					<altlabel>31050</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
 				</control>
+				<control type="radiobutton" id="14">
+					<description>Watched Toggle</description>
+					<textwidth>170</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>20367</label>
+				</control>
 				<control type="edit" id="19">
 					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
 					<description>Filter</description>
@@ -207,7 +215,7 @@
 					<onclick>right</onclick>
 					<onclick>Filter</onclick>
 				</control>
-				<control type="label" id="201">
+				<!-- control type="label" id="201">
 					<width>250</width>
 					<height>35</height>
 					<font>font12</font>
@@ -215,7 +223,7 @@
 					<textcolor>blue</textcolor>
 					<align>center</align>
 					<aligny>center</aligny>
-				</control>
+				</control -->
 				<!--control type="radiobutton" id="91">
 					<description>Subtitle Flags</description>
 					<textwidth>170</textwidth>
@@ -281,13 +289,8 @@
 					<selected>Skin.HasSetting(flattenshowcase)</selected>
 					<visible>Control.IsVisible(508)</visible>
 				</control -->
-				<control type="radiobutton" id="14">
-					<description>Watched Toggle</description>
-					<textwidth>170</textwidth>
-					<include>ButtonCommonValues</include>
-					<label>20367</label>
-				</control>
-				<control type="button" id="8">
+				
+				<!-- control type="button" id="8">
 					<description>Search</description>
 					<include>ButtonCommonValues</include>
 					<label>137</label>
@@ -303,7 +306,7 @@
 					<textwidth>170</textwidth>
 					<include>ButtonCommonValues</include>
 					<label>20411</label>
-				</control>
+				</control -->
 				<control type="radiobutton" id="16">
 					<description>PartyMode</description>
 					<label>589</label>
