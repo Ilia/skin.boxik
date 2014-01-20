@@ -92,6 +92,30 @@
 		</control>
 
 		<control type="group">
+			<visible>!Skin.HasSetting(ShowLegend) + Container.Content(Movies) + Library.HasContent(Movies)</visible>
+			<posx>225</posx>
+			<animation effect="slide" reversable="true" start="0,0" end="-149,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
+			<control type="image">
+				<posx>0</posx>
+				<posy>40r</posy>
+				<width>20</width>
+				<height>13</height>
+				<aspectratio>keep</aspectratio>
+				<texture>legend/yellow.png</texture>
+			</control>
+			<control type="label">
+				<posx>30</posx>
+				<posy>46r</posy>
+				<width>1000</width>
+				<height>30</height>
+				<align>left</align>
+				<font>font12</font>
+				<label>Movie Information</label>
+			</control>
+		</control>
+
+
+		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
 			<animation effect="slide" reversable="true" start="0,0" end="-2000,0" time="200" condition="[Player.Caching | Player.Playing | Player.Seeking]">Conditional</animation>
 			<control type="image">
@@ -121,6 +145,7 @@
 				<font>font12</font>
 				<label>View Options</label>
 			</control>
+			
 		</control>
 		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
