@@ -1915,7 +1915,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="MediaListView4"> <!-- not used -->
+	<include name="MediaListView4"> <!-- Media Fanart -->
 		<control type="group">
 			<visible>Control.IsVisible(515)</visible>
 			<include>VisibleFadeEffect</include>
@@ -1936,15 +1936,15 @@
 				<visible>Container.Content(TVShows) | Container.Content(Movies) | Container.Content(Episodes) | Container.Content(Seasons) | Container.Content(MusicVideos)</visible>
 				<itemlayout height="720" width="1280">
 					<control type="image">
-						<width>1280</width>
-						<height>720</height>
+						<include>DimensionsFullscreen</include>
+                		<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="720" width="1280">
 					<control type="image">
-						<width>1280</width>
-						<height>720</height>
+						<include>DimensionsFullscreen</include>
+               			<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
 					</control>
 					<control type="group">
