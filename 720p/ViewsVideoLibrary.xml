@@ -17,7 +17,7 @@
 				<posx>-133</posx>
 				<posy>0</posy>
 				<width>1526</width>
-				<height>490</height>
+				<height>790</height>
 				<onleft>501</onleft>
 				<onright>501</onright>
 				<onup>2</onup>
@@ -40,6 +40,14 @@
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
+					</control>
+					<control type="image">
+						<posx>6</posx>
+        				<posy>350</posy>
+        				<width>206</width>
+        				<height>300</height>
+						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$VAR[PosterThumb]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>	
 					</control>
 
 					<!-- watched status needs updating -->
@@ -74,20 +82,28 @@
 						<animation reversible="false" effect="zoom" start="-2,36,222,318" end="-28,0,284,390" time="200">focus</animation>
 						<animation reversible="false" effect="zoom" end="-2,36,222,318" start="-28,0,284,390" time="200">unfocus</animation>
 					</control>
+					<control type="image">
+						<posx>6</posx>
+        				<posy>352</posy>
+        				<width>206</width>
+        				<height>300</height>
+						<texture background="true" flipy="true" diffuse="diffuse_mirror3.png">$VAR[PosterThumb]</texture>
+						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<animation reversible="false" effect="zoom" start="6,6,206,300" end="-18,-48,264,378" time="200">focus</animation>
+						<animation reversible="false" effect="zoom" end="6,6,206,300" start="-18,-48,264,378" time="200">unfocus</animation>	
+					</control>
 					<control type="group">
 						<posx>175</posx>
-						<posy>307</posy>
+						<posy>312</posy>
 						<width>30</width>
 						<height>30</height>
 						<aspectratio>keep</aspectratio>
 						<visible>!Skin.HasSetting(HideWatchStatus)</visible>
 						<animation type="focus">
-							<effect type="fade" start="0" end="100" time="200" />
-							<effect type="slide" start="0,0" end="40,40" time="200" />
+							<effect type="slide" start="0,0" end="35,35" time="200" />
 						</animation>
 						<animation type="unfocus">
-							<effect type="fade" start="100" end="0" time="200" />
-							<effect type="slide" end="0,0" start="40,40" time="200" />
+							<effect type="slide" end="0,0" start="35,35" time="200" />
 						</animation>
 						<control type="image">
 							<texture>OverlayStatus/watched.png</texture>
