@@ -20,7 +20,6 @@
 		<include>CommonPageCount</include>
 		<include>CommonNowPlaying</include>
 		<include>MainWindowMouseButtons</include>
-		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
 		<control type="image">
 			<description>Section header image</description>
@@ -50,8 +49,31 @@
 			</control>
 		</control>
 		<control type="group">
+			<visible>!Player.HasMedia + !Skin.HasSetting(KioskMode)</visible>
+			<animation effect="fade" time="200" start="0" end="100">WindowOpen</animation>
+        	<animation effect="fade" time="200" start="100" end="0">WindowClose</animation>
+			<control type="image">
+				<posx>85</posx>
+				<posy>40r</posy>
+				<width>12</width>
+				<height>12</height>
+				<aspectratio>keep</aspectratio>
+				<texture>arrow-big-left.png</texture>
+			</control>
+			<control type="label">
+				<posx>105</posx>
+				<posy>46r</posy>
+				<width>1000</width>
+				<height>30</height>
+				<align>left</align>
+				<font>font12</font>
+				<label>View Options</label>
+			</control>
+		</control>
+		<include>BehindDialogFadeOut</include>
+		<control type="group">
 			<visible>!Skin.HasSetting(KioskMode)</visible>
-			<posx>-250</posx>
+			<posx>-260</posx>
 			<include>SideBladeLeft</include>
 			<control type="grouplist" id="9000">
 				<posx>0</posx>
@@ -124,6 +146,7 @@
 					<label>25001</label>
 				</control>
 				<include>CommonNowPlaying_Controls</include>
+
 			</control>
 		</control>
 		<include>Clock</include>
