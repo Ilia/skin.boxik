@@ -12,7 +12,7 @@
 			<!-- view id = 50 -->
 			<include>FullWidthList</include>
 			<!-- view id = 51 -->
-			<include>AddonInfoListView12</include>
+			<!-- include>AddonInfoListView12</include -->
 			<!-- view id = 550 -->
 			<include>AddonInfoThumbView1</include>
 			<!-- view id = 551 -->
