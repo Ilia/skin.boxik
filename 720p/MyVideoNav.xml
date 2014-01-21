@@ -27,7 +27,7 @@
 			<!-- view id = 503 -->
 			<!-- include>MediaListView2</include -->
 			<!-- view id = 504 -->
-			<include>MediaListView4</include>
+			<include>MediaFanart</include>
 			<!-- view id = 515 -->
 			<include>WideIconView</include>
 			<!-- view id = 505 -->

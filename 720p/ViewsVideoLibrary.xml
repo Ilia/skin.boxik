@@ -265,9 +265,7 @@
         <width>173</width>
         <height>254</height>
         <align>center</align>
-		<texture background="true" diffuse="poster_matte.png">DefaultFolderBack.png</texture>
-		<!--bordertexture border="5">button-nofocus.png</bordertexture>
-		<bordersize>4</bordersize-->
+		<texture background="true" diffuse="poster_matte.png">DefaultFolder.png</texture>
 		<aspectratio scalediffuse="false">stretch</aspectratio>
 	</include>
 	<include name="MovieShowcaseThumbReflection">
@@ -305,7 +303,7 @@
 		<control type="group">
             <posx>0</posx>
             <posy>350</posy>
-            <visible>Library.HasContent(Movies) + Control.IsVisible(508) + [[ListItem.IsFolder + Container.Content(Movies)] | Container.Content(Sets)]</visible>
+            <visible>Control.IsVisible(508) + Library.HasContent(Movies)</visible>
             <include>VisibleFadeEffect</include>
             <control type="image">
                 <posx>0</posx>
@@ -313,20 +311,6 @@
                 <width>1280</width>
                 <height>270</height>
                 <texture>HomeNowPlayingBack.png</texture>
-            </control>
-            <control type="label">
-                <posx>40</posx>
-                <posy>70</posy>
-                <width>1200</width>
-                <height>20</height>
-                <font>font24_title</font>
-                <textcolor>white</textcolor>
-                <shadowcolor>black</shadowcolor>
-                <scroll>true</scroll>
-                <align>center</align>
-                <aligny>center</aligny>
-                <label>$VAR[MainItemLabel]</label>
-                <animation effect="slide" start="0,0" end="0,25" time="200" condition="!Control.HasFocus(508)">conditional</animation>
             </control>
         </control>
 		<control type="group">
@@ -1915,7 +1899,7 @@
 			</control>
 		</control>
 	</include>
-	<include name="MediaListView4"> <!-- Media Fanart -->
+	<include name="MediaFanart"> <!-- Media Fanart -->
 		<control type="group">
 			<visible>Control.IsVisible(515)</visible>
 			<include>VisibleFadeEffect</include>
