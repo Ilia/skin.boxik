@@ -26,12 +26,14 @@
             <control type="image">
             	<animation effect="fade" start="0" end="100" delay="400" time="200" tween="quadratic" easing="out">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200" tween="quadratic" easing="out">WindowClose</animation>
-            	<posx>0</posx>
+            	<posx>-1</posx>
 		        <posy>220</posy>
 		        <width>1580</width>
 		        <height>330</height>
                 <colordiffuse>ddFFFFFF</colordiffuse>
-                <texture background="true">black-back.png</texture>                        
+                <texture background="true">black-back.png</texture>
+                <bordertexture border="1">button-nofocus.png</bordertexture>
+				<bordersize>1</bordersize>                             
             </control>
 
 			<control type="group">
