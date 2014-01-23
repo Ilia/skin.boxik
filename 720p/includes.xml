@@ -216,7 +216,7 @@
 		<control type="image">
 			<posx>-10</posx>
 			<posy>-10</posy>
-			<width>270</width>
+			<width>265</width>
 			<height>732</height>
 			<texture border="0,0,10,0">black-back3.png</texture>
 			<bordertexture border="1">button-nofocus.png</bordertexture>
