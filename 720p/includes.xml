@@ -188,9 +188,9 @@
 	<include name="SideBladeRight">
 		<control type="image">
 			<posx>181</posx>
-			<posy>-1</posy>
+			<posy>-10</posy>
 			<width>1100</width>
-			<height>722</height>
+			<height>750</height>
 			<texture border="15,0,0,0" flipx="true">black-back3.png</texture>
 			<bordertexture border="1">button-nofocus.png</bordertexture>
 			<bordersize>1</bordersize>
@@ -214,10 +214,10 @@
 			<visible>true</visible>
 		</control>
 		<control type="image">
-			<posx>-1</posx>
-			<posy>-1</posy>
-			<width>260</width>
-			<height>722</height>
+			<posx>-10</posx>
+			<posy>-10</posy>
+			<width>270</width>
+			<height>750</height>
 			<texture border="0,0,10,0">black-back3.png</texture>
 			<bordertexture border="1">button-nofocus.png</bordertexture>
 			<bordersize>1</bordersize>

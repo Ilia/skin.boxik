@@ -122,10 +122,10 @@
 			<animation effect="slide" start="-480,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" end="-480,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
-				<posx>-1</posx>
-				<posy>-1</posy>
-				<width>480</width>
-				<height>722</height>
+				<posx>-10</posx>
+				<posy>-10</posy>
+				<width>490</width>
+				<height>750</height>
 				<texture border="0,0,15,0">black-back3.png</texture>
 				<bordertexture border="1">button-nofocus.png</bordertexture>
 				<bordersize>1</bordersize>
@@ -263,10 +263,10 @@
 			<animation effect="slide" end="480,0" start="0,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
 			<posx>800</posx>
 			<control type="image">
-				<posx>-1</posx>
-				<posy>-1</posy>
-				<width>480</width>
-				<height>722</height>
+				<posx>-10</posx>
+				<posy>-10</posy>
+				<width>500</width>
+				<height>750</height>
 				<texture border="15,0,0,0">black-back3.png</texture>
 				<bordertexture border="1">button-nofocus.png</bordertexture>
 				<bordersize>1</bordersize>

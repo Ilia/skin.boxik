@@ -12,9 +12,9 @@
 			<animation effect="slide" start="0,0" end="400,0" time="400" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="image">
 				<posx>401r</posx>
-				<posy>-1</posy>
-				<width>400</width>
-				<height>722</height>
+				<posy>-10</posy>
+				<width>410</width>
+				<height>750</height>
 				<texture border="15,0,0,0" flipx="true">black-back3.png</texture>
 				<bordertexture border="1">button-nofocus.png</bordertexture>
 				<bordersize>1</bordersize>
