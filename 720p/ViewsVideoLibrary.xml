@@ -35,7 +35,7 @@
 						<posy>40</posy>
 						<width>214</width>
 						<height>310</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<bordertexture border="5">button-nofocus.png</bordertexture>
 						<bordersize>4</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
@@ -46,9 +46,8 @@
         				<width>206</width>
         				<height>300</height>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror2.png">$VAR[PosterThumb]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>	
+						<aspectratio scalediffuse="false">scale</aspectratio>	
 					</control>
-
 					<!-- watched status needs updating -->
 					<control type="group">
 						<posx>175</posx>
@@ -74,7 +73,7 @@
 						<posy>36</posy>
 						<width>222</width>
 						<height>318</height>
-						<aspectratio>stretch</aspectratio>
+						<aspectratio>scale</aspectratio>
 						<bordertexture border="8">ThumbBorder.png</bordertexture>
 						<bordersize>8</bordersize>
 						<texture background="true">$VAR[PosterThumb]</texture>
@@ -87,7 +86,7 @@
         				<width>206</width>
         				<height>300</height>
 						<texture background="true" flipy="true" diffuse="diffuse_mirror3.png">$VAR[PosterThumb]</texture>
-						<aspectratio scalediffuse="false">stretch</aspectratio>
+						<aspectratio scalediffuse="false">scale</aspectratio>
 						<animation reversible="false" effect="zoom" start="6,6,206,300" end="-18,-48,264,378" time="200">focus</animation>
 						<animation reversible="false" effect="zoom" end="6,6,206,300" start="-18,-48,264,378" time="200">unfocus</animation>	
 					</control>
@@ -259,41 +258,41 @@
     <include name="MovieShowcaseThumb">		
 		<posx>49</posx>
         <posy>8</posy>
-        <width>173</width>
+        <width>188</width>
         <height>254</height>
         <align>center</align>
-		<texture background="true" diffuse="poster_matte.png">DefaultFolder.png</texture>
-		<aspectratio scalediffuse="false">stretch</aspectratio>
+		<texture background="true" diffuse="poster_matte.png">Default/poster/folder.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
 	</include>
 	<include name="MovieShowcaseThumbReflection">
 		<posx>49</posx>
         <posy>260</posy>
-        <width>173</width>
+        <width>188</width>
         <height>254</height>
 		<colordiffuse>52FFFFFF</colordiffuse>
-		<texture background="true" flipy="true" diffuse="poster_matte_reflect.png">DefaultFolderBack.png</texture>
-		<aspectratio scalediffuse="false">stretch</aspectratio>		
+		<texture background="true" flipy="true" diffuse="poster_matte_reflect.png">Default/poster/folder.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>		
 	</include>
 
 	<include name="MovieShowcaseThumbMain">		
 		<posx>49</posx>
         <posy>8</posy>
-        <width>173</width>
+        <width>188</width>
         <height>254</height>
         <align>center</align>
-		<texture background="true" diffuse="poster_matte.png">DefaultFolderBack.png</texture>
+		<texture background="true" diffuse="poster_matte.png">Default/poster/folder.png</texture>
 		<!--bordertexture border="5">button-nofocus.png</bordertexture>
 		<bordersize>4</bordersize-->
-		<aspectratio scalediffuse="false">stretch</aspectratio>
+		<aspectratio scalediffuse="false">scale</aspectratio>
 	</include>
 	<include name="MovieShowcaseThumbReflectionMain">
 		<posx>49</posx>
         <posy>260</posy>
-        <width>173</width>
+        <width>188</width>
         <height>254</height>
 		<colordiffuse>52FFFFFF</colordiffuse>
-		<texture background="true" flipy="true" diffuse="poster_matte_reflect.png">DefaultFolderBack.png</texture>
-		<aspectratio scalediffuse="false">stretch</aspectratio>		
+		<texture background="true" flipy="true" diffuse="poster_matte_reflect.png">Default/poster/folder.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>		
 	</include>
 
 	<include name="ShowcaseView"> <!-- showcase -->
