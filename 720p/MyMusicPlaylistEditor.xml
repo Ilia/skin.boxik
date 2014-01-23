@@ -427,6 +427,6 @@
 				<visible>!IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
-		<include>Clock</include>
+		<!-- include>Clock</include -->
 	</controls>
 </window>
