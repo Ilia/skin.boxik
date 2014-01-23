@@ -190,7 +190,7 @@
 			<posx>181</posx>
 			<posy>-10</posy>
 			<width>1100</width>
-			<height>750</height>
+			<height>732</height>
 			<texture border="15,0,0,0" flipx="true">black-back3.png</texture>
 			<bordertexture border="1">button-nofocus.png</bordertexture>
 			<bordersize>1</bordersize>
@@ -217,7 +217,7 @@
 			<posx>-10</posx>
 			<posy>-10</posy>
 			<width>270</width>
-			<height>750</height>
+			<height>732</height>
 			<texture border="0,0,10,0">black-back3.png</texture>
 			<bordertexture border="1">button-nofocus.png</bordertexture>
 			<bordersize>1</bordersize>
