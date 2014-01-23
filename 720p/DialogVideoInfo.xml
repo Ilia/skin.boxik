@@ -314,8 +314,7 @@
 			          <label>CinEx Play</label>
 			          <include>ButtonInfoDialogStrip</include>
 			          <onclick>Dialog.Close(all,true)</onclick>
-			          <onclick>Playlist.Clear</onclick>
-			          <onclick>RunScript(script.cinema.experience)</onclick>
+			          <onclick>RunScript(script.cinema.experience,movieid=$INFO[ListItem.DBID])</onclick>
 			        </control>
 					<control type="button" id="11">
 						<description>Trailer</description>
