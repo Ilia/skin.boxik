@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.boxik" version="1.1.21" name="BOXiK" provider-name="BOXiK">
+<addon id="skin.boxik" version="1.1.22" name="BOXiK" provider-name="BOXiK">
   <requires>
     <import addon="xbmc.gui" version="4.0.0"/>
   	<import addon="service.skin.widgets" version="0.0.25"/>
@@ -30,10 +30,10 @@
     <description lang="hr">Confluence je prilagodljivi izgled koji ukljućuje mnoge popularne dodatke i skripte.</description>
     <description lang="ko">XBMC 기본 스킨의 수정 버전으로 최신 인기 트윅, 추가기능, 스크립트를 포함하였습니다.</description>
     <disclaimer lang="el">Η Τροποποίηση του Confluence [B]ΔΕΝ[/B] είναι το Επίσημο Προεπιλεγμένο Κέλυφος του XBMC από τον Jezz_X.</disclaimer>
-    <disclaimer lang="en">Confluence Customizable Mod is [B]NOT[/B] the Official XBMC Default skin by Jezz_X.</disclaimer>
-    <disclaimer lang="es">Confluence Customizable Mod [B]NO[/B] es el skin Official por defecto de XBMC de Jezz_X.</disclaimer>
-    <disclaimer lang="gl">Confluence Customizable Mod [B]NON É[/B] o tema predefinido oficial do XBMC de Jezz_X.</disclaimer>
-    <disclaimer lang="ko">Confluence Customizable Mod는 Jezz_X의 공식 XBMC 기본 스킨이 [B]아닙니다.[/B]</disclaimer>
+    <disclaimer lang="en">BOXiK is [B]NOT[/B] the Official XBMC Default skin by Jezz_X.</disclaimer>
+    <disclaimer lang="es">BOXiK [B]NO[/B] es el skin Official por defecto de XBMC de Jezz_X.</disclaimer>
+    <disclaimer lang="gl">BOXiK [B]NON É[/B] o tema predefinido oficial do XBMC de Jezz_X.</disclaimer>
+    <disclaimer lang="ko">BOXiK는 Jezz_X의 공식 XBMC 기본 스킨이 [B]아닙니다.[/B]</disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
