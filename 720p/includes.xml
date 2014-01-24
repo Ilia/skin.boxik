@@ -1580,14 +1580,14 @@
     </include>
 
     <include name="HomeMenuFade">
-		<animation effect="fade" start="100" end="0" time="1000" condition="[System.HasAddon(service.skin.fanart) + System.IdleTime(30) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio]">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="1000" condition="[Library.HasContent(Movies) + System.HasAddon(service.skin.fanart) + System.IdleTime(30) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio]">Conditional</animation>
 	</include>
 	<include name="HomeMenuFadedInfo">
 		<control type="label">
 			<animation type="Conditional" condition="true" pulse="true">
 	       		<effect type="fade" start="10" end="60"  time="1400"  />
 			</animation>
-			<visible>[System.HasAddon(service.skin.fanart) +  System.IdleTime(31) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio]</visible>
+			<visible>[Library.HasContent(Movies) + System.HasAddon(service.skin.fanart) +  System.IdleTime(31) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio]</visible>
 			<posx>0</posx>
 			<posy>672</posy>
 			<width>1280</width>
