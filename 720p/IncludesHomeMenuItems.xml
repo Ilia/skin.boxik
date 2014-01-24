@@ -7,6 +7,18 @@
 			<onclick>XBMC.updatelibrary(Video)</onclick>
 			<visible>Library.HasContent(Movies)</visible>
 		</control>
+		<control type="button" id="90164">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>369</label>
+			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<visible>Library.HasContent(Movies)</visible>
+		</control>
+		<control type="button" id="90174">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>369</label>
+			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+			<visible>Library.HasContent(TVShows)</visible>
+		</control>
 		<control type="button" id="90106">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>14022</label>
@@ -27,29 +39,23 @@
 		</control>
 		<control type="button" id="90107">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>24001</label>
+			<label>Online</label>
 			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
 		</control>
 	</include>
 	<include name="HomeSubMenuMovies">
+		<control type="button" id="901041">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Update Library</label>
+			<onclick>XBMC.updatelibrary(Video)</onclick>
+			<visible>Library.HasContent(Movies)</visible>
+		</control>
 		<control type="button" id="90162">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>31328</label>
 			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
 			<visible>Library.HasContent(Movies)</visible>
 		</control>
-		<control type="button" id="90163">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>20434</label>
-			<onclick>ActivateWindow(Videos,MovieSets,return)</onclick>
-			<visible>Library.HasContent(MovieSets)</visible>
-		</control>
-		<!-- control type="button" id="90164">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>369</label>
-			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
-			<visible>Library.HasContent(Movies)</visible>
-		</control -->
 		<control type="button" id="90165">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>135</label>
@@ -68,8 +74,24 @@
 			<onclick>ActivateWindow(VideoLibrary,special://videoplaylists/,return)</onclick>
 			<visible>Library.HasContent(Movies)</visible>
 		</control>
+		<control type="button" id="90107">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Online</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+		</control>
+		<control type="button" id="90105">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Sources</label>
+			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+		</control>
 	</include>
 	<include name="HomeSubMenuTVShows">
+		<control type="button" id="901041">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Update Library</label>
+			<onclick>XBMC.updatelibrary(Video)</onclick>
+			<visible>Library.HasContent(Movies)</visible>
+		</control>
 		<control type="button" id="90172">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>575</label>
@@ -82,31 +104,23 @@
 			<onclick>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</onclick>
 			<visible>Library.HasContent(TVShows)</visible>
 		</control>
-		<!-- control type="button" id="90174">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>369</label>
-			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
-			<visible>Library.HasContent(TVShows)</visible>
-		</control -->
-		<control type="button" id="90175">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>135</label>
-			<onclick>ActivateWindow(Videos,TVShowGenres,return)</onclick>
-			<visible>Library.HasContent(TVShows)</visible>
-		</control>
 		<control type="button" id="90176">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>Favourites</label>
 			<onclick>ActivateWindow(Favourites)</onclick>
 			<visible>Library.HasContent(TVShows)</visible>
 		</control>	
-		<!-- control type="button" id="90177">
+		<control type="button" id="90107">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>652</label>
-			<onclick>ActivateWindow(Videos,TVShowYears,return)</onclick>
-			<visible>Library.HasContent(TVShows)</visible>
-		</control -->
-		</include>
+			<label>Online</label>
+			<onclick>ActivateWindow(Videos,Addons,return)</onclick>
+		</control>
+		<control type="button" id="90105">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Sources</label>
+			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+		</control>
+	</include>
 	<include name="HomeSubMenuMusic">
 		<control type="button" id="90112">
 			<include>ButtonHomeSubCommonValues</include>
@@ -132,12 +146,6 @@
 			<onclick>ActivateWindow(Favourites)</onclick>
 			<visible>Library.HasContent(Music)</visible>
 		</control>
-		<control type="button" id="90115">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>744</label>
-			<onclick>ActivateWindow(MusicFiles)</onclick>
-			<visible>Library.HasContent(Music)</visible>
-		</control>
 		<control type="button" id="90116">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>Playlists</label>
@@ -146,15 +154,13 @@
 		</control>
 		<control type="button" id="90117">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>24001</label>
+			<label>Online</label>
 			<onclick>ActivateWindow(MusicLibrary,Addons,return)</onclick>
-			<visible>Library.HasContent(Music)</visible>
 		</control>
-		<control type="button" id="90118">
+		<control type="button" id="90115">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>24001</label>
-			<onclick>ActivateWindow(MusicFiles,Addons,return)</onclick>
-			<visible>!Library.HasContent(Music)</visible>
+			<label>Sources</label>
+			<onclick>ActivateWindow(MusicFiles)</onclick>
 		</control>
 	</include>
 	<include name="HomeSubMenuSystem">
@@ -205,7 +211,7 @@
 	<include name="HomeSubMenuPictures">
 		<control type="button" id="90148">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>24001</label>
+			<label>Online</label>
 			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
 		</control>
 	</include>
@@ -326,7 +332,7 @@
 		</control>
 		<control type="button" id="901013">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>Pictures</label>
+			<label>Photos</label>
 			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
 		</control>
 		<control type="button" id="901014">
