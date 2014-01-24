@@ -961,7 +961,7 @@
 				<texture border="0,6,0,6">home/NavbarOverlay.png</texture>
 			</control>
 
-			<control type="fixedlist" id="9000">
+			<control type="wraplist" id="9000">
 				<posx>-210</posx>
 				<posy>5</posy>
 				<width>1700</width>
