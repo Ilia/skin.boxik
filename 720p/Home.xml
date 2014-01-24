@@ -833,8 +833,8 @@
 				<animation effect="zoom" start="100,100" end="100,66" time="100" 
 					condition="![
 						StringCompare(Container(9000).ListItem.Property(SubMenu),Videos) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) + Library.hasContent(Movies) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) + Library.hasContent(TVShows) |
+						StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) |
+						StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) |
 						StringCompare(Container(9000).ListItem.Property(SubMenu),Music) |
 						StringCompare(Container(9000).ListItem.Property(SubMenu),Settings) |
 						StringCompare(Container(9000).ListItem.Property(SubMenu),PlayDisc) |
