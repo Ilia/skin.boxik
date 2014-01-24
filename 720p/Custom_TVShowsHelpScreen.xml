@@ -72,7 +72,7 @@
 					<posy>10</posy>
 					<width>160</width>
 					<height>38</height>
-	        		<label>Videos</label>
+	        		<label>Sources</label>
 					<texturenofocus border="10,0,10,0">button-nofocus.png</texturenofocus>
 					<texturefocus border="10,0,10,0">button-focus.png</texturefocus>
 					<align>center</align>
