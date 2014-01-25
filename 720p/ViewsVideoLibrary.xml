@@ -258,7 +258,7 @@
     <include name="MovieShowcaseThumb">		
 		<posx>49</posx>
         <posy>8</posy>
-        <width>188</width>
+        <width>173</width>
         <height>254</height>
         <align>center</align>
 		<texture background="true" diffuse="poster_matte.png">Default/poster/folder.png</texture>
