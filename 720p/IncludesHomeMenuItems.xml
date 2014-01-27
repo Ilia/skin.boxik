@@ -9,13 +9,13 @@
 		</control>
 		<control type="button" id="90164">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>369</label>
+			<label>Movies</label>
 			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 			<visible>Library.HasContent(Movies)</visible>
 		</control>
 		<control type="button" id="90174">
 			<include>ButtonHomeSubCommonValues</include>
-			<label>369</label>
+			<label>TV Shows</label>
 			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 			<visible>Library.HasContent(TVShows)</visible>
 		</control>
