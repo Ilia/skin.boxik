@@ -351,6 +351,11 @@
 		<visible>System.HasAddon(plugin.video.1channel)</visible>
 		<control type="button" id="9010111">
 			<include>ButtonHomeSubCommonValues</include>
+			<label>Update</label>
+			<onclick>RunPlugin(plugin://plugin.video.1channel/?mode=GetFilteredResults&amp;section&amp;sort=featured)</onclick>
+		</control>
+		<control type="button" id="9010111">
+			<include>ButtonHomeSubCommonValues</include>
 			<label>Movies</label>
 			<onclick>ActivateWindow(videofiles,plugin://plugin.video.1channel/?mode=BrowseListMenu&amp;section,return)</onclick>
 		</control>
