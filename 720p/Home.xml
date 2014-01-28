@@ -82,7 +82,8 @@
 				Control.isVisible(8000) | 
 				Control.isVisible(8001) | 
 				Control.isVisible(8002) | 
-				Control.isVisible(8004) ]">Conditional</animation>
+				Control.isVisible(8004) |
+				Control.isVisible(8005)]">Conditional</animation>
 			<!-- Music Info -->
 			<control type="group">
 				<posx>0</posx>
@@ -842,7 +843,8 @@
 						StringCompare(Container(9000).ListItem.Property(SubMenu),Photos) |
 						StringCompare(Container(9000).ListItem.Property(SubMenu),Concerts) |
 						StringCompare(Container(9000).ListItem.Property(SubMenu),Favourites) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Online)
+						StringCompare(Container(9000).ListItem.Property(SubMenu),Online) |
+						StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel)
 						]"
 				>Conditional</animation>
 	          	<posx>0</posx>
@@ -933,6 +935,13 @@
 					<onright>9021</onright>
 					<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),Online)</visible>
 					<include>HomeSubMenuOnline</include>
+				</control>
+				<control type="grouplist" id="9022">
+					<include>HomeSubMenuCommonValues</include>
+					<onleft>9022</onleft>
+					<onright>9022</onright>
+					<visible>StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel)</visible>
+					<include>HomeSubMenu1Channel</include>
 				</control>
 			</control>
 

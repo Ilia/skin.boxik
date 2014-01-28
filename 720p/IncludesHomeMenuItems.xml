@@ -346,4 +346,29 @@
 			<onclick>ActivateWindow(Favourites)</onclick>
 		</control>
 	</include>
+
+	<include name="HomeSubMenu1Channel">
+		<visible>System.HasAddon(plugin.video.1channel)</visible>
+		<control type="button" id="9010111">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Movies</label>
+			<onclick>ActivateWindow(videofiles,plugin://plugin.video.1channel/?mode=BrowseListMenu&amp;section,return)</onclick>
+		</control>
+		<control type="button" id="9010121">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>TV Shows</label>
+			<onclick>ActivateWindow(videofiles,plugin://plugin.video.1channel/?mode=BrowseListMenu&amp;section=tv,return)</onclick>
+		</control>
+		<!-- control type="button" id="9010131">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Search</label>
+			<onclick>XBMC.RunScript(plugin.video.1channel,mode=GetSearchQueryDesc&amp;section)</onclick>
+		</control -->
+		<!-- control type="button" id="9010141">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Settings</label>
+			<onclick>ActivateWindow(Pictures,Addons,return)</onclick>
+		</control -->
+
+	</include>
 </includes>

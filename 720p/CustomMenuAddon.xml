@@ -160,6 +160,17 @@
 						<include>CloseMenuChoice</include>
 						<visible>System.HasAddon(script.cinema.experience) + Library.HasContent(Movies)</visible>
 					</item>
+					<item id="8">
+						<description>1Channel</description>
+						<label>Online: 1Channel</label>
+						<include>ClearButtonChoice</include>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,RunAddon(plugin.video.1channel,mode=main))</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label,1Channel)</onclick>
+						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,1Channel)</onclick>
+						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,1Channel)</onclick>
+						<include>CloseMenuChoice</include>
+						<visible>System.HasAddon(plugin.video.1channel)</visible>
+					</item>
 					<!-- item id="9">
 						<description>Concerts</description>
 						<label>$LOCALIZE[20389]</label>

@@ -186,12 +186,14 @@
 							StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) + !Skin.HasSetting(HideHomeVideoWidget) + IntegerGreaterThan(Container(8000).NumItems,0) |
 							StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) + !Skin.HasSetting(HideHomeVideoWidget) + IntegerGreaterThan(Container(8001).NumItems,0) |
 							StringCompare(Container(9000).ListItem.Property(SubMenu),Music) + !Skin.HasSetting(HideHomeAlbumsWidget) + IntegerGreaterThan(Container(8002).NumItems,0) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Online) + !Skin.HasSetting(HideHomeAddonWidget) + IntegerGreaterThan(Container(8004).NumItems,0)
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Online) + !Skin.HasSetting(HideHomeAddonWidget) + IntegerGreaterThan(Container(8004).NumItems,0) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel) + IntegerGreaterThan(Container(8005).NumItems,0)
 							] + [
 							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) | 
 							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music) |
 							StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows) |
-							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Online) ]
+							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Online) | 
+							StringCompare(Container(9000).ListItem.Property(HiLiteItem),1Channel)]
 							">Conditional
 				</animation>
 		        <posx>0</posx>
@@ -436,10 +438,127 @@
 							<label>$VAR[MainItemLabel]</label>
 						</control>
 					</focusedlayout>
-					<!-- include>HomeAddonItemsShelf</include -->
+					<include>HomeAddonItemsShelf</include>
+				</control>
+			</control>
+
+
+			<control type="group">
+				<posx>0</posx>
+				<posy>45</posy>
+				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),1Channel)</visible>
+				<include>VisibleFadeEffect</include>
+	   			<control type="image" description="Top glass border">
+					<include>VisibleFadeEffect</include>
+					<visible allowhiddenfocus="true">[!Control.HasFocus(8005) + IntegerGreaterThan(Container(8005).NumItems,0)]</visible>
+			        <posx>620</posx>
+			       	<posy>333</posy>
+			       	<width>24</width>
+			       	<height>15</height>
+			       	<texture background="true">arrow-big-up.png</texture>
+			       	<animation type="Conditional" condition="true" pulse="true">
+			       		<effect type="fade" start="10" end="90"  time="1400"  />
+					</animation>
+			    </control>
+	   			<control type="list" id="8005">
+					<visible allowhiddenfocus="true">Control.HasFocus(8005)</visible>
+					<include>VisibleFadeEffect</include>
+					<posx>40</posx>
+					<posy>125</posy>
+					<width>1250</width>
+					<height>300</height>
+					<onleft>8005</onleft>
+					<onright>8005</onright>
+					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
+					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<viewtype label="535">list</viewtype>
+					<pagecontrol>-</pagecontrol>
+					<scrolltime>200</scrolltime>
+					<orientation>Horizontal</orientation>
+
+
+					<itemlayout height="280" width="165">
+						<control type="image">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>140</width>
+      						<height>210</height>
+							<texture background="true" fallback="DefaultVideoIcon.png">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image" description="Reflection">
+					        <posx>0</posx>
+					        <posy>210</posy>
+					        <width>140</width>
+					        <height>210</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="DefaultVideoIcon.png" flipy="true">$INFO[ListItem.Icon]</texture>
+					        <aspectratio>scale</aspectratio>
+					      </control>
+					</itemlayout>
+					<focusedlayout height="280" width="165">
+						<!-- no image fallback -->
+						<control type="image">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+							</animation>
+					        <posx>0</posx>
+							<posy>0</posy>
+							<width>140</width>
+							<height>210</height>
+					        <texture background="true">DefaultVideoIcon.png</texture>
+					        <aspectratio>scale</aspectratio>
+					    </control>
+					    <control type="label">
+					    	<posx>70</posx>
+							<posy>186</posy>
+							<width>125</width>
+							<height>20</height>
+							<font>font12</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$VAR[MainItemLabel]</label>
+						</control>
+						<!-- no image fallback end -->
+						<control type="image" description="Reflection">
+							<animation type="Focus" condition="true" reversable="true">
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="slide" end="0,14" time="400" />
+							</animation>
+					        <posx>0</posx>
+					        <posy>210</posy>
+					        <width>140</width>
+					        <height>100</height>
+					        <texture background="true" diffuse="home/NavbarGlass.png" fallback="black-back.png" flipy="true">$INFO[ListItem.ActualIcon]</texture>
+					       	<aspectratio>scale</aspectratio>    
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="100,100" end="110,110" fallback="black-back.png" center="auto" time="300">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>140</width>
+							<height>210</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<aspectratio>scale</aspectratio>
+						</control>
+						<control type="image">
+							<animation effect="zoom" start="100,100" end="110,110" center="auto" time="300">Focus</animation>
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>140</width>
+							<height>210</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="1">button-nofocus.png</bordertexture>
+							<bordersize>1</bordersize>
+							<aspectratio>scale</aspectratio>
+						</control>
+					</focusedlayout>
 					<include>Home1ChannelItemsShelf</include>
 				</control>
 			</control>
+
 
 			<control type="group">
 				<posx>0</posx>
