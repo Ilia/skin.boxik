@@ -2384,73 +2384,73 @@
 		<content>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.1.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.1.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.1.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.1.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.1.run))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.1.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.2.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.2.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.2.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.2.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.2.title))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.2.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.3.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.3.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.3.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.3.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.3.run))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.3.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.4.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.4.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.4.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.4.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.4.run))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.4.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.5.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.5.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.5.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.5.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.5.run))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.5.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.6.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.6.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.6.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.6.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.6.run))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.6.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.7.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.7.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.7.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.7.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.7.run))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.7.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.8.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.8.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.8.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.8.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.8.run))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.8.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.9.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.9.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.9.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.9.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.9.run))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.9.path))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.10.title)]</label>
-				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.10.run)]&amp;dialog=1)</onclick>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.10.path)])</onclick>
 				<icon>$INFO[Window(Home).Property(1ch.movie.10.thumb)]</icon>
 				<thumb>-</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.10.run))</visible>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.10.path))</visible>
 			</item>
 		</content>
 	</include>
