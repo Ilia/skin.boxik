@@ -18,7 +18,7 @@
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
 		<control type="group">
-			<animation effect="fade" start="100" end="0" reversable="true" time="400" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004)]">Conditional</animation>
+			<animation effect="fade" start="100" end="0" reversable="true" time="400" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004) | Control.hasFocus(8005)]">Conditional</animation>
 			<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
 			<visible>[System.HasAddon(service.skin.fanart) + !Player.HasMedia + !Player.HasAudio + Library.HasContent(Movies)]</visible>	
 			<posx>80r</posx>
