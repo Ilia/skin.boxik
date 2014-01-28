@@ -88,9 +88,29 @@
 			<fadetime>FanartCrossfadeTime</fadetime>
 			<include>Window_OpenClose_Animation</include>
 			<visible>Control.HasFocus(8003) + !Skin.HasSetting(HideBackGroundFanart)</visible>
+		</control>	
+
+		<control type="image">
+			<description>1Channel Background Image Alt</description>
+			<include>Dimensions_Fullscreen</include>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</texture>
+			<include>backgroundfade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<include>Window_OpenClose_Animation</include>
+			<visible>Control.HasFocus(8005)</visible>
+		</control>	
+
+		<control type="image">
+			<description>1Channel Background Image</description>
+			<include>Dimensions_Fullscreen</include>
+			<aspectratio>scale</aspectratio>
+			<texture background="true">special://home/addons/plugin.video.1channel/fanart.jpg</texture>
+			<include>backgroundfade</include>
+			<fadetime>FanartCrossfadeTime</fadetime>
+			<include>Window_OpenClose_Animation</include>
+			<visible>Control.HasFocus(8005)</visible>
 		</control>			
-		
-		
 
 		<control type="group">
 			<visible>!Skin.HasSetting(HideBackGroundFanart)</visible>
