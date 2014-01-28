@@ -2264,17 +2264,17 @@
 	<include name="Home1ChannelItemsShelf">
 		<content>
 			<item>
-				<label>$INFO[Window(Home).Property(1ch.movie.1.title)]</label>
-				<onclick>ActivateWindow(videofiles,plugin://plugin.video.1channel/?mode=main,return)</onclick>
-				<thumb>$INFO[Window(Home).Property(1ch.movie.1.thumb)]</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.1.title))</visible>
+				<label>$INFO[Window(10025).Property(1ch.movie.1.title)]</label>
+				<onclick>ActivateWindow(videofiles,$INFO[Window(10025).Property(1ch.movie.1.run)],return)</onclick>
+				<thumb>$INFO[Window(10025).Property(1ch.movie.1.thumb)]</thumb>
+				<visible>!IsEmpty(Window(10025).Property(1ch.movie.1.run))</visible>
 			</item>
 			<item>
-				<label>$INFO[Window(Home).Property(1ch.movie.2.title)]</label>
-				<onclick>ActivateWindow(videofiles,plugin://plugin.video.1channel/?img=http%3A%2F%2Fimages.primewire.ag%2Fthumbs%2F2108073_August_Osage_County_2014.jpg&title=August+Osage+County+&url=%2Fwatch-2108073-August-Osage-County&imdbnum=&video_type=movie&mode=GetSources&year=2014&dialog=True,return)</onclick>
-				<icon>$INFO[Window(Home).Property(1ch.movie.2.thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(1ch.movie.2.thumb)]</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.2.title))</visible>
+				<label>$INFO[Window(10025).Property(1ch.movie.2.title)]</label>
+				<onclick>ActivateWindow(videofiles,$INFO[Window(10025).Property(1ch.movie.2.run)],return)</onclick>
+				<icon>$INFO[Window(10025).Property(1ch.movie.2.thumb)]</icon>
+				<thumb>$INFO[Window(10025).Property(1ch.movie.2.thumb)]</thumb>
+				<visible>!IsEmpty(Window(10025).Property(1ch.movie.2.title))</visible>
 			</item>
 			<item>
 				<label>$INFO[Window(10025).Property(1ch.movie.3.title)]</label>
@@ -2284,25 +2284,53 @@
 				<visible>!IsEmpty(Window(10025).Property(1ch.movie.3.run))</visible>
 			</item>
 			<item>
-				<label>$INFO[Window(Home).Property(1ch.movie.4.title)]</label>
-				<onclick>XBMC.RunPlugin($INFO[Window(Home).Property(1ch.movie.4.run)])</onclick>
-				<icon>$INFO[Window(Home).Property(1ch.movie.4.thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(1ch.movie.4.thumb)]</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.4.run))</visible>
+				<label>$INFO[Window(10025).Property(1ch.movie.4.title)]</label>
+				<onclick>XBMC.RunPlugin($INFO[Window(10025).Property(1ch.movie.4.run)])</onclick>
+				<icon>$INFO[Window(10025).Property(1ch.movie.4.thumb)]</icon>
+				<thumb>$INFO[Window(10025).Property(1ch.movie.4.thumb)]</thumb>
+				<visible>!IsEmpty(Window(10025).Property(1ch.movie.4.run))</visible>
 			</item>
 			<item>
-				<label>$INFO[Window(Home).Property(1ch.movie.5.title)]</label>
-				<onclick>XBMC.RunPlugin($INFO[Window(Home).Property(1ch.movie.5.run)])</onclick>
-				<icon>$INFO[Window(Home).Property(1ch.movie.5.thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(1ch.movie.5.thumb)]</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.5.run))</visible>
+				<label>$INFO[Window(10025).Property(1ch.movie.5.title)]</label>
+				<onclick>XBMC.RunPlugin($INFO[Window(10025).Property(1ch.movie.5.run)])</onclick>
+				<icon>$INFO[Window(10025).Property(1ch.movie.5.thumb)]</icon>
+				<thumb>$INFO[Window(10025).Property(1ch.movie.5.thumb)]</thumb>
+				<visible>!IsEmpty(Window(10025).Property(1ch.movie.5.run))</visible>
 			</item>
 			<item>
-				<label>$INFO[Window(Home).Property(1ch.movie.6.title)]</label>
-				<onclick>XBMC.RunPlugin($INFO[Window(Home).Property(1ch.movie.6.run)])</onclick>
-				<icon>$INFO[Window(Home).Property(1ch.movie.6.thumb)]</icon>
-				<thumb>$INFO[Window(Home).Property(1ch.movie.6.thumb)]</thumb>
-				<visible>!IsEmpty(Window(Home).Property(1ch.movie.6.run))</visible>
+				<label>$INFO[Window(10025).Property(1ch.movie.6.title)]</label>
+				<onclick>XBMC.RunPlugin($INFO[Window(10025).Property(1ch.movie.6.run)])</onclick>
+				<icon>$INFO[Window(10025).Property(1ch.movie.6.thumb)]</icon>
+				<thumb>$INFO[Window(10025).Property(1ch.movie.6.thumb)]</thumb>
+				<visible>!IsEmpty(Window(10025).Property(1ch.movie.6.run))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(10025).Property(1ch.movie.7.title)]</label>
+				<onclick>XBMC.RunPlugin($INFO[Window(10025).Property(1ch.movie.7.run)])</onclick>
+				<icon>$INFO[Window(10025).Property(1ch.movie.7.thumb)]</icon>
+				<thumb>$INFO[Window(10025).Property(1ch.movie.7.thumb)]</thumb>
+				<visible>!IsEmpty(Window(10025).Property(1ch.movie.7.run))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(10025).Property(1ch.movie.8.title)]</label>
+				<onclick>XBMC.RunPlugin($INFO[Window(10025).Property(1ch.movie.8.run)])</onclick>
+				<icon>$INFO[Window(10025).Property(1ch.movie.8.thumb)]</icon>
+				<thumb>$INFO[Window(10025).Property(1ch.movie.8.thumb)]</thumb>
+				<visible>!IsEmpty(Window(10025).Property(1ch.movie.8.run))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(10025).Property(1ch.movie.9.title)]</label>
+				<onclick>XBMC.RunPlugin($INFO[Window(10025).Property(1ch.movie.9.run)])</onclick>
+				<icon>$INFO[Window(10025).Property(1ch.movie.9.thumb)]</icon>
+				<thumb>$INFO[Window(10025).Property(1ch.movie.9.thumb)]</thumb>
+				<visible>!IsEmpty(Window(10025).Property(1ch.movie.9.run))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(10025).Property(1ch.movie.10.title)]</label>
+				<onclick>XBMC.RunPlugin($INFO[Window(10025).Property(1ch.movie.10.run)])</onclick>
+				<icon>$INFO[Window(10025).Property(1ch.movie.10.thumb)]</icon>
+				<thumb>$INFO[Window(10025).Property(1ch.movie.10.thumb)]</thumb>
+				<visible>!IsEmpty(Window(10025).Property(1ch.movie.10.run))</visible>
 			</item>
 		</content>
 	</include>
