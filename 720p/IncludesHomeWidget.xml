@@ -2383,6 +2383,12 @@
 	<include name="Home1ChannelItemsShelf">
 		<content>
 			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.0.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.0.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.0.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.0.path))</visible>
+			</item>
+			<item>
 				<label>$INFO[Window(Home).Property(1ch.movie.1.title)]</label>
 				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.1.path)])</onclick>
 				<thumb>$INFO[Window(Home).Property(1ch.movie.1.thumb)]</thumb>
@@ -2441,6 +2447,90 @@
 				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.10.path)])</onclick>
 				<thumb>$INFO[Window(Home).Property(1ch.movie.10.thumb)]</thumb>
 				<visible>!IsEmpty(Window(Home).Property(1ch.movie.10.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.11.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.11.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.11.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.11.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.12.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.12.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.12.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.12.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.13.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.13.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.13.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.13.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.14.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.14.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.14.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.14.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.15.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.15.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.15.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.15.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.16.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.16.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.16.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.16.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.17.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.17.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.17.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.17.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.18.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.18.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.18.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.18.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.19.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.19.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.19.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.19.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.20.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.20.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.20.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.20.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.21.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.21.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.21.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.21.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.22.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.22.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.22.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.22.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.23.title)]</label>
+				<onclick>PlayMedia($INFO[Window(Home).Property(1ch.movie.23.path)])</onclick>
+				<thumb>$INFO[Window(Home).Property(1ch.movie.23.thumb)]</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.23.path))</visible>
+			</item>
+			<item>
+				<label>$INFO[Window(Home).Property(1ch.movie.more.title)] >> </label>
+				<onclick>ActivateWindow(videofiles, $INFO[Window(Home).Property(1ch.movie.more.path)])</onclick>
+				<thumb>-</thumb>
+				<visible>!IsEmpty(Window(Home).Property(1ch.movie.more.path))</visible>
 			</item>
 		</content>
 	</include>
