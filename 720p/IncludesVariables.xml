@@ -120,6 +120,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.1.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 	<variable name="UsrDefItemTwoSubLabel" type="text">
@@ -136,6 +137,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.2.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 	<variable name="UsrDefItemThreeSubLabel" type="text">
@@ -152,6 +154,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.3.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 	<variable name="UsrDefItemFourSubLabel" type="text">
@@ -168,6 +171,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.4.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 	<variable name="UsrDefItemFiveSubLabel" type="text">
@@ -184,6 +188,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.5.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 	<variable name="UsrDefItemSixSubLabel" type="text">
@@ -200,6 +205,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.6.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 	<variable name="UsrDefItemSevenSubLabel" type="text">
@@ -216,6 +222,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.7.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 	<variable name="UsrDefItemEightSubLabel" type="text">
@@ -232,6 +239,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.8.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 	<variable name="UsrDefItemNineSubLabel" type="text">
@@ -248,6 +256,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.9.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 	<variable name="UsrDefItemTenSubLabel" type="text">
@@ -264,6 +273,7 @@
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Settings)">$LOCALIZE[10004]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Favourites)">$LOCALIZE[1036]</value>
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Online)">Online</value>
+		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
 </includes>	

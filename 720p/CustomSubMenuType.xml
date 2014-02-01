@@ -140,6 +140,14 @@
 						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,Online)</onclick>
 						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
 					</item>
+					<item id="31">
+						<description>1Channel</description>
+						<label>1Channel</label>
+						<onclick>Dialog.Close(2116)</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,1Channel)</onclick>
+						<onclick>ClearProperty(UsrSelectBtn,Home)</onclick>
+						<visible>System.HasAddon(plugin.video.1channel)</visible>
+					</item>
 					<item id="4">
 						<description>Video</description>
 						<label>$LOCALIZE[3]</label>
