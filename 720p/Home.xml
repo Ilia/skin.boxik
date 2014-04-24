@@ -823,36 +823,36 @@
 			<control type="image" description="Top glass border">
 				<description>Shown when recently added is disabled</description>
 				<visible>[Skin.HasSetting(HideHomeVideoWidget) + Skin.HasSetting(HideHomeAlbumsWidget) + Skin.HasSetting(HideHomeConcertsWidget)]</visible>
-		        <posx>0</posx>
-		       	<posy>-65</posy>
-		       	<width>1280</width>
-		       	<height>87</height>
-		       	<texture border="0,0,0,12">home/NavbarGlass.png</texture>
-   			</control>
+        <posx>0</posx>
+       	<posy>-65</posy>
+       	<width>1280</width>
+       	<height>87</height>
+       	<texture>home/NavbarGlass.png</texture>
+   		</control>
 
-   			<control type="image" description="Bottom glass border">
+   		<control type="image" description="Bottom glass border">
 				<animation effect="zoom" start="100,100" end="100,66" time="100" 
-					condition="![
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Videos) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Music) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Settings) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),PlayDisc) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),LiveTV) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Photos) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Concerts) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Favourites) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),Online) |
-						StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel)
-						]"
-				>Conditional</animation>
-	          	<posx>0</posx>
-	          	<posy>65</posy>
-	          	<width>1280</width>
-	          	<height>80</height>
-	          	<texture flipy="true" border="12,0,0,0">home/NavbarGlass2.png</texture>
-        	</control>
+						condition="![
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Videos) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Music) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Settings) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),PlayDisc) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),LiveTV) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Photos) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Concerts) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Favourites) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),Online) |
+							StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel)
+							]"
+					>Conditional</animation>
+	      <posx>0</posx>
+	      <posy>65</posy>
+	      <width>1280</width>
+	      <height>80</height>
+	      <texture flipy="true">home/NavbarGlass2.png</texture>
+      </control>
 
 			<control type="group" id="9001">
 				<posx>0</posx>
