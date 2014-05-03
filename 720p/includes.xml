@@ -1583,4 +1583,17 @@
 		<posx>120</posx>
 		<posy>18</posy>
 	</include>
+
+	<variable name="WiFiState">
+	    <value condition="Stringcompare(ListItem.Label,a)">disconnected.png</value>
+	    <value condition="!Stringcompare(ListItem.Label,>)">connecting.png</value>
+	    <value condition="[Stringcompare(ListItem.Label,>) + !Stringcompare(System.InternetState,$LOCALIZE[13296])]">disconnected.png</value>
+	    <value condition="[Stringcompare(ListItem.Label,>) + Stringcompare(System.InternetState,$LOCALIZE[13296])]">connected.png</value>
+	</variable>
+
+	<variable name="InternetState">
+	    <value condition="stringcompare(System.InternetState,$LOCALIZE[13296])">connected.png</value>
+	    <value condition="!stringcompare(System.InternetState,$LOCALIZE[13296]) + !stringcompare(System.InternetState,$LOCALIZE[13297])">disconnected.png</value>
+	    <value condition="stringcompare(System.InternetState,$LOCALIZE[13297])">disconnected.png</value>
+  	</variable>
 </includes>
