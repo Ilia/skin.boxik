@@ -40,7 +40,7 @@
 			<animation effect="slide" end="-100000,-415000" time="0" tween="back" easing="out" condition="[Window.IsVisible(home) + !Control.isVisible(8000)]" reversible="true">Conditional</animation>
 			<posx>115r</posx>
 			<posy>175r</posy>
-
+			<visible>!Window.IsVisible(SubtitleSearch)</visible>
 			<control type="group">
 				<posx>0</posx>
 				<posy>0</posy>
@@ -162,100 +162,6 @@
 					<height>40</height>
 					<texture>OSD32x.png</texture>
 					<visible>Player.Forwarding32x</visible>
-				</control>
-			</control>
-			<control type="group">
-				<visible>!Window.IsVisible(home)</visible>
-				<control type="label">
-					<description>Playing Label</description>
-					<posx>110r</posx>
-					<posy>40r</posy>
-					<width>240</width>
-					<height>20</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
-					<label>$LOCALIZE[31042]</label>
-					<visible>Player.Playing + !Player.Seeking + !Player.DisplayAfterSeek</visible>
-				</control>
-				<control type="label">
-					<description>Paused Label</description>
-					<posx>110r</posx>
-					<posy>40r</posy>
-					<width>240</width>
-					<height>20</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
-					<label>31043</label>
-					<visible>[Player.Paused + !Player.Caching] + !Player.Seeking + !Player.DisplayAfterSeek</visible>
-				</control>
-				<control type="label">
-					<description>Cache Label</description>
-					<posx>110r</posx>
-					<posy>40r</posy>
-					<width>240</width>
-					<height>20</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
-					<label>$LOCALIZE[15107] $INFO[Player.CacheLevel]%</label>
-					<visible>[Player.Paused + Player.Caching] + !Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>Seeking Label</description>
-					<posx>110r</posx>
-					<posy>40r</posy>
-					<width>240</width>
-					<height>20</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
-					<label>[UPPERCASE]$LOCALIZE[773][/UPPERCASE]</label>
-					<visible>Player.Seeking</visible>
-				</control>
-				<control type="label">
-					<description>Final Seek amount Label</description>
-					<posx>110r</posx>
-					<posy>40r</posy>
-					<width>240</width>
-					<height>20</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
-					<label>[UPPERCASE]$LOCALIZE[773][/UPPERCASE][COLOR=grey] $INFO[Player.SeekOffset][/COLOR]</label>
-					<visible>Player.DisplayAfterSeek + ![player.forwarding | player.rewinding]</visible>
-				</control>
-				<control type="label">
-					<description>FF Label</description>
-					<posx>110r</posx>
-					<posy>40r</posy>
-					<width>240</width>
-					<height>20</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
-					<label>31044</label>
-					<visible>Player.Forwarding</visible>
-				</control>
-				<control type="label">
-					<description>RW Label</description>
-					<posx>110r</posx>
-					<posy>40r</posy>
-					<width>240</width>
-					<height>20</height>
-					<align>right</align>
-					<aligny>center</aligny>
-					<font>font10_title</font>
-					<textcolor>blue</textcolor>
-					<label>31045</label>
-					<visible>Player.Rewinding</visible>
 				</control>
 			</control>
 		</control>
