@@ -981,6 +981,7 @@
 	</include>
 	<include name="Clock">
 		<animation effect="slide" start="0,0" end="-40,0" time="100" condition="Window.IsVisible(Mutebug)">conditional</animation>
+		
 		<control type="group">
 			<posx>300r</posx>
 			<posy>20</posy>
@@ -1025,7 +1026,9 @@
 					<shadowcolor>black</shadowcolor>
 					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
 				</control>
+				
 			</control>
+
 		</control>
 		<control type="label">
 			<description>time label</description>
@@ -1040,6 +1043,14 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
 		</control>
+		<control type="image">
+			<top>23</top>
+			<right>47</right>
+      <width>26</width>
+      <height>26</height>
+		  <aspectratio align="left" aligny="center">keep</aspectratio>
+		  <texture background="true">$VAR[InternetState]</texture>
+    </control>
 	</include>
 	<include name="HomeAddonsCommonLayout">
 		<include>Window_OpenClose_Animation</include>
@@ -1583,17 +1594,4 @@
 		<posx>120</posx>
 		<posy>18</posy>
 	</include>
-
-	<variable name="WiFiState">
-	    <value condition="Stringcompare(ListItem.Label,a)">disconnected.png</value>
-	    <value condition="!Stringcompare(ListItem.Label,>)">connecting.png</value>
-	    <value condition="[Stringcompare(ListItem.Label,>) + !Stringcompare(System.InternetState,$LOCALIZE[13296])]">disconnected.png</value>
-	    <value condition="[Stringcompare(ListItem.Label,>) + Stringcompare(System.InternetState,$LOCALIZE[13296])]">connected.png</value>
-	</variable>
-
-	<variable name="InternetState">
-	    <value condition="stringcompare(System.InternetState,$LOCALIZE[13296])">connected.png</value>
-	    <value condition="!stringcompare(System.InternetState,$LOCALIZE[13296]) + !stringcompare(System.InternetState,$LOCALIZE[13297])">disconnected.png</value>
-	    <value condition="stringcompare(System.InternetState,$LOCALIZE[13297])">disconnected.png</value>
-  	</variable>
 </includes>

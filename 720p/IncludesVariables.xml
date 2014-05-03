@@ -276,4 +276,27 @@
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
 	</variable>
+
+	<variable name="WiFiState">
+		<value condition="Stringcompare(ListItem.Label,a)">disconnected.png</value>
+		<value condition="!Stringcompare(ListItem.Label,>)">connecting.png</value>
+		<value condition="[Stringcompare(ListItem.Label,>) + !Stringcompare(System.InternetState,$LOCALIZE[13296])]">disconnected.png</value>
+		<value condition="[Stringcompare(ListItem.Label,>) + Stringcompare(System.InternetState,$LOCALIZE[13296])]">connected.png</value>
+	</variable>
+
+	<variable name="InternetState">
+		<value condition="stringcompare(System.InternetState,$LOCALIZE[13296])">connected.png</value>
+	  <value condition="!stringcompare(System.InternetState,$LOCALIZE[13296]) + !stringcompare(System.InternetState,$LOCALIZE[13297])">disconnected.png</value>
+	  <value condition="stringcompare(System.InternetState,$LOCALIZE[13297])">disconnected.png</value>
+ 	</variable>
+
+  <variable name="WiFiSignal">
+		<value condition="!IntegerGreaterThan(ListItem.Property(signal),0)">ap-signal1.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),0) + !IntegerGreaterThan(ListItem.Property(signal),19)">ap-signal1.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),20) + !IntegerGreaterThan(ListItem.Property(signal),39)">ap-signal2.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),40) + !IntegerGreaterThan(ListItem.Property(signal),59)">ap-signal3.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),60) + !IntegerGreaterThan(ListItem.Property(signal),79)">ap-signal4.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),80) + !IntegerGreaterThan(ListItem.Property(signal),100)">ap-signal5.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),100)">ap-signal5.png</value>
+	</variable>
 </includes>	

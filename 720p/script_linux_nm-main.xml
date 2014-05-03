@@ -13,7 +13,15 @@
 			<posy>0</posy>
 			<width>800</width>
 			<height>420</height>
-			<texture border="40">black-back3.png</texture>
+			<texture border="40">ContentPanel.png</texture>
+		</control>
+		<control type="image">
+			<description>background image</description>
+			<posx>10</posx>
+			<posy>10</posy>
+			<width>780</width>
+			<height>400</height>
+			<texture border="40">black-back.png</texture>
 		</control>
 		<!-- control type="image">
 			<posx>80</posx>
@@ -151,19 +159,28 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>500</width>
-					<height>41</height>
+					<height>40</height>
 					<texture>MenuItemNF.png</texture>
 				</control>
 				<control type="image">
 					<posx>0</posx>
-					<posy>4</posy>
-					<width>40</width>
-					<height>40</height>
+					<posy>5</posy>
+					<width>32</width>
+					<height>32</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture background="true">$VAR[WiFiState]</texture>
 				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>10</posy>
+					<width>40</width>
+					<height>18</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+			    <texture background="true">$VAR[WiFiSignal]</texture>
+          <animation effect="slide"  start="0" end="35" time="200" tween="cubic" easing="inout" condition="stringcompare(ListItem.Property(encryption),NONE)">Conditional</animation>
+				</control>
 				<control type="label">
-					<posx>25</posx>
+					<posx>90</posx>
 					<posy>0</posy>
 					<width>200</width>
 					<height>40</height>
@@ -218,7 +235,7 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>500</width>
-					<height>41</height>
+					<height>40</height>
 					<visible>!Control.HasFocus(10)</visible>
 					<texture>MenuItemNF.png</texture>
 				</control>
@@ -226,20 +243,29 @@
 					<posx>0</posx>
 					<posy>0</posy>
 					<width>500</width>
-					<height>41</height>
+					<height>40</height>
 					<visible>Control.hasfocus(11) | Control.HasFocus(10)</visible>
 					<texture>MenuItemFO.png</texture>
 				</control>
 				<control type="image">
 					<posx>0</posx>
-					<posy>4</posy>
-					<width>40</width>
-					<height>40</height>
+					<posy>5</posy>
+					<width>32</width>
+					<height>32</height>
 					<aspectratio align="center" aligny="center">keep</aspectratio>
 					<texture background="true">$VAR[WiFiState]</texture>
 				</control>
+				<control type="image">
+					<posx>40</posx>
+					<posy>10</posy>
+					<width>40</width>
+					<height>18</height>
+					<aspectratio align="center" aligny="center">keep</aspectratio>
+			    <texture background="true">$VAR[WiFiSignal]</texture>
+          <animation effect="slide"  start="0" end="35" time="200" tween="cubic" easing="inout" condition="stringcompare(ListItem.Property(encryption),NONE)">Conditional</animation>
+				</control>
 				<control type="label">
-					<posx>25</posx>
+					<posx>90</posx>
 					<posy>0</posy>
 					<width>200</width>
 					<height>40</height>
@@ -308,9 +334,11 @@
 		<control type="group" id="9000">
 			<posx>580</posx>
 			<posy>80</posy>
-			<control type="button" id="13">
-				<description>Disconnect button</description>
-				<label>$ADDON[script.linux.nm 612]</label>
+			
+
+			<control type="button" id="14">
+				<description>Add Connection button</description>
+				<label>$ADDON[script.linux.nm 621]</label>
 				<posx>0</posx>
 				<posy>0</posy>
 				<width>200</width>
@@ -323,12 +351,12 @@
 				<onup>19</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
-				<ondown>14</ondown>
+				<ondown>13</ondown>
 			</control>
-
-			<control type="button" id="14">
-				<description>Add Connection button</description>
-				<label>$ADDON[script.linux.nm 621]</label>
+			
+			<control type="button" id="13">
+				<description>Disconnect button</description>
+				<label>$ADDON[script.linux.nm 612]</label>
 				<posx>0</posx>
 				<posy>80</posy>
 				<width>200</width>
@@ -338,12 +366,12 @@
 				<aligny>center</aligny>
 				<texturenofocus border="5">MenuItemNF.png</texturenofocus>
 				<texturefocus border="5">button-focus.png</texturefocus>
-				<onup>13</onup>
+				<onup>14</onup>
 				<onleft>60</onleft>
 				<onright>10</onright>
 				<ondown>11</ondown>
 			</control>
-			
+
 			<control type="button" id="11">
 				<description>Delete button</description>
 				<label>$ADDON[script.linux.nm 622]</label>
