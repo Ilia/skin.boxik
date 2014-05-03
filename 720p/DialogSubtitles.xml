@@ -138,7 +138,7 @@
 						<control type="label">
 							<left>205</left>
 							<top>0</top>
-							<width>495</width>
+							<width>335</width>
 							<height>38</height>
 							<font>font18</font>
 							<aligny>center</aligny>
@@ -195,7 +195,7 @@
 						<control type="label">
 							<left>205</left>
 							<top>0</top>
-							<width>495</width>
+							<width>335</width>
 							<height>38</height>
 							<font>font18</font>
 							<aligny>center</aligny>
