@@ -82,7 +82,7 @@
 					<textoffsety>3</textoffsety>
 					<onleft>13</onleft>
 					<onright>11</onright>
-					<onclick>ActivateWindow(AccessPoints)</onclick>
+					<onclick>XBMC.RunScript(script.linux.nm)</onclick>
 					<onclick>Close</onclick>
 					<onclick>Skin.Setbool(HelpScreen)</onclick>
 				</control>
