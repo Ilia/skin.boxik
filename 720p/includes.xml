@@ -1043,14 +1043,14 @@
 			<shadowcolor>black</shadowcolor>
 			<label>$INFO[System.Time]</label>
 		</control>
-		<control type="image">
+		<control type=".image">
 			<top>23</top>
 			<right>47</right>
-      <width>26</width>
-      <height>26</height>
-		  <aspectratio align="left" aligny="center">keep</aspectratio>
-		  <texture background="true">$VAR[InternetState]</texture>
-    </control>
+      		<width>26</width>
+      		<height>26</height>
+		  	<aspectratio align="left" aligny="center">keep</aspectratio>
+		  	<texture background="true">$VAR[InternetState]</texture>
+    	</control>
 	</include>
 	<include name="HomeAddonsCommonLayout">
 		<include>Window_OpenClose_Animation</include>

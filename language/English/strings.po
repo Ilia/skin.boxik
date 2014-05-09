@@ -550,19 +550,11 @@ msgid "Preset"
 msgstr ""
 
 msgctxt "#31155"
-msgid "Movies: Animation"
-msgstr ""
-
-msgctxt "#31156"
-msgid "Movies: Children"
+msgid "Cartoons"
 msgstr ""
 
 msgctxt "#31157"
-msgid "Movies: Comedy"
-msgstr ""
-
-msgctxt "#31158"
-msgid "Movies: Family"
+msgid "Comedies"
 msgstr ""
 
 msgctxt "#31159"
