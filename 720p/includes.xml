@@ -42,26 +42,31 @@
 	</include>
 	<include name="DefaultInitialSetup">
 		<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
-		<onload condition="!Skin.HasSetting(HideHomeSearch) + !System.HasAddon(script.globalsearch)">Skin.Setbool(HideHomeSearch)</onload>
+
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.1.Label))">Skin.SetString(HomeItem.1.Label,Photos)</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.1.Path))">Skin.SetString(HomeItem.1.Path,ActivateWindow(Pictures))</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.1.Sub))">Skin.SetString(HomeItem.1.Sub,Photos)</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.1.Type))">Skin.SetString(HomeItem.1.Type,Photos)</onload>
 
-
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.2.Label))">Skin.SetString(HomeItem.2.Label,$LOCALIZE[20342])</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.2.Path))">Skin.SetString(HomeItem.2.Path,ActivateWindow(Videos,MovieTitles,return))</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.2.Sub))">Skin.SetString(HomeItem.2.Sub,Movies)</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.2.Type))">Skin.SetString(HomeItem.2.Type,Movies)</onload>
+
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Label))">Skin.SetString(HomeItem.3.Label,"Online")</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Path))">Skin.SetString(HomeItem.3.Path,ActivateWindow(Video,Addons,return))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Sub))">Skin.SetString(HomeItem.3.Sub,Online)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Type))">Skin.SetString(HomeItem.3.Type,Online)</onload>
 		
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Label))">Skin.SetString(HomeItem.3.Label,$LOCALIZE[20343])</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Path))">Skin.SetString(HomeItem.3.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Sub))">Skin.SetString(HomeItem.3.Sub,TVShows)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Type))">Skin.SetString(HomeItem.3.Type,TVShows)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Label))">Skin.SetString(HomeItem.4.Label,$LOCALIZE[2])</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Path))">Skin.SetString(HomeItem.4.Path,ActivateWindow(Music))</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Sub))">Skin.SetString(HomeItem.4.Sub,Music)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Type))">Skin.SetString(HomeItem.4.Type,Music)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Label))">Skin.SetString(HomeItem.4.Label,$LOCALIZE[20343])</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Path))">Skin.SetString(HomeItem.4.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Sub))">Skin.SetString(HomeItem.4.Sub,TVShows)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Type))">Skin.SetString(HomeItem.4.Type,TVShows)</onload>
+		
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Label))">Skin.SetString(HomeItem.5.Label,$LOCALIZE[2])</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Path))">Skin.SetString(HomeItem.5.Path,ActivateWindow(Music))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Sub))">Skin.SetString(HomeItem.5.Sub,Music)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Type))">Skin.SetString(HomeItem.5.Type,Music)</onload>
 	
 		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetBool(InitialSetUpRun)</onload>
 	</include>
