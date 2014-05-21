@@ -1145,6 +1145,7 @@
 						<property name="HiLiteItem">$INFO[Skin.String(HomeItem.10.Type)]</property>
 						<visible>!IsEmpty(Skin.String(HomeItem.10.Path))</visible>
 					</item>
+					
 					<item id="12">
 						<description>Home Menu Settings</description>
 						<label>SETTINGS</label>
@@ -1155,6 +1156,13 @@
 						<thumb>$INFO[Skin.String(HomeItem.12.FanArt)]</thumb>
 						<property name="SubMenu">Settings</property>
 						<property name="HiLiteItem">Settings</property>
+					</item>
+					<item id="12">
+						<description>Home Menu Settings</description>
+						<label>HELP</label>
+						<onclick>ActivateWindow(1111)</onclick>
+						<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
+						<thumb>$INFO[Skin.String(HomeItem.12.FanArt)]</thumb>
 					</item>
 				</content>
 			</control>
