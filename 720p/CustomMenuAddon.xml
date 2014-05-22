@@ -124,7 +124,6 @@
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 						<include>CloseMenuChoice</include>
-						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="3">
 						<description>Theater</description>
@@ -146,7 +145,6 @@
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,TVShows)</onclick>
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 						<include>CloseMenuChoice</include>
-						<visible>Library.HasContent(TVShows)</visible>
 					</item>
 					<item id="5">
 						<description>Live TV</description>

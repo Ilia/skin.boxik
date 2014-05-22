@@ -81,16 +81,11 @@
 		<control type="button" id="90105">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>Sources</label>
-			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+			<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
+      <onclick>Action(down)</onclick>
 		</control>
 	</include>
 	<include name="HomeSubMenuTVShows">
-		<control type="button." id="901041">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>Update Library</label>
-			<onclick>XBMC.updatelibrary(Video)</onclick>
-			<visible>Library.HasContent(Movies)</visible>
-		</control>
 		<control type="button" id="90172">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>575</label>
@@ -116,7 +111,8 @@
 		<control type="button" id="90105">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>Sources</label>
-			<onclick>ActivateWindow(Videos,Files,return)</onclick>
+			<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
+      <onclick>Action(down)</onclick>
 		</control>
 	</include>
 	<include name="HomeSubMenuMusic">
