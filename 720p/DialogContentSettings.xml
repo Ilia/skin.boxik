@@ -61,10 +61,10 @@
 			<control type="image">
 				<description>Used Scraper Image</description>
 				<posx>35</posx>
-				<posy>125</posy>
+				<posy>130</posy>
 				<width>150</width>
-				<height>150</height>
-				<aspectratio>keep</aspectratio>
+				<height>130</height>
+				<aspectratio>scale</aspectratio>
 				<texture>$INFO[ListItem.Icon]</texture>
 			</control>
 			
@@ -94,7 +94,7 @@
 						<posy>0</posy>
 						<width>340</width>
 						<height>40</height>
-						<texture border="5">button-nofocus.png</texture>
+						
 					</control>
 					<control type="image">
 						<posx>5</posx>
@@ -123,7 +123,7 @@
 						<width>340</width>
 						<height>40</height>
 						<visible>!Control.HasFocus(4)</visible>
-						<texture border="5">button-nofocus.png</texture>
+						
 					</control>
 					<control type="image">
 						<posx>0</posx>
@@ -153,21 +153,6 @@
 						<info>ListItem.Label</info>
 					</control>
 				</focusedlayout>
-			</control>
-			<control type="scrollbar" id="60">
-				<posx>560</posx>
-				<posy>130</posy>
-				<width>25</width>
-				<height>135</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				<textureslidernib>ScrollBarNib.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-				<onleft>4</onleft>
-				<onright>3</onright>
-				<showonepage>true</showonepage>
-				<orientation>vertical</orientation>
 			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
