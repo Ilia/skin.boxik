@@ -181,22 +181,14 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>430</height>
-                    <label>Thank you for purchasing[B][COLOR=selected] The Little Black Box[/COLOR][/B]. The revolution in Home Media Entertainment.[CR][CR]This one time seen [B]"First Use Help Guide"[/B], will guide you through the quickest way possible of setting up your Little Black Box. If you have any questions regarding The Little Black Box please [B]check the manual [/B] included in your box. For technical questions please visit the website you purchased your device from. For more info or help, please visit our forums at [COLOR=selected]www.tlbbforum.com[/COLOR] where you can find an FAQ and other useful information. Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR]TLBB Team</label>
+                    <label>Hi, my name is [B][COLOR=selected]BOXiK[/COLOR][/B] and I will be your entertainment for tonight.[CR][CR]These help screens will aide you to setup your BOXiK and enable you to build your movie, tv show and music libraries - so that you get the most out of your little back box. Each section will describe what BOXiK is capable of and you may come back to it at any stage by going to the HELP menu on the home screen.[CR][CR]If you have any questions regarding your BOXiK please email our support line at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].[CR][CR]Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR][B][COLOR=selected]BOXiK[/COLOR][/B]</label>
                     <font>font12</font>
                     <align>left</align>
                    <textcolor>white</textcolor>
                     <shadowcolor>99000000</shadowcolor>
                 </control>
-                <control type="image">
-                    <posx>690</posx>
-                    <posy>55</posy>
-                    <width>506</width>
-                    <height>360</height>
-                    <texture>windows/help/1.png</texture>
-                  <visible>!Player.HasMedia</visible>
-                </control>
                 <control type="button" id="5">
-                    <include>TopButton</include>
+                    <include>HiddenButton</include>
                     <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=Um22ddbbwDI,1)</onfocus>
                     <onfocus>SetFocus(4001)</onfocus>
                 </control>
@@ -206,19 +198,19 @@
                     <width>1075</width>
                     <height>50</height>
                     <font>FontSize_24</font>
-                  <label>$INFO[Control.Getlabel(70)]</label>
+                    <label>$INFO[Control.Getlabel(70)]</label>
                     <align>right</align>
                     <aligny>center</aligny>
                     <textcolor>grey</textcolor>
                     <shadowcolor>99000000</shadowcolor>
                 </control>
-                <control type="textbox">
+                <control type=".textbox">
                     <description>Help Tip</description>
                     <posx>0</posx>
                     <posy>500</posy>
                     <width>750</width>
                     <height>80</height>
-                    <label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a video presentation of the[B][COLOR=white] BOXiK.[/COLOR][/B]</label>
+                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a introduction video.</label>
                     <font>font12</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -251,11 +243,11 @@
                     <description>Calibration</description>
                     <posx>0</posx>
                     <posy>70</posy>
-                    <width>600</width>
+                    <width>700</width>
                     <height>400</height>
-                    <label>In the next step you can adjust the screen to your display devise. Press [B]"OK"[/B] to bring up the [B]Calibration[/B] setup screen and follow the [B]calibration instructions [/B] to adjust the screen so it fits perfectly to your display device.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+                    <label>Your [B][COLOR=selected]BOXiK[/COLOR][/B] will need to be adjusted for your TV - this is a one time adjustment that you will never need to do again (unless you change TV's regurarly).[CR][CR]Press [B]"OK"[/B] to bring up the [B]Calibration[/B] setup screen and follow the [B]calibration instructions [/B] to adjust the screen so it fits perfectly to your TV.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step.</label>
                     <font>font12</font>
-                    <align>justify</align>
+                    <align>left</align>
                     <textcolor>white</textcolor>
                     <shadowcolor>99000000</shadowcolor>
                 </control>
@@ -268,9 +260,9 @@
                   <visible>!Player.HasMedia</visible>
                 </control>
                 <control type="button" id="5">
-                <include>TopButton</include>
-              <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=xLggcsNzPeM,1)</onfocus>
-              <onfocus>SetFocus(4001)</onfocus>
+                    <include>HiddenButton</include>
+                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=xLggcsNzPeM,1)</onfocus>
+                    <onfocus>SetFocus(4001)</onfocus>
                 </control>
                 <control type="label.">
                     <posx>1188</posx>
@@ -290,7 +282,7 @@
                     <posy>500</posy>
                     <width>750</width>
                     <height>80</height>
-                    <label>[COLOR=blue]NOTICE:[/COLOR] If you need more help, press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step.</label>
+                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a tutorial.</label>
                     <font>font12</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -323,26 +315,18 @@
                     <description>WiFi</description>
                     <posx>0</posx>
                     <posy>70</posy>
-                    <width>600</width>
+                    <width>700</width>
                     <height>400</height>
-                    <label>In the next step you can setup your network. Click [B]"OK"[/B] on your remote to bring up the [B]WiFi[/B] setup window. Press the [B]"Add"[/B] button, navigate to your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary. [B]Wired[/B] connections are configured automatically via DHCP on boot.[CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is connected but with no Internet access and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step. Press "NEXT" if you want to skip this step.</label>
+                    <label>Internet is very important to your [B][COLOR=selected]BOXiK[/COLOR][/B] since it grabs all information about your movies, tv shows and music from the internet to build your library. [B][COLOR=selected]BOXiK[/COLOR][/B] comes with both wired and wireless connection (WiFi). If you have connected it via a network cable then you can skip this section. [CR][CR]To connect to your home WiFi - click [B]"OK"[/B] on your remote to bring up the [B]WiFi[/B] setup window and choose your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary. [CR][CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is connected but with no Internet access and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.</label>
                     <font>font12</font>
-                    <align>justify</align>
+                    <align>left</align>
                     <textcolor>white</textcolor>
                     <shadowcolor>99000000</shadowcolor>
                 </control>
-                <control type="image">
-                    <posx>601</posx>
-                    <posy>40</posy>
-                    <width>605</width>
-                    <height>345</height>
-                    <texture>windows/help/3.png</texture>
-                  <visible>!Player.HasMedia</visible>
-                </control>
                 <control type="button" id="5">
-                <include>TopButton</include>
-              <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
-              <onfocus>SetFocus(4001)</onfocus>
+                    <include>HiddenButton</include>
+                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+                    <onfocus>SetFocus(4001)</onfocus>
                 </control>
                 <control type="label.">
                     <posx>1188</posx>
@@ -350,7 +334,7 @@
                     <width>1075</width>
                     <height>50</height>
                     <font>FontSize_24</font>
-                  <label>$INFO[Control.Getlabel(70)]</label>
+                    <label>$INFO[Control.Getlabel(70)]</label>
                     <align>right</align>
                     <aligny>center</aligny>
                     <textcolor>grey</textcolor>
@@ -362,7 +346,7 @@
                     <posy>500</posy>
                     <width>750</width>
                     <height>80</height>
-                    <label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=white]"RIGHT"[/COLOR] again to stop the video.</label>
+                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a tutorial.</label>
                     <font>font12</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -424,9 +408,9 @@
                   <visible>!Player.HasMedia</visible>
                 </control>
                 <control type="button" id="5">
-                <include>TopButton</include>
-              <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
-              <onfocus>SetFocus(4001)</onfocus>
+                    <include>HiddenButton</include>
+                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+                    <onfocus>SetFocus(4001)</onfocus>
                 </control>
                 <control type="label.">
                     <posx>1188</posx>
@@ -446,7 +430,7 @@
                     <posy>500</posy>
                     <width>750</width>
                     <height>80</height>
-                    <label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=white]"RIGHT"[/COLOR] again to stop the video.</label>
+                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a tutorial.</label>
                     <font>font12</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -496,7 +480,7 @@
                   <visible>!Player.HasMedia</visible>
                 </control>
                 <control type="button" id="5">
-                <include>TopButton</include>
+                <include>HiddenButton</include>
               <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
               <onfocus>SetFocus(4001)</onfocus>
                 </control>
@@ -518,7 +502,7 @@
                     <posy>500</posy>
                     <width>750</width>
                     <height>80</height>
-                    <label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=white]"RIGHT"[/COLOR] again to stop the video.</label>
+                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a tutorial.</label>
                     <font>font12</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -568,7 +552,7 @@
                   <visible>!Player.HasMedia</visible>
                 </control>
                 <control type="button" id="5">
-                <include>TopButton</include>
+                <include>HiddenButton</include>
               <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
               <onfocus>SetFocus(4001)</onfocus>
                 </control>
@@ -590,7 +574,7 @@
                     <posy>500</posy>
                     <width>750</width>
                     <height>80</height>
-                    <label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=white]"RIGHT"[/COLOR] again to stop the video.</label>
+                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a tutorial.</label>
                     <font>font12</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -640,7 +624,7 @@
                   <visible>!Player.HasMedia</visible>
                 </control>
                 <control type="button" id="5">
-                <include>TopButton</include>
+                <include>HiddenButton</include>
               <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
               <onfocus>SetFocus(4001)</onfocus>
                 </control>
@@ -662,7 +646,7 @@
                     <posy>500</posy>
                     <width>750</width>
                     <height>80</height>
-                    <label>[COLOR=blue]NOTICE:[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a video tutorial about this step. Press [COLOR=white]"RIGHT"[/COLOR] again to stop the video.</label>
+                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=white]"RIGHT"[/COLOR] button on your remote to watch a tutorial.</label>
                     <font>font12</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
