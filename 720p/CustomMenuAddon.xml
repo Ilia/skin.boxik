@@ -127,7 +127,7 @@
 						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="3">
-						<description>Cinema</description>
+						<description>Theater</description>
 						<label>$LOCALIZE[24000] - $LOCALIZE[31146]</label>
 						<include>ClearButtonChoice</include>
 						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,RunScript(script.cinema.experience,movietitles))</onclick>
