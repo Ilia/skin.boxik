@@ -44,18 +44,6 @@
 		</control>
 	</include>
 	<include name="HomeSubMenuMovies">
-		<control type="button" id="901041">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>Update Library</label>
-			<onclick>XBMC.updatelibrary(Video)</onclick>
-			<visible>Library.HasContent(Movies)</visible>
-		</control>
-		<control type="button" id="90162">
-			<include>ButtonHomeSubCommonValues</include>
-			<label>31328</label>
-			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
-			<visible>Library.HasContent(Movies)</visible>
-		</control>
 		<control type="button" id="90165">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>135</label>
@@ -66,6 +54,18 @@
 			<include>ButtonHomeSubCommonValues</include>
 			<label>136</label>
 			<onclick>ActivateWindow(VideoLibrary,special://videoplaylists/,return)</onclick>
+			<visible>Library.HasContent(Movies)</visible>
+		</control>
+		<control type="button" id="90168">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>Theater</label>
+			<onclick>RunScript(script.cinema.experience,movietitles)</onclick>
+			<visible>System.HasAddon(script.cinema.experience) + Library.HasContent(Movies)</visible>
+		</control>
+		<control type="button" id="90162">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>31328</label>
+			<onclick>ActivateWindow(Videos,RecentlyAddedMovies,return)</onclick>
 			<visible>Library.HasContent(Movies)</visible>
 		</control>
 		<control type="button" id="90107">
@@ -85,7 +85,7 @@
 		</control>
 	</include>
 	<include name="HomeSubMenuTVShows">
-		<control type="button" id="901041">
+		<control type="button." id="901041">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>Update Library</label>
 			<onclick>XBMC.updatelibrary(Video)</onclick>
