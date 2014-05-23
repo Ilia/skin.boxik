@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<onload condition="!IsEmpty(Window(home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
 	<onload condition="!IsEmpty(Window(home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
-	<!-- onload condition="Skin.HasSetting(HelpScreen)">ActivateWindow(1100)</onload -->
+	<onload>ActivateWindow(1100)</onload>
 	<include>DefaultInitialSetup</include>
 	<controls>
 		<include>CommonBackground</include>
@@ -809,7 +809,7 @@
 
 		<control type="group">
 			<include>HomeMenuFade</include>
-			<visible>!Skin.HasSetting(HideHomeMenu)</visible>
+			<visible>!Skin.HasSetting(HideHomeMenu) | !Skin.HasSetting(HelpScreen)</visible>
 			<posy>500</posy>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />

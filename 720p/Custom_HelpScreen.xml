@@ -37,6 +37,7 @@
                 <height>588</height>
                 <texture border="5">black-back2.png</texture>
             </control>
+
             <control type="label">
                 <posx>120</posx>
                 <posy>18</posy>
@@ -216,7 +217,7 @@
                     <posy>500</posy>
                     <width>750</width>
                     <height>80</height>
-                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=white]"DOWN"[/COLOR] button on your remote to go to each section of this help guide.</label>
+                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=white]"DOWN"[/COLOR] button on your remote to go to each section.</label>
                     <font>font12</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -251,7 +252,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Your [B][COLOR=selected]BOXiK[/COLOR][/B] will need to be adjusted for your TV - this is a one time adjustment that you will never need to do again (unless you change TV's regurarly).[CR][CR]Press [B]"OK"[/B] to bring up the [B]Calibration[/B] setup screen and use the [B]UP[/B], [B]DOWN[/B], [B]LEFT[/B] and [B]RIGHT[/B] to adjust the screen so it fits perfectly to your TV.[CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step.</label>
+                    <label>Your [B][COLOR=selected]BOXiK[/COLOR][/B] will need to be adjusted for your TV - this is a one time adjustment that you will never need to do again (unless you change TV's regurarly).[CR][CR]Press [B]OK[/B] to bring up the [B]Calibration[/B] setup screen and use the [B]UP[/B], [B]DOWN[/B], [B]LEFT[/B] and [B]RIGHT[/B] to adjust the screen so it fits perfectly to your TV. To save each adjustment press [B]OK[/B]. [CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -323,7 +324,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Internet is very important to your [B][COLOR=selected]BOXiK[/COLOR][/B] since it grabs all information about your movies, tv shows and music from the internet to build your library. [B][COLOR=selected]BOXiK[/COLOR][/B] comes with both wired and wireless connection (WiFi). If you have connected it via a network cable then you can skip this section. [CR][CR]To connect to your home WiFi - click [B]"OK"[/B] on your remote to bring up the [B]WiFi[/B] setup window and choose your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary. [CR][CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is available but with no connected access and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.</label>
+                    <label>Internet is very important to your [B][COLOR=selected]BOXiK[/COLOR][/B] since it grabs all information about your movies, tv shows and music from the internet to build your library. [B][COLOR=selected]BOXiK[/COLOR][/B] comes with both wired and wireless connection (WiFi). If you have connected it via a network cable then you can skip this section. [CR][CR]To connect to your home WiFi - click [B]"OK"[/B] on your remote to bring up the [B]WiFi[/B] setup window and choose your [B]WiFi[/B] and enter your [B]WiFi[/B] password if necessary. [CR][CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is available but no connected and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -396,7 +397,7 @@
                 <control type="textbox">
                     <description>WARNING</description>
                     <posx>0</posx>
-                    <posy>225</posy>
+                    <posy>295</posy>
                     <width>600</width>
                     <height>80</height>
                     <label>[COLOR=red]WARNING:[/COLOR] Some online addons may contain content that may not be legal in your country. BOXiK is not liable for any content or add-ons played and installed on this device.</label>
@@ -687,7 +688,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>These start guide only stractched the surface of what your [B][COLOR=selected]BOXiK[/COLOR][/B] can do even though it is already doing quiet a bit. We are upload more video tutorials to ur BOXiK Help channel on Youtube and by pressing [B]OK[/B] you can go there now. </label>
+                    <label>These start guide only stractched the surface of what your [B][COLOR=selected]BOXiK[/COLOR][/B] can do even though it is already doing quiet a bit. [CR][CR]We are uploading more video tutorials to our BOXiK Help channel on Youtube and by pressing [B]OK[/B] you can go there now or anytime go to the [B]Online[/B] section to find it.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
