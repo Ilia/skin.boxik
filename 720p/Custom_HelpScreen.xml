@@ -90,7 +90,7 @@
                 <texture>boxik.png</texture>
             </control>
             <control type="group" id="4000">
-                <posy>200</posy>
+                <posy>180</posy>
                 <animation effect="fade"  start="100" end="65" time="300" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus">Conditional</animation>
                 <control type="list" id="4001">
                 <posx>78</posx>
@@ -199,7 +199,7 @@
 
           <!-- Welcome -->
             <control type="group">
-                <posy>-95</posy>
+                <posy>-75</posy>
                 <posx>370</posx>
                 <visible>Container(4001).Hasfocus(1)</visible>
                 <control type="label">
@@ -221,7 +221,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>430</height>
-                    <label>Thank you for purchasing your [B][COLOR=selected]BOXiK[/COLOR][/B].[CR][CR]These help screens will aide you to setup your BOXiK and enable you to build your movie, tv show and music libraries so that you get the most out of your little black box. Each section will describe what BOXiK is capable of and you can come back to this guide at any time by going to the HELP menu on the home screen.[CR][CR]If you have any questions regarding your BOXiK please email our support line at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].[CR][CR]Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR][B]Sincerely,[CR][COLOR=selected]BOXiK[/COLOR][/B]</label>
+                    <label>These guide screens will help you to setup your [B][COLOR=selected]BOXiK[/COLOR][/B] and enable you to build your movie, tv show and music libraries so that you get the most out of your little black box.[CR][CR]If you have any questions regarding your [B][COLOR=selected]BOXiK[/COLOR][/B] please email our support line at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].[CR][CR]Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR][B]Sincerely,[CR][COLOR=selected]BOXiK[/COLOR][/B]</label>
                     <font>font12</font>
                     <align>left</align>
                    <textcolor>white</textcolor>
@@ -262,7 +262,7 @@
 
           <!-- Calibration -->
             <control type="group">
-                <posy>-95</posy>
+                <posy>-75</posy>
                 <posx>370</posx>
                 <visible>Container(4001).Hasfocus(2)</visible>
                 <include>VisibleHiddenSlideAnimation</include>
@@ -285,7 +285,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Your [B][COLOR=selected]BOXiK[/COLOR][/B] will need to be adjusted for your TV - this is a one time adjustment that you will never need to do again (unless you change TV's regurarly).[CR][CR]Press [B]OK[/B] to bring up the [B]Calibration[/B] setup screen and use the [B]UP[/B], [B]DOWN[/B], [B]LEFT[/B] and [B]RIGHT[/B] to adjust the screen so it fits perfectly to your TV. To save each adjustment press [B]OK[/B]. [CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step.</label>
+                    <label>Your [B][COLOR=selected]BOXiK[/COLOR][/B] will need to be adjusted for your TV - this is a one time adjustment.[CR][CR]Press [B]OK[/B] to bring up the [B]Calibration[/B] setup screen and use the [B]UP[/B], [B]DOWN[/B], [B]LEFT[/B] and [B]RIGHT[/B] to adjust the screen so it fits perfectly to your TV. To save each adjustment press [B]OK[/B]. [CR][CR]When you done press the [B]"BACK"[/B] button on your remote to go to the next step.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -334,7 +334,7 @@
 
           <!-- WiFi -->
             <control type="group">
-                <posy>-95</posy>
+                <posy>-75</posy>
                 <posx>370</posx>
                 <visible>Container(4001).Hasfocus(3)</visible>
                 <include>VisibleHiddenSlideAnimation</include>
@@ -398,7 +398,7 @@
 
           <!-- Addons -->
             <control type="group">
-                <posy>-95</posy>
+                <posy>-75</posy>
                 <posx>370</posx>
                 <visible>Container(4001).Hasfocus(4)</visible>
                 <include>VisibleHiddenSlideAnimation</include>
@@ -431,7 +431,7 @@
                     <description>WARNING</description>
                     <posx>0</posx>
                     <posy>295</posy>
-                    <width>600</width>
+                    <width>700</width>
                     <height>80</height>
                     <label>[COLOR=red]WARNING:[/COLOR] Some online addons may contain content that may not be legal in your country. BOXiK is not liable for any content or add-ons played and installed on this device.</label>
                     <font>font12</font>
@@ -482,7 +482,7 @@
 
           <!-- Video Library -->
             <control type="group">
-                <posy>-95</posy>
+                <posy>-75</posy>
                 <posx>370</posx>
                 <visible>Container(4001).Hasfocus(5)</visible>
                 <include>VisibleHiddenSlideAnimation</include>
@@ -554,7 +554,7 @@
 
           <!-- Music Library -->
             <control type="group">
-                <posy>-95</posy>
+                <posy>-75</posy>
                 <posx>370</posx>
                 <visible>Container(4001).Hasfocus(6)</visible>
                 <include>VisibleHiddenSlideAnimation</include>
@@ -626,7 +626,7 @@
 
           <!-- Cutomize UI -->
             <control type="group">
-                <posy>-95</posy>
+                <posy>-75</posy>
                 <posx>370</posx>
                 <visible>Container(4001).Hasfocus(7)</visible>
                 <include>VisibleHiddenSlideAnimation</include>
@@ -698,7 +698,7 @@
 
             <!-- More -->
             <control type="group">
-                <posy>-95</posy>
+                <posy>-75</posy>
                 <posx>370</posx>
                 <visible>Container(4001).Hasfocus(8)</visible>
                 <include>VisibleHiddenSlideAnimation</include>
@@ -721,7 +721,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>These start guide only stractched the surface of what your [B][COLOR=selected]BOXiK[/COLOR][/B] can do even though it is already doing quiet a bit. [CR][CR]We are uploading more video tutorials to our BOXiK Help channel on Youtube and by pressing [B]OK[/B] you can go there now or anytime go to the [B]Online[/B] section to find it.</label>
+                    <label>We are uploading more video tutorials to our [B]BOXiK Help Channel[/B] on Youtube. You can find this channel in the [B]Online[/B] menu on the home screen.[CR][CR]Press [B]OK[/B] to go see more videos or press [B]Back[/B] to go to home screen.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
