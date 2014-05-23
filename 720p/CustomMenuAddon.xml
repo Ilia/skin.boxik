@@ -369,6 +369,15 @@
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,Programs)</onclick>
 						<include>CloseMenuChoice</include>
 					</item>
+					<item id="25">
+						<description>Help</description>
+						<label>Help/Guide</label>
+						<include>ClearButtonChoice</include>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(1111,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label,"Help")</onclick>
+						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,Help)</onclick>
+						<include>CloseMenuChoice</include>
+					</item>
 				</content>
 			</control>
 			<control type="button">

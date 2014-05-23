@@ -77,6 +77,10 @@
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Path))">Skin.SetString(HomeItem.5.Path,ActivateWindow(Music))</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Sub))">Skin.SetString(HomeItem.5.Sub,Music)</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Type))">Skin.SetString(HomeItem.5.Type,Music)</onload>
+
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Label))">Skin.SetString(HomeItem.6.Label,"HELP")</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Path))">Skin.SetString(HomeItem.6.Path,ActivateWindow(1111))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Type))">Skin.SetString(HomeItem.6.Type,Help)</onload>
 	
 		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetBool(InitialSetUpRun)</onload>
 	</include>
