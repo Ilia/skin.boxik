@@ -186,8 +186,7 @@
 		<control type="button" id="90125">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>Help</label>
-			<onclick condition="System.HasAddon(plugin.video.boxik.channel)">RunAddon(plugin.video.boxik.channel)</onclick>
-			<visible>System.HasAddon(plugin.video.boxik.channel)</visible>
+			<onclick>ActivateWindow(1111)</onclick>
 		</control>
 		<control type="button" id="90126">
 			<include>ButtonHomeSubCommonValues</include>
