@@ -154,6 +154,7 @@
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
+
 			<control type="group">
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50)</visible>
@@ -288,7 +289,7 @@
 			</control>
 			<control type="group">
 				<include>VisibleFadeEffect</include>
-				<visible>Window.IsVisible(1111) | Control.IsVisible(51) | Control.IsVisible(500) | Control.IsVisible(505)</visible>
+				<visible>Control.IsVisible(51) | Control.IsVisible(500) | Control.IsVisible(505)</visible>
 				<control type="image">
 					<posx>75</posx>
 					<posy>60</posy>
