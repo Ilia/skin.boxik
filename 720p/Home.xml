@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<onload condition="!IsEmpty(Window(home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
 	<onload condition="!IsEmpty(Window(home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
-	<!-- onload>ActivateWindow(1100)</onload -->
+	<onload condition="!Skin.HasSetting(HelpScreen)">ActivateWindow(1100)</onload>
 	<include>DefaultInitialSetup</include>
 	<controls>
 		<include>CommonBackground</include>
@@ -1157,13 +1157,6 @@
 						<thumb>$INFO[Skin.String(HomeItem.12.FanArt)]</thumb>
 						<property name="SubMenu">Settings</property>
 						<property name="HiLiteItem">Settings</property>
-					</item>
-					<item id="12">
-						<description>Home Menu Settings</description>
-						<label>HELP</label>
-						<onclick>ActivateWindow(1111)</onclick>
-						<icon>$INFO[Skin.CurrentTheme,special://skin/backgrounds/,.jpg]</icon>
-						<thumb>$INFO[Skin.String(HomeItem.12.FanArt)]</thumb>
 					</item>
 				</content>
 			</control>
