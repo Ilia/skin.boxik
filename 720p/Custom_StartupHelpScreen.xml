@@ -4,7 +4,7 @@
 	<coordinates>
 		<system>1</system>
 		<posx>320</posx>
-		<posy>95</posy>
+		<posy>115</posy>
 	</coordinates>
 	<controls>
 		<control type="group">
@@ -45,7 +45,7 @@
 					<posy>0</posy>
 					<width>540</width>
 					<height>360</height>
-					<label>Thank you for purchasing your [B][COLOR=selected]BOXiK[/COLOR][/B].[CR][CR]If this is your first time, we recommend you head over to our [B]Help/Guide[/B] section to go through the first time setup process. Otherwise select the [B]Close[/B] button below to never see this message again. 
+					<label>Thank you for purchasing your [B][COLOR=selected]BOXiK[/COLOR][/B].[CR][CR]If this is your first time, we recommend you head over to our [B]Help/Guide[/B] section to go through the initial setup process. Otherwise select the [B]Close[/B] button below to never see this message again. 
 						[CR]Happy watching,
 						[B]BOXiK[/B]
 						</label>

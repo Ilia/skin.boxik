@@ -171,7 +171,10 @@
 		</control>
 	</include>
 	<include name="HomeWidgetPanel">
+		
 		<control type="group" id="9003">
+			<visible>!Skin.HasSetting(HideHomeMenu)</visible>
+			<visible>Skin.HasSetting(HelpScreen)</visible>
 			<include>HomeMenuFade</include>
 			<posy>100</posy>
 			<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>

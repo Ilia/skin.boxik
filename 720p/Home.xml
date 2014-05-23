@@ -4,7 +4,7 @@
 	<allowoverlay>no</allowoverlay>
 	<onload condition="!IsEmpty(Window(home).Property(MenuItemSelected))">ClearProperty(MenuItemSelected,Home)</onload>
 	<onload condition="!IsEmpty(Window(home).Property(MenuItemActive))">ClearProperty(MenuItemActive,Home)</onload>
-	<onload>ActivateWindow(1100)</onload>
+	<!-- onload>ActivateWindow(1100)</onload -->
 	<include>DefaultInitialSetup</include>
 	<controls>
 		<include>CommonBackground</include>
@@ -809,7 +809,8 @@
 
 		<control type="group">
 			<include>HomeMenuFade</include>
-			<visible>!Skin.HasSetting(HideHomeMenu) | !Skin.HasSetting(HelpScreen)</visible>
+			<visible>!Skin.HasSetting(HideHomeMenu)</visible>
+			<visible>Skin.HasSetting(HelpScreen)</visible>
 			<posy>500</posy>
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
@@ -823,14 +824,14 @@
 			<control type="image" description="Top glass border">
 				<description>Shown when recently added is disabled</description>
 				<visible>[Skin.HasSetting(HideHomeVideoWidget) + Skin.HasSetting(HideHomeAlbumsWidget) + Skin.HasSetting(HideHomeConcertsWidget)]</visible>
-        <posx>0</posx>
-       	<posy>-65</posy>
-       	<width>1280</width>
-       	<height>87</height>
-       	<texture>home/NavbarGlass.png</texture>
-   		</control>
+		        <posx>0</posx>
+		       	<posy>-65</posy>
+		       	<width>1280</width>
+		       	<height>87</height>
+		       	<texture>home/NavbarGlass.png</texture>
+	   		</control>
 
-   		<control type="image" description="Bottom glass border">
+   			<control type="image" description="Bottom glass border">
 				<animation effect="zoom" start="100,100" end="100,66" time="100" 
 						condition="![
 							StringCompare(Container(9000).ListItem.Property(SubMenu),Videos) |
@@ -847,12 +848,12 @@
 							StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel)
 							]"
 					>Conditional</animation>
-	      <posx>0</posx>
-	      <posy>65</posy>
-	      <width>1280</width>
-	      <height>80</height>
-	      <texture flipy="true">home/NavbarGlass2.png</texture>
-      </control>
+				<posx>0</posx>
+				<posy>65</posy>
+				<width>1280</width>
+				<height>80</height>
+				<texture flipy="true">home/NavbarGlass2.png</texture>
+			</control>
 
 			<control type="group" id="9001">
 				<posx>0</posx>
