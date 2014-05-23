@@ -256,7 +256,7 @@
                     <textcolor>white</textcolor>
                     <shadowcolor>99000000</shadowcolor>
                     <include>VisibleHiddenSlideAnimation</include>
-                  <visible>!Player.HasMedia</visible>
+                    <visible>!Player.HasMedia</visible>
                 </control>
             </control>
 
@@ -664,9 +664,9 @@
                   <visible>!Player.HasMedia</visible>
                 </control>
                 <control type="button" id="5">
-                <include>HiddenButton</include>
-              <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
-              <onfocus>SetFocus(4001)</onfocus>
+                    <include>HiddenButton</include>
+                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+                    <onfocus>SetFocus(4001)</onfocus>
                 </control>
                 <control type="label.">
                     <posx>1188</posx>
@@ -728,180 +728,7 @@
                     <shadowcolor>99000000</shadowcolor>
                 </control>
             </control>
-
-          <!-- Head Labels & Video Window -->
-            <control type="group.">
-                <control type="videowindow">
-                    <posx>610</posx>
-                    <posy>65</posy>
-                    <width>580</width>
-                    <height>325</height>
-                    <visible>Player.HasMedia</visible>
-                </control>
-                <control type="progress">
-                    <description>Progressbar</description>
-                    <posx>611</posx>
-                    <posy>385</posy>
-                    <width>580</width>
-                    <height>17</height>
-                    <info>Player.Progress</info>
-                    <reveal>true</reveal>
-                    <texturebg border="10">osd/osd_bg_progress_cache_big.png</texturebg>
-                    <lefttexture>-</lefttexture>
-                    <midtexture>osd/osd_center_progress.png</midtexture>
-                    <righttexture>-</righttexture>
-                    <overlaytexture>-</overlaytexture>
-                </control>
-                <control type="progress">
-                    <description>Progressbar</description>
-                    <posx>611</posx>
-                    <posy>385</posy>
-                    <width>580</width>
-                    <height>17</height>
-                    <info>Player.CacheLevel</info>
-                    <texturebg border="10">osd/osd_bg_progress_cache_big.png</texturebg>
-                    <lefttexture>-</lefttexture>
-                    <midtexture>osd/osd_center_progress_cache.png</midtexture>
-                    <righttexture>-</righttexture>
-                    <overlaytexture>-</overlaytexture>
-                    <colordiffuse>11FFFFFF</colordiffuse>
-                </control>
-                <control type="progress">
-                    <description>Progressbar</description>
-                    <posx>611</posx>
-                    <posy>385</posy>
-                    <width>580</width>
-                    <height>17</height>
-                    <info>Player.ProgressCache</info>
-                    <reveal>true</reveal>
-                    <texturebg border="10">osd/osd_bg_progress_cache_big.png</texturebg>
-                    <lefttexture>-</lefttexture>
-                    <midtexture>osd/osd_center_progress.png</midtexture>
-                    <righttexture>-</righttexture>
-                    <overlaytexture>-</overlaytexture>
-                    <colordiffuse>44FFFFFF</colordiffuse>
-                </control>
             </control>
-        </control>
-
-        <control type="group." id="10000">
-            <posx>35</posx>
-            <posy>590</posy>
-            <width>1210</width>
-            <visible>Window.IsVisible(Custom_HelpScreen.xml)</visible>
-            <control type="grouplist" id="10001">
-                <align>left</align>
-                <orientation>horizontal</orientation>
-                <onleft>10002</onleft>
-                <onright>10002</onright>
-                <onup>4000</onup>
-                <ondown>4000</ondown>
-                <control type="button" id="200">
-                    <description>Next</description>
-                    <width>140</width>
-                    <height>40</height>
-                    <texturefocus border="39,3,39,39">windows/help/next_fo.png</texturefocus>
-                    <texturenofocus border="39,3,39,39">windows/help/next_nf.png</texturenofocus>
-                    <align>left</align>
-                    <aligny>top</aligny>
-                    <font>FontSize_20</font>
-                    <textwidth>310</textwidth>
-                    <textoffsetx>40</textoffsetx>
-                    <textoffsety>6</textoffsety>
-                    <textcolor>99grey</textcolor>
-                    <focusedcolor>white</focusedcolor>
-                    <shadowcolor>99000000</shadowcolor>
-                    <label>Next</label>
-                    <onclick>Control.Move(4001,1)</onclick>
-                    <!-- <visible>Container(4001).HasNext</visible> -->
-                </control>
-                <control type="button" id="201">
-                    <description>Previous</description>
-                    <width>140</width>
-                    <height>40</height>
-                    <texturefocus border="39,3,39,39">windows/help/previous_fo.png</texturefocus>
-                    <texturenofocus border="39,3,39,39">windows/help/previous_nf.png</texturenofocus>
-                    <align>left</align>
-                    <aligny>top</aligny>
-                    <font>FontSize_20</font>
-                    <textwidth>310</textwidth>
-                    <textoffsetx>40</textoffsetx>
-                    <textoffsety>6</textoffsety>
-                    <textcolor>99grey</textcolor>
-                    <focusedcolor>white</focusedcolor>
-                    <shadowcolor>99000000</shadowcolor>
-                    <label>Previous</label>
-                    <onclick>Control.Move(4001,-1)</onclick>
-                    <!-- <visible>Container(4001).HasPrevious</visible> -->
-                </control>
-            </control>
-            <control type="grouplist" id="10002">
-                <orientation>horizontal</orientation>
-                <align>right</align>
-                <onleft>10001</onleft>
-                <onright>10001</onright>
-                <onup>4000</onup>
-                <ondown>4000</ondown>
-                <control type="button" id="202">
-                    <description>Skip</description>
-                    <width>310</width>
-                    <height>40</height>
-                    <texturefocus border="39,3,39,39">windows/help/save_fo.png</texturefocus>
-                    <texturenofocus border="39,3,39,39">windows/help/save_nf.png</texturenofocus>
-                    <align>right</align>
-                    <aligny>top</aligny>
-                    <font>FontSize_20</font>
-                    <textwidth>260</textwidth>
-                    <textoffsetx>40</textoffsetx>
-                    <textoffsety>5</textoffsety>
-                    <textcolor>99grey</textcolor>
-                    <focusedcolor>white</focusedcolor>
-                    <shadowcolor>99000000</shadowcolor>
-                    <label>Skip this guide</label>
-                    <onclick>Action(back)</onclick>
-                    <visible>![Window.Previous(Settings) | Window.Previous(Home)]</visible>
-                </control>
-                <control type="button" id="203">
-                    <description>Don't show again</description>
-                    <width>310</width>
-                    <height>40</height>
-                    <texturefocus border="39,3,39,39">windows/help/cancel_fo.png</texturefocus>
-                    <texturenofocus border="39,3,39,39">windows/help/cancel_nf.png</texturenofocus>
-                    <align>right</align>
-                    <aligny>top</aligny>
-                    <font>FontSize_20</font>
-                    <textwidth>260</textwidth>
-                    <textoffsetx>40</textoffsetx>
-                    <textoffsety>5</textoffsety>
-                    <textcolor>99grey</textcolor>
-                    <focusedcolor>white</focusedcolor>
-                    <shadowcolor>99000000</shadowcolor>
-                  <label>Don't show this guide again</label>
-                    <onclick>Skin.Setbool(FirstTimeRun)</onclick>
-                <onclick>Action(back)</onclick>
-                <visible>![Window.Previous(Settings) | Window.Previous(Home)]</visible>
-                </control>
-                <control type="button" id="204">
-                    <description>Quit</description>
-                    <width>260</width>
-                    <height>40</height>
-                    <texturefocus border="39,3,39,39">windows/help/cancel_fo.png</texturefocus>
-                    <texturenofocus border="39,3,39,39">windows/help/cancel_nf.png</texturenofocus>
-                    <align>right</align>
-                    <aligny>top</aligny>
-                    <font>FontSize_20</font>
-                    <textwidth>310</textwidth>
-                    <textoffsetx>40</textoffsetx>
-                    <textoffsety>5</textoffsety>
-                    <textcolor>99grey</textcolor>
-                    <focusedcolor>white</focusedcolor>
-                    <shadowcolor>99000000</shadowcolor>
-                    <label>13009</label>
-                    <onclick>Action(back)</onclick>
-                    <visible>Window.Previous(Settings) | Window.Previous(Home)</visible>
-                </control>
-            </control>
-        </control>
         </control>
         <include>Clock</include>
     </controls>
