@@ -45,16 +45,14 @@
 			</control>
 			<control type="group">
 				<posx>60</posx>
-				<posy>110</posy>
+				<posy>115</posy>
 				<control type="textbox">
 					<description>textarea</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>540</width>
+					<width>530</width>
 					<height>360</height>
-					<label>Thank you for purchasing your [B]BOXiK[/B] - the single access point to all your media.[CR][CR]We recommend you press the [B][COLOR=selected]OK[/COLOR][/B] button to go through the initial setup process. Otherwise press the [B]Down[/B] button on your remote to never see this message again. 
-						[CR]Happy watching,
-						[B]BOXiK[/B]
+					<label>Welcome to [B]BOXiK[/B] - the single access point to all your media.[CR][CR]We recommend you press the [B][COLOR=selected]OK[/COLOR][/B] button on your remote to go through the Help Guide to setup your [B]BOXiK[/B]. Otherwise press the [B]DOWN[/B] button on your remote to never see this message again. [CR]You can still find the Help Guide section on your home menu.[CR][CR]Happy watching,[CR][B]BOXiK[/B]
 						</label>
 					<font>font12</font>
 					<align>left</align>
