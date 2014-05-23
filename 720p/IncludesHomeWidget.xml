@@ -10,6 +10,10 @@
 			<animation effect="slide" reversable="true" start="0,0" end="30,0" time="200" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
 			<animation effect="slide" reversable="true" start="0,0" end="32,0" time="200" condition="Player.HasAudio">Conditional</animation>
 			<animation effect="slide" reversable="true" start="0,0" end="120,0" time="200" condition="[IsEmpty(Player.Art(poster)) + !VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(Episodes) + !Player.HasAudio]">Conditional</animation>
+			
+			<animation effect="slide" reversable="true" start="0,0" end="-58,25" time="200" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)">Conditional</animation>
+					
+
 			<visible>Player.HasMedia + Window.IsVisible(Home)</visible>
 			<control type="group">
 				<posx>0</posx>

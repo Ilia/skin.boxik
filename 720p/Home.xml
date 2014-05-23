@@ -304,7 +304,7 @@
 						<description>Cover image</description>
 						<posx>20</posx>
 						<posy>45</posy>
-						<width>100</width>
+						<width>155</width>
 						<height>300</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
@@ -314,7 +314,7 @@
 					<control type="label">
 						<description>Title label</description>
 						<posx>190</posx>
-						<posy>285</posy>
+						<posy>290</posy>
 						<height>30</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.Title]</label>
@@ -327,7 +327,7 @@
 					<control type="label">
 						<description>Time Label</description>
 						<posx>190</posx>
-						<posy>310</posy>
+						<posy>315</posy>
 						<height>30</height>
 						<width>300</width>
 						<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
