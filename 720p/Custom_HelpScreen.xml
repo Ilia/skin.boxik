@@ -221,7 +221,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>430</height>
-                    <label>These guide screens will help you to setup your [B][COLOR=selected]BOXiK[/COLOR][/B] and enable you to build your movie, tv show and music libraries so that you get the most out of your little black box.[CR][CR]If you have any questions regarding your [B][COLOR=selected]BOXiK[/COLOR][/B] please email our support line at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].[CR][CR]Don't forget to "Like" us on Facebook for exclusive updates and promotions![CR][CR][B]Sincerely,[CR][COLOR=selected]BOXiK[/COLOR][/B]</label>
+                    <label>These guide screens will help you to setup your [B][COLOR=selected]BOXiK[/COLOR][/B] and enable you to build your movie, tv show and music libraries so that you get the most out of your little black box. To navigate through this tutorial press the [B]"DOWN"[/B] button on your remote to go to each section.[CR][CR]If you have any questions regarding your [B][COLOR=selected]BOXiK[/COLOR][/B] please email us at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].[CR][CR]Don't forget to "Like" us on Facebook for exclusive updates and promotions![</label>
                     <font>font12</font>
                     <align>left</align>
                    <textcolor>white</textcolor>
@@ -244,7 +244,7 @@
                     <textcolor>grey</textcolor>
                     <shadowcolor>99000000</shadowcolor>
                 </control>
-                <control type="textbox">
+                <control type="textbox.">
                     <description>Help Tip</description>
                     <posx>0</posx>
                     <posy>500</posy>
