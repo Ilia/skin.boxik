@@ -45,7 +45,7 @@
 					<posy>0</posy>
 					<width>540</width>
 					<height>360</height>
-					<label>Thank you for purchasing your [B][COLOR=selected]BOXiK[/COLOR][/B].[CR][CR]If this is your first time, we recommend you head over to our [B]Help/Guide[/B] section to go through the initial setup process. Otherwise select the [B]Close[/B] button below to never see this message again. 
+					<label>Thank you for purchasing your [B][COLOR=selected]BOXiK[/COLOR][/B] - the single access point to all your media.[CR][CR]We recommend you press the [B]Start Here[/B] button below to go through the initial setup process. Otherwise press the [B]Down[/B] button on your remote to never see this message again. 
 						[CR]Happy watching,
 						[B]BOXiK[/B]
 						</label>
@@ -56,30 +56,31 @@
 				</control>
 			</control>
 		  	<control type="group" id="10000">
-				<posx>140</posx>
+				<posx>160</posx>
 				<posy>400</posy>
 				<control type="button" id="10">
-					<include>ButtonInfoDialogsCommonValues</include>
+					<height>40</height>
+					<width>250</width>
+					<textoffsetx>20</textoffsetx>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>font12_title</font>
+					<texturefocus border="5">button-focus2.png</texturefocus>
+					<texturenofocus border="5">button-nofocus2.png</texturenofocus>
+					<pulseonselect>false</pulseonselect>
 					<description>Help button</description>
-					<posx>0</posx>
+					<posx>35</posx>
 					<posy>0</posy>
-					<label>Guide</label>
-					<onleft>11</onleft>
-					<onright>11</onright>
+					<label>Start Here</label>
+					<ondown>11</ondown>
 					<onclick>ActivateWindow(1111)</onclick>
 					<onclick>Close</onclick>
 					<onclick>Skin.Setbool(HelpScreen)</onclick>
 				</control>
 				<control type="button" id="11">
-					<include>ButtonInfoDialogsCommonValues</include>
-					<description>Close button</description>
-					<posx>190</posx>
-					<posy>0</posy>
-					<label>Close</label>
-					<onleft>10</onleft>
-					<onright>10</onright>
-					<onclick>Close</onclick>
-					<onclick>Skin.Setbool(HelpScreen)</onclick>
+					<include>HiddenButton</include>
+					<onfocus>Close</onfocus>
+					<onfocus>Skin.Setbool(HelpScreen)</onfocus>
 				</control>
 		  	</control>
 		</control>
