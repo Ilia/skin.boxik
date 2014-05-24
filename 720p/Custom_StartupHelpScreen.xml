@@ -78,6 +78,7 @@
 					<posy>0</posy>
 					<label>Start Here</label>
 					<ondown>Close</ondown>
+					<ondown>Skin.Setbool(HelpScreen)</ondown>
 					<onclick>ActivateWindow(1111)</onclick>
 					<onclick>Close</onclick>
 					<onclick>Skin.Setbool(HelpScreen)</onclick>
