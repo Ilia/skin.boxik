@@ -97,35 +97,9 @@
 		<control type="group">
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>[Player.ShowInfo | Window.IsActive(MusicOSD)] + ![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
-			<control type="image">
-				<posx>0</posx>
-				<posy>-150</posy>
-				<width>1280</width>
-				<height>256</height>
-				<texture flipy="true">HomeNowPlayingBack.png</texture>
-			</control>
-			<control type="label">
-				<description>Header label</description>
-				<posx>30</posx>
-				<posy>5</posy>
-				<width>800</width>
-				<height>25</height>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-				<label>$VAR[MusicHeaderLabel]</label>
-			</control>
 			<include>Clock</include>
-			<control type="image">
-				<posx>0</posx>
-				<posy>230r</posy>
-				<width>1280</width>
-				<height>230</height>
-				<texture>HomeNowPlayingBack.png</texture>
-			</control>
-			<control type="group">
+			
+			<control type="group.">
 				<animation effect="slide" start="-275,275" end="0,0" time="1000" tween="cubic" easing="out" delay="1000">WindowOpen</animation>
 				<animation effect="slide" start="0,0" end="-275,275" time="400" tween="cubic" easing="in" delay="400">WindowClose</animation>
 				<control type="image">
@@ -145,10 +119,10 @@
 				<posy>215r</posy>
 				<control type="image">
 					<description>Cd overlay</description>
-					<posx>120</posx>
-					<posy>15</posy>>
-					<width>170</width>
-					<height>175</height>
+					<posx>90</posx>
+					<posy>10</posy>>
+					<width>190</width>
+					<height>190</height>
 					<include>CDArtSpinner</include>
 					<texture fallback="livecdcase/DefaultCDArt.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture>
 					<aspectratio align="center">keep</aspectratio>
@@ -162,14 +136,14 @@
 					<aspectratio aligny="bottom">stretch</aspectratio>
 					<texture background="true" diffuse="livecdcase/cdmask.png" fallback="livecdcase/DefaultAlbumCover.png">$INFO[MusicPlayer.Cover]</texture>
 				</control>
-				<control type="image">
+				<!-- control type="image">
 					<posx>4</posx>
 					<posy>3</posy>
-                    <width>229</width>
-                    <height>207</height>
-                    <bordertexture>livecdcase/cdshadow.png</bordertexture>
-                    <texture background="true">livecdcase/cdglass.png</texture>
-                </control>
+          <width>229</width>
+          <height>207</height>
+          <bordertexture>livecdcase/cdshadow.png</bordertexture>
+          <texture background="true">livecdcase/cdglass.png</texture>
+      	</control -->
 				<visible>!Skin.HasSetting(HideVisualizationCDart) + !Skin.HasSetting(HideTraditionalCDart)</visible>
 			</control>
 			<control type="image">
@@ -195,9 +169,10 @@
 					<texture>$INFO[Player.FolderPath,,../logo.png]</texture>
 					<aspectratio aligny="bottom" align="left">keep</aspectratio>
 				</control>
+				
 				<control type="label" id="1">
 					<description>Artist label</description>
-					<posx>20</posx>
+					<posx>0</posx>
 					<posy>75</posy>
 					<width>910</width>
 					<height>25</height>
@@ -207,8 +182,9 @@
 					<textcolor>grey2</textcolor>
 					<shadowcolor>black</shadowcolor>
 				</control>
+
 				<control type="grouplist">
-					<posx>20</posx>
+					<posx>0</posx>
 					<posy>105</posy>
 					<width>910</width>
 					<height>35</height>
@@ -217,42 +193,11 @@
 					<control type="label">
 						<width min="10" max="700">auto</width>
 						<height>30</height>
-						<font>font30</font>
+						<font>font30_title</font>
 						<align>left</align>
 						<aligny>center</aligny>
 						<label>$INFO[MusicPlayer.Title]</label>
-						<textcolor>orange</textcolor>
 						<scroll>true</scroll>
-					</control>
-					<control type="image">
-						<description>Audio Codec Image</description>
-						<width>80</width>
-						<height>35</height>
-						<aspectratio align="right">keep</aspectratio>
-						<texture>$INFO[MusicPlayer.Codec,flagging/audio/,.png]</texture>
-					</control>
-					<control type="group">
-						<description>Rating</description>
-						<width>110</width>
-						<height>35</height>
-						<control type="image">
-							<description>rating back</description>
-							<posx>0</posx>
-							<posy>0</posy>
-							<width>110</width>
-							<height>35</height>
-							<aspectratio align="left">stretch</aspectratio>
-							<texture border="5">flagging/blank.png</texture>
-						</control>
-						<control type="image">
-							<description>Rating</description>
-							<posx>5</posx>
-							<posy>0</posy>
-							<width>100</width>
-							<height>35</height>
-							<aspectratio align="center">keep</aspectratio>
-							<texture fallback="LeftRating/rating0.png">$INFO[Player.StarRating,LeftRating/]</texture>
-						</control>
 					</control>
 				</control>
 				<control type="fadelabel" id="1">
@@ -265,7 +210,7 @@
 					<scrollout>true</scrollout>
 					<scrollspeed>30</scrollspeed>
 					<pauseatend>400</pauseatend>
-					<label>$VAR[NextFiveSongScroller]</label>
+					<label>$VAR[NextSong]</label>
 					<font>font12</font>
 					<textcolor>white</textcolor>
 					<shadowcolor>black</shadowcolor>
@@ -277,33 +222,46 @@
 				<posx>330</posx>
 				<posy>95r</posy>
 				<control type="label">
+					<description>Header label</description>
 					<posx>0</posx>
 					<posy>0</posy>
-					<width>100</width>
+					<width>800</width>
 					<height>40</height>
-					<font>font13</font>
 					<align>left</align>
 					<aligny>center</aligny>
-					<label>$INFO[Player.Time(hh:mm:ss)]</label>
-				</control>
-				<control type="progress">
-					<description>Progressbar</description>
-					<posx>100</posx>
-					<posy>15</posy>
-					<width>720</width>
-					<height>16</height>
-					<info>Player.Progress</info>
+					<font>font12</font>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+					<label>$VAR[MusicHeaderLabel]</label>
 				</control>
 				<control type="label">
+					<posx>120</posx>
+					<posy>0</posy>
+					<width>400</width>
+					<height>40</height>
+					<font>font12</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Player.Time(hh:mm:ss)]$INFO[Player.Duration(hh:mm:ss), / ]</label>
+				</control>
+				<!-- control type="progress">
+					<description>Progressbar</description>
+					<posx>210</posx>
+					<posy>13</posy>
+					<width>610</width>
+					<height>16</height>
+					<info>Player.Progress</info>
+				</control-->
+				<!-- control type="label">
 					<posx>920</posx>
 					<posy>0</posy>
 					<width>100</width>
 					<height>40</height>
-					<font>font13</font>
+					<font>font12</font>
 					<align>right</align>
 					<aligny>center</aligny>
 					<label>$INFO[Player.Duration(hh:mm:ss)]</label>
-				</control>
+				</control -->
 			</control>
 		</control>
 		<!-- codec & viz infos -->
