@@ -148,17 +148,19 @@
                         <onclick>PlayerControl(Stop)</onclick>
                         <onclick>Control.Move(4001,1)</onclick>
                     </item>
-                    <item id="2">
-                        <label>Screen Calibration</label>
-                        <onclick>PlayerControl(Stop)</onclick>
-                        <onclick condition="!Player.HasMedia">Control.Move(4001,1)</onclick>
-                        <onclick condition="!Player.HasMedia">ActivateWindow(screencalibration)</onclick>
-                    </item>
+                   
                     <item id="3">
                         <label>WiFi Setup</label>
                         <onclick>PlayerControl(Stop)</onclick>
                         <onclick condition="!Player.HasMedia">Control.Move(4001,1)</onclick>
                         <onclick condition="!Player.HasMedia">RunScript(script.linux.nm)</onclick>
+                    </item>
+
+                    <item id="2">
+                        <label>Screen Calibration</label>
+                        <onclick>PlayerControl(Stop)</onclick>
+                        <onclick condition="!Player.HasMedia">Control.Move(4001,1)</onclick>
+                        <onclick condition="!Player.HasMedia">ActivateWindow(screencalibration)</onclick>
                     </item>
                     
                     <item id="5">
