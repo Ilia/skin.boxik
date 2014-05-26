@@ -6,7 +6,7 @@
 			<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
+			<fadetime>-</fadetime>
 			<visible>Window.IsVisible(home) + !Skin.HasSetting(UseCustomBackground)</visible>
 		</control>
 		<control type="image">
