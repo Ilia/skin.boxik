@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="HomePlayStatus">
+	<include name="HomePlayStatus.">
 		<control type="group">
-			<posx>115</posx>
-			<posy>215</posy>
+			<posx>50</posx>
+			<posy>255</posy>
 			<width>1280</width>
 			<height>100</height>
-			<animation effect="slide" reversable="true" start="0,0" end="80,0" time="200" condition="VideoPlayer.Content(Episodes)">Conditional</animation>
+			<animation effect="slide" reversable="true" start="0,0" end="0,0" time="200" condition="VideoPlayer.Content(Episodes)">Conditional</animation>
 			<animation effect="slide" reversable="true" start="0,0" end="30,0" time="200" condition="VideoPlayer.Content(LiveTV)">Conditional</animation>
-			<animation effect="slide" reversable="true" start="0,0" end="150,-34" time="200" condition="Player.HasAudio">Conditional</animation>
+			<animation effect="slide" reversable="true" start="0,0" end="150,-24" time="200" condition="Player.HasAudio">Conditional</animation>
 			<animation effect="slide" reversable="true" start="0,0" end="120,0" time="200" condition="[IsEmpty(Player.Art(poster)) + !VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(Episodes) + !Player.HasAudio]">Conditional</animation>
 			<animation effect="slide" reversable="true" start="0,0" end="-58,25" time="200" condition="!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)">Conditional</animation>
 			<visible>Player.HasMedia + Window.IsVisible(Home)</visible>
@@ -172,6 +172,7 @@
 		</control>
 	</include>
 	<include name="HomeWidgetPanel">	
+		
 		<control type="group" id="9003">
 			<visible>!Skin.HasSetting(HideHomeMenu)</visible>
 			<visible>Skin.HasSetting(HelpScreen)</visible>
@@ -204,6 +205,8 @@
 		       	<height>87</height>
 		       	<texture border="0,0,0,12">home/NavbarGlass.png</texture>
    			</control>
+
+
 
 			<control type="group">
 				<posx>0</posx>
@@ -739,6 +742,7 @@
 					<include condition="Skin.HasSetting(SuggestedWidgetInfo) + !SubString(Window(Home).Property(SkinWidgets_Recommended),true)">RecentTVShowContent</include -->
 				</control>
 			</control>
+			
 			<control type="group">
 				<posx>0</posx>
 				<posy>45</posy>
@@ -1030,6 +1034,7 @@
 					<include>VisibleFadeEffect</include>
 				</control>
 			</control>
+
 		</control>
 	</include>
 
@@ -1703,6 +1708,7 @@
 				<label>$INFO[Window.Property(LatestAlbum.2.Title)]</label>
 				<label2>$INFO[Window.Property(LatestAlbum.2.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.2.Path)]")</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.2.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.2.Fanart)]</thumb>
@@ -1712,6 +1718,7 @@
 				<label>$INFO[Window.Property(LatestAlbum.3.Title)]</label>
 				<label2>$INFO[Window.Property(LatestAlbum.3.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.3.Path)]")</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.3.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.3.Fanart)]</thumb>
@@ -1721,6 +1728,7 @@
 				<label>$INFO[Window.Property(LatestAlbum.4.Title)]</label>
 				<label2>$INFO[Window.Property(LatestAlbum.4.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.4.Path)]")</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.4.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.4.Fanart)]</thumb>
@@ -1730,6 +1738,7 @@
 				<label>$INFO[Window.Property(LatestAlbum.5.Title)]</label>
 				<label2>$INFO[Window.Property(LatestAlbum.5.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.5.Path)]")</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.5.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.5.Fanart)]</thumb>
@@ -1739,6 +1748,7 @@
 				<label>$INFO[Window.Property(LatestAlbum.6.Title)]</label>
 				<label2>$INFO[Window.Property(LatestAlbum.6.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.6.Path)]")</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.6.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.6.Fanart)]</thumb>
@@ -1748,6 +1758,7 @@
 				<label>$INFO[Window.Property(LatestAlbum.7.Title)]</label>
 				<label2>$INFO[Window.Property(LatestAlbum.7.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.7.Path)]")</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.7.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.7.Fanart)]</thumb>
@@ -1757,6 +1768,7 @@
 				<label>$INFO[Window.Property(LatestAlbum.8.Title)]</label>
 				<label2>$INFO[Window.Property(LatestAlbum.8.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.8.Path)]")</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.8.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.8.Fanart)]</thumb>
@@ -1766,6 +1778,7 @@
 				<label>$INFO[Window.Property(LatestAlbum.9.Title)]</label>
 				<label2>$INFO[Window.Property(LatestAlbum.9.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.9.Path)]")</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.9.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.9.Fanart)]</thumb>
@@ -1775,6 +1788,7 @@
 				<label>$INFO[Window.Property(LatestAlbum.10.Title)]</label>
 				<label2>$INFO[Window.Property(LatestAlbum.10.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.10.Path)]")</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.10.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.10.Fanart)]</thumb>
@@ -1788,6 +1802,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.1.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.1.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.1.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.1.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.1.Fanart)]</thumb>
@@ -1797,6 +1812,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.2.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.2.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.2.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.2.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.2.Fanart)]</thumb>
@@ -1806,6 +1822,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.3.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.3.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.3.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.3.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.3.Fanart)]</thumb>
@@ -1815,6 +1832,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.4.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.4.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.4.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.4.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.4.Fanart)]</thumb>
@@ -1824,6 +1842,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.5.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.5.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.5.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.5.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.5.Fanart)]</thumb>
@@ -1833,6 +1852,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.6.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.6.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.6.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.6.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.6.Fanart)]</thumb>
@@ -1842,6 +1862,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.7.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.7.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.7.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.7.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.7.Fanart)]</thumb>
@@ -1851,6 +1872,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.8.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.8.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.8.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.8.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.8.Fanart)]</thumb>
@@ -1860,6 +1882,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.9.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.9.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.9.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.9.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.9.Fanart)]</thumb>
@@ -1869,6 +1892,7 @@
 				<label>$INFO[Window(Home).Property(RandomAlbum.10.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RandomAlbum.10.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RandomAlbum.10.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RandomAlbum.10.Thumb )]</icon>
 				<thumb>$INFO[Window(Home).Property(RandomAlbum.10.Fanart)]</thumb>
@@ -1882,6 +1906,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.1.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.1.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.1.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.1.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.1.Fanart)]</thumb>
@@ -1891,6 +1916,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.2.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.2.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.2.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.2.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.2.Fanart)]</thumb>
@@ -1900,6 +1926,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.3.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.3.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.3.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.3.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.3.Fanart)]</thumb>
@@ -1909,6 +1936,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.4.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.4.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.4.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.4.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.4.Fanart)]</thumb>
@@ -1918,6 +1946,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.5.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.5.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.5.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.5.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.5.Fanart)]</thumb>
@@ -1927,6 +1956,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.6.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.6.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.6.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.6.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.6.Fanart)]</thumb>
@@ -1936,6 +1966,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.7.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.7.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.7.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.7.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.7.Fanart)]</thumb>
@@ -1945,6 +1976,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.8.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.8.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.8.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.8.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.8.Fanart)]</thumb>
@@ -1954,6 +1986,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.9.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.9.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.9.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.9.Thumb)]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.9.Fanart)]</thumb>
@@ -1963,6 +1996,7 @@
 				<label>$INFO[Window(Home).Property(RecommendedAlbum.10.Title)]</label>
 				<label2>$INFO[Window(Home).Property(RecommendedAlbum.10.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
+				<onclick>Action(down)</onclick>
 				<onclick>$INFO[Window(Home).Property(RecommendedAlbum.10.Play)]</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedAlbum.10.Thumb )]</icon>
 				<thumb>$INFO[Window(Home).Property(RecommendedAlbum.10.Fanart)]</thumb>

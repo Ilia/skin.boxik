@@ -74,6 +74,9 @@
 		<!-- Current Playing Info --> 
 		<control type="group">
 			<posy>90</posy>
+
+
+			
 			<animation effect="fade" reversable="true" start="100" end="0" time="300" condition="[ 
 				Control.isVisible(8000) | 
 				Control.isVisible(8001) | 
@@ -92,7 +95,7 @@
 				<control type="image">
 					<description>Cover image</description>
 					<posx>20</posx>
-					<posy>45</posy>
+					<posy>42</posy>
 					<width>180</width>
 					<height>295</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
@@ -290,9 +293,7 @@
 			<!-- Video Info -->
 			<control type="group">
 				<posx>0</posx>
-				<posy>35</posy>
-				<!-- slide if recent videos are show -->
-				<!--animation effect="slide" reversable="true" start="0,0" end="-2000,0" time="200" condition="[ Control.isVisible(8000) | Control.isVisible(8001) | Control.isVisible(8002)]">Conditional</animation -->
+				<posy>25</posy>
 				<include>HomePlayStatus</include>
 				<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo)</visible>
 				<include>VisibleFadeEffect</include>
@@ -302,9 +303,9 @@
 					<control type="image">
 						<description>Cover image</description>
 						<posx>20</posx>
-						<posy>45</posy>
-						<width>155</width>
-						<height>300</height>
+						<posy>145</posy>
+						<width>135</width>
+						<height>200</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 						<bordertexture border="8">ThumbBorder.png</bordertexture>
@@ -312,8 +313,8 @@
 					</control>
 					<control type="label">
 						<description>Title label</description>
-						<posx>190</posx>
-						<posy>290</posy>
+						<posx>170</posx>
+						<posy>293</posy>
 						<height>30</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.Title]</label>
@@ -325,11 +326,11 @@
 					</control>
 					<control type="label">
 						<description>Time Label</description>
-						<posx>190</posx>
-						<posy>315</posy>
+						<posx>170</posx>
+						<posy>320</posy>
 						<height>30</height>
 						<width>300</width>
-						<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font12</font>
@@ -395,8 +396,8 @@
 					<control type="image">
 						<description>Cover image</description>
 						<posx>20</posx>
-						<posy>136</posy>
-						<width>100</width>
+						<posy>145</posy>
+						<width>135</width>
 						<height>200</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(poster)]</texture>
@@ -407,9 +408,9 @@
 					<control type="image">
 						<description>Cover image</description>
 						<posx>20</posx>
-						<posy>116</posy>
-						<width>220</width>
-						<height>220</height>
+						<posy>145</posy>
+						<width>135</width>
+						<height>200</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 						<bordertexture border="8">ThumbBorder.png</bordertexture>
@@ -417,11 +418,10 @@
 						<visible>IsEmpty(Player.Art(poster))</visible>
 					</control>
 					<control type="group">
-						<animation effect="slide" reversable="true" start="0,0" end="120,0" time="200" condition="IsEmpty(Player.Art(poster))">Conditional</animation>
 						<control type="label">
 							<description>Genre label</description>
-							<posx>130</posx>
-							<posy>265</posy>
+							<posx>170</posx>
+							<posy>270</posy>
 							<height>25</height>
 							<width>1000</width>
 							<label>$INFO[VideoPlayer.Genre]</label>
@@ -433,8 +433,8 @@
 						</control>
 						<control type="label">
 							<description>Title label</description>
-							<posx>130</posx>
-							<posy>285</posy>
+							<posx>170</posx>
+							<posy>293</posy>
 							<height>30</height>
 							<width>1000</width>
 							<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
@@ -446,11 +446,11 @@
 						</control>
 						<control type="label">
 							<description>Time Label</description>
-							<posx>130</posx>
-							<posy>310</posy>
+							<posx>170</posx>
+							<posy>320</posy>
 							<height>30</height>
 							<width>300</width>
-							<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+							<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 							<align>left</align>
 							<aligny>center</aligny>
 							<font>font12</font>
@@ -464,18 +464,18 @@
 					<control type="image">
 						<description>Cover image</description>
 						<posx>20</posx>
-						<posy>215</posy>
-						<width>180</width>
-						<height>120</height>
-						<aspectratio>scale</aspectratio>
+						<posy>145</posy>
+						<width>135</width>
+						<height>200</height>
+						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
 						<bordertexture border="8">ThumbBorder.png</bordertexture>
 						<bordersize>5</bordersize>
 					</control>
 					<control type="label">
 						<description>TV Show Season Ep Label</description>
-						<posx>210</posx>
-						<posy>265</posy>
+						<posx>170</posx>
+						<posy>270</posy>
 						<height>25</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.TVShowTitle] ($LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode])</label>
@@ -487,8 +487,8 @@
 					</control>
 					<control type="label">
 						<description>Title label</description>
-						<posx>210</posx>
-						<posy>285</posy>
+						<posx>170</posx>
+						<posy>293</posy>
 						<height>30</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.Title]</label>
@@ -500,11 +500,11 @@
 					</control>
 					<control type="label">
 						<description>Time Label</description>
-						<posx>210</posx>
-						<posy>310</posy>
+						<posx>170</posx>
+						<posy>320</posy>
 						<height>30</height>
 						<width>300</width>
-						<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
+						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
 						<align>left</align>
 						<aligny>center</aligny>
 						<font>font12</font>
@@ -513,6 +513,7 @@
 					</control>
 				</control>
 			</control>
+
 		</control>
 		<include condition="!Skin.HasSetting(HideHomeVideoWidget) | !Skin.HasSetting(HideHomeAlbumsWidget) | !Skin.HasSetting(HideHomeConcertsWidget)">HomeWidgetPanel</include>
 		<control type="button" id="9003">
@@ -532,6 +533,7 @@
 			<ondown>608</ondown>
 			<visible>false</visible>
 		</control>
+
 		<control type="group">
 			<include>HomeMenuFade</include>
 			<visible>!Skin.HasSetting(HideHomeMenu)</visible>
@@ -578,6 +580,8 @@
 				<height>80</height>
 				<texture flipy="true">home/NavbarGlass2.png</texture>
 			</control>
+
+
 
 			<!-- Sub Menu -->
 			<control type="group" id="9001">
