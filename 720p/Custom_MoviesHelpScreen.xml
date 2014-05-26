@@ -53,7 +53,7 @@
 					<posy>0</posy>
 					<width>510</width>
 					<height>360</height>
-					<label>BOXiK didnt find any movies here. You may need to create your movie library, to do so click on the "Add Source" button below bring up the "Add Video source" dialog. [CR][CR]Please follow the prompts to add all folders that you wish BOXiK to look trhough to find your movies.</label>
+					<label>BOXiK did not find any movies. You may need to create your movie library, to do so select the "Add Source" button below to show the "Add Video source" dialog. [CR][CR]Please follow the prompts to add all folders that you wish BOXiK to look through to find your movies.</label>
 					<font>font12</font>
 					<align>justify</align>
 					<textcolor>white</textcolor>
