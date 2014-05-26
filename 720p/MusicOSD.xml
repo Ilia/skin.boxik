@@ -105,40 +105,9 @@
 			<posy>60r</posy>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
-			<control type="button" id="600">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>210</label>
-				<font>-</font>
-				<texturefocus>OSDHomeBtnFO.png</texturefocus>
-				<texturenofocus>OSDHomeBtnNF.png</texturenofocus>
-				<onleft>705</onleft>
-				<onright>601</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
-				<onclick>Dialog.Close(MusicOSD,true)</onclick>
-				<onclick>FullScreen</onclick>
-			</control>
-			<control type="button" id="601">
-				<posx>55</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>210</label>
-				<font>-</font>
-				<texturefocus>OSDPlaylistFO.png</texturefocus>
-				<texturenofocus>OSDPlaylistNF.png</texturenofocus>
-				<onleft>600</onleft>
-				<onright>602</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
-				<onclick>Dialog.Close(MusicOSD,true)</onclick>
-				<onclick>ActivateWindow(musicplaylist)</onclick>
-			</control>
+			
 			<control type="button" id="602">
-				<posx>110</posx>
+				<posx>0</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -146,29 +115,15 @@
 				<font>-</font>
 				<texturefocus>OSDPrevTrackFO.png</texturefocus>
 				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
-				<onleft>601</onleft>
-				<onright>603</onright>
+				<onleft>704</onleft>
+				<onright>604</onright>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Previous)</onclick>
 			</control>
-			<control type="button" id="603">
-				<posx>165</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>31354</label>
-				<font>-</font>
-				<texturefocus>OSDRewindFO.png</texturefocus>
-				<texturenofocus>OSDRewindNF.png</texturenofocus>
-				<onleft>602</onleft>
-				<onright>604</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
-				<onclick>PlayerControl(Rewind)</onclick>
-			</control>
+			
 			<control type="togglebutton" id="604">
-				<posx>220</posx>
+				<posx>55</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -180,14 +135,15 @@
 				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 				<alttexturefocus>OSDPlayFO.png</alttexturefocus>
 				<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
-				<onleft>603</onleft>
+				<onleft>602</onleft>
 				<onright>605</onright>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Play)</onclick>
 			</control>
+
 			<control type="button" id="605">
-				<posx>275</posx>
+				<posx>110</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -196,28 +152,14 @@
 				<texturefocus>OSDStopFO.png</texturefocus>
 				<texturenofocus>OSDStopNF.png</texturenofocus>
 				<onleft>604</onleft>
-				<onright>606</onright>
+				<onright>607</onright>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Stop)</onclick>
 			</control>
-			<control type="button" id="606">
-				<posx>330</posx>
-				<posy>0</posy>
-				<width>55</width>
-				<height>55</height>
-				<label>31353</label>
-				<font>-</font>
-				<texturefocus>OSDForwardFO.png</texturefocus>
-				<texturenofocus>OSDForwardNF.png</texturenofocus>
-				<onleft>605</onleft>
-				<onright>607</onright>
-				<onup>1000</onup>
-				<ondown>1000</ondown>
-				<onclick>PlayerControl(Forward)</onclick>
-			</control>
+			
 			<control type="button" id="607">
-				<posx>385</posx>
+				<posx>165</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -225,14 +167,14 @@
 				<font>-</font>
 				<texturefocus>OSDNextTrackFO.png</texturefocus>
 				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
-				<onleft>606</onleft>
+				<onleft>605</onleft>
 				<onright>608</onright>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>PlayerControl(Next)</onclick>
 			</control>
 			<control type="button" id="608">
-				<posx>440</posx>
+				<posx>220</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -247,7 +189,7 @@
 				<ondown>1000</ondown>
 			</control>
 			<control type="image">
-				<posx>440</posx>
+				<posx>220</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -256,7 +198,7 @@
 				<visible>!Control.HasFocus(608)</visible>
 			</control>
 			<control type="image">
-				<posx>440</posx>
+				<posx>220</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -265,7 +207,7 @@
 				<visible>Control.HasFocus(608)</visible>
 			</control>
 			<control type="image">
-				<posx>440</posx>
+				<posx>220</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -274,7 +216,7 @@
 				<visible>!Control.HasFocus(608)</visible>
 			</control>
 			<control type="image">
-				<posx>440</posx>
+				<posx>220</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -283,7 +225,7 @@
 				<visible>Control.HasFocus(608)</visible>
 			</control>
 			<control type="image">
-				<posx>440</posx>
+				<posx>220</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -292,7 +234,7 @@
 				<visible>!Control.HasFocus(608)</visible>
 			</control>
 			<control type="image">
-				<posx>440</posx>
+				<posx>220</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -301,7 +243,7 @@
 				<visible>Control.HasFocus(608)</visible>
 			</control>
 			<control type="togglebutton" id="609">
-				<posx>495</posx>
+				<posx>275</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -314,7 +256,7 @@
 				<alttexturenofocus>OSDRandomOnNF.png</alttexturenofocus>
 				<onclick>XBMC.PlayerControl(Random)</onclick>
 				<onleft>608</onleft>
-				<onright>702</onright>
+				<onright>701</onright>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 			</control>
@@ -324,8 +266,24 @@
 			<posy>60r</posy>
 			<animation effect="fade" time="200">VisibleChange</animation>
 			<visible>![Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList)]</visible>
-			<control type="togglebutton" id="702">
+			<control type="button" id="701">
 				<posx>0</posx>
+				<posy>0</posy>
+				<width>55</width>
+				<height>55</height>
+				<label>210</label>
+				<font>-</font>
+				<texturefocus>OSDPlaylistFO.png</texturefocus>
+				<texturenofocus>OSDPlaylistNF.png</texturenofocus>
+				<onleft>609</onleft>
+				<onright>702</onright>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<onclick>Dialog.Close(MusicOSD,true)</onclick>
+				<onclick>ActivateWindow(musicplaylist)</onclick>
+			</control>
+			<control type="togglebutton" id="702">
+				<posx>55</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -347,7 +305,7 @@
 				<usealttexture>IsEmpty(Skin.String(LyricScript_Path))</usealttexture>
 			</control>
 			<control type="button" id="500">
-				<posx>55</posx>
+				<posx>110</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -361,7 +319,7 @@
 				<ondown>1000</ondown>
 			</control>
 			<control type="button" id="703">
-				<posx>110</posx>
+				<posx>165</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -376,7 +334,7 @@
 				<onclick>Addon.Default.OpenSettings(xbmc.player.musicviz)</onclick>
 			</control>
 			<control type="button" id="704">
-				<posx>165</posx>
+				<posx>220</posx>
 				<posy>0</posy>
 				<width>55</width>
 				<height>55</height>
@@ -385,12 +343,12 @@
 				<texturefocus>OSDPreFO.png</texturefocus>
 				<texturenofocus>OSDPreNF.png</texturenofocus>
 				<onleft>703</onleft>
-				<onright>705</onright>
+				<onright>602</onright>
 				<onup>1000</onup>
 				<ondown>1000</ondown>
 				<onclick>ActivateWindow(122)</onclick>
 			</control>
-			<control type="button" id="705">
+			<control type="button." id="705">
 				<posx>220</posx>
 				<posy>0</posy>
 				<width>55</width>
