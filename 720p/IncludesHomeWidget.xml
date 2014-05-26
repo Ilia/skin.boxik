@@ -174,15 +174,13 @@
 			</control>
 		</control>
 	</include>
-	<include name="HomeWidgetPanel">
-		
+	<include name="HomeWidgetPanel">	
 		<control type="group" id="9003">
 			<visible>!Skin.HasSetting(HideHomeMenu)</visible>
 			<visible>Skin.HasSetting(HelpScreen)</visible>
 			<include>HomeMenuFade</include>
 			<posy>100</posy>
-			<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
-			<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+			<ondown>9000</ondown>
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="0">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
@@ -241,8 +239,7 @@
 					<height>300</height>
 					<onleft>8000</onleft>
 					<onright>8000</onright>
-					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
-					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<ondown>9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -338,21 +335,6 @@
 				<posy>45</posy>
 				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Online) + !Skin.HasSetting(HideHomeAddonWidget)</visible>
 				<include>VisibleFadeEffect</include>
-	   			<!-- control type="label">
-					<visible allowhiddenfocus="true">!Control.HasFocus(8004)</visible>
-					<visible>IntegerGreaterThan(Container(8004).NumItems,0)</visible>
-					<include>VisibleFadeEffect</include>
-					<description>Title label</description>
-					<posx>0</posx>
-					<posy>330</posy>
-					<height>20</height>
-					<width>1280</width>
-					<label>Favourites</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>grey</textcolor>
-				</control -->
 				<control type="image" description="Top glass border">
 					<include>VisibleFadeEffect</include>
 					<visible allowhiddenfocus="true">[!Control.HasFocus(8004) + IntegerGreaterThan(Container(8004).NumItems,0)]</visible>
@@ -374,8 +356,7 @@
 					<height>300</height>
 					<onleft>8004</onleft>
 					<onright>8004</onright>
-					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
-					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<ondown>9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -449,7 +430,6 @@
 				</control>
 			</control>
 
-
 			<control type="group">
 				<posx>0</posx>
 				<posy>45</posy>
@@ -476,8 +456,7 @@
 					<height>300</height>
 					<onleft>8005</onleft>
 					<onright>8005</onright>
-					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
-					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<ondown>9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -566,29 +545,12 @@
 				</control>
 			</control>
 
-
 			<control type="group">
 				<posx>0</posx>
 				<posy>45</posy>
 				<visible>Library.HasContent(TVShows)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows) + !Skin.HasSetting(HideHomeVideoWidget)</visible>
 				<include>VisibleFadeEffect</include>
-		
-				<!-- control type="label">
-					<visible allowhiddenfocus="true">!Control.HasFocus(8001)</visible>
-					<visible>IntegerGreaterThan(Container(8001).NumItems,0)</visible>
-					<include>VisibleFadeEffect</include>
-					<description>Title label</description>
-					<posx>0</posx>
-					<posy>330</posy>
-					<height>20</height>
-					<width>1280</width>
-					<label>$VAR[WidgetTitle]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>grey</textcolor>
-				</control -->
 				<control type="image" description="Top glass border">
 					<include>VisibleFadeEffect</include>
 					<visible allowhiddenfocus="true">[!Control.HasFocus(8001) + IntegerGreaterThan(Container(8001).NumItems,0)]</visible>
@@ -610,8 +572,7 @@
 					<onright>8001</onright>
 					<onup condition="!Skin.HasSetting(AutoHidePowerBtn)">20</onup>
 					<onup condition="Skin.HasSetting(AutoHidePowerBtn)">21</onup>
-					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
-					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<ondown>9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -787,22 +748,6 @@
 				<visible>Library.HasContent(Music)</visible>
 				<visible>StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music) + !Skin.HasSetting(HideHomeAlbumsWidget)</visible>
 				<include>VisibleFadeEffect</include>
-				<!-- control type="label">
-					<visible allowhiddenfocus="true">!Control.HasFocus(8002)</visible>
-					<visible>IntegerGreaterThan(Container(8002).NumItems,0)</visible>
-					<include>VisibleFadeEffect</include>
-					<description>Title label</description>
-					<posx>0</posx>
-					<posy>330</posy>
-					<height>20</height>
-					<width>1280</width>
-					<label>$VAR[WidgetTitle]</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>grey</textcolor>
-				</control -->
-					
 				<control type="image" description="Top glass border">
 					<include>VisibleFadeEffect</include>
 					<visible allowhiddenfocus="true">[!Control.HasFocus(8002) + IntegerGreaterThan(Container(8002).NumItems,0)]</visible>
@@ -827,8 +772,7 @@
 					<onright>8002</onright>
 					<onup condition="!Skin.HasSetting(AutoHidePowerBtn)">20</onup>
 					<onup condition="Skin.HasSetting(AutoHidePowerBtn)">21</onup>
-					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
-					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<ondown>9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -965,8 +909,7 @@
 					<onright>8003</onright>
 					<onup condition="!Skin.HasSetting(AutoHidePowerBtn)">20</onup>
 					<onup condition="Skin.HasSetting(AutoHidePowerBtn)">21</onup>
-					<ondown condition="!Skin.HasSetting(HideHomeSearch)">608</ondown>
-					<ondown condition="Skin.HasSetting(HideHomeSearch)">603</ondown>
+					<ondown>9000</ondown>
 					<viewtype label="535">list</viewtype>
 					<pagecontrol>-</pagecontrol>
 					<scrolltime>200</scrolltime>
@@ -1754,6 +1697,7 @@
 				<label2>$INFO[Window.Property(LatestAlbum.1.Artist)]</label2>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia("$INFO[Window.Property(LatestAlbum.1.Path)]")</onclick>
+				<onclick>Action(down)</onclick>
 				<icon>$INFO[Window.Property(LatestAlbum.1.Thumb)]</icon>
 				<thumb>$INFO[Window.Property(LatestAlbum.1.Fanart)]</thumb>
 				<visible>!IsEmpty(Window.Property(LatestAlbum.1.Title))</visible>
