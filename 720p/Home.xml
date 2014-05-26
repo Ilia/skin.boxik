@@ -93,7 +93,7 @@
 					<description>Cover image</description>
 					<posx>20</posx>
 					<posy>45</posy>
-					<width>130</width>
+					<width>180</width>
 					<height>295</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
@@ -102,7 +102,7 @@
 				</control>
 				<control type="label">
 					<description>Album Label</description>
-					<posx>160</posx>
+					<posx>220</posx>
 					<posy>265</posy>
 					<height>25</height>
 					<width>1000</width>
@@ -115,7 +115,7 @@
 				</control>
 				<control type="label">
 					<description>Title label</description>
-					<posx>160</posx>
+					<posx>220</posx>
 					<posy>285</posy>
 					<height>30</height>
 					<width>1000</width>
@@ -128,7 +128,7 @@
 				</control>
 				<control type="label">
 					<description>Time Label</description>
-					<posx>160</posx>
+					<posx>220</posx>
 					<posy>310</posy>
 					<height>30</height>
 					<width>300</width>
