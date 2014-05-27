@@ -53,7 +53,7 @@
 				<posy>230</posy>
 				<width>530</width>
 				<height>360</height>
-				<label>Your library has no movies. You will need to create your [B]MOVIE[/B] library, to do so press [B][COLOR=selected]"OK"[/COLOR][/B] button on your remote and select [B]"Add Video"[/B] and follow the prompts to add all your movies.[CR][CR]COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
+				<label>Your library has no movies. You will need to create your [B]MOVIE[/B] library, to do so press [B][COLOR=selected]"OK"[/COLOR][/B] button on your remote and select [B]"Add Video"[/B] and follow the prompts to add all your movies.[CR][CR][COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
 				<font>font12</font>
 				<align>left</align>
 				<textcolor>white</textcolor>
