@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1112" type="dialog">
+	<defaultcontrol always="true">10000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<include>HelpWindowAnimation</include>
+			<visible>!Player.HasVideo</visible>
+	  		<control type="image">
+				<posx>320</posx>
+				<posy>115</posy>
+				<width>640</width>
+				<height>470</height>
+				<texture background="true">ContentPanel.png</texture>
+			</control>
+			<control type="image">
+		        <posx>330</posx>
+		        <posy>125</posy>
+		        <width>620</width>
+		        <height>370</height>
+		        <texture border="5">black-back2.png</texture>
+	    	</control>
+			<control type="label">
+				<description>header label</description>
+				<posx>380</posx>
+				<posy>155</posy>
+				<width>620</width>
+				<height>50</height>
+				<label>Empty Library</label>
+				<font>font35_title</font>
+		        <align>left</align>
+		        <aligny>center</aligny>
+		        <textcolor>white</textcolor>
+		        <shadowcolor>99000000</shadowcolor>
+			</control>
+			<control type="textbox">
+				<description>textarea</description>
+				<posx>380</posx>
+				<posy>230</posy>
+				<width>530</width>
+				<height>360</height>
+				<label>You library has no TV shows. You will need to create your [B]TV SHOW[/B] library, to do so press [B][COLOR=selected]"OK"[/COLOR][/B] button on your remote and select [B]"Add Video"[/B] and follow the prompts to add all your tv shows.[CR][CR][COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<visible>Container.Content(TVShows)</visible>
+			</control>
+			<control type="textbox">
+				<description>textarea</description>
+				<posx>380</posx>
+				<posy>230</posy>
+				<width>530</width>
+				<height>360</height>
+				<label>Your library has no movies. You will need to create your [B]MOVIE[/B] library, to do so press [B][COLOR=selected]"OK"[/COLOR][/B] button on your remote and select [B]"Add Video"[/B] and follow the prompts to add all your movies.[CR][CR]COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+				<visible>Container.Content(Movies)</visible>
+			</control>
+		 	<control type="button" id="10000">
+		 		<posx>510</posx>
+				<posy>515</posy>
+				<height>40</height>
+				<width>250</width>
+				<textoffsetx>20</textoffsetx>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus2.png</texturenofocus>
+				<pulseonselect>true</pulseonselect>
+				<label>Add TV Shows</label>
+				<onleft>-</onleft>
+				<onright>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=xLggcsNzPeM,1)</onright>
+				<onclick>Close</onclick>
+				<ondown>ActivateWindow(Home)</ondown>
+				<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
+      			<onclick>Action(down)</onclick>
+      			<onclick condition="!Library.HasContent(TVShows)">Action(select)</onclick> 
+      			<visible>Container.Content(TVShows)</visible>
+      		</control>
+      		<control type="button" id="10000">
+		 		<posx>510</posx>
+				<posy>515</posy>
+				<height>40</height>
+				<width>250</width>
+				<textoffsetx>20</textoffsetx>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus2.png</texturenofocus>
+				<pulseonselect>true</pulseonselect>
+				<label>Add Movies</label>
+				<onleft>-</onleft>
+				<onright>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=xLggcsNzPeM,1)</onright>
+				<onclick>Close</onclick>
+				<ondown>ActivateWindow(Home)</ondown>
+				<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
+      			<onclick>Action(down)</onclick>
+      			<onclick condition="!Library.HasContent(Movies)">Action(select)</onclick> 
+      			<visible>Container.Content(Movies)</visible>
+      		</control>
+		</control>
+		<control type="group">
+            <animation effect="slide" start="0,0" end="0,-200" time="3000" tween="cubic" easing="inout" pulse="false" reversible="true" condition="Player.HasMedia">Conditional</animation>
+            <posx>430</posx>
+            <posy>830</posy>
+            <control type="image">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>420</width>
+                <height>140</height>
+                <texture border="40">DialogBack.png</texture>
+            </control>
+            <control type="textbox">
+                <description>Cutomize UI</description>
+                <posx>40</posx>
+                <posy>30</posy>
+                <width>700</width>
+                <height>400</height>
+                <label>Press [B][COLOR=selected]"STOP"[/COLOR][/B] button to go back.</label>
+                <font>font12</font>
+                <align>left</align>
+                <textcolor>white</textcolor>
+                <shadowcolor>99000000</shadowcolor>
+            </control>
+        </control>
+	</controls>
+</window>

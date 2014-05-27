@@ -1613,4 +1613,14 @@
 		<posx>120</posx>
 		<posy>18</posy>
 	</include>
+	<include name="HelpWindowAnimation">
+		<animation type="WindowOpen" reversible="false">
+	      <effect type="fade" start="0" end="100" time="700" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,200" end="0,0" time="1000" delay="100" tween="cubic" easing="out" />
+	    </animation>
+	    <animation type="WindowClose" reversible="false">
+	      <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,60" time="500" tween="sine" easing="out" />
+	    </animation>
+	</include>
 </includes>

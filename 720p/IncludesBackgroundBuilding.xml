@@ -150,7 +150,7 @@
 			<aspectratio>stretch</aspectratio>
 			<include>VisibleFadeEffect</include>
 			<texture>floor.png</texture>
-			<visible>![Control.IsVisible(515) | Control.IsVisible(501)]</visible>
+			<visible>![Control.IsVisible(515) | Control.IsVisible(501) | Window.IsActive(1101) | Window.IsActive(1102)]</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
