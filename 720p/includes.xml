@@ -81,7 +81,13 @@
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Label))">Skin.SetString(HomeItem.6.Label,"HELP")</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Path))">Skin.SetString(HomeItem.6.Path,ActivateWindow(1111))</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Type))">Skin.SetString(HomeItem.6.Type,Help)</onload>
-	
+
+		<!-- Initial Addon shelf -->
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeShelfAddonButton1))">Skin.SetString(HomeShelfAddonButton1,plugin.video.youtube)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeShelfAddonButton2))">Skin.SetString(HomeShelfAddonButton2,plugin.video.hdtrailers_net)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeShelfAddonButton3))">Skin.SetString(HomeShelfAddonButton3,plugin.audio.radio_de)</onload>
+
+
 		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetBool(InitialSetUpRun)</onload>
 	</include>
 	<include name="DimensionsFullscreen">
