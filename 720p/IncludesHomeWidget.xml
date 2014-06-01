@@ -2371,7 +2371,7 @@
 			<item>
 				<label fallback="Add Shortcut">Manage Shortcuts</label>
 				<onclick>ActivateWindowAndFocus(SkinSettings,9000,1)</onclick>
-				<icon>DefaultAddonShelfIcon.png</icon>
+				<icon>DefaultSettingsIcon.png</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton10))</visible>
 			</item>
