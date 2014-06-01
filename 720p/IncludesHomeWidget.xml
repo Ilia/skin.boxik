@@ -2292,14 +2292,14 @@
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton1))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton1)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton1))">Skin.SetAddon(HomeShelfAddonButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton1))">Skin.SetAddon(HomeShelfAddonButton1,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton1))]</icon>
 				<thumb>-</thumb>
 			</item>
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton2))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton2)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton2))">Skin.SetAddon(HomeShelfAddonButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton2))">Skin.SetAddon(HomeShelfAddonButton2,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton2))]</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton1))</visible>
@@ -2307,7 +2307,7 @@
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton3))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton3)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton3))">Skin.SetAddon(HomeShelfAddonButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton3))">Skin.SetAddon(HomeShelfAddonButton3,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton3))]</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton2))</visible>
@@ -2315,7 +2315,7 @@
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton4))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton4)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton4))">Skin.SetAddon(HomeShelfAddonButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton4))">Skin.SetAddon(HomeShelfAddonButton4,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton4))]</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton3))</visible>
@@ -2323,7 +2323,7 @@
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton5))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton5)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton5))">Skin.SetAddon(HomeShelfAddonButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton5))">Skin.SetAddon(HomeShelfAddonButton5,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton5))]</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton4))</visible>
@@ -2331,7 +2331,7 @@
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton6))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton6)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton6))">Skin.SetAddon(HomeShelfAddonButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton6))">Skin.SetAddon(HomeShelfAddonButton6,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton6))]</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton5))</visible>
@@ -2339,7 +2339,7 @@
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton7))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton7)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton7))">Skin.SetAddon(HomeShelfAddonButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton7))">Skin.SetAddon(HomeShelfAddonButton7,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton7))]</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton6))</visible>
@@ -2347,7 +2347,7 @@
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton8))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton8)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton8))">Skin.SetAddon(HomeShelfAddonButton8,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton8))">Skin.SetAddon(HomeShelfAddonButton8,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton8))]</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton7))</visible>
@@ -2355,7 +2355,7 @@
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton9))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton9)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton9))">Skin.SetAddon(HomeShelfAddonButton9,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton9))">Skin.SetAddon(HomeShelfAddonButton9,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton9))]</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton8))</visible>
@@ -2363,7 +2363,7 @@
 			<item>
 				<label fallback="Add Shortcut">$INFO[system.addontitle(Skin.String(HomeShelfAddonButton10))]</label>
 				<onclick>RunAddon($INFO[Skin.String(HomeShelfAddonButton10)])</onclick>
-				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton10))">Skin.SetAddon(HomeShelfAddonButton10,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
+				<onclick condition="IsEmpty(Skin.String(HomeShelfAddonButton10))">Skin.SetAddon(HomeShelfAddonButton10,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
 				<icon>$INFO[system.addonicon(Skin.String(HomeShelfAddonButton10))]</icon>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Skin.String(HomeShelfAddonButton9))</visible>
