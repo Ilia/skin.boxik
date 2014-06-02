@@ -91,7 +91,7 @@
                 <texture>boxik.png</texture>
             </control>
             <control type="group" id="4000">
-                <posy>180</posy>
+                <posy>200</posy>
                 <animation effect="fade"  start="100" end="65" time="300" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus">Conditional</animation>
                 <control type="list" id="4001">
                 <posx>78</posx>
