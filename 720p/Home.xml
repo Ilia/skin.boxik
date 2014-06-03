@@ -20,15 +20,16 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" reversable="true" time="400" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004) | Control.hasFocus(8005)]">Conditional</animation>
 			<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+			<animation effect="slide" end="-80,0" time="200" condition="Control.HasFocus(9002)">Conditional</animation>
 			<visible>[System.HasAddon(service.skin.fanart) + !Player.HasMedia + !Player.HasAudio + Library.HasContent(Movies)]</visible>	
 			<posx>80r</posx>
-			<posy>73r</posy>
+			<posy>93r</posy>
 			<control type="label">
 				<description>BG Movie title</description>
-				<posx>150r</posx>
-				<posy>0</posy>
+				<posx>0</posx>
+				<posy>22</posy>
 				<height>25</height>
-				<width>300</width>
+				<width>350</width>
 				<label>$INFO[Window(Home).Property(Movie.Title)]</label>
 				<align>right</align>
 				<aligny>center</aligny>
@@ -36,22 +37,23 @@
 				<textcolor>white</textcolor>
 			</control>
 			<control type="label">
+				<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
 				<description>BG Movie year</description>
 				<posx>0</posx>
-				<posy>0</posy>
+				<posy>44</posy>
 				<height>25</height>
 				<width>400</width>
-				<label>($INFO[Window(Home).Property(Movie.Year)])</label>
+				<label>$INFO[Window(Home).Property(Movie.Year)]</label>
 				<align>right</align>
 				<aligny>center</aligny>
 				<font>font13</font>
-				<textcolor>grey2</textcolor>
+				<textcolor>grey</textcolor>
 			</control>
 			<control type="label">
 				<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
 				<description>BG Movie genre</description>
 				<posx>0</posx>
-				<posy>22</posy>
+				<posy>0</posy>
 				<height>25</height>
 				<width>350</width>
 				<label>$INFO[Window(Home).Property(Movie.Genre)]</label>
@@ -71,12 +73,10 @@
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 		</control>
+		
 		<!-- Current Playing Info --> 
 		<control type="group">
 			<posy>90</posy>
-
-
-			
 			<animation effect="fade" reversable="true" start="100" end="0" time="300" condition="[ 
 				Control.isVisible(8000) | 
 				Control.isVisible(8001) | 
@@ -534,6 +534,39 @@
 			<visible>false</visible>
 		</control>
 
+		<control type="image">
+			<posx>0r</posx>
+			<posy>105r</posy>
+			<width>60</width>
+			<height>80</height>
+			<aspectratio aligny="bottom">keep</aspectratio>
+			<texture>$INFO[Window(Home).Property(Movie.Art(poster))]</texture>
+			<visible>Control.hasFocus(9002)</visible>
+			<animation effect="slide" end="-140,0" time="200" condition="Control.HasFocus(9002)">Conditional</animation>
+			<bordertexture border="8">ThumbBorder.png</bordertexture>
+			<bordersize>5</bordersize>
+		</control>
+
+		<control type="button" id="9002">
+	 		<posx>0r</posx>
+			<posy>80r</posy>
+			<height>35</height>
+			<width>35</width>
+			<textoffsetx>20</textoffsetx>
+			<align>center</align>
+			<aligny>center</aligny>
+			<onup>9001</onup>
+			<onup>ClearProperty(SkinFanartPause)</onup>
+			<texturefocus>icon_player.png</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<pulseonselect>true</pulseonselect>
+			<onclick>PlayList.Clear</onclick>
+			<onclick>PlayMedia($ESCINFO[Window(Home).Property(Movie.File)])</onclick>
+			<onfocus>SetProperty(SkinFanartPause,True)</onfocus>
+			<label>-</label>
+			<animation effect="slide" end="-128,0" time="200" condition="Control.HasFocus(9002)">Conditional</animation>
+    </control>
+
 		<control type="group">
 			<include>HomeMenuFade</include>
 			<visible>!Skin.HasSetting(HideHomeMenu)</visible>
@@ -581,8 +614,7 @@
 				<texture flipy="true">home/NavbarGlass2.png</texture>
 			</control>
 
-
-
+			
 			<!-- Sub Menu -->
 			<control type="group" id="9001">
 				<posx>0</posx>
@@ -692,6 +724,9 @@
 				<height>175</height>
 				<texture border="0,6,0,6">home/NavbarOverlay.png</texture>
 			</control>
+
+			
+
 
 			<!-- Main Menu -->
 			<control type="wraplist" id="9000">
