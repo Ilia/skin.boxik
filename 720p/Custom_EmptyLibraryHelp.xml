@@ -76,7 +76,6 @@
 				<onleft>-</onleft>
 				<onright>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=xLggcsNzPeM,1)</onright>
 				<onclick>Close</onclick>
-				<ondown>ActivateWindow(Home)</ondown>
 				<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
       			<onclick>Action(down)</onclick>
       			<onclick condition="!Library.HasContent(TVShows)">Action(select)</onclick> 
@@ -98,7 +97,6 @@
 				<onleft>-</onleft>
 				<onright>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=xLggcsNzPeM,1)</onright>
 				<onclick>Close</onclick>
-				<ondown>ActivateWindow(Home)</ondown>
 				<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
       			<onclick>Action(down)</onclick>
       			<onclick condition="!Library.HasContent(Movies)">Action(select)</onclick> 
