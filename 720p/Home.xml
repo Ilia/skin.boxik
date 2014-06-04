@@ -606,6 +606,7 @@
 			<onup>ClearProperty(SkinFanartPause)</onup>
 			<texturefocus>-</texturefocus>
 			<texturenofocus>-</texturenofocus>
+			<onclick>ClearProperty(SkinFanartPause)</onclick>
 			<onclick>PlayList.Clear</onclick>
 			<onclick>PlayMedia($ESCINFO[Window(Home).Property(Movie.File)])</onclick>
 			<onfocus>SetProperty(SkinFanartPause,True)</onfocus>
