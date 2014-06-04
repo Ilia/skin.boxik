@@ -182,7 +182,7 @@
 			<include>VisibleFadeEffect</include>
 			<animation effect="fade" time="300" delay="0">WindowOpen</animation>
 			<animation effect="fade" time="200">WindowClose</animation>
-
+			<animation effect="fade" time="400" start="100" end="0" condition="Control.HasFocus(9002)">Conditional</animation>
 			<control type="image" description="Top glass border">
 				<animation effect="slide" start="0,0" end="0,-10" time="300" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004)]">Conditional</animation>
 				<animation effect="slide" start="0,0" end="0,-12" time="300" condition="[

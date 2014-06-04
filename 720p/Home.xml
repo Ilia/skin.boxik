@@ -17,50 +17,6 @@
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
-		<control type="group">
-			<animation effect="fade" start="100" end="0" reversable="true" time="400" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004) | Control.hasFocus(8005)]">Conditional</animation>
-			<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
-			<visible>[System.HasAddon(service.skin.fanart) + !Player.HasMedia + !Player.HasAudio + Library.HasContent(Movies)]</visible>	
-			<posx>80r</posx>
-			<posy>73r</posy>
-			<control type="label">
-				<description>BG Movie title</description>
-				<posx>150r</posx>
-				<posy>0</posy>
-				<height>25</height>
-				<width>300</width>
-				<label>$INFO[Window(Home).Property(Movie.Title)]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font13_title</font>
-				<textcolor>white</textcolor>
-			</control>
-			<control type="label">
-				<description>BG Movie year</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<height>25</height>
-				<width>400</width>
-				<label>($INFO[Window(Home).Property(Movie.Year)])</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey2</textcolor>
-			</control>
-			<control type="label">
-				<animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
-				<description>BG Movie genre</description>
-				<posx>0</posx>
-				<posy>22</posy>
-				<height>25</height>
-				<width>350</width>
-				<label>$INFO[Window(Home).Property(Movie.Genre)]</label>
-				<align>right</align>
-				<aligny>center</aligny>
-				<font>font13</font>
-				<textcolor>grey</textcolor>
-			</control>
-		</control>
 		<control type="image">
 			<description>LOGO</description>
 			<posx>80</posx>
@@ -71,12 +27,119 @@
 			<include>VisibleFadeEffect</include>
 			<include>Window_OpenClose_Animation</include>
 		</control>
+
+		<control type="image">
+			<posy>0r</posy>
+			<posx>620</posx>
+     	<width>24</width>
+     	<height>15</height>
+			<aspectratio align="center" aligny="bottom">stretch</aspectratio>
+			<texture>arrow-big-up.png</texture>
+			<visible>Control.hasFocus(9002)</visible>
+			<animation type="Conditional" condition="true" pulse="true">
+		  	<effect type="fade" start="10" end="90"  time="1400"  />
+			</animation>
+			<animation effect="slide" end="0,-45" time="200" condition="Control.HasFocus(9002)">Conditional</animation>
+		</control>
+
+		<control type=".image">
+			<posy>115r</posy>
+			<posx>620</posx>
+     	<width>24</width>
+     	<height>12</height>
+			<aspectratio align="center" aligny="bottom">stretch</aspectratio>
+			<texture>arrow-big-down.png</texture>
+			<visible>!Control.hasFocus(9002)</visible>
+		</control>
+
+		<control type="group">
+			<animation effect="fade" start="100" end="0" reversable="true" time="400" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004) | Control.hasFocus(8005)]">Conditional</animation>
+			<animation effect="slide" end="-120,0" time="200" condition="Control.HasFocus(9002)">Conditional</animation>
+			<visible>[System.HasAddon(service.skin.fanart) + !Player.HasMedia + !Player.HasAudio + Library.HasContent(Movies)]</visible>	
+			
+			<control type="image">
+				<posx>0r</posx>
+				<posy>255r</posy>
+				<width>110</width>
+				<height>240</height>
+				<aspectratio align="left" aligny="bottom">keep</aspectratio>
+				<texture>$INFO[Window(Home).Property(Movie.Art(poster))]</texture>
+				<visible>Control.hasFocus(9002)</visible>	
+				<animation effect="slide" end="-60,0" time="200" condition="Control.HasFocus(9002)">Conditional</animation>
+				<bordertexture border="12">ThumbShadow.png</bordertexture>
+				<bordersize>12</bordersize>
+			</control>
+			<control type="image.">
+				<posx>-27r</posx>
+				<posy>120r</posy>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio align="center" aligny="bottom">keep</aspectratio>
+				<texture>icon_player.png</texture>
+				<visible>Control.hasFocus(9002)</visible>	
+				<animation type="Conditional" condition="true" pulse="true">
+		  		<effect type="fade" start="10" end="90"  time="1400"  />
+				</animation>
+				<animation effect="slide" end="-60,0" time="200" condition="Control.HasFocus(9002)">Conditional</animation>
+			</control>
+			<control type="group">
+				<posx>80r</posx>
+				<posy>93r</posy>
+				<control type="label">
+					<description>BG Movie title</description>
+					<posx>0</posx>
+					<posy>22</posy>
+					<height>25</height>
+					<width>350</width>
+					<label>$INFO[Window(Home).Property(Movie.Title)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>BG Movie year</description>
+					<posx>0</posx>
+					<posy>0</posy>
+					<height>25</height>
+					<width>400</width>
+					<label>$INFO[Window(Home).Property(Movie.Year)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>44</posy>
+					<height>25</height>
+					<width>400</width>
+					<label>Press "[B]OK[/B]" to PLAY</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<visible>Control.HasFocus(9002)</visible>
+					<textcolor>white</textcolor>
+				</control>
+				<control type="label">
+					<description>BG Movie genre</description>
+					<posx>0</posx>
+					<posy>44</posy>
+					<height>25</height>
+					<width>350</width>
+					<label>$INFO[Window(Home).Property(Movie.Genre)]</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>font12</font>
+					<textcolor>grey2</textcolor>
+					<visible>!Control.HasFocus(9002)</visible>
+				</control>
+			</control>
+		</control>
+		
 		<!-- Current Playing Info --> 
 		<control type="group">
 			<posy>90</posy>
-
-
-			
 			<animation effect="fade" reversable="true" start="100" end="0" time="300" condition="[ 
 				Control.isVisible(8000) | 
 				Control.isVisible(8001) | 
@@ -513,7 +576,6 @@
 					</control>
 				</control>
 			</control>
-
 		</control>
 		<include condition="!Skin.HasSetting(HideHomeVideoWidget) | !Skin.HasSetting(HideHomeAlbumsWidget) | !Skin.HasSetting(HideHomeConcertsWidget)">HomeWidgetPanel</include>
 		<control type="button" id="9003">
@@ -534,11 +596,31 @@
 			<visible>false</visible>
 		</control>
 
+		<control type="button" id="9002">
+	 		<posx>-20</posx>
+			<posy>-20</posy>
+			<height>1</height>
+			<width>1</width>
+			<align>center</align>
+			<onup>9001</onup>
+			<onup>ClearProperty(SkinFanartPause)</onup>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<onclick>PlayList.Clear</onclick>
+			<onclick>PlayMedia($ESCINFO[Window(Home).Property(Movie.File)])</onclick>
+			<onfocus>SetProperty(SkinFanartPause,True)</onfocus>
+			<label>-</label>
+			<visible>[System.HasAddon(service.skin.fanart) + !Player.HasMedia + !Player.HasAudio + Library.HasContent(Movies)]</visible>
+    </control>
+
 		<control type="group">
+
 			<include>HomeMenuFade</include>
 			<visible>!Skin.HasSetting(HideHomeMenu)</visible>
 			<visible>Skin.HasSetting(HelpScreen)</visible>
+			<animation effect="fade" start="100" time="400" end="0" condition="Control.HasFocus(9002)">Conditional</animation>
 			<posy>500</posy>
+			
 			<animation type="WindowOpen" reversible="false">
 				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
 				<effect type="fade" start="0" end="100" time="300" />
@@ -580,15 +662,12 @@
 				<height>80</height>
 				<texture flipy="true">home/NavbarGlass2.png</texture>
 			</control>
-
-
-
+			
 			<!-- Sub Menu -->
 			<control type="group" id="9001">
 				<posx>0</posx>
 				<posy>70</posy>
 				<onup>9000</onup>
-				<ondown>9002</ondown>
 				<control type="grouplist" id="9010">
 					<include>HomeSubMenuCommonValues</include>
 					<onleft>9010</onleft>
@@ -683,7 +762,6 @@
 				<height>175</height>
 				<texture>home/HomeMenuBack3.png</texture>
 			</control>
-
 			
 			<control type="image">
 				<posx>0</posx>
