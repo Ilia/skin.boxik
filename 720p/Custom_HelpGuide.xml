@@ -250,7 +250,7 @@
                 <control type="textbox.">
                     <description>Help Tip</description>
                     <posx>0</posx>
-                    <posy>500</posy>
+                    <posy>480</posy>
                     <width>750</width>
                     <height>80</height>
                     <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]DOWN[/COLOR] button on your remote to go to each section.</label>
@@ -322,7 +322,7 @@
                 <control type="textbox">
                     <description>Help Tip</description>
                     <posx>0</posx>
-                    <posy>500</posy>
+                    <posy>480</posy>
                     <width>750</width>
                     <height>80</height>
                     <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
@@ -383,10 +383,10 @@
                     <textcolor>grey</textcolor>
                     <shadowcolor>99000000</shadowcolor>
                 </control>
-                <control type="textbox">
+                <control type="textbox.">
                     <description>NOTICE</description>
                     <posx>0</posx>
-                    <posy>500</posy>
+                    <posy>480</posy>
                     <width>750</width>
                     <height>80</height>
                     <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
@@ -424,19 +424,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Online Addons extend the capabilities of your [B]BOXiK[/B]. [CR][CR]Click [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]Add-ons Browser[/B] screen and select the [B]Get Add-ons > All Add-ons[/B] from there you can select what kind of addon you want to install - take a look at the Video Add-ons section. You can also use the [B]Enabled Add-ons[/B] screen to see what has been installed and disable/uninstall optional addons. [CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.</label>
-                    <font>font12</font>
-                    <align>left</align>
-                    <textcolor>white</textcolor>
-                    <shadowcolor>99000000</shadowcolor>
-                </control>
-                <control type="textbox">
-                    <description>WARNING</description>
-                    <posx>0</posx>
-                    <posy>295</posy>
-                    <width>700</width>
-                    <height>80</height>
-                    <label>[COLOR=red]WARNING:[/COLOR] Some online addons may contain content that may not be legal in your country. BOXiK is not liable for any content or add-ons played and installed on this device.</label>
+                    <label>Online Addons extend the capabilities of your [B]BOXiK[/B]. [CR][CR]Click [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]Add-ons Browser[/B] screen and select the [B]Get Add-ons > All Add-ons[/B] from there you can select what kind of addon you want to install - take a look at the Video Add-ons section. You can also use the [B]Enabled Add-ons[/B] screen to see what has been installed and disable/uninstall optional addons. [CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.[CR][CR][COLOR=red]WARNING:[/COLOR] Some online addons may contain content that may not be legal in your country. BOXiK is not liable for any content or add-ons played and installed on this device.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -470,7 +458,7 @@
                 <control type="textbox">
                     <description>NOTICE</description>
                     <posx>0</posx>
-                    <posy>500</posy>
+                    <posy>480</posy>
                     <width>750</width>
                     <height>80</height>
                     <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
@@ -542,7 +530,7 @@
                 <control type="textbox">
                     <description>NOTICE</description>
                     <posx>0</posx>
-                    <posy>500</posy>
+                    <posy>480</posy>
                     <width>750</width>
                     <height>80</height>
                     <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
@@ -614,7 +602,7 @@
                 <control type="textbox">
                     <description>NOTICE</description>
                     <posx>0</posx>
-                    <posy>500</posy>
+                    <posy>480</posy>
                     <width>750</width>
                     <height>80</height>
                     <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
@@ -686,7 +674,7 @@
                 <control type="textbox">
                     <description>NOTICE</description>
                     <posx>0</posx>
-                    <posy>500</posy>
+                    <posy>480</posy>
                     <width>750</width>
                     <height>80</height>
                     <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]RIGHT[/COLOR] button on your remote to watch a tutorial.</label>
