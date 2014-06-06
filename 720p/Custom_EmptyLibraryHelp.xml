@@ -74,7 +74,7 @@
 				<pulseonselect>true</pulseonselect>
 				<label>Add TV Shows</label>
 				<onleft>-</onleft>
-				<onright>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=xLggcsNzPeM,1)</onright>
+				<onright>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=PVzgyKIPb04,1)</onright>
 				<onclick>Close</onclick>
 				<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
       			<onclick>Action(down)</onclick>
@@ -95,7 +95,7 @@
 				<pulseonselect>true</pulseonselect>
 				<label>Add Movies</label>
 				<onleft>-</onleft>
-				<onright>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=xLggcsNzPeM,1)</onright>
+				<onright>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=PVzgyKIPb04,1)</onright>
 				<onclick>Close</onclick>
 				<onclick>ActivateWindow(videos,sources://video/,return)</onclick>
       			<onclick>Action(down)</onclick>

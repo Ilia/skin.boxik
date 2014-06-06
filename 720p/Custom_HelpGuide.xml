@@ -167,9 +167,9 @@
                         <label>Video Library</label>
                         <onclick>PlayerControl(Stop)</onclick>
                         <onclick condition="!Player.HasMedia">Control.Move(4001,1)</onclick>
-                        <onclick condition="!Player.HasMedia">ActivateWindow(videos,sources://video/)</onclick>
+                        <onclick condition="!Player.HasMedia">ActivateWindow(videos,sources://video/,return)</onclick>
                         <onclick condition="!Player.HasMedia">Action(down)</onclick>
-                        <onclick condition="!Player.HasMedia + !Library.HasContent(Movies) + !Library.HasContent(TVShows)">Action(select)</onclick>
+                        <!-- onclick condition="!Player.HasMedia + !Library.HasContent(Movies) + !Library.HasContent(TVShows)">Action(select)</onclick -->
                     </item>
                     <!-- item id="6">
                         <label>Music Library</label>
@@ -304,7 +304,7 @@
                 </control>
                 <control type="button" id="5">
                     <include>HiddenButton</include>
-                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=xLggcsNzPeM,1)</onfocus>
+                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=oZxwGB19QT0,1)</onfocus>
                     <onfocus>SetFocus(4001)</onfocus>
                 </control>
                 <control type="label.">
@@ -440,7 +440,7 @@
                 </control>
                 <control type="button" id="5">
                     <include>HiddenButton</include>
-                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=UUezBA80fVg,1)</onfocus>
                     <onfocus>SetFocus(4001)</onfocus>
                 </control>
                 <control type="label.">
@@ -512,7 +512,7 @@
                 </control>
                 <control type="button" id="5">
                 <include>HiddenButton</include>
-              <onfocus>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+              <onfocus>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=PVzgyKIPb04,1)</onfocus>
               <onfocus>SetFocus(4001)</onfocus>
                 </control>
                 <control type="label.">
@@ -656,7 +656,7 @@
                 </control>
                 <control type="button" id="5">
                     <include>HiddenButton</include>
-                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=eCzNc8kl0Bg,1)</onfocus>
+                    <onfocus>PlayMedia(plugin://plugin.video.youtube/?bypass_firstrun=1&amp;action=play_video&amp;videoid=y6xqxtpF-Ak,1)</onfocus>
                     <onfocus>SetFocus(4001)</onfocus>
                 </control>
                 <control type="label.">
