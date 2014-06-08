@@ -5,7 +5,7 @@
 	<allowoverlay>no</allowoverlay>
 	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	
-	<onload condition="[Container.Content(Movies) + !Library.HasContent(Movies)]|[Container.Content(TVShows) + !Library.HasContent(TVShows)]">ActivateWindow(1112,return)</onload>
+	<onload condition="[StringCompare(Container.FolderName, Title) + Container.Content(Movies) + !Library.HasContent(Movies)]|[StringCompare(Container.FolderName, Title) + Container.Content(TVShows) + !Library.HasContent(TVShows)]">ActivateWindow(1112,return)</onload>
 	<onload condition="Container.Content(Addons)">Container.SetViewMode(551)</onload>
 	<views>500,50,560,501,508,503,515,505</views>
 	<controls>
