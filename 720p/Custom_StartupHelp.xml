@@ -41,7 +41,7 @@
 				<posy>115</posy>
 				<width>530</width>
 				<height>360</height>
-				<label>Welcome to [B]BOXiK[/B] - the single access point to all your media.[CR][CR]We recommend you press the [B][COLOR=selected]OK[/COLOR][/B] button on your remote to go through the Help Guide to setup your [B]BOXiK[/B]. Otherwise press the [B]DOWN[/B] button on your remote to never see this message again. [CR]You can still find the help section on your home menu or if you have more questions by email - [B]support@boxik.tv[/B].[CR][CR]Happy watching,[CR][B]BOXiK[/B]
+				<label>Welcome to [B]BOXiK[/B] - the single access point to all your media.[CR][CR]We recommend you press the [B][COLOR=selected]OK[/COLOR][/B] button on your remote to go through the Help Guide to setup your [B]BOXiK[/B]. Otherwise press the [B]DOWN[/B] button on your remote to never see this message again. [CR]You can still find the help section on your home menu or you can send an email with your questions to [B]support@boxik.tv[/B].[CR][CR]Happy watching,[CR][B]BOXiK[/B]
 					</label>
 				<font>font12</font>
 				<align>left</align>

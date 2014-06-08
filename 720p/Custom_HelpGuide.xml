@@ -224,7 +224,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>430</height>
-                    <label>These guide screens will help you to setup your [B]BOXiK[/B] and enable you to build your movie, tv show and music libraries so that you get the most out of your little black box. To navigate through this tutorial press the [B][B][COLOR=selected]DOWN[/COLOR][/B] button on your remote to go to each section.[CR][CR]If you have any questions regarding your [B]BOXiK[/B] please email us at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].[CR][CR]Don't forget to "Like" us on Facebook for exclusive updates and promotions!</label>
+                    <label>This guide will help you to setup your [B]BOXiK[/B] and enable you to build your movie, tv show libraries, so that you get the most out of your little black box. To navigate through this tutorial press the [B][COLOR=selected]DOWN[/COLOR][/B] or [B][COLOR=selected]UP[/COLOR][/B] buttons on your remote to go to each section.[CR][CR]If you have any questions regarding your [B]BOXiK[/B] please email us at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].[CR][CR]Don't forget to "Like" us on Facebook for exclusive updates and promotions!</label>
                     <font>font12</font>
                     <align>left</align>
                    <textcolor>white</textcolor>
@@ -253,7 +253,7 @@
                     <posy>480</posy>
                     <width>750</width>
                     <height>80</height>
-                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]DOWN[/COLOR] button on your remote to go to each section.</label>
+                    <label>[COLOR=blue]NEED HELP?[/COLOR] Press the [COLOR=selected]DOWN[/COLOR] button on your remote to go to the next section.</label>
                     <font>font12</font>
                     <align>justify</align>
                     <textcolor>white</textcolor>
@@ -288,7 +288,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Your [B]BOXiK[/B] will need to be adjusted for your TV - this is a one time adjustment.[CR][CR]Press [B][COLOR=selected]OK[/COLOR][/B] button on your remote to bring up the [B]Calibration[/B] setup screen and use the [B][COLOR=selected]UP[/COLOR][/B], [B][COLOR=selected]DOWN[/COLOR][/B], [B][COLOR=selected]LEFT[/COLOR][/B] and [B][COLOR=selected]RIGHT[/COLOR][/B] to adjust the screen so it fits perfectly to your TV. To save each adjustment press [B][COLOR=selected]OK[/COLOR][/B]. [CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.</label>
+                    <label>Your [B]BOXiK[/B] will need to be adjusted for your TV - this is a one time adjustment.[CR][CR]Press [B][COLOR=selected]OK[/COLOR][/B] button on your remote to bring up the [B]Calibration[/B] setup screen and use the [B][COLOR=selected]UP[/COLOR][/B], [B][COLOR=selected]DOWN[/COLOR][/B], [B][COLOR=selected]LEFT[/COLOR][/B] and [B][COLOR=selected]RIGHT[/COLOR][/B] to adjust the screen so it fits perfectly to your TV. To save each adjustment press [B][COLOR=selected]OK[/COLOR][/B] button on your remote. [CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -360,7 +360,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Internet is very important to your [B]BOXiK[/B] since it grabs all information about your movies, tv shows and music from the internet to build your library. [B]BOXiK[/B] comes with both wired and wireless connection (WiFi). If you have connected it via a network cable then you can skip this section. [CR][CR]To connect to your home WiFi press [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]WiFi[/B] setup window and choose your [B]WiFi[/B] by pressing [B][COLOR=selected]OK[/COLOR][/B] and enter your [B]WiFi[/B] password if necessary. [CR][CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is available but no connected and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.</label>
+                    <label>Internet is very important to your [B]BOXiK[/B] since it finds all the information about your movies and tv shows from the internet inorder to create your library. [B]BOXiK[/B] comes with both wired and wireless connection (WiFi). If you have connected it via a network cable then you can skip this section. [CR][CR]To connect to your home WiFi press [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]WiFi[/B] setup window and choose your [B]WiFi[/B] by pressing [B][COLOR=selected]OK[/COLOR][/B] and enter your [B]WiFi[/B] password if necessary. [CR][CR]There are three colored dots that indicate your Network connectivity. [B][COLOR=red]RED[/COLOR][/B] means no Network connection at all, [B][COLOR=FFFF730F]ORANGE[/COLOR][/B] means that Network is available but not connected and [B][COLOR=FF03CB00]GREEN[/COLOR][/B] means that both Network connection and Internet access are working properly.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -424,7 +424,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Online Addons extend the capabilities of your [B]BOXiK[/B]. [CR][CR]Click [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]Add-ons Browser[/B] screen and select the [B]Get Add-ons > All Add-ons[/B] from there you can select what kind of addon you want to install - take a look at the Video Add-ons section. You can also use the [B]Enabled Add-ons[/B] screen to see what has been installed and disable/uninstall optional addons. [CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.[CR][CR][COLOR=red]WARNING:[/COLOR] Some online addons may contain content that may not be legal in your country. BOXiK is not liable for any content or add-ons played and installed on this device.</label>
+                    <label>Online Addons extend the capabilities of your [B]BOXiK[/B]. [CR][CR]Click [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]Add-ons Browser[/B] screen and select the [B]Get Add-ons > All Add-ons[/B]. From there you can select what kind of addon you want to install - take a look at the Video Add-ons section. You can also use the [B]Enabled Add-ons[/B] screen to see what has been installed and disable/uninstall optional addons. [CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.[CR][CR][COLOR=red]WARNING:[/COLOR] Some online addons may contain content that may not be legal in your country. BOXiK is not liable for any content or add-ons played and installed on this device.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -496,7 +496,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>You are ready to setup your movie and tv show library. Once setup you will be able to see all your latest movies, filter them by actor and genres, search for a particular movie and see what movies you have watched. [CR][CR]Press [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]"Add Video source"[/B] dialog. [B]"Browse"[/B] to the folder that you keep your videos and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button to bring up the [B]"Set Content"[/B] dialog. This is where you tell [B]BOXiK[/B] what type of media is in the folder.Press the [B][COLOR=selected]OK[/COLOR][/B] button on your remote until you reach the correct type (e.g TV Shows). Press the [B]"Save"[/B] button When you are done and select [B]"Yes"[/B] in the next dialog to start scanning.[CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.</label>
+                    <label>You are ready to setup your movie and tv show library. Once setup you will be able to see all your latest movies, filter them by actor and genres, search for a particular movie and see what movies or tv show episodes you have already watched. [CR][CR]Press [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]"Add Video source"[/B] dialog. [B]"Browse"[/B] to the folder that you keep your videos and press the [B]"Save"[/B] button. Name this source however you like and press the [B]"Save"[/B] button to bring up the [B]"Set Content"[/B] dialog. This is where you tell [B]BOXiK[/B] what type of media is in the folder.Press the [B][COLOR=selected]OK[/COLOR][/B] button on your remote until you reach the correct type (e.g TV Shows). Press the [B]"Save"[/B] button When you are done and select [B]"Yes"[/B] in the next dialog to start scanning.[CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -640,7 +640,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Your [B]BOXiK[/B] home menu is very customizable, you can add or remove any menu item (apart from settings). We encourage you to explore this section and customise your [B]BOXiK[/B] to your liking. You can always access this menu by going to the [B]Settings > Skin[/B] from your home menu. [CR][CR]Press [B][COLOR=selected]OK[/COLOR][/B] button on your remote to go to the setting screen now. When you are finished customizing press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.[CR][CR]If you have any questions or suggestions please email our support line at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].</label>
+                    <label>Your [B]BOXiK[/B] home menu is very customizable, you can add or remove any menu item (apart from settings). We encourage you to explore this section and customise your [B]BOXiK[/B] to your liking. You can always access this menu by going to the [B]Settings > Skin[/B] from your home menu. [CR][CR]Press [B][COLOR=selected]OK[/COLOR][/B] button on your remote to go to the settings section now. When you are finished customizing press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.[CR][CR]If you have any questions or suggestions please email our support line at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
