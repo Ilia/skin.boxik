@@ -235,7 +235,7 @@
 		<control type="image">
 			<description>LOGO</description>
 			<posx>65</posx>
-			<posy>-570</posy>
+			<posy>0</posy>
 			<width>120</width>
 			<aspectratio>keep</aspectratio>
 			<texture>boxik.png</texture>
