@@ -153,7 +153,7 @@
                         <label>WiFi Setup</label>
                         <onclick>PlayerControl(Stop)</onclick>
                         <onclick condition="!Player.HasMedia">Control.Move(4001,1)</onclick>
-                        <onclick condition="!Player.HasMedia">RunScript(script.linux.nm)</onclick>
+                        <onclick condition="!Player.HasMedia">ActivateWindow(141)</onclick>
                     </item>
 
                     <item id="2">
