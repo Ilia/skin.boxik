@@ -71,10 +71,10 @@
 		<value>$LOCALIZE[31074]</value>
 	</variable>
 	<variable name="MusicHeaderLabel">
-		<value condition="MusicPartyMode.Enabled">[B]($LOCALIZE[589])[/B]</value>
+		<!-- value condition="MusicPartyMode.Enabled">[B]($LOCALIZE[589])[/B]</value>
 		<value condition="Playlist.IsRandom">[B]($LOCALIZE[31085])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</value>
 		<value condition="Playlist.IsRepeat">[B]($LOCALIZE[31086])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</value>
-		<value condition="Playlist.IsRepeatOne">[B]($LOCALIZE[31087])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</value>
+		<value condition="Playlist.IsRepeatOne">[B]($LOCALIZE[31087])[/B] $INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</value -->
 		<value>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</value>
 	</variable>
 	<variable name="NextFiveSongScroller" type="text">
@@ -83,6 +83,9 @@
 		<value condition="!IsEmpty(MusicPlayer.offset(3).Artist) + IsEmpty(MusicPlayer.offset(4).Artist) + IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">[COLOR=blue][B]$LOCALIZE[31088]   1:[/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]    [COLOR=blue][B]2:[/B][/COLOR]  $INFO[MusicPlayer.offset(2).Artist] - $INFO[MusicPlayer.offset(2).Title]     [COLOR=blue][B]3:[/B][/COLOR]  $INFO[MusicPlayer.offset(3).Artist] - $INFO[MusicPlayer.offset(3).Title]</value>
 		<value condition="!IsEmpty(MusicPlayer.offset(2).Artist) + IsEmpty(MusicPlayer.offset(3).Artist) + IsEmpty(MusicPlayer.offset(4).Artist) + IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">[COLOR=blue][B]$LOCALIZE[31088]   1:[/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]    [COLOR=blue][B]2:[/B][/COLOR]  $INFO[MusicPlayer.offset(2).Artist] - $INFO[MusicPlayer.offset(2).Title]</value>
 		<value condition="!IsEmpty(MusicPlayer.offset(1).Artist) + IsEmpty(MusicPlayer.offset(2).Artist) + IsEmpty(MusicPlayer.offset(3).Artist) + IsEmpty(MusicPlayer.offset(4).Artist) + IsEmpty(MusicPlayer.offset(5).Artist) + Player.HasAudio">[COLOR=blue][B]$LOCALIZE[31088]   1:[/B][/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]</value>
+	</variable>
+	<variable name="NextSong" type="text">
+		<value condition="!IsEmpty(MusicPlayer.offset(1).Artist) + Player.HasAudio">[COLOR=blue]NEXT:[/COLOR]  $INFO[MusicPlayer.offset(1).Artist] - $INFO[MusicPlayer.offset(1).Title]</value>
 	</variable>
 	<include name="CDArtSpinner">
 		<animation effect="slide" start="-70,0" end="0,0" time="900" delay="2000" condition="Player.HasMedia">conditional</animation>
@@ -275,5 +278,28 @@
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),Online)">Online</value>
 		<value condition="stringcompare(Skin.String(HomeItem.10.Sub),1Channel)">1Channel</value>
 		<value>$LOCALIZE[31093]</value>
+	</variable>
+
+	<variable name="WiFiState">
+		<value condition="Stringcompare(ListItem.Label,a)">disconnected.png</value>
+		<value condition="!Stringcompare(ListItem.Label,>)">connecting.png</value>
+		<value condition="[Stringcompare(ListItem.Label,>) + !Stringcompare(System.InternetState,$LOCALIZE[13296])]">disconnected.png</value>
+		<value condition="[Stringcompare(ListItem.Label,>) + Stringcompare(System.InternetState,$LOCALIZE[13296])]">connected.png</value>
+	</variable>
+
+	<variable name="InternetState">
+		<value condition="stringcompare(System.InternetState,$LOCALIZE[13296])">connected.png</value>
+	  <value condition="!stringcompare(System.InternetState,$LOCALIZE[13296]) + !stringcompare(System.InternetState,$LOCALIZE[13297])">disconnected.png</value>
+	  <value condition="stringcompare(System.InternetState,$LOCALIZE[13297])">disconnected.png</value>
+ 	</variable>
+
+  <variable name="WiFiSignal">
+		<value condition="!IntegerGreaterThan(ListItem.Property(signal),0)">ap-signal1.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),0) + !IntegerGreaterThan(ListItem.Property(signal),19)">ap-signal1.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),20) + !IntegerGreaterThan(ListItem.Property(signal),39)">ap-signal2.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),40) + !IntegerGreaterThan(ListItem.Property(signal),59)">ap-signal3.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),60) + !IntegerGreaterThan(ListItem.Property(signal),79)">ap-signal4.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),80) + !IntegerGreaterThan(ListItem.Property(signal),100)">ap-signal5.png</value>
+		<value condition="IntegerGreaterThan(ListItem.Property(signal),100)">ap-signal5.png</value>
 	</variable>
 </includes>	

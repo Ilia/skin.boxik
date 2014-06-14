@@ -3,11 +3,11 @@
 	<defaultcontrol always="true">500</defaultcontrol>
 	<!-- Container.Content(Addons) -->
 	<allowoverlay>no</allowoverlay>
-	<views>500,50,560,501,508,503,515,505</views>
 	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
+	
+	<onload condition="[StringCompare(Container.FolderName, Title) + Container.Content(Movies) + !Library.HasContent(Movies)]|[StringCompare(Container.FolderName, Title) + Container.Content(TVShows) + !Library.HasContent(TVShows)]">ActivateWindow(1112,return)</onload>
 	<onload condition="Container.Content(Addons)">Container.SetViewMode(551)</onload>
-	<onload condition="Container.Content(Movies) + !Library.HasContent(Movies)">ActivateWindow(1101)</onload>
-	<onload condition="Container.Content(TVShows) + !Library.HasContent(TVShows)">ActivateWindow(1102)</onload>
+	<views>500,50,560,501,508,503,515,505</views>
 	<controls>
 		<include>CommonBackground</include>
 		<include>ContentPanelBackgrounds</include>
@@ -239,7 +239,7 @@
 					<include>ButtonCommonValues</include>
 					<label>587</label>
 				</control>
-				<control type="radiobutton" id="20">
+				<control type="radiobutton" id="21">
 					<visible>Container.CanFilterAdvanced</visible>
 					<description>Filter</description>
 					<include>ButtonCommonValues</include>
@@ -247,6 +247,16 @@
 					<selected>Container.Filtered</selected>
 					<onclick>right</onclick>
 					<onclick>Filter</onclick>
+				</control>
+				<control type="togglebutton" id="20">
+					<description>Update library</description>
+					<textwidth>235</textwidth>
+					<include>ButtonCommonValues</include>
+					<label>653</label>
+					<altlabel>13353</altlabel>
+					<alttexturefocus border="5">button-focus.png</alttexturefocus>
+					<alttexturenofocus>-</alttexturenofocus>
+					<usealttexture>library.isscanningvideo</usealttexture>
 				</control>
 				<!-- control type="label" id="201">
 					<width>250</width>

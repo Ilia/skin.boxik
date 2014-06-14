@@ -3,8 +3,8 @@
 	<defaultcontrol always="true">3</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>240</posx>
-		<posy>20</posy>
+		<posx>340</posx>
+		<posy>100</posy>
 	</coordinates>
 	<include>dialogeffect</include>
 	<controls>
@@ -14,164 +14,87 @@
 				<description>background image</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>800</width>
-				<height>680</height>
+				<width>625</width>
+				<height>530</height>
 				<texture border="40">DialogBack.png</texture>
 			</control>
 			<control type="image">
 				<description>Dialog Header image</description>
 				<posx>40</posx>
 				<posy>16</posy>
-				<width>720</width>
+				<width>530</width>
 				<height>40</height>
 				<texture>dialogheader.png</texture>
 			</control>
 			<control type="label" id="1">
 				<description>header label</description>
 				<posx>40</posx>
-				<posy>20</posy>
-				<width>720</width>
+				<posy>21</posy>
+				<width>530</width>
 				<height>30</height>
-				<font>font13_title</font>
+				<font>font14_title</font>
 				<label>$LOCALIZE[20333]</label>
 				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>selected</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="button">
-				<description>Close Window button</description>
-				<posx>710</posx>
-				<posy>15</posy>
-				<width>64</width>
-				<height>32</height>
-				<label>-</label>
-				<font>-</font>
-				<onclick>PreviousMenu</onclick>
-				<texturefocus>DialogCloseButton-focus.png</texturefocus>
-				<texturenofocus>DialogCloseButton.png</texturenofocus>
-				<onleft>10</onleft>
-				<onright>10</onright>
-				<onup>10</onup>
-				<ondown>10</ondown>
-				<visible>system.getbool(input.enablemouse)</visible>
-			</control>
-			<control type="label">
-				<description>Content Picker Header</description>
-				<posx>30</posx>
-				<posy>60</posy>
-				<width>320</width>
-				<height>40</height>
-				<font>font12</font>
-				<label>$LOCALIZE[20344]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="spincontrolex" id="3">
-				<description>Content Picker</description>
-				<posx>30</posx>
-				<posy>100</posy>
-				<width>320</width>
-				<height>40</height>
-				<texturefocus border="5">button-focus.png</texturefocus>
-				<texturenofocus border="5">button-nofocus.png</texturenofocus>
-				<font>-</font>
-				<label>-</label>
-				<reverse>yes</reverse>
-				<onup>28</onup>
-				<ondown>5</ondown>
-				<onleft>60</onleft>
-				<onright>4</onright>
-			</control>
-			<control type="label">
-				<description>Content Picker label</description>
-				<posx>35</posx>
-				<posy>100</posy>
-				<width>280</width>
-				<height>40</height>
-				<font>font13_title</font>
-				<label>$INFO[Control.GetLabel(3)]</label>
-				<align>left</align>
 				<aligny>center</aligny>
 				<textcolor>white</textcolor>
 				<shadowcolor>black</shadowcolor>
 			</control>
-			<control type="label">
-				<description>Used Scraper Header</description>
-				<posx>30</posx>
-				<posy>150</posy>
-				<width>320</width>
-				<height>20</height>
-				<font>font12</font>
-				<label>$LOCALIZE[31312]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
+			
+			<control type="spincontrolex" id="3">
+				<description>Content Picker</description>
+				<posx>35</posx>
+				<posy>80</posy>
+				<width>550</width>
+				<height>40</height>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus.png</texturenofocus>
+				<font>font13_title</font>
+				<label>20344</label>
+				<reverse>yes</reverse>
+				<onup>28</onup>
+				<ondown>4</ondown>
+				<onleft>60</onleft>
+				<onright>4</onright>
+				<align>left</align>
 			</control>
+			
 			<control type="image">
 				<description>Used Scraper Image</description>
-				<posx>30</posx>
-				<posy>175</posy>
-				<width>320</width>
+				<posx>35</posx>
+				<posy>130</posy>
+				<width>150</width>
 				<height>130</height>
-				<aspectratio>keep</aspectratio>
+				<aspectratio>scale</aspectratio>
 				<texture>$INFO[ListItem.Icon]</texture>
 			</control>
-			<control type="label">
-				<description>Used Scaper Label</description>
-				<posx>30</posx>
-				<posy>315</posy>
-				<width>320</width>
-				<height>30</height>
-				<font>font13</font>
-				<label>[B]$INFO[ListItem.Label][/B]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>selected</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
+			
 			<control type="image">
-				<posx>370</posx>
-				<posy>60</posy>
+				<posx>200</posx>
+				<posy>135</posy>
 				<width>5</width>
-				<height>280</height>
+				<height>130</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>separator_vertical.png</texture>
 			</control>
-			<control type="label">
-				<description>Scraper List Header</description>
-				<posx>400</posx>
-				<posy>60</posy>
-				<width>360</width>
-				<height>40</height>
-				<font>font12</font>
-				<label>$LOCALIZE[31313]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
+			
 			<control type="list" id="4">
-				<posx>400</posx>
-				<posy>100</posy>
-				<width>360</width>
-				<height>241</height>
-				<onup>4</onup>
-				<onleft>3</onleft>
+				<posx>217</posx>
+				<posy>132</posy>
+				<width>340</width>
+				<height>135</height>
+				<onup>3</onup>
+				<onleft>60</onleft>
 				<onright>60</onright>
-				<ondown>4</ondown>
+				<ondown>5</ondown>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
 				<itemlayout height="45">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>360</width>
+						<width>340</width>
 						<height>40</height>
-						<texture border="5">button-nofocus.png</texture>
+						
 					</control>
 					<control type="image">
 						<posx>5</posx>
@@ -183,7 +106,7 @@
 					<control type="label">
 						<posx>50</posx>
 						<posy>0</posy>
-						<width>290</width>
+						<width>270</width>
 						<height>40</height>
 						<font>font13</font>
 						<align>left</align>
@@ -197,15 +120,15 @@
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>360</width>
+						<width>340</width>
 						<height>40</height>
 						<visible>!Control.HasFocus(4)</visible>
-						<texture border="5">button-nofocus.png</texture>
+						
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>360</width>
+						<width>340</width>
 						<height>40</height>
 						<visible>Control.HasFocus(4)</visible>
 						<texture border="5">button-focus2.png</texture>
@@ -220,7 +143,7 @@
 					<control type="label">
 						<posx>50</posx>
 						<posy>0</posy>
-						<width>290</width>
+						<width>260</width>
 						<height>40</height>
 						<font>font13</font>
 						<align>left</align>
@@ -231,44 +154,17 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="scrollbar" id="60">
-				<posx>760</posx>
-				<posy>100</posy>
-				<width>25</width>
-				<height>240</height>
-				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
-				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
-				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
-				<textureslidernib>ScrollBarNib.png</textureslidernib>
-				<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
-				<onleft>4</onleft>
-				<onright>3</onright>
-				<showonepage>true</showonepage>
-				<orientation>vertical</orientation>
-			</control>
-			<control type="label">
-				<description>Scanning Options Header</description>
-				<posx>30</posx>
-				<posy>350</posy>
-				<width>740</width>
-				<height>20</height>
-				<font>font12</font>
-				<label>$LOCALIZE[31314]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>blue</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<posx>30</posx>
-				<posy>380</posy>
-				<width>740</width>
+				<posx>35</posx>
+				<posy>275</posy>
+				<width>555</width>
 				<height>220</height>
 				<itemgap>4</itemgap>
-				<onup>3</onup>
+				<onup>4</onup>
 				<ondown>28</ondown>
 				<onleft>5</onleft>
+				<font>font10</font>
 				<onright>5</onright>
 			</control>
 			<control type="button" id="7">
@@ -288,12 +184,12 @@
 				<texturefocus border="5">button-focus2.png</texturefocus>
 			</control>
 			<control type="group" id="9001">
-				<posy>615</posy>
+				<posy>460</posy>
 				<control type="button" id="28">
 					<description>OK Button</description>
-					<posx>300</posx>
+					<posx>35</posx>
 					<posy>0</posy>
-					<width>200</width>
+					<width>175</width>
 					<height>40</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -301,14 +197,14 @@
 					<label>186</label>
 					<onleft>6</onleft>
 					<onright>29</onright>
-					<onup>30</onup>
+					<onup>5</onup>
 					<ondown>3</ondown>
 				</control>
 				<control type="button" id="29">
 					<description>Cancel Button</description>
-					<posx>510</posx>
+					<posx>225</posx>
 					<posy>0</posy>
-					<width>200</width>
+					<width>175</width>
 					<height>40</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -316,14 +212,14 @@
 					<label>222</label>
 					<onleft>28</onleft>
 					<onright>6</onright>
-					<onup>30</onup>
+					<onup>5</onup>
 					<ondown>3</ondown>
 				</control>
 				<control type="button" id="6">
 					<description>Settings Button</description>
-					<posx>90</posx>
+					<posx>415</posx>
 					<posy>0</posy>
-					<width>200</width>
+					<width>175</width>
 					<height>40</height>
 					<align>center</align>
 					<aligny>center</aligny>
@@ -331,7 +227,7 @@
 					<label>5</label>
 					<onleft>29</onleft>
 					<onright>28</onright>
-					<onup>30</onup>
+					<onup>5</onup>
 					<ondown>3</ondown>
 				</control>
 			</control>
