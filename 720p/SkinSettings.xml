@@ -2355,6 +2355,33 @@
 							<texturenofocus>MenuItemNF.png</texturenofocus>
 							<onclick>Skin.SetAddon(HomeShelfAddonButton10,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
 						</control>
+
+						<control type="button" id="458">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>Video $LOCALIZE[31133]</label>
+							<label2>[COLOR=selected]$INFO[system.addontitle(Skin.String(SubtitleScript_Path))][/COLOR]</label2>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
+						</control>
+						<control type="button" id="459">
+							<width>750</width>
+							<height>40</height>
+							<font>font13</font>
+							<label>- $LOCALIZE[24020]</label>
+							<textcolor>grey2</textcolor>
+							<focusedcolor>white</focusedcolor>
+							<texturefocus>MenuItemFO.png</texturefocus>
+							<texturenofocus>MenuItemNF.png</texturenofocus>
+							<enable>!IsEmpty(Skin.String(SubtitleScript_Path))</enable>
+							<visible>!IsEmpty(Skin.String(SubtitleScript_Path))</visible>
+							<onclick>Addon.OpenSettings($INFO[Skin.String(SubtitleScript_Path)])</onclick>
+						</control>
+
 						<!-- control type="button" id="455">
 							<width>750</width>
 							<height>40</height>
