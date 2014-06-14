@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.boxik" version="1.2.0" name="BOXiK" provider-name="BOXiK">
+<addon id="skin.boxik" version="1.1.25" name="BOXiK" provider-name="BOXiK">
   <requires>
-    <import addon="xbmc.gui" version="5.0.1"/>
+    <import addon="xbmc.gui" version="4.0.0"/>
   	<import addon="service.skin.widgets" version="0.0.25"/>
   	<import addon="script.favourites" version="4.0.8"/>
   	<import addon="script.tvtunes" version="3.0.4"/>
