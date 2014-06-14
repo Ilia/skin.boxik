@@ -248,7 +248,7 @@
 					<onclick>right</onclick>
 					<onclick>Filter</onclick>
 				</control>
-				<control type="togglebutton" id="20">
+				<!-- control type="togglebutton" id="20">
 					<description>Update library</description>
 					<textwidth>235</textwidth>
 					<include>ButtonCommonValues</include>
@@ -257,7 +257,7 @@
 					<alttexturefocus border="5">button-focus.png</alttexturefocus>
 					<alttexturenofocus>-</alttexturenofocus>
 					<usealttexture>library.isscanningvideo</usealttexture>
-				</control>
+				</control -->
 				<!-- control type="label" id="201">
 					<width>250</width>
 					<height>35</height>
