@@ -345,7 +345,7 @@
 		<control type="button" id="9010111">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>Update</label>
-			<onclick>RunPlugin(plugin://plugin.video.1channel/?mode=MovieAutoUpdate)</onclick>
+			<onclick>RunPlugin(plugin://plugin.video.1channel/?mode=movie_update)</onclick>
 		</control>
 		<control type="button" id="9010121">
 			<include>ButtonHomeSubCommonValues</include>
