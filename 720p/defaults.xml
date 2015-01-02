@@ -160,8 +160,8 @@
 		<sliderwidth>150</sliderwidth>
 		<sliderheight>20</sliderheight>
 		<texturesliderbar>osd_slider_bg.png</texturesliderbar>
-		<textureslidernib>osd_slider_nibNF.png</textureslidernib>
-		<textureslidernibfocus>osd_slider_nib.png</textureslidernibfocus>
+		<textureslidernib>-</textureslidernib>
+		<textureslidernibfocus>-</textureslidernibfocus>
 		<font>font12</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>

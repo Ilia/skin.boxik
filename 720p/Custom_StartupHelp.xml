@@ -1,0 +1,73 @@
+<window id="1100" type="dialog">
+	<defaultcontrol>10000</defaultcontrol>
+	<include>HelpWindowAnimation</include>
+	<coordinates>
+		<system>1</system>
+		<posx>320</posx>
+		<posy>115</posy>
+	</coordinates>
+	<controls>
+		<control type="group">
+	  		<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>640</width>
+				<height>470</height>
+				<texture background="true">ContentPanel.png</texture>
+			</control>
+			<control type="image">
+		        <posx>10</posx>
+		        <posy>10</posy>
+		        <width>620</width>
+		        <height>370</height>
+		        <texture border="5">black-back2.png</texture>
+	    	</control>
+			<control type="label">
+				<description>header label</description>
+				<posx>60</posx>
+				<posy>40</posy>
+				<width>620</width>
+				<height>50</height>
+				<label>Hello!</label>
+				<font>font35_title</font>
+		        <align>left</align>
+		        <aligny>center</aligny>
+		        <textcolor>white</textcolor>
+		        <shadowcolor>99000000</shadowcolor>
+			</control>
+			<control type="textbox">
+				<description>textarea</description>
+				<posx>60</posx>
+				<posy>115</posy>
+				<width>530</width>
+				<height>360</height>
+				<label>Welcome to [B]BOXiK[/B] - the single access point to all your media.[CR][CR]We recommend you press the [B][COLOR=selected]OK[/COLOR][/B] button on your remote to go through the Help Guide to setup your [B]BOXiK[/B]. Otherwise press the [B]DOWN[/B] button on your remote to never see this message again. [CR]You can still find the help section on your home menu or you can send an email with your questions to [B]support@boxik.tv[/B].[CR][CR]Happy watching,[CR][B]BOXiK[/B]
+					</label>
+				<font>font12</font>
+				<align>left</align>
+				<textcolor>white</textcolor>
+				<shadowcolor>99000000</shadowcolor>
+			</control>
+		 	<control type="button" id="10000">
+				<height>40</height>
+				<width>250</width>
+				<textoffsetx>20</textoffsetx>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12_title</font>
+				<texturefocus border="5">button-focus2.png</texturefocus>
+				<texturenofocus border="5">button-nofocus2.png</texturenofocus>
+				<pulseonselect>true</pulseonselect>
+				<description>Help button</description>
+				<posx>195</posx>
+				<posy>400</posy>
+				<label>Start Here</label>
+				<ondown>Close</ondown>
+				<ondown>Skin.Setbool(HelpScreen)</ondown>
+				<onclick>ActivateWindow(1111)</onclick>
+				<onclick>Close</onclick>
+				<onclick>Skin.Setbool(HelpScreen)</onclick>
+			</control>
+		</control>
+	</controls>
+</window>

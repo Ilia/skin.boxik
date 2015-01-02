@@ -23,7 +23,17 @@
 	<include file="weather\MapAlerts.xml" />
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
-
+	<include name="HiddenButton">
+			<font>-</font>
+			<texturefocus>-</texturefocus>
+			<texturenofocus>-</texturenofocus>
+			<textureradiofocus>-</textureradiofocus>
+			<textureradionofocus>-</textureradionofocus>
+			<textureup>-</textureup>
+			<texturedown>-</texturedown>
+			<textureupfocus>-</textureupfocus>
+			<texturedownfocus>-</texturedownfocus>
+	</include>
 	<include name="KBurnsAnimateFanart">
 		<animation effect="zoom" start="110" end="130" center="auto" time="16000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateFanArt)">Conditional</animation>
 		<animation effect="slide" start="-10,-10" end="20,20" time="8000" tween="cubic" easing="inout" pulse="true" condition="!Skin.HasSetting(NoAnimateFanArt)">Conditional</animation>
@@ -42,27 +52,42 @@
 	</include>
 	<include name="DefaultInitialSetup">
 		<onload condition="System.HasAddon(script.favourites)">XBMC.RunScript(script.favourites)</onload>
-		<onload condition="!Skin.HasSetting(HideHomeSearch) + !System.HasAddon(script.globalsearch)">Skin.Setbool(HideHomeSearch)</onload>
+
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.1.Label))">Skin.SetString(HomeItem.1.Label,Photos)</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.1.Path))">Skin.SetString(HomeItem.1.Path,ActivateWindow(Pictures))</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.1.Sub))">Skin.SetString(HomeItem.1.Sub,Photos)</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.1.Type))">Skin.SetString(HomeItem.1.Type,Photos)</onload>
 
-
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.2.Label))">Skin.SetString(HomeItem.2.Label,$LOCALIZE[20342])</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.2.Path))">Skin.SetString(HomeItem.2.Path,ActivateWindow(Videos,MovieTitles,return))</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.2.Sub))">Skin.SetString(HomeItem.2.Sub,Movies)</onload>
 		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.2.Type))">Skin.SetString(HomeItem.2.Type,Movies)</onload>
+
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Label))">Skin.SetString(HomeItem.3.Label,"Online")</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Path))">Skin.SetString(HomeItem.3.Path,ActivateWindow(Video,Addons,return))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Sub))">Skin.SetString(HomeItem.3.Sub,Online)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Type))">Skin.SetString(HomeItem.3.Type,Online)</onload>
 		
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Label))">Skin.SetString(HomeItem.3.Label,$LOCALIZE[20343])</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Path))">Skin.SetString(HomeItem.3.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Sub))">Skin.SetString(HomeItem.3.Sub,TVShows)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.3.Type))">Skin.SetString(HomeItem.3.Type,TVShows)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Label))">Skin.SetString(HomeItem.4.Label,$LOCALIZE[2])</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Path))">Skin.SetString(HomeItem.4.Path,ActivateWindow(Music))</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Sub))">Skin.SetString(HomeItem.4.Sub,Music)</onload>
-		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Type))">Skin.SetString(HomeItem.4.Type,Music)</onload>
-	
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Label))">Skin.SetString(HomeItem.4.Label,$LOCALIZE[20343])</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Path))">Skin.SetString(HomeItem.4.Path,ActivateWindow(Videos,TVShowTitles,return))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Sub))">Skin.SetString(HomeItem.4.Sub,TVShows)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.4.Type))">Skin.SetString(HomeItem.4.Type,TVShows)</onload>
+		
+		<!-- onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Label))">Skin.SetString(HomeItem.5.Label,$LOCALIZE[2])</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Path))">Skin.SetString(HomeItem.5.Path,ActivateWindow(Music))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Sub))">Skin.SetString(HomeItem.5.Sub,Music)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.5.Type))">Skin.SetString(HomeItem.5.Type,Music)</onload -->
+
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Label))">Skin.SetString(HomeItem.6.Label,"HELP")</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Path))">Skin.SetString(HomeItem.6.Path,ActivateWindow(1111))</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeItem.6.Type))">Skin.SetString(HomeItem.6.Type,Help)</onload>
+
+		<!-- Initial Addon shelf -->
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeShelfAddonButton1)) + System.HasAddon(plugin.video.youtube)">Skin.SetString(HomeShelfAddonButton1,plugin.video.youtube)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeShelfAddonButton2)) + System.HasAddon(plugin.video.hdtrailers_net)">Skin.SetString(HomeShelfAddonButton2,plugin.video.hdtrailers_net)</onload>
+		<onload condition="!Skin.HasSetting(InitialSetUpRun) + IsEmpty(Skin.String(HomeShelfAddonButton3)) + System.HasAddon(plugin.audio.radio_de)">Skin.SetString(HomeShelfAddonButton3,plugin.audio.radio_de)</onload>
+
+
 		<onload condition="!Skin.HasSetting(InitialSetUpRun)">Skin.SetBool(InitialSetUpRun)</onload>
 	</include>
 	<include name="DimensionsFullscreen">
@@ -134,7 +159,8 @@
 		<height>35</height>
 		<align>center</align>
 		<onup>9000</onup>
-		<ondown>9002</ondown>
+		<ondown>-</ondown>
+		<ondown condition="!StringCompare(Window(Home).Property(Movie.File),)">9002</ondown>
 		<itemgap>0</itemgap>
 		<orientation>Horizontal</orientation>
 		<!-- animation effect="slide" start="0,-40" end="0,0" delay="200" time="200" tween="quadratic" easing="out">Visible</animation>
@@ -1567,14 +1593,14 @@
     </include>
 
     <include name="HomeMenuFade">
-		<animation effect="fade" start="100" end="0" time="1000" condition="[Library.HasContent(Movies) + System.HasAddon(service.skin.fanart) + System.IdleTime(30) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio + ![Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004) | Control.hasFocus(8005)]]">Conditional</animation>
+		<animation effect="fade" start="100" end="0" time="1000" condition="[Library.HasContent(Movies) + System.HasAddon(service.skin.fanart) + System.IdleTime(30) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio + ![Control.hasFocus(9002) | Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004) | Control.hasFocus(8005)]]">Conditional</animation>
 	</include>
 	<include name="HomeMenuFadedInfo">
 		<control type="label">
 			<animation type="Conditional" condition="true" pulse="true">
 	       		<effect type="fade" start="10" end="60"  time="1400"  />
 			</animation>
-			<visible>[Library.HasContent(Movies) + System.HasAddon(service.skin.fanart) +  System.IdleTime(31) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio + ![Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004) | Control.hasFocus(8005)]]]</visible>
+			<visible>[Library.HasContent(Movies) + System.HasAddon(service.skin.fanart) +  System.IdleTime(31) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio + ![Control.hasFocus(9002) | Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004) | Control.hasFocus(8005)]]]</visible>
 			<posx>0</posx>
 			<posy>672</posy>
 			<width>1280</width>
@@ -1593,5 +1619,15 @@
 	<include name="HeaderTitlePosition">
 		<posx>120</posx>
 		<posy>18</posy>
+	</include>
+	<include name="HelpWindowAnimation">
+		<animation type="WindowOpen" reversible="false">
+	      <effect type="fade" start="0" end="100" time="700" tween="sine" easing="in"  />
+	      <effect type="slide" start="0,200" end="0,0" time="1000" delay="100" tween="cubic" easing="out" />
+	    </animation>
+	    <animation type="WindowClose" reversible="false">
+	      <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+	      <effect type="slide" start="0,0" end="0,60" time="500" tween="sine" easing="out" />
+	    </animation>
 	</include>
 </includes>

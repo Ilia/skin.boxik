@@ -6,7 +6,7 @@
 			<imagepath background="true">$INFO[Container(9000).ListItem.Icon]</imagepath>
 			<timeperimage>8000</timeperimage>
 			<randomize>true</randomize>
-			<fadetime>1000</fadetime>
+			<fadetime>-</fadetime>
 			<visible>Window.IsVisible(home) + !Skin.HasSetting(UseCustomBackground)</visible>
 		</control>
 		<control type="image">
@@ -140,16 +140,6 @@
 			<include>Dimensions_Fullscreen</include>
 			<visible>Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo) + ![Window.IsVisible(PVR) + [Control.IsVisible(11) | Control.IsVisible(12)]]</visible>
 		</control>
-		<control type="image">
-			<posx>0</posx>
-			<posy>-40</posy>
-			<width>1280</width>
-			<height>120</height>
-			<texture flipy="true">HomeNowPlayingBack.png</texture>
-			<visible>[Player.HasVideo + !Skin.HasSetting(ShowBackgroundVideo)] | [Player.HasAudio + ![Skin.HasSetting(ShowBackgroundVis) | SubString(Window(videolibrary).Property(TvTunesIsAlive),True)]] | [!Skin.HasSetting(HideBackGroundFanart) + !IsEmpty(ListItem.Property(Fanart_Image))]</visible>
-			<include>VisibleFadeEffect</include>
-		</control>
-
 	</include>
 	<include name="ContentPanelBackgrounds">
 		<control type="image">
@@ -160,10 +150,11 @@
 			<aspectratio>stretch</aspectratio>
 			<include>VisibleFadeEffect</include>
 			<texture>floor.png</texture>
-			<visible>![Control.IsVisible(515) | Control.IsVisible(501)]</visible>
+			<visible>![Control.IsVisible(515) | Control.IsVisible(501) | Window.IsActive(1101) | Window.IsActive(1102)]</visible>
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>
+
 			<control type="group">
 				<include>VisibleFadeEffect</include>
 				<visible>Control.IsVisible(50)</visible>

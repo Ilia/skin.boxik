@@ -5,9 +5,7 @@
 		
 		<!-- media infos -->
 		<control type="group" id="1">
-			<visible>!SubString(Window(10025).Property(CinemaExperienceRunning),True)</visible>
-			<visible>!StringCompare(VideoPlayer.Title,XBMC-Intro-Video.mkv)</visible>
-			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | [!Skin.HasSetting(HideInfoStartOSD) + !IntegerGreaterThan(Player.time,5)]</visible>
+			<visible>[Player.ShowInfo | Window.IsActive(VideoOSD)] | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | [!Skin.HasSetting(HideInfoStartOSD) + !IntegerGreaterThan(Player.time,5) + !SubString(Window(10025).Property(CinemaExperienceRunning),True)]</visible>
 			<visible>![Window.IsVisible(osdvideosettings) | Window.IsVisible(osdaudiosettings) | Window.IsVisible(videobookmarks) | Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide)]</visible>
 			<!-- control type="image." id="1">
 				<posx>0</posx>

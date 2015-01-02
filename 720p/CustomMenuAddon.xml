@@ -124,10 +124,9 @@
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 						<include>CloseMenuChoice</include>
-						<visible>Library.HasContent(Movies)</visible>
 					</item>
 					<item id="3">
-						<description>Cinema</description>
+						<description>Theater</description>
 						<label>$LOCALIZE[24000] - $LOCALIZE[31146]</label>
 						<include>ClearButtonChoice</include>
 						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,RunScript(script.cinema.experience,movietitles))</onclick>
@@ -146,7 +145,6 @@
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,TVShows)</onclick>
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,TVShows)</onclick>
 						<include>CloseMenuChoice</include>
-						<visible>Library.HasContent(TVShows)</visible>
 					</item>
 					<item id="5">
 						<description>Live TV</description>
@@ -218,11 +216,9 @@
 						<description>Add-Ons</description>
 						<label>Select $LOCALIZE[24000]</label>
 						<include>ClearButtonChoice</include>
-						<onclick>Skin.SetAddon(UsrSelectAddon,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image,xbmc.addon.executable)</onclick>
-						<onclick condition="!IsEmpty(Skin.String(UsrSelectAddon))">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label,$INFO[system.addontitle(Skin.String(UsrSelectAddon))])</onclick>
-						<onclick condition="!IsEmpty(Skin.String(UsrSelectAddon))">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,RunAddon($INFO[Skin.String(UsrSelectAddon)]))</onclick>
-						<onclick condition="Window.IsVisible(2114) + !IsEmpty(Skin.String(UsrSelectAddon))">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,AddOns)</onclick>
-						<onclick condition="Window.IsVisible(2114) + !IsEmpty(Skin.String(UsrSelectAddon))">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,AddOns)</onclick>
+						<onclick>Skin.SetAddon(UsrSelectAddon,xbmc.addon.video,xbmc.addon.audio,xbmc.addon.image)</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,RunAddon($INFO[Skin.String(UsrSelectAddon)]))</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label)</onclick>
 						<include>CloseMenuChoice</include>
 					</item>
 					<item id="12">
@@ -369,6 +365,15 @@
 						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label,$LOCALIZE[0])</onclick>
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,Programs)</onclick>
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,Programs)</onclick>
+						<include>CloseMenuChoice</include>
+					</item>
+					<item id="25">
+						<description>Help</description>
+						<label>Help/Guide</label>
+						<include>ClearButtonChoice</include>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(1111,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label,"Help")</onclick>
+						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,Help)</onclick>
 						<include>CloseMenuChoice</include>
 					</item>
 				</content>
