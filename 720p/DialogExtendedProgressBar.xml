@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol></defaultcontrol>
+	<defaultcontrol/>
 	<animation effect="slide" start="0,-70" end="0,0" time="100">WindowOpen</animation>
 	<animation effect="slide" start="0,0" end="0,-70" delay="400" time="100">WindowClose</animation>
 	<controls>
@@ -17,8 +17,8 @@
 			</control>
 			<control type="label" id="30">
 				<description>Header Label</description>
-				<posx>15</posx>
-				<posy>4</posy>
+				<top>0</top>
+				<left>15</left>
 				<width>370</width>
 				<height>18</height>
 				<font>font10_title</font>
@@ -28,8 +28,8 @@
 			</control>
 			<control type="label" id="31">
 				<description>Title Label</description>
-				<posx>15</posx>
-				<posy>20</posy>
+				<top>17</top>
+				<left>15</left>
 				<width>370</width>
 				<height>20</height>
 				<font>font10</font>
@@ -38,8 +38,8 @@
 			</control>
 			<control type="progress" id="32">
 				<description>progress control</description>
-				<posx>15</posx>
-				<posy>42</posy>
+				<top>40</top>
+				<left>15</left>
 				<width>370</width>
 				<height>8</height>
 			</control>

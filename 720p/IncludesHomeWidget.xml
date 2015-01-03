@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="HomePlayStatus.">
 		<control type="group">
@@ -19,7 +19,7 @@
 					<visible>[Player.Paused + Player.Caching] + !Player.Seeking + Window.IsVisible(home)</visible>
 					<control type="label" id="24" description="Buffering label">
 						<animation type="Visible" condition="true" reversable="true">
-							<effect type="fade" start="0" end="100" time="700" reversable="true" />
+							<effect type="fade" start="0" end="100" time="700" reversable="true"/>
 						</animation>
 			        	<posx>-23</posx>
 					    <posy>-27</posy>
@@ -185,19 +185,7 @@
 			<animation effect="fade" time="400" start="100" end="0" condition="Control.HasFocus(9002)">Conditional</animation>
 			<control type="image" description="Top glass border">
 				<animation effect="slide" start="0,0" end="0,-10" time="300" condition="[Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004)]">Conditional</animation>
-				<animation effect="slide" start="0,0" end="0,-12" time="300" condition="[
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) + !Skin.HasSetting(HideHomeVideoWidget) + IntegerGreaterThan(Container(8000).NumItems,0) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) + !Skin.HasSetting(HideHomeVideoWidget) + IntegerGreaterThan(Container(8001).NumItems,0) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Music) + !Skin.HasSetting(HideHomeAlbumsWidget) + IntegerGreaterThan(Container(8002).NumItems,0) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Online) + !Skin.HasSetting(HideHomeAddonWidget) + IntegerGreaterThan(Container(8004).NumItems,0) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel) + IntegerGreaterThan(Container(8005).NumItems,0)
-							] + [
-							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) | 
-							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music) |
-							StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows) |
-							StringCompare(Container(9000).ListItem.Property(HiLiteItem),Online) | 
-							StringCompare(Container(9000).ListItem.Property(HiLiteItem),1Channel)]
-							">Conditional
+				<animation effect="slide" start="0,0" end="0,-12" time="300" condition="[        StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) + !Skin.HasSetting(HideHomeVideoWidget) + IntegerGreaterThan(Container(8000).NumItems,0) |        StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) + !Skin.HasSetting(HideHomeVideoWidget) + IntegerGreaterThan(Container(8001).NumItems,0) |        StringCompare(Container(9000).ListItem.Property(SubMenu),Music) + !Skin.HasSetting(HideHomeAlbumsWidget) + IntegerGreaterThan(Container(8002).NumItems,0) |        StringCompare(Container(9000).ListItem.Property(SubMenu),Online) + !Skin.HasSetting(HideHomeAddonWidget) + IntegerGreaterThan(Container(8004).NumItems,0) |        StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel) + IntegerGreaterThan(Container(8005).NumItems,0)        ] + [        StringCompare(Container(9000).ListItem.Property(HiLiteItem),Movies) |         StringCompare(Container(9000).ListItem.Property(HiLiteItem),Music) |        StringCompare(Container(9000).ListItem.Property(HiLiteItem),TVShows) |        StringCompare(Container(9000).ListItem.Property(HiLiteItem),Online) |         StringCompare(Container(9000).ListItem.Property(HiLiteItem),1Channel)]        ">Conditional
 				</animation>
 		        <posx>0</posx>
 		       	<posy>338</posy>
@@ -205,8 +193,6 @@
 		       	<height>87</height>
 		       	<texture border="0,0,0,12">home/NavbarGlass.png</texture>
    			</control>
-
-
 
 			<control type="group">
 				<posx>0</posx>
@@ -224,7 +210,7 @@
 			       	<height>15</height>
 			       	<texture background="true">arrow-big-up.png</texture>
 			       	<animation type="Conditional" condition="true" pulse="true">
-			       		<effect type="fade" start="10" end="90"  time="1400"  />
+			       		<effect type="fade" start="10" end="90" time="1400"/>
 					</animation>
 			    </control>
 				
@@ -266,7 +252,7 @@
 						<!-- no image fallback -->
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 					        <posx>0</posx>
 							<posy>0</posy>
@@ -276,9 +262,9 @@
 					        <aspectratio>scale</aspectratio>
 					    </control>
 					    <control type="label">
-					    	<posx>70</posx>
+					    	<posx>0</posx>
 							<posy>186</posy>
-							<width>125</width>
+							<width>90%</width>
 							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
@@ -291,8 +277,8 @@
 						<!-- no image fallback end -->
 						<control type="image" description="Reflection">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
-								<effect type="slide" end="0,14" time="400" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
+								<effect type="slide" end="0,14" time="400"/>
 							</animation>
 					        <posx>0</posx>
 					        <posy>210</posy>
@@ -344,7 +330,7 @@
 			       	<height>15</height>
 			       	<texture background="true">arrow-big-up.png</texture>
 			       	<animation type="Conditional" condition="true" pulse="true">
-			       		<effect type="fade" start="10" end="90"  time="1400"  />
+			       		<effect type="fade" start="10" end="90" time="1400"/>
 					</animation>
 			    </control>
 	   			<control type="list" id="8004">
@@ -382,7 +368,7 @@
 					<focusedlayout height="220" width="170">
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 							<posx>0</posx>
 							<posy>155</posy>
@@ -393,7 +379,7 @@
 						</control>
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 							<posx>0</posx>
 							<posy>0</posy>
@@ -404,8 +390,8 @@
 						</control>	
 						<control type="image">
 					    	<animation type="Focus" condition="true" reversable="true">
-								<effect type="slide" end="0,7" time="0" />
-								<effect type="zoom"  start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="slide" end="0,7" time="0"/>
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 					        <posx>0</posx>
 							<posy>120</posy>
@@ -415,9 +401,9 @@
 					        <aspectratio>scale</aspectratio>
 					    </control>
 						<control type="label">
-							<posx>78</posx>
+							<posx>0</posx>
 							<posy>135</posy>
-							<width>145</width>
+							<width>90%</width>
 							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
@@ -444,7 +430,7 @@
 			       	<height>15</height>
 			       	<texture background="true">arrow-big-up.png</texture>
 			       	<animation type="Conditional" condition="true" pulse="true">
-			       		<effect type="fade" start="10" end="90"  time="1400"  />
+			       		<effect type="fade" start="10" end="90" time="1400"/>
 					</animation>
 			    </control>
 	   			<control type="list" id="8005">
@@ -485,7 +471,7 @@
 						<!-- no image fallback -->
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 					        <posx>0</posx>
 							<posy>0</posy>
@@ -510,8 +496,8 @@
 						<!-- no image fallback end -->
 						<control type="image" description="Reflection">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
-								<effect type="slide" end="0,14" time="400" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
+								<effect type="slide" end="0,14" time="400"/>
 							</animation>
 					        <posx>0</posx>
 					        <posy>210</posy>
@@ -560,7 +546,7 @@
 			       	<height>15</height>
 			       	<texture background="true">arrow-big-up.png</texture>
 			       	<animation type="Conditional" condition="true" pulse="true">
-			       		<effect type="fade" start="10" end="90"  time="1400"  />
+			       		<effect type="fade" start="10" end="90" time="1400"/>
 					</animation>
 			    </control>
 				<control type="list" id="8001">
@@ -621,7 +607,7 @@
 					<focusedlayout height="220" width="240">
 						<control type="image" description="Reflection">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 					       	<posx>0</posx>
 							<posy>155</posy>
@@ -633,7 +619,7 @@
 					    </control>
 					   	<control type="image" description="Reflection">
 					   		<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 					        <posx>0</posx>
 							<posy>155</posy>
@@ -645,7 +631,7 @@
 					    </control>
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 							<posx>0</posx>
 							<posy>0</posy>
@@ -658,7 +644,7 @@
 						</control>
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 							<posx>0</posx>
 							<posy>0</posy>
@@ -671,7 +657,7 @@
 						</control>
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 							<posx>0</posx>
 							<posy>0</posy>
@@ -684,7 +670,7 @@
 						</control>
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 							<posx>0</posx>
 							<posy>0</posy>
@@ -697,8 +683,8 @@
 						</control>
 					    <control type="image" description="Reflection">
 					    	<animation type="Focus" condition="true" reversable="true">
-								<effect type="slide" end="0,7" time="0" />
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="slide" end="0,7" time="0"/>
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 					        <posx>0</posx>
 							<posy>107</posy>
@@ -708,9 +694,9 @@
 					        <aspectratio>scale</aspectratio>
 					    </control>
 						<control type="label">
-							<posx>112</posx>
+							<posx>0</posx>
 							<posy>115</posy>
-							<width>200</width>
+							<width>90%</width>
 							<height>20</height>
 							<font>font10</font>
 							<textcolor>grey2</textcolor>
@@ -721,9 +707,9 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="label">
-							<posx>112</posx>
+							<posx>0</posx>
 							<posy>135</posy>
-							<width>190</width>
+							<width>90%</width>
 							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
@@ -758,7 +744,7 @@
 			       	<height>15</height>
 			       	<texture background="true">arrow-big-up.png</texture>
 			       	<animation type="Conditional" condition="true" pulse="true">
-			       		<effect type="fade" start="10" end="90"  time="1400"  />
+			       		<effect type="fade" start="10" end="90" time="1400"/>
 					</animation>
 			    </control>
 
@@ -799,7 +785,7 @@
 					<focusedlayout height="220" width="170">
 						<control type="image" description="Reflection">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 					        <posx>0</posx>
 							<posy>155</posy>
@@ -810,7 +796,7 @@
 					    </control>
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 							<posx>0</posx>
 							<posy>0</posy>
@@ -822,11 +808,11 @@
 						</control>
 						<control type="image">
 							<animation type="Focus" condition="true" reversable="true">
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 							<posx>0</posx>
 							<posy>0</posy>
-							<width>155</width>
+							<width>100%</width>
 							<height>155</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true" fallback="livecdcase/DefaultAlbumCover.png">$INFO[ListItem.ActualIcon]</texture>
@@ -834,8 +820,8 @@
 						</control>
 						<control type="image">
 					    	<animation type="Focus" condition="true" reversable="true">
-								<effect type="slide" end="0,7" time="0" />
-								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300" />
+								<effect type="slide" end="0,7" time="0"/>
+								<effect type="zoom" start="100,100" end="110,110" center="auto" time="300"/>
 							</animation>
 					        <posx>0</posx>
 							<posy>107</posy>
@@ -845,9 +831,9 @@
 					        <aspectratio>scale</aspectratio>
 					    </control>
 						<control type="label">
-							<posx>77</posx>
+							<posx>0</posx>
 							<posy>115</posy>
-							<width>135</width>
+							<width>90%</width>
 							<height>20</height>
 							<font>font10</font>
 							<textcolor>grey2</textcolor>
@@ -857,9 +843,9 @@
 							<label>$INFO[ListItem.Label2]</label>
 						</control>
 						<control type="label">
-							<posx>77</posx>
+							<posx>0</posx>
 							<posy>132</posy>
-							<width>135</width>
+							<width>90%</width>
 							<height>20</height>
 							<font>font12</font>
 							<textcolor>white</textcolor>
@@ -1042,7 +1028,7 @@
 		<content>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.1.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.1.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.1.Art(poster))]</icon>
@@ -1051,7 +1037,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.2.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.2.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.2.Art(poster))]</icon>
@@ -1060,7 +1046,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.3.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.3.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.3.Art(poster))]</icon>
@@ -1069,7 +1055,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.4.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.4.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.4.Art(poster))]</icon>
@@ -1078,7 +1064,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.5.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.5.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.5.Art(poster))]</icon>
@@ -1087,7 +1073,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.6.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.6.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.6.Art(poster))]</icon>
@@ -1096,7 +1082,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.7.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.7.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.7.Art(poster))]</icon>
@@ -1105,7 +1091,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.8.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.8.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.8.Art(poster))]</icon>
@@ -1114,7 +1100,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.9.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.9.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.9.Art(poster))]</icon>
@@ -1123,7 +1109,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window(Home).Property(RecentMovie.10.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecentMovie.10.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecentMovie.10.Art(poster))]</icon>
@@ -1132,7 +1118,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.1.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.1.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.1.Thumb)]</icon>
@@ -1141,7 +1127,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.2.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.2.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.2.Thumb)]</icon>
@@ -1150,7 +1136,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.3.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.3.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.3.Thumb)]</icon>
@@ -1159,7 +1145,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.4.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.4.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.4.Thumb)]</icon>
@@ -1168,7 +1154,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.5.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.5.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.5.Thumb)]</icon>
@@ -1177,7 +1163,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.6.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.6.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.6.Thumb)]</icon>
@@ -1186,7 +1172,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.7.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.7.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.7.Thumb)]</icon>
@@ -1195,7 +1181,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.8.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.8.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.8.Thumb)]</icon>
@@ -1204,7 +1190,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.9.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.9.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.9.Thumb)]</icon>
@@ -1213,7 +1199,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMovie.10.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovie.10.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMovie.10.Thumb)]</icon>
@@ -1226,7 +1212,7 @@
 		<content>
 			<item id="1">
 				<label>$INFO[Window(Home).Property(RandomMovie.1.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.1.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.1.Art(poster))]</icon>
@@ -1235,7 +1221,7 @@
 			</item>
 			<item id="2">
 				<label>$INFO[Window(Home).Property(RandomMovie.2.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.2.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.2.Art(poster))]</icon>
@@ -1244,7 +1230,7 @@
 			</item>
 			<item id="3">
 				<label>$INFO[Window(Home).Property(RandomMovie.3.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.3.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.3.Art(poster))]</icon>
@@ -1253,7 +1239,7 @@
 			</item>
 			<item id="4">
 				<label>$INFO[Window(Home).Property(RandomMovie.4.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.4.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.4.Art(poster))]</icon>
@@ -1262,7 +1248,7 @@
 			</item>
 			<item id="5">
 				<label>$INFO[Window(Home).Property(RandomMovie.5.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.5.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.5.Art(poster))]</icon>
@@ -1271,7 +1257,7 @@
 			</item>
 			<item id="6">
 				<label>$INFO[Window(Home).Property(RandomMovie.6.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.6.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.6.Art(poster))]</icon>
@@ -1280,7 +1266,7 @@
 			</item>
 			<item id="7">
 				<label>$INFO[Window(Home).Property(RandomMovie.7.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.7.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.7.Art(poster))]</icon>
@@ -1289,7 +1275,7 @@
 			</item>
 			<item id="8">
 				<label>$INFO[Window(Home).Property(RandomMovie.8.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.8.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.8.Art(poster))]</icon>
@@ -1298,7 +1284,7 @@
 			</item>
 			<item id="9">
 				<label>$INFO[Window(Home).Property(RandomMovie.9.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.9.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.9.Art(poster))]</icon>
@@ -1307,7 +1293,7 @@
 			</item>
 			<item id="10">
 				<label>$INFO[Window(Home).Property(RandomMovie.10.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMovie.10.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMovie.10.Art(poster))]</icon>
@@ -1320,7 +1306,7 @@
 		<content>
 			<item id="1">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.1.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.1.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.1.Art(poster))]</icon>
@@ -1329,7 +1315,7 @@
 			</item>
 			<item id="2">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.2.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.2.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.2.Art(poster))]</icon>
@@ -1338,7 +1324,7 @@
 			</item>
 			<item id="3">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.3.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.3.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.3.Art(poster))]</icon>
@@ -1347,7 +1333,7 @@
 			</item>
 			<item id="4">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.4.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.4.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.4.Art(poster))]</icon>
@@ -1356,7 +1342,7 @@
 			</item>
 			<item id="5">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.5.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.5.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.5.Art(poster))]</icon>
@@ -1365,7 +1351,7 @@
 			</item>
 			<item id="6">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.6.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.6.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.6.Art(poster))]</icon>
@@ -1374,7 +1360,7 @@
 			</item>
 			<item id="7">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.7.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.7.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.7.Art(poster))]</icon>
@@ -1383,7 +1369,7 @@
 			</item>
 			<item id="8">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.8.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.8.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.8.Art(poster))]</icon>
@@ -1392,7 +1378,7 @@
 			</item>
 			<item id="9">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.9.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.9.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.9.Art(poster))]</icon>
@@ -1401,7 +1387,7 @@
 			</item>
 			<item id="10">
 				<label>$INFO[Window(Home).Property(RecommendedMovie.10.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMovie.10.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMovie.10.Art(poster))]</icon>
@@ -2008,7 +1994,7 @@
 		<content>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.1.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.1.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.1.Thumb)]</icon>
@@ -2017,7 +2003,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.2.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.2.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.2.Thumb)]</icon>
@@ -2026,7 +2012,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.3.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.3.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.3.Thumb)]</icon>
@@ -2035,7 +2021,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.4.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.4.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.4.Thumb)]</icon>
@@ -2044,7 +2030,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.5.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.5.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.5.Thumb)]</icon>
@@ -2053,7 +2039,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.6.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.6.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.6.Thumb)]</icon>
@@ -2062,7 +2048,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.7.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.7.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.7.Thumb)]</icon>
@@ -2071,7 +2057,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.8.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.8.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.8.Thumb)]</icon>
@@ -2080,7 +2066,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.9.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.9.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.9.Thumb)]</icon>
@@ -2089,7 +2075,7 @@
 			</item>
 			<item>
 				<label>$INFO[Window.Property(LatestMusicVideo.10.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window.Property(LatestMusicVideo.10.Path)])</onclick>
 				<icon>$INFO[Window.Property(LatestMusicVideo.10.Thumb)]</icon>
@@ -2102,7 +2088,7 @@
 		<content>
 			<item id="1">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.1.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.1.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.1.Thumb)]</icon>
@@ -2111,7 +2097,7 @@
 			</item>
 			<item id="2">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.2.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.2.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.2.Thumb)]</icon>
@@ -2120,7 +2106,7 @@
 			</item>
 			<item id="3">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.3.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.3.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.3.Thumb)]</icon>
@@ -2129,7 +2115,7 @@
 			</item>
 			<item id="4">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.4.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.4.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.4.Thumb)]</icon>
@@ -2138,7 +2124,7 @@
 			</item>
 			<item id="5">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.5.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.5.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.5.Thumb)]</icon>
@@ -2147,7 +2133,7 @@
 			</item>
 			<item id="6">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.6.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.6.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.6.Thumb)]</icon>
@@ -2156,7 +2142,7 @@
 			</item>
 			<item id="7">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.7.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.7.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.7.Thumb)]</icon>
@@ -2165,7 +2151,7 @@
 			</item>
 			<item id="8">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.8.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.8.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.8.Thumb)]</icon>
@@ -2174,7 +2160,7 @@
 			</item>
 			<item id="9">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.9.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.9.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.9.Thumb)]</icon>
@@ -2183,7 +2169,7 @@
 			</item>
 			<item id="10">
 				<label>$INFO[Window(Home).Property(RandomMusicVideo.10.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RandomMusicVideo.10.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RandomMusicVideo.10.Thumb)]</icon>
@@ -2196,7 +2182,7 @@
 			<content>
 			<item id="1">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.1.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.1.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.1.Art(poster))]</icon>
@@ -2205,7 +2191,7 @@
 			</item>
 			<item id="2">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.2.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.2.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.2.Art(poster))]</icon>
@@ -2214,7 +2200,7 @@
 			</item>
 			<item id="3">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.3.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.3.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.3.Art(poster))]</icon>
@@ -2223,7 +2209,7 @@
 			</item>
 			<item id="4">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.4.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.4.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.4.Art(poster))]</icon>
@@ -2232,7 +2218,7 @@
 			</item>
 			<item id="5">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.5.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.5.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.5.Art(poster))]</icon>
@@ -2241,7 +2227,7 @@
 			</item>
 			<item id="6">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.6.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.6.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.6.Art(poster))]</icon>
@@ -2250,7 +2236,7 @@
 			</item>
 			<item id="7">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.7.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.7.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.7.Art(poster))]</icon>
@@ -2259,7 +2245,7 @@
 			</item>
 			<item id="8">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.8.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.8.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.8.Art(poster))]</icon>
@@ -2268,7 +2254,7 @@
 			</item>
 			<item id="9">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.9.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.9.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.9.Art(poster))]</icon>
@@ -2277,7 +2263,7 @@
 			</item>
 			<item id="10">
 				<label>$INFO[Window(Home).Property(RecommendedMusicVideo.10.Title)]</label>
-				<label2></label2>
+				<label2/>
 				<onclick>PlayList.Clear</onclick>
 				<onclick>PlayMedia($ESCINFO[Window(Home).Property(RecommendedMusicVideo.10.File)])</onclick>
 				<icon>$INFO[Window(Home).Property(RecommendedMusicVideo.10.Art(poster))]</icon>
@@ -2525,7 +2511,7 @@
 				<visible>!IsEmpty(Window(Home).Property(1ch.movie.23.path))</visible>
 			</item>
 			<item>
-				<label>$INFO[Window(Home).Property(1ch.movie.more.title)] >> </label>
+				<label>$INFO[Window(Home).Property(1ch.movie.more.title)] &gt;&gt; </label>
 				<onclick>ActivateWindow(videofiles, $INFO[Window(Home).Property(1ch.movie.more.path)])</onclick>
 				<thumb>-</thumb>
 				<visible>!IsEmpty(Window(Home).Property(1ch.movie.more.path))</visible>

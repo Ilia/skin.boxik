@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -38,7 +38,7 @@
 			</control>
 			<control type="label">
 				<posx>100</posx>
-				<posy>46r</posy>
+				<left>46r</left>
 				<width>1000</width>
 				<height>30</height>
 				<align>left</align>
@@ -48,12 +48,12 @@
 		</control>
 		<control type="group">
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+				<effect type="fade" start="0" end="100" time="300"/>
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+				<effect type="fade" start="100" end="0" time="300"/>
 			</animation>
 			<include>VisibleFadeEffect</include>
 			<control type="group">
@@ -149,7 +149,7 @@
 				<control type="label">
 					<description>current temp Value Units</description>
 					<posx>190</posx>
-					<posy>185</posy>
+					<left>185</left>
 					<width>100</width>
 					<height>40</height>
 					<font>font16</font>
@@ -257,7 +257,7 @@
 				<control type="label">
 					<description>current feels like Value</description>
 					<posx>185</posx>
-					<posy>400</posy>
+					<left>400</left>
 					<width>300</width>
 					<height>35</height>
 					<font>font13</font>
@@ -270,7 +270,7 @@
 				<control type="label">
 					<description>current dew Value</description>
 					<posx>185</posx>
-					<posy>430</posy>
+					<left>430</left>
 					<width>300</width>
 					<height>35</height>
 					<font>font13</font>
@@ -283,7 +283,7 @@
 				<control type="label">
 					<description>current humidity Value</description>
 					<posx>185</posx>
-					<posy>460</posy>
+					<left>460</left>
 					<width>300</width>
 					<height>35</height>
 					<font>font13</font>
@@ -296,7 +296,7 @@
 				<control type="label">
 					<description>current UV Index Value</description>
 					<posx>185</posx>
-					<posy>490</posy>
+					<left>490</left>
 					<width>300</width>
 					<height>35</height>
 					<font>font13</font>
@@ -309,7 +309,7 @@
 				<control type="label">
 					<description>current Wind Value</description>
 					<posx>185</posx>
-					<posy>520</posy>
+					<left>520</left>
 					<width>300</width>
 					<height>35</height>
 					<font>font13</font>
@@ -324,7 +324,7 @@
 					<control type="label">
 						<description>Sunrise Label</description>
 						<posx>30</posx>
-						<posy>570</posy>
+						<left>570</left>
 						<width>300</width>
 						<height>35</height>
 						<font>font13</font>
@@ -756,7 +756,7 @@
 					</control>
 					<control type="label" id="301">
 						<posx>10</posx>
-						<posy>0</posy>
+						<left>0</left>
 						<width>200</width>
 						<height>40</height>
 						<font>font13</font>

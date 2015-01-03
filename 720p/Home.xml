@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -37,7 +37,7 @@
 			<texture>arrow-big-up.png</texture>
 			<visible>Control.hasFocus(9002)</visible>
 			<animation type="Conditional" condition="true" pulse="true">
-		  	<effect type="fade" start="10" end="90"  time="1400"  />
+		  	<effect type="fade" start="10" end="90" time="1400"/>
 			</animation>
 			<animation effect="slide" end="0,-45" time="200" condition="Control.HasFocus(9002)">Conditional</animation>
 		</control>
@@ -78,7 +78,7 @@
 				<texture>icon_player.png</texture>
 				<visible>Control.hasFocus(9002)</visible>	
 				<animation type="Conditional" condition="true" pulse="true">
-		  		<effect type="fade" start="10" end="90"  time="1400"  />
+		  		<effect type="fade" start="10" end="90" time="1400"/>
 				</animation>
 				<animation effect="slide" end="-60,0" time="200" condition="Control.HasFocus(9002)">Conditional</animation>
 			</control>
@@ -140,12 +140,7 @@
 		<!-- Current Playing Info --> 
 		<control type="group">
 			<posy>90</posy>
-			<animation effect="fade" reversable="true" start="100" end="0" time="300" condition="[ 
-				Control.isVisible(8000) | 
-				Control.isVisible(8001) | 
-				Control.isVisible(8002) | 
-				Control.isVisible(8004) |
-				Control.isVisible(8005)]">Conditional</animation>
+			<animation effect="fade" reversable="true" start="100" end="0" time="300" condition="[      Control.isVisible(8000) |      Control.isVisible(8001) |      Control.isVisible(8002) |      Control.isVisible(8004) |     Control.isVisible(8005)]">Conditional</animation>
 			
 			<!-- Music Info -->
 			<control type="group">
@@ -169,7 +164,7 @@
 				<control type="label">
 					<description>Album Label</description>
 					<posx>220</posx>
-					<posy>265</posy>
+					<left>265</left>
 					<height>25</height>
 					<width>1000</width>
 					<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
@@ -182,7 +177,7 @@
 				<control type="label">
 					<description>Title label</description>
 					<posx>220</posx>
-					<posy>285</posy>
+					<left>285</left>
 					<height>30</height>
 					<width>1000</width>
 					<label>$INFO[MusicPlayer.Title]</label>
@@ -195,7 +190,7 @@
 				<control type="label">
 					<description>Time Label</description>
 					<posx>220</posx>
-					<posy>310</posy>
+					<left>310</left>
 					<height>30</height>
 					<width>300</width>
 					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -377,7 +372,7 @@
 					<control type="label">
 						<description>Title label</description>
 						<posx>170</posx>
-						<posy>293</posy>
+						<left>293</left>
 						<height>30</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.Title]</label>
@@ -390,7 +385,7 @@
 					<control type="label">
 						<description>Time Label</description>
 						<posx>170</posx>
-						<posy>320</posy>
+						<left>320</left>
 						<height>30</height>
 						<width>300</width>
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
@@ -417,7 +412,7 @@
 					<control type="label">
 						<description>Channel label</description>
 						<posx>160</posx>
-						<posy>265</posy>
+						<left>265</left>
 						<height>25</height>
 						<width>660</width>
 						<label>$INFO[VideoPlayer.ChannelName]</label>
@@ -430,7 +425,7 @@
 					<control type="label">
 						<description>Title label</description>
 						<posx>160</posx>
-						<posy>285</posy>
+						<left>285</left>
 						<height>30</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.Title]</label>
@@ -443,7 +438,7 @@
 					<control type="label">
 						<description>Time Label</description>
 						<posx>160</posx>
-						<posy>310</posy>
+						<left>310</left>
 						<height>30</height>
 						<width>300</width>
 						<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
@@ -484,7 +479,7 @@
 						<control type="label">
 							<description>Genre label</description>
 							<posx>170</posx>
-							<posy>270</posy>
+							<left>270</left>
 							<height>25</height>
 							<width>1000</width>
 							<label>$INFO[VideoPlayer.Genre]</label>
@@ -497,7 +492,7 @@
 						<control type="label">
 							<description>Title label</description>
 							<posx>170</posx>
-							<posy>293</posy>
+							<left>293</left>
 							<height>30</height>
 							<width>1000</width>
 							<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
@@ -510,7 +505,7 @@
 						<control type="label">
 							<description>Time Label</description>
 							<posx>170</posx>
-							<posy>320</posy>
+							<left>320</left>
 							<height>30</height>
 							<width>300</width>
 							<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
@@ -538,7 +533,7 @@
 					<control type="label">
 						<description>TV Show Season Ep Label</description>
 						<posx>170</posx>
-						<posy>270</posy>
+						<left>270</left>
 						<height>25</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.TVShowTitle] ($LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode])</label>
@@ -551,7 +546,7 @@
 					<control type="label">
 						<description>Title label</description>
 						<posx>170</posx>
-						<posy>293</posy>
+						<left>293</left>
 						<height>30</height>
 						<width>1000</width>
 						<label>$INFO[VideoPlayer.Title]</label>
@@ -564,7 +559,7 @@
 					<control type="label">
 						<description>Time Label</description>
 						<posx>170</posx>
-						<posy>320</posy>
+						<left>320</left>
 						<height>30</height>
 						<width>300</width>
 						<label>$INFO[Player.Time]$INFO[Player.Duration, / ]</label>
@@ -623,12 +618,12 @@
 			<posy>500</posy>
 			
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+				<effect type="fade" start="0" end="100" time="300"/>
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+				<effect type="fade" start="100" end="0" time="300"/>
 			</animation>
 
 			<control type="image" description="Top glass border">
@@ -642,21 +637,7 @@
 	   		</control>
 
    			<control type="image" description="Bottom glass border">
-				<animation effect="zoom" start="100,100" end="100,66" time="100" 
-						condition="![
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Videos) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Music) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Settings) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),LiveTV) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Photos) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Concerts) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Favourites) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),Online) |
-							StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel)
-							]"
-					>Conditional</animation>
+				<animation effect="zoom" start="100,100" end="100,66" time="100" condition="![        StringCompare(Container(9000).ListItem.Property(SubMenu),Videos) |        StringCompare(Container(9000).ListItem.Property(SubMenu),Movies) |        StringCompare(Container(9000).ListItem.Property(SubMenu),TVShows) |        StringCompare(Container(9000).ListItem.Property(SubMenu),Music) |        StringCompare(Container(9000).ListItem.Property(SubMenu),Settings) |        StringCompare(Container(9000).ListItem.Property(SubMenu),LiveTV) |        StringCompare(Container(9000).ListItem.Property(SubMenu),Photos) |        StringCompare(Container(9000).ListItem.Property(SubMenu),Concerts) |        StringCompare(Container(9000).ListItem.Property(SubMenu),Favourites) |        StringCompare(Container(9000).ListItem.Property(SubMenu),Online) |        StringCompare(Container(9000).ListItem.Property(SubMenu),1Channel)        ]">Conditional</animation>
 				<posx>0</posx>
 				<posy>65</posy>
 				<width>1280</width>
@@ -776,7 +757,7 @@
 
 			<!-- Main Menu -->
 			<control type="wraplist" id="9000">
-				<posx>-210</posx>
+				<posx>-380</posx>
 				<posy>5</posy>
 				<width>1700</width>
 				<height>60</height>

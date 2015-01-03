@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="CommonRootView">
 		<control type="group">
@@ -337,7 +337,7 @@
 						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
 					</control>					
 					<control type="label">
-						<posx>108</posx>
+						<posx>8</posx>
 						<posy>160</posy>
 						<width>200</width>
 						<height>25</height>
@@ -406,7 +406,7 @@
 						<visible>Container.Content(Episodes) + Skin.HasSetting(HideEpisodeThumb) + !StringCompare(ListItem.Label,..)</visible>
 					</control>
 					<control type="label">
-						<posx>108</posx>
+						<posx>8</posx>
 						<posy>160</posy>
 						<width>200</width>
 						<height>25</height>
@@ -452,7 +452,7 @@
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
 					<control type="label">
-						<posx>108</posx>
+						<posx>8</posx>
 						<posy>240</posy>
 						<width>200</width>
 						<height>25</height>
@@ -497,7 +497,7 @@
 						<texture background="true">$VAR[PosterThumb]</texture>
 					</control>
 					<control type="label">
-						<posx>108</posx>
+						<posx>8</posx>
 						<posy>240</posy>
 						<width>200</width>
 						<height>25</height>

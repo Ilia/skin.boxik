@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Dimensions_Fullscreen">
 		<posx>0</posx>
@@ -282,9 +282,9 @@
 
 	<variable name="WiFiState">
 		<value condition="Stringcompare(ListItem.Label,a)">disconnected.png</value>
-		<value condition="!Stringcompare(ListItem.Label,>)">connecting.png</value>
-		<value condition="[Stringcompare(ListItem.Label,>) + !Stringcompare(System.InternetState,$LOCALIZE[13296])]">disconnected.png</value>
-		<value condition="[Stringcompare(ListItem.Label,>) + Stringcompare(System.InternetState,$LOCALIZE[13296])]">connected.png</value>
+		<value condition="!Stringcompare(ListItem.Label,&gt;)">connecting.png</value>
+		<value condition="[Stringcompare(ListItem.Label,&gt;) + !Stringcompare(System.InternetState,$LOCALIZE[13296])]">disconnected.png</value>
+		<value condition="[Stringcompare(ListItem.Label,&gt;) + Stringcompare(System.InternetState,$LOCALIZE[13296])]">connected.png</value>
 	</variable>
 
 	<variable name="InternetState">
@@ -302,4 +302,4 @@
 		<value condition="IntegerGreaterThan(ListItem.Property(signal),80) + !IntegerGreaterThan(ListItem.Property(signal),100)">ap-signal5.png</value>
 		<value condition="IntegerGreaterThan(ListItem.Property(signal),100)">ap-signal5.png</value>
 	</variable>
-</includes>	
+</includes>

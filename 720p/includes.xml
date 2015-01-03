@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<!-- include file="Custom_Overlay.xml" / -->
-	<include file="defaults.xml" />
+	<include file="defaults.xml"/>
 	<!-- include file="DialogMediaSource.xml" / -->
-	<include file="IncludesVariables.xml" />
-	<include file="ViewsVideoLibrary.xml" />
-	<include file="ViewsMusicLibrary.xml" />
-	<include file="ViewsFileMode.xml" />
-	<include file="ViewsPictures.xml" />
-	<include file="ViewsAddonBrowser.xml" />
-	<include file="ViewsLiveTV.xml" />
-	<include file="ViewsPVR.xml" />
-	<include file="IncludesCodecFlagging.xml" />
-	<include file="IncludesHomeWidget.xml" />
-	<include file="IncludesHomeMenuItems.xml" />
-	<include file="IncludesBackgroundBuilding.xml" />
-	<include file="IncludesGenreFlagging.xml" />
-	<include file="weather\10DayForecast.xml" />
-	<include file="weather\36HourForecast.xml" />
-	<include file="weather\WeekendForecast.xml" />
-	<include file="weather\HourlyForecast.xml" />
-	<include file="weather\MapAlerts.xml" />
+	<include file="IncludesVariables.xml"/>
+	<include file="ViewsVideoLibrary.xml"/>
+	<include file="ViewsMusicLibrary.xml"/>
+	<include file="ViewsFileMode.xml"/>
+	<include file="ViewsPictures.xml"/>
+	<include file="ViewsAddonBrowser.xml"/>
+	<include file="ViewsLiveTV.xml"/>
+	<include file="ViewsPVR.xml"/>
+	<include file="IncludesCodecFlagging.xml"/>
+	<include file="IncludesHomeWidget.xml"/>
+	<include file="IncludesHomeMenuItems.xml"/>
+	<include file="IncludesBackgroundBuilding.xml"/>
+	<include file="IncludesGenreFlagging.xml"/>
+	<include file="weather\10DayForecast.xml"/>
+	<include file="weather\36HourForecast.xml"/>
+	<include file="weather\WeekendForecast.xml"/>
+	<include file="weather\HourlyForecast.xml"/>
+	<include file="weather\MapAlerts.xml"/>
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 	<include name="HiddenButton">
@@ -338,7 +338,7 @@
 			</control>
 			<control type="label">
 				<posx>45</posx>
-				<posy>0</posy>
+				<left>0</left>
 				<width>700</width>
 				<height>20</height>
 				<label>$INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title] - $INFO[Player.Time] [COLOR=blue]/[/COLOR] $INFO[Player.Duration,]</label>
@@ -350,7 +350,7 @@
 			</control>
 			<control type="label">
 				<posx>45</posx>
-				<posy>20</posy>
+				<left>20</left>
 				<width>700</width>
 				<height>20</height>
 				<label>$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album, - ]</label>
@@ -363,7 +363,7 @@
 			</control>
 			<control type="label">
 				<posx>45</posx>
-				<posy>20</posy>
+				<left>20</left>
 				<width>700</width>
 				<height>20</height>
 				<label>$INFO[VideoPlayer.Genre]</label>
@@ -376,7 +376,7 @@
 			</control>
 			<control type="label">
 				<posx>45</posx>
-				<posy>20</posy>
+				<left>20</left>
 				<width>700</width>
 				<height>20</height>
 				<label>$INFO[VideoPlayer.TVShowTitle]</label>
@@ -389,7 +389,7 @@
 			</control>
 			<control type="label">
 				<posx>45</posx>
-				<posy>0</posy>
+				<left>0</left>
 				<width>700</width>
 				<height>20</height>
 				<label>$INFO[VideoPlayer.Artist]</label>
@@ -402,7 +402,7 @@
 			</control>
 			<control type="label">
 				<posx>45</posx>
-				<posy>0</posy>
+				<left>0</left>
 				<width>700</width>
 				<height>20</height>
 				<label>$INFO[VideoPlayer.ChannelName]$INFO[VideoPlayer.ChannelNumber, - [COLOR=blue],[/COLOR]]</label>
@@ -471,7 +471,7 @@
 		<control type="label">
 			<description>Artist label</description>
 			<posx>160</posx>
-			<posy>20</posy>
+			<left>20</left>
 			<height>30</height>
 			<width>325</width>
 			<label>$INFO[MusicPlayer.Artist]</label>
@@ -499,7 +499,7 @@
 		<control type="label">
 			<description>Album Label</description>
 			<posx>160</posx>
-			<posy>70</posy>
+			<left>70</left>
 			<height>30</height>
 			<width>325</width>
 			<label>$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
@@ -512,7 +512,7 @@
 		<control type="label">
 			<description>Time Label</description>
 			<posx>160</posx>
-			<posy>95</posy>
+			<left>95</left>
 			<height>30</height>
 			<width>325</width>
 			<label>$INFO[MusicPlayer.Time]$INFO[MusicPlayer.Duration, / ]</label>
@@ -558,7 +558,7 @@
 		<control type="label">
 			<description>Studio label</description>
 			<posx>160</posx>
-			<posy>20</posy>
+			<left>20</left>
 			<height>30</height>
 			<width>325</width>
 			<label>$INFO[VideoPlayer.Studio]</label>
@@ -572,7 +572,7 @@
 		<control type="label">
 			<description>TV Show Title label</description>
 			<posx>160</posx>
-			<posy>20</posy>
+			<left>20</left>
 			<height>30</height>
 			<width>325</width>
 			<label>$INFO[VideoPlayer.tvshowtitle]</label>
@@ -617,7 +617,7 @@
 		<control type="label">
 			<description>Genre label</description>
 			<posx>160</posx>
-			<posy>70</posy>
+			<left>70</left>
 			<height>30</height>
 			<width>325</width>
 			<label>$INFO[VideoPlayer.Genre]</label>
@@ -630,7 +630,7 @@
 		</control>
 		<control type="label">
 			<posx>160</posx>
-			<posy>70</posy>
+			<left>70</left>
 			<height>30</height>
 			<width>325</width>
 			<label>$INFO[VideoPlayer.Album]</label>
@@ -644,7 +644,7 @@
 		<control type="label">
 			<description>Season and Episode label</description>
 			<posx>160</posx>
-			<posy>70</posy>
+			<left>70</left>
 			<height>30</height>
 			<width>325</width>
 			<label>$LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode]</label>
@@ -658,7 +658,7 @@
 		<control type="label">
 			<description>Time Label</description>
 			<posx>160</posx>
-			<posy>95</posy>
+			<left>95</left>
 			<height>30</height>
 			<width>325</width>
 			<label>$INFO[VideoPlayer.Time]$INFO[VideoPlayer.Duration, / ]</label>
@@ -1081,14 +1081,14 @@
 	<include name="HomeAddonsCommonLayout">
 		<include>Window_OpenClose_Animation</include>
 		<animation type="Visible">
-			<effect type="slide" start="0,30" end="0,0" delay="200" easing="out" tween="quadratic" time="200" />
-			<effect type="fade" start="0" end="100" delay="200" time="200" />
+			<effect type="slide" start="0,30" end="0,0" delay="200" easing="out" tween="quadratic" time="200"/>
+			<effect type="fade" start="0" end="100" delay="200" time="200"/>
 		</animation>
 		<animation type="Hidden">
-			<effect type="zoom" start="100" end="70" center="auto" easing="in" tween="quadratic" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
+			<effect type="zoom" start="100" end="70" center="auto" easing="in" tween="quadratic" time="300"/>
+			<effect type="fade" start="100" end="0" time="300"/>
 		</animation>
-		<hitrect x="0" y="530" w="1280" h="120" />
+		<hitrect x="0" y="530" w="1280" h="120"/>
 		<posx>0</posx>
 		<posy>190r</posy>
 		<width>1280</width>
@@ -1598,7 +1598,7 @@
 	<include name="HomeMenuFadedInfo">
 		<control type="label">
 			<animation type="Conditional" condition="true" pulse="true">
-	       		<effect type="fade" start="10" end="60"  time="1400"  />
+	       		<effect type="fade" start="10" end="60" time="1400"/>
 			</animation>
 			<visible>[Library.HasContent(Movies) + System.HasAddon(service.skin.fanart) +  System.IdleTime(31) + !Skin.HasSetting(HideHomeMenu) + !Player.HasMedia + !Player.HasAudio + ![Control.hasFocus(9002) | Control.hasFocus(8000) | Control.hasFocus(8001) | Control.hasFocus(8002) | Control.hasFocus(8004) | Control.hasFocus(8005)]]]</visible>
 			<posx>0</posx>
@@ -1622,12 +1622,61 @@
 	</include>
 	<include name="HelpWindowAnimation">
 		<animation type="WindowOpen" reversible="false">
-	      <effect type="fade" start="0" end="100" time="700" tween="sine" easing="in"  />
-	      <effect type="slide" start="0,200" end="0,0" time="1000" delay="100" tween="cubic" easing="out" />
+	      <effect type="fade" start="0" end="100" time="700" tween="sine" easing="in"/>
+	      <effect type="slide" start="0,200" end="0,0" time="1000" delay="100" tween="cubic" easing="out"/>
 	    </animation>
 	    <animation type="WindowClose" reversible="false">
-	      <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
-	      <effect type="slide" start="0,0" end="0,60" time="500" tween="sine" easing="out" />
+	      <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out"/>
+	      <effect type="slide" start="0,0" end="0,60" time="500" tween="sine" easing="out"/>
 	    </animation>
+	</include>
+	<include name="KeyboardButton">
+		<width>50</width>
+		<height>50</height>
+		<texturenofocus border="3">KeyboardKeyNF.png</texturenofocus>
+		<texturefocus border="5">KeyboardKey.png</texturefocus>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font13</font>
+		<focusedcolor>black</focusedcolor>
+	</include>
+	<include name="MovieShowcaseThumb">		
+		<posx>49</posx>
+        <posy>8</posy>
+        <width>173</width>
+        <height>254</height>
+        <align>center</align>
+		<texture background="true" diffuse="poster_matte.png">Default/poster/folder.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</include>
+	<include name="MovieShowcaseThumbReflection">
+		<posx>49</posx>
+        <posy>260</posy>
+        <width>188</width>
+        <height>254</height>
+		<colordiffuse>52FFFFFF</colordiffuse>
+		<texture background="true" flipy="true" diffuse="poster_matte_reflect.png">Default/poster/folder.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>		
+	</include>
+
+	<include name="MovieShowcaseThumbMain">		
+		<posx>49</posx>
+        <posy>8</posy>
+        <width>188</width>
+        <height>254</height>
+        <align>center</align>
+		<texture background="true" diffuse="poster_matte.png">Default/poster/folder.png</texture>
+		<!--bordertexture border="5">button-nofocus.png</bordertexture>
+		<bordersize>4</bordersize-->
+		<aspectratio scalediffuse="false">scale</aspectratio>
+	</include>
+	<include name="MovieShowcaseThumbReflectionMain">
+		<posx>49</posx>
+        <posy>260</posy>
+        <width>188</width>
+        <height>254</height>
+		<colordiffuse>52FFFFFF</colordiffuse>
+		<texture background="true" flipy="true" diffuse="poster_matte_reflect.png">Default/poster/folder.png</texture>
+		<aspectratio scalediffuse="false">scale</aspectratio>		
 	</include>
 </includes>

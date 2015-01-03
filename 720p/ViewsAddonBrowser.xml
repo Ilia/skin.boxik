@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="AddonInfoListView1">
 		<control type="group">
@@ -190,7 +190,7 @@
 					<control type="label">
 						<description>Version Value</description>
 						<posx>160</posx>
-						<posy>30</posy>
+						<left>30</left>
 						<width>350</width>
 						<height>25</height>
 						<label fallback="416">$INFO[ListItem.Property(Addon.Version)]</label>
@@ -439,7 +439,7 @@
 					<control type="label">
 						<description>Version Value</description>
 						<posx>140</posx>
-						<posy>30</posy>
+						<left>30</left>
 						<width>155</width>
 						<height>25</height>
 						<label fallback="416">$INFO[ListItem.Property(Addon.Version)]</label>

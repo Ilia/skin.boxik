@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<onload condition="System.HasAddon(script.artistslideshow) + IsEmpty(Window.Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow)</onload>
 	<defaultcontrol>-</defaultcontrol>
@@ -100,7 +100,7 @@
             	<animation effect="fade" start="0" end="100" delay="400" time="200" tween="quadratic" easing="out">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200" tween="quadratic" easing="out">WindowClose</animation>
 				
-				<animation effect="zoom" end="100,109"  time="300" condition="Window.IsVisible(MusicOSD)">Conditional</animation>
+				<animation effect="zoom" end="100,109" time="300" condition="Window.IsVisible(MusicOSD)">Conditional</animation>
 
             	<posx>-1</posx>
 		        <posy>220</posy>
@@ -124,7 +124,7 @@
 					<width>500</width>
 					<height>500</height>
 					<aligny>center</aligny>
-					<texture  fallback="livecdcase/DefaultCDArt.png" diffuse="livecdcase/cddiffuse.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture>
+					<texture fallback="livecdcase/DefaultCDArt.png" diffuse="livecdcase/cddiffuse.png" background="true">$INFO[Player.FolderPath,,cdart.png]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<include>CDArtSpinner</include>
 				</control>
@@ -137,7 +137,7 @@
 				<control type="image.">
 					<description>Cd overlay</description>
 					<posx>90</posx>
-					<posy>10</posy>>
+					<posy>10</posy>&gt;
 					<width>190</width>
 					<height>190</height>
 					<include>CDArtSpinner</include>
@@ -244,7 +244,7 @@
 			<control type="label">
 				<description>row 1 label</description>
 				<posx>50</posx>
-				<posy>10</posy>
+				<left>10</left>
 				<label>-</label>
 				<align>left</align>
 				<label>$INFO[musicplayer.Codec,$LOCALIZE[21446]: ,]$INFO[musicplayer.Bitrate, · $LOCALIZE[623]: ,kbps]$INFO[musicplayer.bitspersample, · $LOCALIZE[612]: ,]$INFO[musicplayer.Samplerate, · $LOCALIZE[613]: ,kHz]$INFO[musicplayer.Channels, · $LOCALIZE[21444]: ]</label>
@@ -253,7 +253,7 @@
 			<control type="label">
 				<description>row 2 label</description>
 				<posx>50</posx>
-				<posy>40</posy>
+				<left>40</left>
 				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Name,, [I][COLOR=orange]($LOCALIZE[20166])[/COLOR][/I] · ]fps: $INFO[System.FPS]</label>
@@ -263,7 +263,7 @@
 			<control type="label">
 				<description>Unlocked row 2 label</description>
 				<posx>50</posx>
-				<posy>40</posy>
+				<left>40</left>
 				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Name,, · ]fps: $INFO[System.FPS]</label>
@@ -273,7 +273,7 @@
 			<control type="label">
 				<description>row 3 label</description>
 				<posx>50</posx>
-				<posy>70</posy>
+				<left>70</left>
 				<label>-</label>
 				<align>left</align>
 				<label>$INFO[Visualisation.Preset,$LOCALIZE[13388]: ]</label>

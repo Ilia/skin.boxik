@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="PictureWrapView">
 		<control type="group">
@@ -191,7 +191,7 @@
 				<control type="label">
 					<description>Date time txt</description>
 					<posx>0</posx>
-					<posy>510</posy>
+					<left>510</left>
 					<width>640</width>
 					<height>15</height>
 					<label>$INFO[ListItem.PictureDateTime,[COLOR=blue]$LOCALIZE[31326][/COLOR] - ]</label>
@@ -204,7 +204,7 @@
 				<control type="label">
 					<description>Resolution txt</description>
 					<posx>0</posx>
-					<posy>535</posy>
+					<left>535</left>
 					<width>640</width>
 					<height>15</height>
 					<label>$INFO[ListItem.PictureResolution,[COLOR=blue]$LOCALIZE[31327][/COLOR] - ]</label>

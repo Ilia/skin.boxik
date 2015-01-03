@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
@@ -56,7 +56,7 @@
 		<control type="label" id="2">
 			<description>dialog line 1</description>
 			<posx>30</posx>
-			<posy>60</posy>
+			<top>60</top>
 			<width>550</width>
 			<height>30</height>
 			<align>left</align>
@@ -67,7 +67,7 @@
 		<control type="label" id="3">
 			<description>dialog line 2</description>
 			<posx>30</posx>
-			<posy>85</posy>
+			<top>85</top>
 			<width>550</width>
 			<height>30</height>
 			<align>left</align>
@@ -78,7 +78,7 @@
 		<control type="label" id="4">
 			<description>dialog line 3</description>
 			<posx>30</posx>
-			<posy>110</posy>
+			<top>110</top>
 			<width>550</width>
 			<height>30</height>
 			<align>left</align>

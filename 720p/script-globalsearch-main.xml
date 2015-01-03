@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<allowoverlay>no</allowoverlay>
 	<defaultcontrol>9000</defaultcontrol>
@@ -13,12 +13,12 @@
 			<include>VisibleFadeEffect</include>
 			<control type="group">
 					<animation type="WindowOpen" reversible="false">
-							<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-							<effect type="fade" start="0" end="100" time="300" />
+							<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+							<effect type="fade" start="0" end="100" time="300"/>
 					</animation>
 					<animation type="WindowClose" reversible="false">
-							<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-							<effect type="fade" start="100" end="0" time="300" />
+							<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+							<effect type="fade" start="100" end="0" time="300"/>
 					</animation>
 					<control type="image">
             	<posx>0</posx>
@@ -61,7 +61,7 @@
 	      </control>
 	      <control type="label">
 	          <posx>120</posx>
-	          <posy>18</posy>
+	          <left>18</left>
 	          <width>1000</width>
 	          <height>30</height>
 	          <align>left</align>
@@ -219,7 +219,7 @@
 				<control type="label">
 					<description>header label Finished Searching</description>
 					<posx>380</posx>
-					<posy>80</posy>
+					<left>80</left>
 					<width>740</width>
 					<height>30</height>
 					<font>font16</font>
@@ -233,7 +233,7 @@
 				<control type="label">
 					<description>header Label Still Searching</description>
 					<posx>380</posx>
-					<posy>80</posy>
+					<left>80</left>
 					<width>740</width>
 					<height>30</height>
 					<font>font16</font>
@@ -277,12 +277,12 @@
 			</control>
 			<control type="group">
 				<animation type="WindowOpen" reversible="false">
-					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-					<effect type="fade" start="0" end="100" time="300" />
+					<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+					<effect type="fade" start="0" end="100" time="300"/>
 				</animation>
 				<animation type="WindowClose" reversible="false">
-					<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-					<effect type="fade" start="100" end="0" time="300" />
+					<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+					<effect type="fade" start="100" end="0" time="300"/>
 				</animation>
 				<posx>380</posx>
 				<posy>120</posy>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9</defaultcontrol>
 	<coordinates>
@@ -58,7 +58,7 @@
 		<control type="label">
 			<description>Search string</description>
 			<posx>30</posx>
-			<posy>60</posy>
+			<left>60</left>
 			<width>320</width>
 			<height>40</height>
 			<font>font12caps</font>

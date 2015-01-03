@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>20</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -17,12 +17,12 @@
 			<posx>30</posx>
 			<posy>40</posy>
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+				<effect type="fade" start="0" end="100" time="300"/>
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+				<effect type="fade" start="100" end="0" time="300"/>
 			</animation>
 			<control type="image">
 				<posx>0</posx>
@@ -51,7 +51,7 @@
 			<control type="label">
 				<description>header label</description>
 				<posx>30</posx>
-				<posy>30</posy>
+				<left>30</left>
 				<width>470</width>
 				<height>30</height>
 				<font>font35_title</font>
@@ -64,7 +64,7 @@
 			<control type="label" id="101">
 				<description>current directory text label</description>
 				<posx>30</posx>
-				<posy>70</posy>
+				<left>70</left>
 				<width>470</width>
 				<height>30</height>
 				<font>font12_title</font>
@@ -191,12 +191,12 @@
 			<posx>650</posx>
 			<posy>40</posy>
 			<animation type="WindowOpen" reversible="false">
-				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300" />
-				<effect type="fade" start="0" end="100" time="300" />
+				<effect type="zoom" start="80" end="100" center="640,360" easing="out" tween="back" time="300"/>
+				<effect type="fade" start="0" end="100" time="300"/>
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300" />
-				<effect type="fade" start="100" end="0" time="300" />
+				<effect type="zoom" start="100" end="80" center="640,360" easing="in" tween="back" time="300"/>
+				<effect type="fade" start="100" end="0" time="300"/>
 			</animation>
 			<control type="image">
 				<posx>0</posx>
@@ -364,7 +364,7 @@
 		<control type="label">
 			<description>number of files/pages in left list text label</description>
 			<posx>40</posx>
-			<posy>53r</posy>
+			<left>53r</left>
 			<width>570</width>
 			<font>font12</font>
 			<align>left</align>

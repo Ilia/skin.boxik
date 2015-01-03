@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<coordinates>
@@ -126,7 +126,7 @@
 					<textcolor>white</textcolor>
 					<pagecontrol>61</pagecontrol>
 					<label>$INFO[ListItem.Property(Addon.Description)]</label>
-					<autoscroll time="3000" delay="4000" repeat="5000"></autoscroll>
+					<autoscroll time="3000" delay="4000" repeat="5000"/>
 				</control>
 				<control type="group">
 					<visible>!IsEmpty(ListItem.Property(Addon.Disclaimer))</visible>
@@ -215,7 +215,7 @@
 			<control type="label">
 				<description>header label</description>
 				<posx>30</posx>
-				<posy>15</posy>
+				<left>15</left>
 				<width>600</width>
 				<height>25</height>
 				<font>font12_title</font>

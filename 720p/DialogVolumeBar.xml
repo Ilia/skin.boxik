@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
 	<animation effect="slide" start="0,-40" end="0,0" time="100">WindowOpen</animation>
@@ -49,7 +49,7 @@
 				<control type="label">
 					<description>Passthrough Label</description>
 					<posx>50</posx>
-					<posy>6</posy>
+					<left>6</left>
 					<width>230</width>
 					<height>20</height>
 					<label>$LOCALIZE[29802]</label>

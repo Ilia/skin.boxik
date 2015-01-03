@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<animation effect="fade" time="100">WindowOpen</animation>
 	<animation effect="fade" time="200">WindowClose</animation>
@@ -9,8 +9,8 @@
 	</coordinates>
 	<controls>
 		<control type="group">
-			<posx>1070</posx>
-			<posy>640</posy>
+			<left>1200</left>
+			<bottom>40</bottom>
 			<control type="image">
 				<description>background image</description>
 				<posx>0</posx>
@@ -32,7 +32,7 @@
 			<control type="label">
 				<description>Busy label</description>
 				<posx>60</posx>
-				<posy>20</posy>
+				<top>20</top>
 				<width>120</width>
 				<height>32</height>
 				<align>left</align>
@@ -43,7 +43,7 @@
 			<control type="progress" id="10">
 				<description>Progressbar</description>
 				<posx>20</posx>
-				<posy>53</posy>
+				<top>53</top>
 				<width>160</width>
 				<height>8</height>
 			</control>

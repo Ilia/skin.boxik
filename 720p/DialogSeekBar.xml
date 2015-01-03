@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
 	<visible>[Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding]</visible>
@@ -10,7 +10,7 @@
 			<visible>[Player.Paused + Player.Caching] + !Player.Seeking + !Window.IsVisible(home)</visible>
 			<control type="label" id="24" description="Buffering label">
 				<animation type="Visible" condition="true" reversable="true">
-					<effect type="fade" start="0" end="100" time="700" reversable="true" />
+					<effect type="fade" start="0" end="100" time="700" reversable="true"/>
 				</animation>
 	        	<posx>500</posx>
 			    <posy>280</posy>

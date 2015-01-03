@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">500</defaultcontrol>
 	<!-- Container.Content(Addons) -->
@@ -92,13 +92,12 @@
 
 		<control type="group">
 			<visible>!Skin.HasSetting(HideLegend) + [[Container.Content(Movies) + Library.HasContent(Movies)] | [Container.Content(TVShows) + Library.HasContent(TVShows)] | Container.Content(episodes) | Container.Content(Addons)] + !Player.HasMedia</visible>
-			<posx>225</posx>
 			<animation effect="fade" time="200" start="0" end="100">WindowOpen</animation>
             <animation effect="fade" time="200" start="100" end="0">WindowClose</animation>
 			<animation effect="slide" reversable="true" start="0,0" end="-149,0" time="0" condition="Skin.HasSetting(KioskMode)">Conditional</animation>
 			<control type="image">
-				<posx>0</posx>
-				<posy>40r</posy>
+				<left>230</left>
+				<bottom>27</bottom>
 				<width>20</width>
 				<height>13</height>
 				<aspectratio>keep</aspectratio>
@@ -106,43 +105,35 @@
 			</control>
 			<control type="label">
 				<visible>Container.Content(Movies) + Library.HasContent(Movies)</visible>
-				<posx>30</posx>
-				<posy>46r</posy>
+				<label>Movie Information</label>
+				<left>263</left>
+				<bottom>18</bottom>
 				<width>1000</width>
 				<height>30</height>
-				<align>left</align>
-				<font>font12</font>
-				<label>Movie Information</label>
 			</control>
 			<control type="label">
 				<visible>Container.Content(TVShows) + Library.HasContent(TVShows)</visible>
-				<posx>30</posx>
-				<posy>46r</posy>
+				<label>TV Show Information</label>
+				<left>263</left>
+				<bottom>18</bottom>
 				<width>1000</width>
 				<height>30</height>
-				<align>left</align>
-				<font>font12</font>
-				<label>TV Show Information</label>
 			</control>
 			<control type="label">
 				<visible>Container.Content(episodes)</visible>
-				<posx>30</posx>
-				<posy>46r</posy>
+				<label>Episode Information</label>
+				<left>263</left>
+				<bottom>18</bottom>
 				<width>1000</width>
 				<height>30</height>
-				<align>left</align>
-				<font>font12</font>
-				<label>Episode Information</label>
 			</control>
 			<control type="label">
 				<visible>Container.Content(Addons)</visible>
-				<posx>30</posx>
-				<posy>46r</posy>
+				<label>Addon Information</label>
+				<left>263</left>
+				<bottom>18</bottom>
 				<width>1000</width>
 				<height>30</height>
-				<align>left</align>
-				<font>font12</font>
-				<label>Addon Information</label>
 			</control>
 		</control>
 		<control type="group">
@@ -171,8 +162,8 @@
 					<visible>[Control.IsVisible(500) | Control.IsVisible(50) | Control.IsVisible(560) | Control.IsVisible(503) | Control.IsVisible(505)]</visible>
 				</control>
 				<control type="label">
-					<posx>105</posx>
-					<posy>46r</posy>
+					<bottom>16</bottom>
+					<left>105</left>
 					<width>1000</width>
 					<height>30</height>
 					<align>left</align>

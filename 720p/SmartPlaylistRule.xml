@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9001</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -86,7 +86,7 @@
 			<control type="label">
 				<description>Rule Field label</description>
 				<posx>35</posx>
-				<posy>100</posy>
+				<left>100</left>
 				<width>300</width>
 				<height>40</height>
 				<font>font13</font>
@@ -113,7 +113,7 @@
 			<control type="label">
 				<description>Rule Field label</description>
 				<posx>410</posx>
-				<posy>100</posy>
+				<left>100</left>
 				<width>300</width>
 				<height>40</height>
 				<font>font13</font>

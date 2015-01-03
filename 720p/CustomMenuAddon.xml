@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="2114">
 	<defaultcontrol always="true">450</defaultcontrol>
 	<coordinates>
@@ -237,7 +237,7 @@
 						<label>$LOCALIZE[31155]</label>
 						<include>ClearButtonChoice</include>
 						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,&quot;special://skin/extras/Playlists/Cartoons.xsp&quot;,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,"special://skin/extras/Playlists/Cartoons.xsp",return))</onclick>
 						<include>CloseMenuChoice</include>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>				
@@ -247,7 +247,7 @@
 						<label>$LOCALIZE[31157]</label>
 						<include>ClearButtonChoice</include>
 						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,&quot;special://skin/extras/Playlists/Comedies.xsp&quot;,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,"special://skin/extras/Playlists/Comedies.xsp",return))</onclick>
 						<include>CloseMenuChoice</include>
 						<visible>Library.HasContent(Movies)</visible>
 					</item>	
@@ -256,7 +256,7 @@
 						<label>$LOCALIZE[31159]</label>
 						<include>ClearButtonChoice</include>
 						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label,$LOCALIZE[31159])</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,&quot;special://skin/extras/Playlists/HDMovies.xsp&quot;,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,"special://skin/extras/Playlists/HDMovies.xsp",return))</onclick>
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
 						<include>CloseMenuChoice</include>
 						<visible>Library.HasContent(Movies)</visible>
@@ -266,7 +266,7 @@
 						<label>$LOCALIZE[31160]</label>
 						<include>ClearButtonChoice</include>
 						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,&quot;special://skin/extras/Playlists/Movies In Progress.xsp&quot;,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,"special://skin/extras/Playlists/Movies In Progress.xsp",return))</onclick>
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Sub,Movies)</onclick>
 						<onclick condition="Window.IsVisible(2114)">Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Type,Movies)</onclick>
 						<include>CloseMenuChoice</include>
@@ -290,7 +290,7 @@
 						<include>ClearButtonChoice</include>
 						<onclick>Skin.SetFile(SelectPlaylist,.xsp,special://videoplaylists/)</onclick>
 						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Label)</onclick>
-						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,&quot;$INFO[Skin.String(SelectPlaylist)]&quot;,return))</onclick>
+						<onclick>Skin.SetString($INFO[Window(home).Property(UsrSelectBtn)].Path,ActivateWindow(VideoLibrary,"$INFO[Skin.String(SelectPlaylist)]",return))</onclick>
 						<include>CloseMenuChoice</include>
 					</item>
 					<item id="18">

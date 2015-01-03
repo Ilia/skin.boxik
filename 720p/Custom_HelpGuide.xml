@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window  id="1111">
+<window id="1111">
     <defaultcontrol always="true">4000</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <controls>
@@ -74,7 +74,7 @@
 
             <control type="label">
                 <posx>120</posx>
-                <posy>18</posy>
+                <left>18</left>
                 <width>1000</width>
                 <height>30</height>
                 <align>left</align>
@@ -92,7 +92,7 @@
             </control>
             <control type="group" id="4000">
                 <posy>200</posy>
-                <animation effect="fade"  start="100" end="65" time="300" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus">Conditional</animation>
+                <animation effect="fade" start="100" end="65" time="300" tween="cubic" easing="inout" condition="ControlGroup(10000).HasFocus">Conditional</animation>
                 <control type="list" id="4001">
                 <posx>78</posx>
                 <width>260</width>
@@ -208,7 +208,7 @@
                 <control type="label">
                     <description>Help Category Label</description>
                     <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
                     <width>1075</width>
                     <height>50</height>
                     <font>font35_title</font>
@@ -272,7 +272,7 @@
                 <control type="label">
                     <description>Calibration Category Label</description>
                     <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
                     <width>1075</width>
                     <height>50</height>
                     <font>font35_title</font>
@@ -344,7 +344,7 @@
                 <control type="label">
                     <description>WiFi Category Label</description>
                     <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
                     <width>1075</width>
                     <height>50</height>
                     <font>font35_title</font>
@@ -408,7 +408,7 @@
                 <control type="label">
                     <description>Region Addons Category Label</description>
                     <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
                     <width>1075</width>
                     <height>50</height>
                     <font>font35_title</font>
@@ -424,7 +424,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Online Addons extend the capabilities of your [B]BOXiK[/B]. [CR][CR]Click [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]Add-ons Browser[/B] screen and select the [B]Get Add-ons > All Add-ons[/B]. From there you can select what kind of addon you want to install - take a look at the Video Add-ons section. You can also use the [B]Enabled Add-ons[/B] screen to see what has been installed and disable/uninstall optional addons. [CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.[CR][CR][COLOR=red]WARNING:[/COLOR] Some online addons may contain content that may not be legal in your country. BOXiK is not liable for any content or add-ons played and installed on this device.</label>
+                    <label>Online Addons extend the capabilities of your [B]BOXiK[/B]. [CR][CR]Click [B][COLOR=selected]OK[/COLOR][/B] on your remote to bring up the [B]Add-ons Browser[/B] screen and select the [B]Get Add-ons &gt; All Add-ons[/B]. From there you can select what kind of addon you want to install - take a look at the Video Add-ons section. You can also use the [B]Enabled Add-ons[/B] screen to see what has been installed and disable/uninstall optional addons. [CR][CR]When you are done press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.[CR][CR][COLOR=red]WARNING:[/COLOR] Some online addons may contain content that may not be legal in your country. BOXiK is not liable for any content or add-ons played and installed on this device.</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -480,7 +480,7 @@
                 <control type="label">
                     <description>Video Library Category Label</description>
                     <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
                     <width>1075</width>
                     <height>50</height>
                     <font>font35_title</font>
@@ -552,7 +552,7 @@
                <control type="label">
                     <description>Music Library Category Label</description>
                     <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
                     <width>1075</width>
                     <height>50</height>
                     <font>font35_title</font>
@@ -624,7 +624,7 @@
                 <control type="label">
                     <description>Cutomize UI Category Label</description>
                     <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
                     <width>1075</width>
                     <height>50</height>
                     <font>font35_title</font>
@@ -640,7 +640,7 @@
                     <posy>70</posy>
                     <width>700</width>
                     <height>400</height>
-                    <label>Your [B]BOXiK[/B] home menu is very customizable, you can add or remove any menu item (apart from settings). We encourage you to explore this section and customise your [B]BOXiK[/B] to your liking. You can always access this menu by going to the [B]Settings > Skin[/B] from your home menu. [CR][CR]Press [B][COLOR=selected]OK[/COLOR][/B] button on your remote to go to the settings section now. When you are finished customizing press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.[CR][CR]If you have any questions or suggestions please email our support line at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].</label>
+                    <label>Your [B]BOXiK[/B] home menu is very customizable, you can add or remove any menu item (apart from settings). We encourage you to explore this section and customise your [B]BOXiK[/B] to your liking. You can always access this menu by going to the [B]Settings &gt; Skin[/B] from your home menu. [CR][CR]Press [B][COLOR=selected]OK[/COLOR][/B] button on your remote to go to the settings section now. When you are finished customizing press the [B][COLOR=selected]RETURN[/COLOR][/B] button on your remote to come back to this guide.[CR][CR]If you have any questions or suggestions please email our support line at [B][COLOR=selected]support@boxik.tv[/COLOR][/B].</label>
                     <font>font12</font>
                     <align>left</align>
                     <textcolor>white</textcolor>
@@ -696,7 +696,7 @@
                 <control type="label">
                     <description>Cutomize UI Category Label</description>
                     <posx>0</posx>
-                    <posy>0</posy>
+                    <left>0</left>
                     <width>1075</width>
                     <height>50</height>
                     <font>font35_title</font>

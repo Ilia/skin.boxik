@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol allways="true">6</defaultcontrol>
 	<allowoverlay>no</allowoverlay>
@@ -132,7 +132,7 @@
 			</control>
 			<control type="label">
 				<posx>30</posx>
-				<posy>40</posy>
+				<left>40</left>
 				<width>410</width>
 				<height>30</height>
 				<font>font24_title</font>
@@ -159,7 +159,7 @@
 			<control type="label">
 				<description>number of files/pages in left list text label</description>
 				<posx>30</posx>
-				<posy>38r</posy>
+				<left>38r</left>
 				<width>410</width>
 				<font>font12</font>
 				<align>left</align>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>1</defaultcontrol>
 	<coordinates>
@@ -69,7 +69,7 @@
 		<control type="label">
 			<description>profile name label</description>
 			<posx>200</posx>
-			<posy>70</posy>
+			<left>70</left>
 			<width>460</width>
 			<align>left</align>
 			<font>font13_title</font>
@@ -79,7 +79,7 @@
 		<control type="label" id="1000">
 			<description>profile name Value</description>
 			<posx>200</posx>
-			<posy>95</posy>
+			<left>95</left>
 			<width>460</width>
 			<align>left</align>
 			<font>font16</font>
@@ -88,7 +88,7 @@
 		<control type="label">
 			<description>profile directory label</description>
 			<posx>200</posx>
-			<posy>155</posy>
+			<left>155</left>
 			<width>460</width>
 			<align>left</align>
 			<font>font13_title</font>
@@ -98,7 +98,7 @@
 		<control type="label" id="1001">
 			<description>profile directory Value</description>
 			<posx>200</posx>
-			<posy>180</posy>
+			<left>180</left>
 			<width>460</width>
 			<align>left</align>
 			<font>font13</font>
