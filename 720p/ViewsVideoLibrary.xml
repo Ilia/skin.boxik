@@ -255,46 +255,6 @@
 		</control>
 	</include>
 
-    <include name="MovieShowcaseThumb">		
-		<posx>49</posx>
-        <posy>8</posy>
-        <width>173</width>
-        <height>254</height>
-        <align>center</align>
-		<texture background="true" diffuse="poster_matte.png">Default/poster/folder.png</texture>
-		<aspectratio scalediffuse="false">scale</aspectratio>
-	</include>
-	<include name="MovieShowcaseThumbReflection">
-		<posx>49</posx>
-        <posy>260</posy>
-        <width>188</width>
-        <height>254</height>
-		<colordiffuse>52FFFFFF</colordiffuse>
-		<texture background="true" flipy="true" diffuse="poster_matte_reflect.png">Default/poster/folder.png</texture>
-		<aspectratio scalediffuse="false">scale</aspectratio>		
-	</include>
-
-	<include name="MovieShowcaseThumbMain">		
-		<posx>49</posx>
-        <posy>8</posy>
-        <width>188</width>
-        <height>254</height>
-        <align>center</align>
-		<texture background="true" diffuse="poster_matte.png">Default/poster/folder.png</texture>
-		<!--bordertexture border="5">button-nofocus.png</bordertexture>
-		<bordersize>4</bordersize-->
-		<aspectratio scalediffuse="false">scale</aspectratio>
-	</include>
-	<include name="MovieShowcaseThumbReflectionMain">
-		<posx>49</posx>
-        <posy>260</posy>
-        <width>188</width>
-        <height>254</height>
-		<colordiffuse>52FFFFFF</colordiffuse>
-		<texture background="true" flipy="true" diffuse="poster_matte_reflect.png">Default/poster/folder.png</texture>
-		<aspectratio scalediffuse="false">scale</aspectratio>		
-	</include>
-
 	<include name="ShowcaseView"> <!-- showcase -->
 		<control type="group">
             <posx>0</posx>
@@ -980,6 +940,7 @@
 			</control>
       	</control>
 	</include>
+
 	<include name="MediaListView3">
 		<control type="group">
 			<visible>Control.IsVisible(503)</visible>
@@ -1212,7 +1173,7 @@
 					<control type="label">
 						<description>Episodes Value</description>
 						<posx>160</posx>
-						<left>120</left>
+						<posy>120</posy>
 						<width>360</width>
 						<height>25</height>
 						<label fallback="416">$INFO[listitem.episode] [COLOR=grey] ($INFO[ListItem.Property(WatchedEpisodes),, $LOCALIZE[16102]] - $INFO[ListItem.Property(UnWatchedEpisodes), , $LOCALIZE[16101]])[/COLOR]</label>
@@ -1236,7 +1197,7 @@
 					<control type="label">
 						<description>Aired Value</description>
 						<posx>160</posx>
-						<left>145</left>
+						<posy>145</posy>
 						<width>360</width>
 						<height>25</height>
 						<label fallback="416">$INFO[listitem.premiered]</label>
